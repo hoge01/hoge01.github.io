@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <title>prototype01_04</title>
+
+<!-- CSS AOS
+============================================= -->
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+<!-- CSS・ファイル
+============================================= -->
+<link rel="stylesheet" href="css/reset01.css">
+<link rel="stylesheet" href="css/header_00.css">
+
+<style>
+/* CSS Reset
+############################################# */
+.parallax {
+ width:100%;
+ min-height:600px;
+ background-position:center top;
+ background-repeat:no-repeat;
+ background-attachment:fixed;
+ background-size:cover;	
+ text-align:center;
+ padding:60px;
+/* opacity:0.1;*/
+/* z-index:2;*/
+}
+
+.content {
+ max-width:100%;
+ min-height:500px;
+/* background-color:#fff;*/
+ background:linear-gradient(rgba(0, 255, 255, 0.1), rgba(255, 255, 0, 0.2));
+/* background-color:rgba(255, 255, 0, 0.1);*/
+ text-align:center;
+ padding:60px;
+/* opacity:0.1;*/
+/* z-index:1;*/
+}
+
+.test{
+ max-width:50%;
+ min-height:500px;
+/* border:1px solid #aaa;*/
+ box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
+/* box-shadow: 10px 10px 10px 10px rgba(200,200,200,0.6) inset;*/
+ filter:drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
+ margin:0 10%;
+/* opacity:0.1;*/
+/* z-index:9;*/
+}
+/*
+.test1{
+ max-width:50%;
+ min-height:500px;
+ background-image:url(test/gas01.png);
+ background-repeat:no-repeat;
+ background-attachment:fixed;
+ background-size:contain;
+ padding:5px;
+ margin:0 auto;
+ background-color:rgba(0, 255, 255, 0.1);
+}
+*/
+.wrap{
+ width:100%;
+/* background-color:#aaa;*/
+/* opacity:0.1;*/
+/* z-index:0;*/
+}
+
+.parallax.bg-01{
+ background-image:url(img/parallax02/sign-1573405_1920.jpg);
+ background-position:center center;
+ background-size:cover;
+}
+
+.parallax.bg-02{
+ background-image:url(img/parallax02/annie-gray-WEWTGkPUVT0-unsplash.jpg);
+ background-position:center center;
+ background-size:cover;
+}
+
+.parallax.bg-03{
+ background-image:url(img/parallax02/becca-tapert-sY5RjMB1KkE-unsplash.jpg);
+ background-position:center bottom;
+ background-size:cover;
+}
+
+.parallax.bg-04{
+ background-image:url(img/parallax02/kaboompics_Toilet%20Paper.jpg);
+ background-position:center center;
+ background-size:cover;
+}
+
+.parallax.bg-05{
+ background-image:url(img/parallax02/huy-nguyen-lTmyAPyDYtA-unsplash.jpg);
+ background-position:center bottom;
+ background-size:cover;
+}
+
+.parallax.bg-06{
+ background-image:url(img/parallax02/pexels-quark-studio-2507016.jpg);
+ background-position:center center;
+ background-size:cover;
+}
+
+.parallax.bg-07{
+ background-image:url(img/parallax02/pexels-pixabay-355952.jpg);
+ background-position:center center;
+ background-size:cover;
+}
+
+.parallax.bg-08{
+ background-image:url(img/parallax02/support-2355701_1920.jpg);
+ background-position:center center;
+ background-size:cover;
+}
+
+.parallax.bg-09{
+ background-image:url(img/parallax02/scaffold-1207389_1920.jpg);
+ background-position:center center;
+ background-size:cover;
+}
+
+
+
+.test2{
+/* width:500px;*/
+ width:60%;
+ height:200px;
+/* max-height:300px;*/
+/*height:auto;*/
+/*background:#00f;*/
+ background-color:#fff;
+ border:5px solid #440;
+ margin:0 auto 30%;
+}
+
+.test2 img{
+ width:50%;
+/* height:200px;*/
+ max-height:100%;
+ object-fit:cover;
+ object-position:center bottom;
+/* box-sizing:border-box;*/
+ float:right;
+/* float:left;*/
+}
+.test2 p{
+ color:#0c0;
+ width:250px;
+ text-align: center;
+ line-height:2.0;
+ text-shadow:1px 1px 1px #0000f0;
+ padding:10px;
+/* clear:both;*/
+}
+
+span{
+ color:#f00;
+ font-size:30px;
+ font-weight:bold;
+ text-shadow:1px 1px 3px #0000f0;
+}
+
+.left{
+ margin-left:0;
+}
+
+.right{
+ margin-right:0;
+}
+
+.parallax h2{
+ color:#fff;
+ font-size:100px;
+ text-shadow:2px 2px 10px #0000f0;
+ padding:20vh 0 5vh;
+}
+
+.parallax p{
+ color:#fff;
+ font-size:30px;
+ text-shadow:2px 2px 5px #800000;
+ line-height:1.5;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+<header>
+<a href="prototype01_01.html">
+<h1><img class="logo" src="img/logo01.png" alt="大曽根産業株式会社"></h1>
+</a>
+</header>
+
+
+
+<!--
+<div class="headerp">
+<p>
+埼玉県八潮市のプロパンガス・液化石油ガス販売事業者<br>
+建設業許可、宅地建物取引業、建築士事務所登録
+</p>
+</div>
+-->
+
+<div class="logo1">
+<!--<img class="logo1" src="test/logo00.png" alt="大曽根産業株式会社">-->
+</div>
+
+<div class="company">
+<!--<h2>テスト</h2>-->
+<img class="gas" src="img/gas00.jpg" alt="gas">
+</div>
+
+<div class="logo2">
+<!--<img class="logo2" src="img/logo2.png" alt="大曽根産業株式会社">-->
+</div>
+
+<section class="company">
+<h2>会社概要</h2>
+<dl>
+<dt>会社名</dt>
+<dd>大曽根産業株式会社</dd>
+<dt>本社所在地</dt>
+<dd>〒340-0834　埼玉県八潮市大字大曽根３２６番地</dd>
+<dt>電話番号</dt>
+<dd>048-996-0406（建設部）　　　048-996-0130（プロパン部）</dd>
+<dt>事業内容</dt>
+<dd>液化石油ガス販売事業者　建設業許可　宅地建物取引業　建築士事務所登録</dd>
+<dt>店舗営業日時案内</dt>
+<dd>日曜祝日-休業　　営業時間　月～金　9：00 より 19：00　　土　9：00 より 18：30</dd>
+</dl>
+</section>
+
+
+
+<!--</a>-->
+
+<nav class="pcnav">
+<ul>
+ <li class="current"><a href="prototype01_02.html" id="#tab1" class="caption2">ホームサービス</a></li>
+ <li><a href="prototype01_04.html" id="#tab2" class="caption2">暮らしサポート</a></li>
+ <li><a href="prototype01_03.html" id="#tab3" class="caption2">プロパンガス</a></li>
+</ul>
+</nav><!-- /.pcnav -->
+<!--</header>-->
+
+
+<!--<div class="container">-->
+<div class="heroheader">
+
+
+
+
+<div class="wrap">
+
+<!--<div class="parallax bg-01">背面：パララックスエリア</div>-->
+<div class="parallax bg-01">
+<h2>受付作業メニュー</h2>
+<p>
+商品は安く手に入ったけど、取り付けや、組み立てが出来ない！
+<br>そんなときも、ご相談ください。
+</p>
+</div>
+<!--<div class="content"><img src="test/gas01.png">前面：コンテンツエリア</div>-->
+<div class="content">
+
+<div class="test2 left" data-aos="fade-up">
+<img alt="画像1" src="test_img/hands-4054418_1920.jpg" />
+<p>
+ホームセンターでの購入商品
+<br>設置組み立て
+<br><span>５，２００～</span>
+<br>特殊工具対応不可
+</p>
+</div>
+
+<div class="test2 right" data-aos="fade-down">
+<img alt="画像1" src="test_img/shopping-4694470_1920.jpg" />
+<p>
+ネットショッピング商品
+<br>設置組み立て
+<br><span>５，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test2 left" data-aos="fade-right">
+<img alt="画像1" src="test_img/service-4950222_1920.jpg" />
+<p>
+商品手配のお手伝い
+<br>作業部材、お買い物の付き添い
+<br><span>５，２００～</span>
+<br>
+</p>
+</div>
+
+</div>
+
+<div class="parallax bg-02">
+<h2>屋内・メニュー</h2>
+<p>
+お客様のご要望に、可能な範囲で対応いたします
+<br>介護保険、助成金を使ってのリフォーム工事
+<br>取付商品選定
+</p>
+</div>
+
+<div class="content">
+
+<div class="test2 right" data-aos="fade-left">
+<img alt="画像1" src="img/pexels-lisa-1909014.jpg" />
+<p>
+玄関小上がり、踏み台
+<br>
+<br><span>４，２００～</span>
+<br>オーダー製作対応可
+</p>
+</div>
+
+<div class="test2 left" data-aos="fade-up-right">
+<img alt="画像1" src="img/pexels-mikotoraw-5011475.jpg" />
+<p>
+玄関・廊下・階段
+<br>手すり取付
+<br><span>４，２００～</span>
+<br>介護保険適用、リフォーム工事
+</p>
+</div>
+
+<div class="test2 right" data-aos="fade-up-left">
+<img alt="画像1" src="img/pexels-meruyert-gonullu-6152393.jpg" />
+<p>
+階段
+<br>すべり止め取付
+<br><span>４，２００～</span>
+<br>介護保険適用、リフォーム工事
+</p>
+</div>
+
+<div class="test2 left" data-aos="fade-down-right">
+<img alt="画像1" src="img/natural-goods-berlin-L6NP4ZGnpSY-unsplash.jpg" />
+<p>
+押入れ収納
+<br>棚取付
+<br><span>４，２００～</span>
+<br>取付商品は、別途
+</p>
+</div>
+
+<div class="test2 right" data-aos="fade-down-left">
+<img alt="画像1" src="img/mak-HSx5SEDgZ4k-unsplash.jpg" />
+<p>
+サッシの動き調整
+<br>
+<br><span>４，２００～</span>
+<br>戸車交換は、別途
+</p>
+</div>
+
+</div>
+
+<div class="parallax bg-03">
+<h2>キッチン・メニュー</h2>
+<p>
+水漏れ・排水・コーキング
+<br>ガスコンロ
+<br>換気扇
+</p>
+</div>
+<div class="content">
+<div class="test2 left" data-aos="flip-left">
+<img alt="画像1" src="img/kitchen/jos-speetjens-b2P4_I9G_mA-unsplash.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test2 right" data-aos="flip-right">
+<img alt="画像1" src="img/kitchen/callum-hill-CmW1uWURB18-unsplash.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test2 left" data-aos="flip-up">
+<img alt="画像1" src="img/kitchen/kelly-sikkema-BK3h3qXspQU-unsplash.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test2 right" data-aos="flip-down">
+<img alt="画像1" src="img/kitchen/gas-stove-1776648_1920.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test2 left" data-aos="zoom-in">
+<img alt="画像1" src="img/kitchen/exhaust-fan-546946_1920.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test2 right" data-aos="zoom-in-up">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+</div>
+
+<div class="parallax bg-04">
+<h2>トイレ・メニュー</h2>
+<p>
+水漏れ・排水・詰まり
+<br>ペーパーホルダー・手すり
+<br>洗浄便座交換
+</p>
+</div>
+<div class="content">
+</div>
+
+<div class="parallax bg-05">
+<h2>浴室・メニュー</h2>
+<p>
+水漏れ・排水・詰まり
+<br>シャワーヘッド・鏡・タオル掛け・手すり
+<br>タイルひび割れ・浴槽回り・シーリング
+</p>
+</div>
+<div class="content">
+</div>
+
+<div class="parallax bg-06">
+<h2>洗面所・メニュー</h2>
+<p>
+水漏れ・排水・詰まり
+<br>タオル掛け・手すり
+<br>
+</p>
+</div>
+<div class="content">
+</div>
+
+<div class="parallax bg-07">
+<h2>共通・メニュー</h2>
+<p>
+電球・蛍光灯・交換作業
+<br>
+<br>
+</p>
+</div>
+<div class="content">
+</div>
+
+<div class="parallax bg-08">
+<h2>季節ごとのお手伝い・メニュー</h2>
+<p>
+網戸・日よけ
+<br>冷暖房器具の設置・片付け
+<br>ガラス窓清掃
+</p>
+</div>
+<div class="content">
+</div>
+
+<div class="parallax bg-09">
+<h2>屋外・メニュー</h2>
+<p>
+表札・外灯
+<br>防犯
+<br>屋根・シャッター・雨戸・雨樋・床・玄関
+</p>
+</div>
+<div class="content">
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+
+<!--js読み込み-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
+
+
+ 
+</body>
+
+</html>

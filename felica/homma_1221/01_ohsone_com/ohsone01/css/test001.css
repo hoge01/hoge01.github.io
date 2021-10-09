@@ -1,0 +1,197 @@
+body {
+  background-color: #aaa;
+}
+
+
+
+/*
+4. The CSS styles for the main content.
+*/
+.main{
+ height:100%;
+ position:relative;
+}
+
+
+
+h1{
+ font-family:'roboto', serif;
+ font-size:60px;
+ line-height:1.125;
+ margin-bottom:10px;
+ letter-spacing:-3px;
+}
+
+@media (min-width:800px) {
+h1{
+ font-size:80px;
+}
+}
+
+h3{
+ color:red;
+ font-family:helvetica, sans-serif;
+ font-weight:400;
+ font-size:18px;
+ line-height:0.85;
+ margin:0;
+ text-transform:uppercase;
+ border-bottom:2px solid rgba(0, 0, 0, 0.3);
+ padding-bottom:15px;
+ margin-bottom:35px;
+}
+
+
+
+/*
+3. The CSS for the dots navigation.
+*/
+@media (min-width:800px) {
+h3{
+ font-size: 23px;
+}
+}
+
+p{
+ font-size:18px;
+ line-height:28px;
+ font-family:georgia, times, serif;
+ font-weight:normal;
+}
+
+.nav{
+ display:none;
+ position:fixed;
+ top:0;
+ bottom:0;
+ left:0;
+ height:100%;
+ list-style:none;
+ z-index:997;
+}
+
+@media (min-width:500px) and (min-height:375px) {
+.nav{
+ display:block;
+}
+}
+
+.nav:before{
+ border-left:2px solid rgba(255, 255, 255, 0.3);
+ content:"";
+ position:absolute;
+ top:0;
+ bottom:0;
+ height:100%;
+ left:49px;
+}
+
+.dot-nav{
+ list-style:none;
+ position:relative;
+ z-index:5;
+}
+
+.dot-nav a{
+ display:inline-block;
+ background:#ddd;
+ width:20px;
+ height:20px;
+ border-radius:100%;
+ vertical-align:middle;
+}
+
+.dot-nav a:hover{
+ -webkit-transition:all 0.15s ease-in-out;
+ transition:all 0.15s ease-in-out;
+ background-color:#e53333;
+ -webkit-transform:scale(2);
+ -ms-transform:scale(2);
+ transform:scale(2);
+}
+
+.dot-nav a.active{
+ background-color:#e53333;
+ -webkit-transform:scale(2);
+ -ms-transform:scale(2);
+ transform:scale(2);
+}
+
+.dot-nav li{
+ margin:25px 0;
+}
+
+.dot-nav li span {
+ position:fixed;
+ vertical-align:middle;
+ color:#fff;
+ background:#000;
+ font-size:14px;
+ padding:2px 7px;
+ margin-top:-4px;
+ margin-left:25px;
+ border-radius:4px;
+ -webkit-transition: opacity 0.3s ease-in-out;
+ transition:opacity 0.3s ease-in-out;
+ opacity:0;
+}
+
+.dot-nav li span b{
+ display:block;
+ font-size:18px;
+ line-height:1;
+ margin-bottom:5px;
+}
+
+.dot-nav li a:hover + span{
+ opacity:1;
+}
+
+
+
+/*
+4. The CSS styles for the main content.
+*/
+.page-block{
+  background-size:cover;
+}
+
+.content{
+ width:70%;
+ margin:0 auto;
+ padding:3em 0;
+ color:#fff;
+}
+
+
+
+/*
+5. Add background images into the content sections.
+*/
+#one{
+ background:url(../img/parallax02/sign-1573405_1920.jpg) no-repeat center center fixed;
+}
+
+#one>.content>p{
+ margin-bottom:50%;
+}
+
+#two{
+ background:url(../img/parallax02/annie-gray-WEWTGkPUVT0-unsplash.jpg) no-repeat center center fixed;
+}
+
+#three{
+ background:url(../img/parallax02/becca-tapert-sY5RjMB1KkE-unsplash.jpg) no-repeat center center fixed;
+}
+
+#four{
+ background:url(../img/parallax02/pexels-hafidz-alifuddin-88808.jpg) no-repeat center center fixed;
+}
+
+#five{
+ background:url(../img/parallax02/huy-nguyen-lTmyAPyDYtA-unsplash.jpg) no-repeat center center fixed;
+}
+
+#six{
+ background:url(../img/parallax02/pexels-quark-studio-2507016.jpg) no-repeat center center fixed;
+}

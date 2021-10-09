@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fullpage Parallax Scrolling with Side Navigation</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel='stylesheet' type='text/css'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="css/test003.css">
+<style>
+</style>
+</head>
+
+<body>
+<div class="nav">
+  <ul class="dot-nav">
+    <li>
+      <a href="#one" class="active" data-scroll="one"></a>
+      <span><b>Section One</b>
+      Test Heading here</span>
+    </li>
+    <li>
+      <a href="#two" data-scroll="two"></a>
+      <span><b>Title</b>
+      Subtitle</span>
+    </li>
+    <li>
+      <a href="#three" data-scroll="three"></a>
+      <span><b>Title2</b>
+      Subtitle2</span>
+    </li>
+      <li>
+      <a href="#four" data-scroll="four"></a>
+      <span><b>Title3</b>
+      Subtitle3</span>
+    </li>
+    <li>
+      <a href="#five" scroll-data="five"></a>
+      <span><b>Title4</b>
+      Subtitle4</span>
+    </li>
+    <li>
+      <a href="#six" scroll-data="six"></a>
+      <span><b>Title5</b>
+      Subtitle5</span>
+    </li>
+    <li>
+      <a href="#seven" scroll-data="seven"></a>
+      <span><b>Title6</b>
+   Subtitle6</span>
+    </li>
+    <li>
+      <a href="#eight" scroll-data="eight"></a>
+      <span><b>Title7</b>
+      Subtitle7</span>
+    </li>
+  </ul>
+</div>
+    
+<div class="main">
+  <section id="one" data-anchor="one" class="page-block">
+    <div class="content">
+      <h1>Fullpage Parallax Scrolling with Side Navigation</h1>
+      <h3>Title One</h3>
+<!--
+      <div class="jquery-script-ads"><script type="text/javascript">
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//
+</script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+     </div>
+-->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut libero vel libero efficitur ultricies. Phasellus at mi urna. Suspendisse vel erat ut ligula vulputate dapibus. Morbi ullamcorper efficitur aliquam. Mauris at eleifend lorem, eget rhoncus nisi. Phasellus viverra aliquet suscipit. Proin facilisis massa ac malesuada dapibus. Nam vulputate dui ex, et efficitur est varius non. Ut in metus scelerisque sem sollicitudin sodales at ac mauris. Mauris ornare in nisl ac rhoncus. Donec porta, ligula hendrerit gravida fringilla, elit lorem placerat ante, sed efficitur libero odio id metus. Quisque vitae enim at nulla pellentesque lobortis.</p>
+<p>In aliquam nulla tellus, vel dictum velit eleifend sit amet. Vivamus sed varius orci. Cras eget massa ullamcorper, sollicitudin orci et, lacinia velit. Sed nisi leo, vulputate et commodo quis, vehicula non urna. Duis erat metus, suscipit a blandit eu, ultrices sit amet risus. Phasellus feugiat erat odio, semper congue nibh vehicula ac. Cras tincidunt enim vel lorem euismod, a facilisis turpis ornare. Nulla pharetra, risus posuere pulvinar tempus, ipsum lectus elementum nunc, vel bibendum tellus justo eu ipsum. Praesent diam erat, ultrices ac turpis eu, pulvinar consequat tellus.</p>
+<p>Integer lorem lectus, scelerisque at molestie id, sollicitudin nec nisi. Aenean consectetur maximus risus, sed faucibus tellus condimentum sed. Etiam non pharetra sapien. Nullam in mi consequat justo facilisis semper at sed erat. Curabitur elit metus, gravida eu nulla nec, imperdiet fermentum sapien. Quisque tincidunt pharetra consectetur. Suspendisse tincidunt dictum purus, in iaculis dui maximus eu. Vestibulum nibh eros, venenatis sit amet commodo ac, accumsan nec lorem. Donec rutrum ex convallis, lacinia felis auctor, pulvinar nisl.</p>
+    </div>
+  </section>
+  <section id="two" data-anchor="two" class="page-block">
+    <div class="content">
+      <h1>Title Two</h1>
+      <h3>Subtitle Two</h3>
+      <p>In aliquam nulla tellus, vel dictum velit eleifend sit amet. Vivamus sed varius orci. Cras eget massa ullamcorper, sollicitudin orci et, lacinia velit. Sed nisi leo, vulputate et commodo quis, vehicula non urna. Duis erat metus, suscipit a blandit eu, ultrices sit amet risus. Phasellus feugiat erat odio, semper congue nibh vehicula ac. Cras tincidunt enim vel lorem euismod, a facilisis turpis ornare. Nulla pharetra, risus posuere pulvinar tempus, ipsum lectus elementum nunc, vel bibendum tellus justo eu ipsum. Praesent diam erat, ultrices ac turpis eu, pulvinar consequat tellus.</p>
+<p>Integer lorem lectus, scelerisque at molestie id, sollicitudin nec nisi. Aenean consectetur maximus risus, sed faucibus tellus condimentum sed. Etiam non pharetra sapien. Nullam in mi consequat justo facilisis semper at sed erat. Curabitur elit metus, gravida eu nulla nec, imperdiet fermentum sapien. Quisque tincidunt pharetra consectetur. Suspendisse tincidunt dictum purus, in iaculis dui maximus eu. Vestibulum nibh eros, venenatis sit amet commodo ac, accumsan nec lorem. Donec rutrum ex convallis, lacinia felis auctor, pulvinar nisl.</p>
+    </div>
+  </section>
+  <section id="three" data-anchor="three" class="page-block">
+    <div class="content">
+      <h1>Title Three</h1>
+      <h3>Subtitle Three</h3>
+      <p>In aliquam nulla tellus, vel dictum velit eleifend sit amet. Vivamus sed varius orci. Cras eget massa ullamcorper, sollicitudin orci et, lacinia velit. Sed nisi leo, vulputate et commodo quis, vehicula non urna. Duis erat metus, suscipit a blandit eu, ultrices sit amet risus. Phasellus feugiat erat odio, semper congue nibh vehicula ac. Cras tincidunt enim vel lorem euismod, a facilisis turpis ornare. Nulla pharetra, risus posuere pulvinar tempus, ipsum lectus elementum nunc, vel bibendum tellus justo eu ipsum. Praesent diam erat, ultrices ac turpis eu, pulvinar consequat tellus.</p>
+<p>Integer lorem lectus, scelerisque at molestie id, sollicitudin nec nisi. Aenean consectetur maximus risus, sed faucibus tellus condimentum sed. Etiam non pharetra sapien. Nullam in mi consequat justo facilisis semper at sed erat. Curabitur elit metus, gravida eu nulla nec, imperdiet fermentum sapien. Quisque tincidunt pharetra consectetur. Suspendisse tincidunt dictum purus, in iaculis dui maximus eu. Vestibulum nibh eros, venenatis sit amet commodo ac, accumsan nec lorem. Donec rutrum ex convallis, lacinia felis auctor, pulvinar nisl.</p>
+    </div>
+  </section>
+  <section id="four" data-anchor="four" class="page-block">
+    <div class="content">
+      <h1>Title Four</h1>
+      <h3>Subtitle Four</h3>
+      <p>In aliquam nulla tellus, vel dictum velit eleifend sit amet. Vivamus sed varius orci. Cras eget massa ullamcorper, sollicitudin orci et, lacinia velit. Sed nisi leo, vulputate et commodo quis, vehicula non urna. Duis erat metus, suscipit a blandit eu, ultrices sit amet risus. Phasellus feugiat erat odio, semper congue nibh vehicula ac. Cras tincidunt enim vel lorem euismod, a facilisis turpis ornare. Nulla pharetra, risus posuere pulvinar tempus, ipsum lectus elementum nunc, vel bibendum tellus justo eu ipsum. Praesent diam erat, ultrices ac turpis eu, pulvinar consequat tellus.</p>
+<p>Integer lorem lectus, scelerisque at molestie id, sollicitudin nec nisi. Aenean consectetur maximus risus, sed faucibus tellus condimentum sed. Etiam non pharetra sapien. Nullam in mi consequat justo facilisis semper at sed erat. Curabitur elit metus, gravida eu nulla nec, imperdiet fermentum sapien. Quisque tincidunt pharetra consectetur. Suspendisse tincidunt dictum purus, in iaculis dui maximus eu. Vestibulum nibh eros, venenatis sit amet commodo ac, accumsan nec lorem. Donec rutrum ex convallis, lacinia felis auctor, pulvinar nisl.</p>
+    </div>
+  </section>
+  <section id="five" data-anchor="five" class="page-block">
+    <div class="content">
+      <h1>Title Five</h1>
+      <h3>Subtitle Five</h3>
+      <p>In aliquam nulla tellus, vel dictum velit eleifend sit amet. Vivamus sed varius orci. Cras eget massa ullamcorper, sollicitudin orci et, lacinia velit. Sed nisi leo, vulputate et commodo quis, vehicula non urna. Duis erat metus, suscipit a blandit eu, ultrices sit amet risus. Phasellus feugiat erat odio, semper congue nibh vehicula ac. Cras tincidunt enim vel lorem euismod, a facilisis turpis ornare. Nulla pharetra, risus posuere pulvinar tempus, ipsum lectus elementum nunc, vel bibendum tellus justo eu ipsum. Praesent diam erat, ultrices ac turpis eu, pulvinar consequat tellus.</p>
+<p>Integer lorem lectus, scelerisque at molestie id, sollicitudin nec nisi. Aenean consectetur maximus risus, sed faucibus tellus condimentum sed. Etiam non pharetra sapien. Nullam in mi consequat justo facilisis semper at sed erat. Curabitur elit metus, gravida eu nulla nec, imperdiet fermentum sapien. Quisque tincidunt pharetra consectetur. Suspendisse tincidunt dictum purus, in iaculis dui maximus eu. Vestibulum nibh eros, venenatis sit amet commodo ac, accumsan nec lorem. Donec rutrum ex convallis, lacinia felis auctor, pulvinar nisl.</p>
+    </div>
+  </section>
+  <section id="six" data-anchor="six" class="page-block">
+    <div class="content">
+      <h1>Title Six</h1>
+      <h3>Subtitle Six</h3>
+      <p>In aliquam nulla tellus, vel dictum velit eleifend sit amet. Vivamus sed varius orci. Cras eget massa ullamcorper, sollicitudin orci et, lacinia velit. Sed nisi leo, vulputate et commodo quis, vehicula non urna. Duis erat metus, suscipit a blandit eu, ultrices sit amet risus. Phasellus feugiat erat odio, semper congue nibh vehicula ac. Cras tincidunt enim vel lorem euismod, a facilisis turpis ornare. Nulla pharetra, risus posuere pulvinar tempus, ipsum lectus elementum nunc, vel bibendum tellus justo eu ipsum. Praesent diam erat, ultrices ac turpis eu, pulvinar consequat tellus.</p>
+<p>Integer lorem lectus, scelerisque at molestie id, sollicitudin nec nisi. Aenean consectetur maximus risus, sed faucibus tellus condimentum sed. Etiam non pharetra sapien. Nullam in mi consequat justo facilisis semper at sed erat. Curabitur elit metus, gravida eu nulla nec, imperdiet fermentum sapien. Quisque tincidunt pharetra consectetur. Suspendisse tincidunt dictum purus, in iaculis dui maximus eu. Vestibulum nibh eros, venenatis sit amet commodo ac, accumsan nec lorem. Donec rutrum ex convallis, lacinia felis auctor, pulvinar nisl.</p>
+    </div>
+  </section>
+  <section id="seven" data-anchor="sevent" class="page-block">
+    <div class="content">
+      <h1>Title Seven</h1>
+      <h3>Subtitle Seven</h3>
+      <p>In aliquam nulla tellus, vel dictum velit eleifend sit amet. Vivamus sed varius orci. Cras eget massa ullamcorper, sollicitudin orci et, lacinia velit. Sed nisi leo, vulputate et commodo quis, vehicula non urna. Duis erat metus, suscipit a blandit eu, ultrices sit amet risus. Phasellus feugiat erat odio, semper congue nibh vehicula ac. Cras tincidunt enim vel lorem euismod, a facilisis turpis ornare. Nulla pharetra, risus posuere pulvinar tempus, ipsum lectus elementum nunc, vel bibendum tellus justo eu ipsum. Praesent diam erat, ultrices ac turpis eu, pulvinar consequat tellus.</p>
+<p>Integer lorem lectus, scelerisque at molestie id, sollicitudin nec nisi. Aenean consectetur maximus risus, sed faucibus tellus condimentum sed. Etiam non pharetra sapien. Nullam in mi consequat justo facilisis semper at sed erat. Curabitur elit metus, gravida eu nulla nec, imperdiet fermentum sapien. Quisque tincidunt pharetra consectetur. Suspendisse tincidunt dictum purus, in iaculis dui maximus eu. Vestibulum nibh eros, venenatis sit amet commodo ac, accumsan nec lorem. Donec rutrum ex convallis, lacinia felis auctor, pulvinar nisl.</p>
+    </div>
+  </section>
+  <section id="eight" data-anchor="eight" class="page-block">
+    <div class="content">
+      <h1>Title Eight</h1>
+      <h3>Subtitle Eight</h3>
+      <p>In aliquam nulla tellus, vel dictum velit eleifend sit amet. Vivamus sed varius orci. Cras eget massa ullamcorper, sollicitudin orci et, lacinia velit. Sed nisi leo, vulputate et commodo quis, vehicula non urna. Duis erat metus, suscipit a blandit eu, ultrices sit amet risus. Phasellus feugiat erat odio, semper congue nibh vehicula ac. Cras tincidunt enim vel lorem euismod, a facilisis turpis ornare. Nulla pharetra, risus posuere pulvinar tempus, ipsum lectus elementum nunc, vel bibendum tellus justo eu ipsum. Praesent diam erat, ultrices ac turpis eu, pulvinar consequat tellus.</p>
+<p>Integer lorem lectus, scelerisque at molestie id, sollicitudin nec nisi. Aenean consectetur maximus risus, sed faucibus tellus condimentum sed. Etiam non pharetra sapien. Nullam in mi consequat justo facilisis semper at sed erat. Curabitur elit metus, gravida eu nulla nec, imperdiet fermentum sapien. Quisque tincidunt pharetra consectetur. Suspendisse tincidunt dictum purus, in iaculis dui maximus eu. Vestibulum nibh eros, venenatis sit amet commodo ac, accumsan nec lorem. Donec rutrum ex convallis, lacinia felis auctor, pulvinar nisl.</p>
+    </div>
+  </section>
+</div>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+$('.dot-nav a').on('click', function() {
+
+    var scrollAnchor = $(this).attr('data-scroll'),
+        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 28;
+
+    $('.main').animate({
+        scrollTop: scrollPoint
+    }, 500);
+
+    return false;
+
+})
+
+
+$(window).scroll(function() {
+    var windscroll = $(window).scrollTop();
+    if (windscroll >= 100) {
+        $('.dot-nav').addClass('fixed');
+        $('.main section').each(function(i) {
+            if ($(this).position().top <= windscroll) {
+                $('.dot-nav a.active').removeClass('active');
+                $('.dot-nav a').eq(i).addClass('active');
+            }
+        });
+
+    } else {
+
+        $('dot-nav').removeClass('fixed');
+        $('dot-nav a.active').removeClass('active');
+        $('dot-nav a:first').addClass('active');
+    }
+
+}).scroll();
+</script>
+
+<!--
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+-->
+
+</body>
+</html>

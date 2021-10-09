@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fullpage Parallax Scrolling with Side Navigation</title>
+
+<!--<link rel="stylesheet" href="css/reset01.css">-->
+
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel='stylesheet' type='text/css'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" type="text/css">
+
+<!-- CSS AOS
+============================================= -->
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+<!-- CSS・ファイル
+============================================= -->
+<!--<link rel="stylesheet" href="css/reset01.css">-->
+<!--<link rel="stylesheet" href="css/heroheader01.css">-->
+<link rel="stylesheet" href="css/test001.css">
+
+<style>
+.test2{
+/* width:500px;*/
+ width:60%;
+ height:200px;
+/* max-height:300px;*/
+/*height:auto;*/
+/*background:#00f;*/
+ background-color:#fff;
+ border:5px solid #440;
+ margin:0 auto 30%;
+}
+
+.test2 img{
+ width:50%;
+/* height:200px;*/
+ max-height:100%;
+ object-fit:cover;
+ object-position:center bottom;
+/* box-sizing:border-box;*/
+ float:right;
+/* float:left;*/
+}
+.test2 p{
+ color:#0c0;
+ width:250px;
+ text-align: center;
+ line-height:2.0;
+ text-shadow:1px 1px 1px #0000f0;
+ padding:10px;
+/* clear:both;*/
+}
+
+span{
+ color:#f00;
+ font-size:30px;
+ font-weight:bold;
+ text-shadow:1px 1px 3px #0000f0;
+}
+
+.left{
+ margin-left:0;
+}
+
+.right{
+ margin-right:0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="nav">
+  <ul class="dot-nav">
+    <li>
+      <a href="#one" class="active" scroll-data="one"></a>
+      <span><b>受付作業メニュー</b>
+      Test Heading here</span>
+    </li>
+    <li>
+      <a href="#two" scroll-data="two"></a>
+      <span><b>屋内</b>
+      Subtitle</span>
+    </li>
+    <li>
+      <a href="#three" scroll-data="three"></a>
+      <span><b>キッチン</b>
+      Subtitle2</span>
+    </li>
+      <li>
+      <a href="#four" scroll-data="four"></a>
+      <span><b>トイレ</b>
+      Subtitle3</span>
+    </li>
+    <li>
+      <a href="#five" scroll-data="five"></a>
+      <span><b>浴室</b>
+      Subtitle4</span>
+    </li>
+    <li>
+      <a href="#six" scroll-data="six"></a>
+      <span><b>洗面所</b>
+      Subtitle5</span>
+    </li>
+    <li>
+      <a href="#seven" scroll-data="seven"></a>
+      <span><b>共通</b>
+   Subtitle6</span>
+    </li>
+    <li>
+      <a href="#eight" scroll-data="eight"></a>
+      <span><b>季節ごとのお手伝い</b>
+      Subtitle7</span>
+    </li>
+    <li>
+      <a href="#nine" scroll-data="nine"></a>
+      <span><b>屋外</b>
+      Subtitle8</span>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="main">
+
+<section id="one" data-anchor="one" class="page-block">
+<div class="content">
+<h1>受付作業メニュー</h1>
+<h3>商品は安く手に入ったけど、取り付けや、組み立てが出来ない！
+<br>そんなときも、ご相談ください。</h3>
+<p>test 1</p>
+
+<div class="test2 left" data-aos="fade-up">
+<img alt="画像1" src="test_img/hands-4054418_1920.jpg" />
+<p>
+ホームセンターでの購入商品
+<br>設置組み立て
+<br><span>５，２００～</span>
+<br>特殊工具対応不可
+</p>
+</div>
+
+<div class="test2 right" data-aos="fade-down">
+<img alt="画像1" src="test_img/shopping-4694470_1920.jpg" />
+<p>
+ネットショッピング商品
+<br>設置組み立て
+<br><span>５，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test2 left" data-aos="fade-right">
+<img alt="画像1" src="test_img/service-4950222_1920.jpg" />
+<p>
+商品手配のお手伝い
+<br>作業部材、お買い物の付き添い
+<br><span>５，２００～</span>
+<br>
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="two" data-anchor="two" class="page-block">
+<div class="content">
+<h1>屋内・メニュー</h1>
+<h3>お客様のご要望に、可能な範囲で対応いたします
+<br>介護保険、助成金を使ってのリフォーム工事
+<br>取付商品選定</h3>
+<p>test 2</p>
+</div>
+</section>
+
+<section id="three" data-anchor="three" class="page-block">
+<div class="content">
+<h1>Title Three</h1>
+<h3>Subtitle Three</h3>
+<p>test 3</p>
+</div>
+</section>
+
+<section id="four" data-anchor="four" class="page-block">
+<div class="content">
+<h1>Title Four</h1>
+<h3>Subtitle Four</h3>
+<p>test 4</p>
+</div>
+</section>
+
+<section id="five" data-anchor="five" class="page-block">
+<div class="content">
+<h1>Title Five</h1>
+<h3>Subtitle Five</h3>
+<p>test 5</p>
+</div>
+</section>
+
+<section id="six" data-anchor="six" class="page-block">
+<div class="content">
+<h1>Title Six</h1>
+<h3>Subtitle Six</h3>
+<p>test 6</p>
+</div>
+</section>
+
+<section id="seven" data-anchor="sevent" class="page-block">
+<div class="content">
+<h1>Title Seven</h1>
+<h3>Subtitle Seven</h3>
+<p>test 7</p>
+</div>
+</section>
+
+<section id="eight" data-anchor="eight" class="page-block">
+<div class="content">
+<h1>Title Eight</h1>
+<h3>Subtitle Eight</h3>
+<p>test 8</p>
+</div>
+</section>
+
+<section id="nine" data-anchor="nine" class="page-block">
+<div class="content">
+<h1>Title Nine</h1>
+<h3>Subtitle Nine</h3>
+<p>test 9</p>
+</div>
+</section>
+
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script src="js/test001.js"></script>
+
+<!--js読み込み-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
+
+
+</body>
+</html>

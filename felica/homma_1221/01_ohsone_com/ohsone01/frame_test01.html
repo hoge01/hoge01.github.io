@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width initial-scale=1.0">
+ <title>プロトタイプ　ＯＮＥ</title>
+
+<!-- CSS・ファイル
+============================================= -->
+<link rel="stylesheet" href="css/reset01.css">
+
+<style type="text/css">
+iframe{
+ padding:0;
+ border:none;
+ margin:0;
+}
+
+.box{
+ display:grid;
+ grid-template-columns:15fr 85fr;
+ height:100vh;
+/* margin:0;*/
+}
+
+.framesize{
+ height:100%;
+ width:100%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+<iframe src="frame_test01_00.html" name="menu" class="framesize"></iframe>
+<iframe src="frame_test01_01.html" name="contents" class="framesize"></iframe>
+</div>
+
+</body>
+
+
+</html>

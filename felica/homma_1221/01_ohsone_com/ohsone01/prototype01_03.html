@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <title>prototype01_03</title>
+
+<!-- CSS・ファイル
+============================================= -->
+<link rel="stylesheet" href="css/reset01.css">
+<link rel="stylesheet" href="css/heroheader01.css">
+
+<style>
+/* CSS Reset
+############################################# */
+.parallax {
+ width:100%;
+ min-height:600px;
+ background-position:center top;
+ background-repeat:no-repeat;
+ background-attachment:fixed;
+ background-size:cover;	
+ text-align:center;
+ padding:60px;
+/* opacity:0.1;*/
+/* z-index:2;*/
+}
+
+.content {
+ max-width:100%;
+ min-height:500px;
+/* background-color:#fff;*/
+/* background:linear-gradient(rgba(0, 255, 255, 0.1), rgba(255, 255, 255, 0.1));*/
+/* background-color:rgba(0, 255, 255, 0.1);*/
+ text-align:center;
+ padding:60px;
+/* opacity:0.1;*/
+/* z-index:1;*/
+}
+
+.test{
+ max-width:50%;
+ min-height:500px;
+/* border:1px solid #aaa;*/
+ box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
+/* box-shadow: 10px 10px 10px 10px rgba(200,200,200,0.6) inset;*/
+ filter:drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
+ margin:0 10%;
+/* opacity:0.1;*/
+/* z-index:9;*/
+}
+/*
+.test1{
+ max-width:50%;
+ min-height:500px;
+ background-image:url(test/gas01.png);
+ background-repeat:no-repeat;
+ background-attachment:fixed;
+ background-size:contain;
+ padding:5px;
+ margin:0 auto;
+ background-color:rgba(0, 255, 255, 0.1);
+}
+*/
+.wrap{
+ width:100%;
+/* background-color:#aaa;*/
+/* opacity:0.1;*/
+/* z-index:0;*/
+}
+
+.parallax.bg-01{
+ background-image:url(img/stove-4994398_1920.jpg);
+ background-position:center bottom;
+/* background-size:cover;*/
+}
+
+.parallax.bg-02{
+ background-image:url(img/gas-carrier-5085700_1920.jpg);
+}
+
+.parallax.bg-03{
+ background-image:url(img/gazoport-2639720_1920.jpg);
+}
+
+.parallax.bg-04{
+ background-image:url(img/pexels-pixabay-257700.jpg);
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+<header>
+<a href="prototype01_01.html">
+<h1><img class="logo" src="img/logo01.png" alt="大曽根産業株式会社"></h1>
+</a>
+</header>
+
+
+
+<!--
+<div class="headerp">
+<p>
+埼玉県八潮市のプロパンガス・液化石油ガス販売事業者<br>
+建設業許可、宅地建物取引業、建築士事務所登録
+</p>
+</div>
+-->
+
+<div class="logo1">
+<!--<img class="logo1" src="test/logo00.png" alt="大曽根産業株式会社">-->
+</div>
+
+<div class="company">
+<!--<h2>テスト</h2>-->
+<img class="gas" src="img/gas00.jpg" alt="gas">
+</div>
+
+<div class="logo2">
+<!--<img class="logo2" src="img/logo2.png" alt="大曽根産業株式会社">-->
+</div>
+
+<section class="company">
+<h2>会社概要</h2>
+<dl>
+<dt>会社名</dt>
+<dd>大曽根産業株式会社</dd>
+<dt>本社所在地</dt>
+<dd>〒340-0834　埼玉県八潮市大字大曽根３２６番地</dd>
+<dt>電話番号</dt>
+<dd>048-996-0406（建設部）　　　048-996-0130（プロパン部）</dd>
+<dt>事業内容</dt>
+<dd>液化石油ガス販売事業者　建設業許可　宅地建物取引業　建築士事務所登録</dd>
+<dt>店舗営業日時案内</dt>
+<dd>日曜祝日-休業　　営業時間　月～金　9：00 より 19：00　　土　9：00 より 18：30</dd>
+</dl>
+</section>
+
+
+
+<!--</a>-->
+
+<nav class="pcnav">
+<ul>
+ <li class="current"><a href="prototype01_02.html" id="#tab1" class="caption2">ホームサービス</a></li>
+ <li><a href="prototype01_04.html" id="#tab2" class="caption2">暮らしサポート</a></li>
+ <li><a href="prototype01_03.html" id="#tab3" class="caption2">プロパンガス</a></li>
+</ul>
+</nav><!-- /.pcnav -->
+<!--</header>-->
+
+
+<!--<div class="container">-->
+<div class="heroheader">
+
+
+
+
+<div class="wrap">
+
+<!--<div class="parallax bg-01">背面：パララックスエリア</div>-->
+<div class="parallax bg-01"></div>
+<!--<div class="content"><img src="test/gas01.png">前面：コンテンツエリア</div>-->
+<div class="content"><img class="test" src="img/gas01.png"></div>
+<!--<div class="content"><div class="test1"></div></div>-->
+<div class="parallax bg-02"></div>
+<div class="content"><img class="test" src="img/gas02.png"></div>
+<div class="parallax bg-03"></div>
+<div class="content"><img class="test" src="img/gas03.png"></div>
+<div class="parallax bg-04"></div>
+<div class="content"><img class="test" src="img/gas04.png"></div>
+
+</div>
+
+</div>
+</div>
+
+ 
+</body>
+
+</html>

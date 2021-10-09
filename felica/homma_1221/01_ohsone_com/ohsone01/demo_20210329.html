@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja" >
+<head>
+<meta charset="UTF-8">
+<title>デモ０１</title>
+
+<!-- CSS・ファイル
+============================================= -->
+<link rel="stylesheet" href="css/reset01.css">
+
+
+<!-- CSS・bxSlider
+============================================= -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+
+<!-- jQury Plug-in (Lightbox CDN)
+============================================= -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+
+
+<!-- CSS・slick
+============================================= -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" />
+
+
+<!-- CSS・ヘッダーのスクロールのテンプレート
+============================================= -->
+<link rel="stylesheet" href="css/HeaderScrolling.css">
+
+
+
+<style>
+
+/* 0-2-0 <DIV> キーヴィジュアル
+============================================= */
+.keyVis{
+ padding:120px 0;
+}
+
+.img1{
+ background:
+ url(img/20210329/flame-580342_1920.jpg)
+ no-repeat
+ center/100% 100%;
+}
+
+.img2{
+ background:
+ url(img/20210329/stove-4994398_1920.jpg)
+ no-repeat
+ center/100% 100%;
+}
+
+.img3{
+ background:
+ url(img/20210329/building-1080592_1920.jpg)
+ no-repeat
+ center/cover;
+}
+
+.img4{
+ background:
+ url(img/20210329/becca-tapert-sY5RjMB1KkE-unsplash.jpg)
+ no-repeat
+ center bottom/cover;
+}
+
+
+.keyVis>.container{
+/* display:block;*/
+ font-size:44px;                   /*文字サイズ*/
+ color:#fff;                       /*文字色*/
+ font-family:'Italianno',cursive;  /*google font*/
+ text-shadow:2px 2px 2px #900;     /*文字に影*/
+                                /* 右:下:ぼかし:色*/
+}
+
+.keyVis span{
+/* display:block;*/
+ font-size:100px;
+}
+
+.bx-wrapper{
+ border: none;
+}
+
+</style>
+
+
+
+<style>
+.container ul.lb{
+ display:flex;
+/* flex-wrap:wrap;*/
+ max-width:400px;
+/* background-color:#f00;*/
+ padding:10px;
+ margin:0 auto;
+}
+
+.container ul.lb li{
+ max-width:200px;
+/* background-color:#109cae;*/
+ border:2px solid #fff;
+/* max-height:200px;*/
+ margin:auto;
+}
+
+.container ul.lb a{
+ display: block;
+/* width:140px;*/
+/* padding:10px auto;*/
+}
+
+.container ul.lb img{
+/* width:140px;*/
+ max-height:200px;
+}
+
+#glayLayer{
+ position:absolute;
+ left:0;
+ top:0;
+ height:100vh;
+ width:100%;
+ background-color:rgba(0,0,0,0.6);
+ cursor:pointer;
+ display:none;
+}
+
+#imgLayer{
+ position:absolute;
+ top:0;
+ right:0;
+ bottom:0;
+ left:0;
+ width:600px;
+ height:400px;
+ margin:auto;
+ background-color:#fff;
+ display:none;
+}
+
+.close{
+ position:absolute;
+ top:-10px;
+ right:-10px;
+ cursor:pointer;
+}
+</style>
+
+
+
+<style>
+body{
+/*max-width:1000px;*/
+background-color:#aaa;
+margin:0 auto;
+}
+
+.slider-for{
+ width:400px;
+ margin:0 auto;
+}
+
+.lightbox
+,.slider-nav
+{
+/*margin:30px auto;*/
+margin:0 auto;
+/*max-width:1100px;*/
+max-width:600px;
+/*max-height:50px;*/
+/*border:1px solid #00f;*/
+}
+
+h3,div{
+/* border:1px solid #0ff;*/
+}
+
+.slider-for img{
+ margin: 0 auto;
+ max-height:300px;
+}
+
+.slider-nav img{
+ margin: 0 auto;
+ max-height:50px;
+}
+
+/*.blue h3 {*/
+h3 {
+    background: #fff;
+    color: #3498db;
+    font-size: 36px;
+    line-height: 100px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+/*    width: 300px;*/
+}
+
+
+.map{
+ position:relative;
+ padding-bottom:40%; /*padding上下%の基準は横幅*/
+ height:0;
+ overflow:hidden;
+}
+
+.map iframe{
+ position:absolute;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ border:0;
+}
+
+h2{
+ text-align:center;
+}
+
+section{
+ margin:50px auto;
+}
+
+</style>
+
+
+
+</head>
+
+
+
+
+
+<body translate="no" >
+<!-- ranslate="no" を指定しておくと、そのテキストが翻訳の対象から除外されることになります。-->
+
+<header>
+<div class="header hidden" id="header">
+<!--<div class="container">-->
+<h1 class="h1">大曽根産業株式会社</h1>
+
+<nav>
+<ul>
+<li class="here">ＬＰガス</li>
+<li><a href="#">建設</a></li>
+<li><a href="#">ホームサービス</a></li>
+<li><a href="#">お知らせ</a></li>
+<li><a href="#">会社概要</a></li>
+</ul>
+</nav>
+</div>
+<!--</div>-->
+</header>
+
+
+
+<!-- 0-2-0 <DIV> キーヴィジュアル
+============================================= -->
+<div class="slider">
+
+<div class="keyVis img1">
+<p class="container">
+  <span>大曽根産業株式会社</span><br>
+  安全・安心・暮らしサポーター　ＬＰガス販売
+</p><!-- /.container -->
+</div><!--./keyVis-->
+
+<div class="keyVis img2">
+<p class="container">
+  <span>大曽根産業株式会社</span><br>
+  安全・安心・暮らしサポーター　ガス機器販売
+</p><!-- /.container -->
+</div><!--./keyVis-->
+
+<div class="keyVis img3">
+<p class="container">
+  <span>大曽根産業株式会社</span><br>
+  安全・安心・暮らしサポーター　　建築工事
+</p><!-- /.container -->
+</div><!--./keyVis-->
+
+<div class="keyVis img4">
+<p class="container">
+  <span>大曽根産業株式会社</span><br>
+  安全・安心・暮らしサポーター　　設備修繕
+</p><!-- /.container -->
+</div><!--./keyVis-->
+
+</div>
+
+
+
+<!-- 0-2-3(3/3)+(2/2) SECTION 商品紹介
+_____________________________________________ -->
+<!--<div class="container">-->
+<!--<section>-->
+
+<!--<section>-->
+<!--<h2 class="h2">大曽根産業株式会社</h2>-->
+
+<div id="glayLayer"></div>
+<div id="imgLayer"></div>
+
+<div class="container">
+
+<h2>商品紹介</h2>
+ <ul class="lb"><!-- data-lightbox="" data-title="" -->
+ <li><a href="img/20210329/gas-stove-1776648_1920.jpg" class="modal" data-lightbox="img-set" data-title="ガスコンロ"><img src="img/20210329/gas-stove-1776648_1920.jpg" alt="ガスコンロ"></a></li>
+ <li><a href="img/20210329/heating-706945_1920.jpg" class="modal" data-lightbox="img-set" data-title="給湯器"><img src="img/20210329/heating-706945_1920.jpg" alt="給湯器"></a></li>
+</ul>
+
+</div><!-- /.container -->
+
+
+<p class="text"></p>
+<!--</section>-->
+
+
+
+<!-- 0-2-3(3/3)+(2/2) SECTION 店舗紹介
+_____________________________________________ -->
+<div class="container">
+<section id="section2" class="cont">
+<h2>ホームサービス</h2>
+
+<div class="slider-for">
+ <div><h3><img alt="画像1" src="img/20210329/kitchen_01.jpg" /></h3></div>
+ <div><h3><img alt="画像2" src="img/20210329/kitchen_02.jpg" /></h3></div>
+ <div><h3><img alt="画像3" src="img/20210329/kitchen_03.jpg" /></h3></div>
+ <div><h3><img alt="画像4" src="img/20210329/kitchen_04.jpg" /></h3></div>
+ <div><h3><img alt="画像5" src="img/20210329/bathroom_01.jpg" /></h3></div>
+ <div><h3><img alt="画像6" src="img/20210329/bathroom_02.jpg" /></h3></div>
+ <div><h3><img alt="画像7" src="img/20210329/washroom_01.jpg" /></h3></div>
+ <div><h3><img alt="画像8" src="img/20210329/Toilet_01.jpg" /></h3></div>
+ <div><h3><img alt="画像9" src="img/20210329/Toilet_02.jpg" /></h3></div>
+</div>
+
+<!--<div class="slider autoplay">-->
+<div class="slider-nav">
+ <div><h3><img alt="画像1" src="img/20210329/kitchen_01.jpg" /></h3></div>
+ <div><h3><img alt="画像2" src="img/20210329/kitchen_02.jpg" /></h3></div>
+ <div><h3><img alt="画像3" src="img/20210329/kitchen_03.jpg" /></h3></div>
+ <div><h3><img alt="画像4" src="img/20210329/kitchen_04.jpg" /></h3></div>
+ <div><h3><img alt="画像5" src="img/20210329/bathroom_01.jpg" /></h3></div>
+ <div><h3><img alt="画像6" src="img/20210329/bathroom_02.jpg" /></h3></div>
+ <div><h3><img alt="画像7" src="img/20210329/washroom_01.jpg" /></h3></div>
+ <div><h3><img alt="画像8" src="img/20210329/Toilet_01.jpg" /></h3></div>
+ <div><h3><img alt="画像9" src="img/20210329/Toilet_02.jpg" /></h3></div>
+</div>
+
+</section>
+</div><!-- /.container -->
+
+
+
+<!-- 0-2-3(3/3)+(2/2) SECTION 店舗紹介
+_____________________________________________ -->
+<div class="container">
+<section id="section3" class="access">
+<h2>店舗紹介</h2>
+
+<div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.6440245687695!2d139.8269117151152!3d35.808671480164804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601890440a9c1915%3A0xb48df14f7b6967bf!2z44CSMzQwLTA4MzQg5Z-8546J55yM5YWr5r2u5biC5aSn5pu95qC577yT77yS77yW!5e0!3m2!1sja!2sjp!4v1616913369162!5m2!1sja!2sjp" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+</iframe>
+</div><!-- /.map -->
+
+</section>
+</div><!-- /.container -->
+
+
+
+<p><a href="#">事業内容</a> /<a href="#">お問い合わせ</a></p>
+<!--</section>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+
+<!-- ヘッダーのスクロールのテンプレート
+============================================= -->
+<script id="rendered-js" >
+// スクロールイベント
+window.addEventListener("scroll", function () {
+
+var headerElement = document.getElementById("header"); // `#header`セレクタを取得
+var rect = headerElement.getBoundingClientRect(); // 
+var y = rect.top + window.pageYOffset; // Y方向 (縦)にスクロール量を取得（pageYOffset：windowオブジェクト。現在表示位置のY座標を取得）
+if (y > 0) {// 変数yの値が0よりも
+headerElement.classList.remove('hidden'); // 大きければhiddensセレクタを削除する
+} else {
+headerElement.classList.add('hidden'); // そうでなければhiddensセレクタを追加する
+}
+});
+</script>
+
+
+
+
+
+<!-- jquery (Google Hosted Libraries)リンク
+############################################# -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<!-- bxSlider
+============================================= -->
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<script>
+$(document).ready(function(){
+ $('.slider').bxSlider({
+  auto:true
+ });
+});
+
+//$('.slick01').slick();
+
+//$('.slick01').slick({ //{}を入れる
+// autoplay: true, //「オプション名: 値」の形式で書く
+// dots: true //複数書く場合は「,」でつなぐ
+//});
+</script>
+
+
+<!-- jQury Plug-in (Lightbox CDN)
+============================================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
+
+<!-- slick
+============================================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+
+
+<script>
+$(function(){
+
+ $('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true
+});
+
+});
+</script>
+
+
+
+</body>
+
+
+
+</html>

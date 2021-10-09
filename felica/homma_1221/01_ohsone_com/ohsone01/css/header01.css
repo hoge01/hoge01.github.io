@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+/* Header CSS
+############################################# */
+/* 共通設定
+############################################# */
+header
+,footer
+{
+/* color:#fff;*/
+/* background:#08f;*/
+}
+
+
+
+/* コンテンツ幅設定
+   header,nav,(main,sidebar),footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* レスポンシヴウェブデザイン（RWD）
+--------------------------------------------- */
+.container{
+/* width:960px;*/   /*PC幅1000前後が通常*/
+/* max-width:1300px;*/  /*♦最大幅を固定値:max-widthで設定*/
+/* padding:0 10px;*/    /*左右の余白調整*/
+/* margin:0 auto;*/     /*左右中央寄せ :上下 左右;*/
+}
+
+
+
+/* レイアウト設定
+############################################# */
+
+
+
+/* 上段（２）・下段（３）カラムレイアウト
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+
+/* 個別設定
+############################################# */
+/* 0-2-1/4 <HEADER> ヘッダー
+============================================= */
+body{
+/* border-top:2px solid #ccc;*/
+/* height:98.6vh;*/
+ height:98.4vh;
+ background:url(../img/j-lee-wt1G1_9aL68-unsplash.jpg) no-repeat center bottom/cover;
+}
+
+header{
+/* position:fixed;*/
+ color:#00f;
+/* background:url(../img/j-lee-wt1G1_9aL68-unsplash.jpg) no-repeat center bottom/cover;*/
+/* background:url(../original_img/daniel-bernard-XU2WQJKtxw0-unsplash.jpg) no-repeat center bottom/cover;*/
+/* border-top:3px solid #bbb;*/
+/* border-left:2px solid #fff;*/
+/* border-right:5px solid #ccc;*/
+/* border-right:5px solid rgba(100, 100, 100, 0.5);*/
+/* border-top-right-radius:5px;*/
+}
+
+h1{
+ border:4px solid rgba(0,0,255,0.5);
+ margin:10px;
+}
+
+h1 .logo{
+ height:auto;
+ background-color:rgba(255,255,255,1.0);
+}
+
+.logo2{
+ position:fixed;
+ width:100px;
+ height:50px;
+ right:2%;
+ bottom:5vh;
+ background:url(../img/logo2.png) no-repeat  center center/contain;
+/* background:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9));*/
+ padding:2px;
+ z-index:2;
+}
+
+
+
+/* :hover 疑似クラス (ホバー状態の <a> 要素を選択)
+カーソル（マウスポインタ―）で要素の上をホバー（通過）させたときにこの状態になる
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+header a:hover .logo{
+ background-color:rgba(0,0,255,0.5);
+ border:3px solid #fff;
+ transition:0.3s;
+}
+
+
+
+
+
+/* 0-2-2/4 <NAV> ナビゲーション
+============================================= */
+/* 0-2-2(1/2) <PCNAV> パソコン用
+_____________________________________________ */
+.pcnav{
+ position:fixed;
+ width:100%;
+/* top:50vh;*/
+ bottom:20vh;
+ text-align:center;
+ z-index:2;
+}
+
+.pcnav li .caption2{
+ display: block;
+ line-height:50px;
+ font-size:15px;
+ font-weight:bold;
+ color:#fff;
+ background-color:rgba(0,0,255,0.5);
+ border-bottom:1px solid #fff;
+}
+
+.pcnav li:last-child .caption2{
+ border-bottom:none;
+}
+
+
+/* :hover 疑似クラス
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.pcnav li .caption2:hover{
+ width:calc(290% + 10px);
+ font-size:30px;
+ color:#00f;
+ background-color:rgba(255,255,255,0.8);
+ padding-left:100%;
+ border:1px solid #00f;
+ border-radius:10px;
+/* border-left:200px solid rgba(0,0,0,0.1);*/
+/* transform:translate(200px, 0);*/
+/* transform:scale(1.5,1.5);*/
+ transition:1.0s;
+ opacity:1;
+}

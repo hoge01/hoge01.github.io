@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width initial-scale=1.0">
+<title>AOS plug-in</title>
+
+<!-- CSS AOS
+============================================= -->
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+<!-- CSS・ファイル
+============================================= -->
+<link rel="stylesheet" href="css/reset01.css">
+
+<style>
+/* CSS Reset
+############################################# */
+.container{
+max-width:960px;
+height:auto;
+padding:0 20px;
+margin:0 auto;
+background-color:#aaa;
+}
+
+.test1{
+/* width:500px;*/
+ width:60%;
+ height:200px;
+/* max-height:300px;*/
+/*height:auto;*/
+/*background:#00f;*/
+ background-color:#fff;
+ border:5px solid #440;
+ margin:0 auto 30%;
+}
+
+.test1 img{
+ width:50%;
+/* height:200px;*/
+ max-height:100%;
+/* box-sizing:border-box;*/
+ float:right;
+/* float:left;*/
+}
+.test1 p{
+ width:250px;
+ text-align: center;
+ line-height:2.0;
+ padding:10px;
+/* clear:both;*/
+}
+
+span{
+ font-size:30px;
+ font-weight:bold;
+ color:#f00;
+}
+
+.left{
+ margin-left:0;
+}
+
+.right{
+ margin-right:0;
+}
+
+div:first-child{
+margin-top:100vh;
+}
+</style>
+
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<div class="test1 left" data-aos="fade-up">
+<img alt="画像1" src="test_img/hands-4054418_1920.jpg" />
+<p>
+ホームセンターでの購入商品
+<br>設置組み立て
+<br><span>５，２００～</span>
+<br>特殊工具対応不可
+</p>
+</div>
+
+<div class="test1 right" data-aos="fade-down">
+<img alt="画像1" src="test_img/shopping-4694470_1920.jpg" />
+<p>
+ネットショッピング商品
+<br>設置組み立て
+<br><span>５，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 left" data-aos="fade-right">
+<img alt="画像1" src="test_img/service-4950222_1920.jpg" />
+<p>
+商品手配のお手伝い
+<br>作業部材、お買い物の付き添い
+<br><span>５，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="fade-left">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+玄関小上がり、踏み台
+<br>
+<br><span>４，２００～</span>
+<br>オーダー製作対応可
+</p>
+</div>
+
+<div class="test1 left" data-aos="fade-up-right">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+玄関・廊下・階段
+<br>手すり取付
+<br><span>４，２００～</span>
+<br>介護保険適用、リフォーム工事
+</p>
+</div>
+
+<div class="test1 right" data-aos="fade-up-left">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+階段
+<br>すべり止め取付
+<br><span>４，２００～</span>
+<br>介護保険適用、リフォーム工事
+</p>
+</div>
+
+<div class="test1 left" data-aos="fade-down-right">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+押入れ収納
+<br>棚取付
+<br><span>４，２００～</span>
+<br>取付商品は、別途
+</p>
+</div>
+
+<div class="test1 right" data-aos="fade-down-left">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+サッシの動き調整
+<br>
+<br><span>４，２００～</span>
+<br>戸車交換は、別途
+</p>
+</div>
+
+<div class="test1 left" data-aos="flip-left">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="flip-right">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 left" data-aos="flip-up">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="flip-down">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 left" data-aos="zoom-in">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="zoom-in-up">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 left" data-aos="zoom-in-down">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="zoom-in-left">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 left" data-aos="zoom-in-right">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="zoom-out">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 left" data-aos="zoom-out-up">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="zoom-out-down">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 left" data-aos="zoom-out-right">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="zoom-out-left">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 left" data-aos="fade-up"
+      data-aos-duration="3000">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 left" data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="500">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 left" data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="300"
+      data-aos-offset="0">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 left" data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 left" data-aos="fade-up"
+      data-aos-anchor-placement="bottom-bottom">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="fade-up"
+      data-aos-anchor-placement="top-center">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 left" data-aos="fade-up"
+      data-aos-anchor-placement="center-center">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+<div class="test1 right" data-aos="fade-up"
+      data-aos-anchor-placement="bottom-center">
+<img alt="画像1" src="img/kitchen_01.jpg" />
+<p>
+
+<br>
+<br><span>４，２００～</span>
+<br>
+</p>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<!--js読み込み-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
+
+
+
+</body>
+</html>
