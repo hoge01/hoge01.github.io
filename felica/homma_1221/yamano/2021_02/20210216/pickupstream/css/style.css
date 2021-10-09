@@ -1,0 +1,388 @@
+@charset "utf-8";
+
+/* CSS Reset Start
+/* reset ブロックレベル要素のみ
+/*ブラウザによって異なるデフォルトのCSSを打ち消してブラウザ間の表示を揃える
+======================================== */
+html,
+body,
+h1,
+h2,
+p,
+ul,
+li
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN",  /*Mac*/
+ Meiryo,                /*Win*/
+ sans-serif;            /*その他ゴシック系*/
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+/*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+/*Fluid*/
+ max-width:100%;        /*画像サイズを親ボックス内に合わせる*/
+ height:auto;
+}
+
+/*ユニバーサルセレクター（全称セレクター）*/
+*{
+ box-sizing:border-box;
+}
+
+
+
+/*--共通設定--*/
+/*****<< フッター >>*****/
+header,nav,footer{
+ color:#fff;
+ background:#000;
+}
+
+
+
+/*****<< コンテンツ幅設定 >>*****/
+/***<< header,nav,(main,sidebar),footer >>***/
+.container{
+ max-width:960px;       /*PC幅1000前後が通常*/
+ margin:0 auto;         /*上下が0　左右がauto*/
+ padding:0 10px;
+ display:flex;
+/* justify-content:space-between;*/
+}
+
+
+
+/* header ヘッダー
+======================================== */
+header{
+ padding:20px 0;
+}
+
+header .container{
+ justify-content: space-between;
+ align-items:flex-end;
+}
+
+h1{
+ font-size:44px;
+ font-family:'Lacquer',cursive;
+ margin-bottom:5px;
+}
+
+/* SNSリンク */
+aside>ul{
+/* display:flex;*/
+}
+
+aside li{
+ display:inline;
+}
+
+aside img{
+ width:50px;
+ height:auto;
+ margin-left:5px;
+}
+
+.logo{
+/* display:flex;*/
+/* justify-content:flex-end;*/
+}
+
+.logo a{
+/* display:block;*/
+/* width:50px;*/
+/* height:auto;*/
+/* padding-right:5px;*/
+}
+
+
+
+.keyVis{
+ background:
+ url(../img/header2.jpg)
+ no-repeat
+ center center/cover;  /*中央　拡大縮小*/
+/*縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小*/
+/* background-size:cover;*/
+ height:200px;
+}
+
+
+
+/* nav ナビゲーション
+======================================== */
+nav{
+ margin-bottom:50px;
+}
+
+/*nav ul{*/
+/* display:flex;*/
+/*コンテンツ幅。ボタン間に、余りを均等に配置*/
+/* justify-content:space-between;*/
+/*}*/
+
+/*ナビゲーション　文字（文言）*/
+nav li{
+ line-height:44px;
+ font-size:14px;
+ text-align:center;
+/*コンテンツ幅に対して、ボタン数を考慮した、幅を指定*/
+ width:20%;
+}
+
+/*ナビゲーション　リンク*/
+nav li a{
+/*ブロック幅を広げる（無いと文字だけ）*/
+ display:block;
+ border-right:1px solid #fff;
+}
+
+nav li:first-child a{
+ border-left:1px solid #fff;
+}
+
+
+/*aの上　マウスを合わせたときの背景色を変更*/
+nav li a:hover{
+ background-color:#39d;
+}
+
+/* スマホ用ナビゲーション*/
+.spnav{
+ display:none;
+}
+
+
+/* main メインコンテンツ
+======================================== */
+/*2カラムレイアウト*/
+.wrap{
+ justify-content:space-between;
+ margin-bottom:50px;
+}
+
+/***<< (main,sidebar) >>***/
+main{
+/* width:62.5%;:/  /* 600px */
+ width:calc(100%*(600/960))
+}
+
+.sidebar{
+/* width:31.2%;*/  /* 300px */
+ width:calc(100%*(300/960))
+}
+
+
+
+/*コンテンツ*/
+main>p{
+/* float:right;*/
+/* margin-top:10px;*/
+}
+
+/*main>p>span{*/
+time{
+ background:#0097d8;
+ color:#fff;
+ padding:20px;
+ border-radius:50%;
+ float:right;
+}
+
+main h2{
+ font-size:28px;
+ color:#000;
+ border-bottom:1px solid #aaa;
+ padding-bottom:10px;    /*borderを付けたら必ずpadding-bottom*/
+ margin-bottom:10px;
+}
+
+/*main p{*/
+article p{
+ margin-bottom:10px;
+ line-height:1.5;
+}
+
+.cat{
+ font-size:10px;
+}
+
+main span{
+ /*display:block;*/          /*display改行させる*/
+/* font-size:20px;*/
+/* font-weight:bold;*/
+/* color:#000;*/
+/* margin-bottom:10px;*/
+}
+
+
+/* 画像枠 */
+main img{
+ border:10px solid #0097db;
+ box-sizing:border-box; /* borderまでが、box-siz */
+}
+
+
+
+/*サブコンテンツ*/
+.cate{
+ margin-bottom:50px;
+}
+
+/*<< 2-2 カテゴリー >>*/
+/*CATEGORIES*/
+/*RECENT POSTS*/
+.sidebar h2{
+ font-size:28px;
+ color:#0097db;
+ margin-bottom:10px;
+}
+
+/*カテゴリー　文字（文言）*/
+.sidebar li{
+ font-size:14px;
+ line-height:44px;
+ border-bottom:1px solid #aaa;
+}
+
+.sidebar li:first-child{
+ border-top:1px solid #aaa;
+}
+
+/*カテゴリー　リンク*/
+.sidebar li a{
+ display:block;
+ padding-left:20px;
+ background:
+ url(../img/listmark.png)
+ no-repeat
+ left center;
+}
+
+/*aの上　マウスを合わせたときの背景色を変更　文字*/
+.sidebar li a:hover{
+/* color:#fff;*/
+ background-color:#b4f0ff; /*背景画像が消えるのでショートハンドはダメ*/
+}
+
+.sideber section:first-child{
+ margin-bottom:50px;
+}
+
+
+/* footer フッター
+======================================== */
+footer{
+ padding:30px 0;
+}
+
+footer p{
+ max-width:960px;
+ margin:0 auto;
+ padding:0 10px;
+}
+
+footer p:first-child{
+ margin-bottom:5px;
+}
+
+/*footer span{*/
+.footer{
+ display:block;
+/* padding-top:5px;*/
+}
+
+.fp2{
+/*  padding-top:5px;*/
+}
+
+
+
+/*メディアクエリ　ブレイクポイント767px*/
+@media screen and (max-width:767px){
+.pcnav{
+ display:none;
+}
+
+.spnav{
+ display:block;
+}
+
+time{
+ font-size:10px;
+ padding:10px;
+}
+
+main img{
+ border:5px solid #0097db;
+}
+
+h1{
+ font-size:20px;
+}
+
+.h1p>p{
+ font-size:10px;
+}
+
+aside img{
+ width:24px;
+ height:auto;
+ margin-left:1px;
+}
+
+
+.spnav ul{
+ display:block;
+ padding:0;
+}
+
+.spnav li{
+ width:100%;
+}
+
+.spnav li a{
+ font-size:10px;
+ border-bottom:1px solid #fff;
+}
+
+.spnav li:first-child a{
+ border-bottom:1px solid #fff;
+}
+
+main h2{
+ font-size:10px;
+}
+
+main p{
+ font-size:10px;
+}
+
+.sidebar h2{
+ font-size:10px;
+}
+
+.sidebar li a{
+ font-size:1px;
+}
+
+.fp2{
+ font-size:7px;
+}
+
+}

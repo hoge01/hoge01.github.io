@@ -1,0 +1,85 @@
+@charset "utf-8";
+ 
+/*コンテンツ幅指定*/
+div{
+width: 960px;
+margin: 0 auto;
+}
+ 
+/*ヘッダー*/
+header{
+background: url(../img/herb.jpg) no-repeat;
+height: 180px;
+padding: 10px;
+text-align: right;
+color: #fff;
+}
+ 
+/*Navigation*/
+nav ul{
+list-style: none;
+padding: 0;
+border-top: 1px solid #090;
+}
+nav li{
+text-align: center;
+border-bottom: 1px solid #090;
+}
+nav a{
+text-decoration: none;
+color: #070;
+background: #dfd;
+display: block;
+padding: 15px 0;
+}
+nav a:hover{
+background:#070;
+color: #fff;
+}
+ 
+/*見出し*/
+h2{
+color: #070;
+/*border-left: 24px solid #070;*/
+padding-left: 35px;
+background:url(../img/head_icon.jpg) no-repeat;
+}
+ 
+/*画像フロート処理*/
+main img{
+float: right;
+margin: 0 0 20px 20px;
+}
+ 
+h3{
+background-color: #090;
+color: #fff;
+padding: 5px;
+clear: both;
+}
+ 
+/*材料表*/
+table{
+border-collapse: collapse;
+}
+th{
+background-color: #dfd;
+}
+th,td{
+border: 1px solid #090;
+padding: 5px;
+}
+ 
+/*調理手順、用語解説*/
+ol,dl{
+background: #dfd;
+border: 1px solid #070;
+padding: 20px;
+}
+/*手順の左内側余白*/
+ol{
+padding-left: 40px;
+}
+footer{
+border-top: 1px solid #070;
+}

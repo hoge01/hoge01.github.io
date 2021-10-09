@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+/* CSS Reset Start
+/* reset ブロックレベル要素のみ
+/*ブラウザによって異なるデフォルトのCSSを打ち消してブラウザ間の表示を揃える
+======================================== */
+html,
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+ol,
+dl
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN",  /*Mac*/
+ Meiryo,                /*Win*/
+ sans-serif;            /*その他ゴシック系*/
+}
+
+/*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+/*Fluid*/
+ max-width:100%;        /*画像サイズを親ボックス内に合わせる*/
+ height:auto;
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+/*ユニバーサルセレクター（全称セレクター）*/
+*{
+ box-sizing:border-box;
+}
+
+
+
+/*--共通設定--*/
+header,footer{
+/* background:#fcc;*/
+}
+
+
+
+/*****<< コンテンツ幅設定 >>*****/
+/***<< header,nav,(main,sidebar),footer >>***/
+.container{
+ max-width:960px;       /*PC幅1000前後が通常*/
+ margin:0 auto;         /*上下が0　左右がauto*/
+/* padding:0 10px;*/
+/* display:flex;*/
+/* justify-content:space-between;*/
+}
+
+
+
+/* header ヘッダー
+======================================== */
+header{
+ color:#fff;
+ padding:10px;
+ margin-bottom:10px;
+ background:
+ url(../img/headerBg02.jpg)
+ no-repeat;
+ height:180px;  /*paddingの上下分引く200-20=180px*/
+ text-align:right;  /*文字を左寄りから右寄りへ*/
+}
+
+h1{
+ display: block;
+ font-size: 2em;
+ margin-block-start: 0.67em;
+ margin-block-end: 0.67em;
+ margin-inline-start: 0px;
+ margin-inline-end: 0px;
+ font-weight: bold;
+}
+
+header p{
+ display: block;
+ margin-block-start: 1em;
+ margin-block-end: 1em;
+ margin-inline-start: 0px;
+ margin-inline-end: 0px;
+}
+
+
+/* nav ナビゲーション
+======================================== */
+/*nav{*/
+.pcnav{
+/* margin-bottom:30px;*/
+/* margin:0 auto 30px;*/
+}
+
+/*nav ul{*/
+.pcnav ul{
+ display:flex;
+/*コンテンツ幅。ボタン間に、余りを均等に配置*/
+/* justify-content:space-between;*/
+ border-top:1px solid #090;
+}
+
+/*ナビゲーション　文字（文言）*/
+/*nav li{*/
+.pcnav li{
+ line-height:44px;
+ font-size:14px;
+ text-align:center;
+ border-bottom:1px solid #090;
+/*コンテンツ幅に対して、ボタン数を考慮した、幅を指定*/
+ width:20%;
+}
+
+/*ナビゲーション　リンク*/
+/*nav li a{*/
+.pcnav li a{
+/*ブロック幅を広げる（無いと文字だけ）*/
+ display:block;
+ /*text-decoration:none;*//*テキストの装飾無し（初期値）*/
+ color:#070;
+ background:#dfd;
+}
+
+/*aの上　マウスを合わせたときの背景色を変更*/
+nav li a:hover{
+ color:#fff;
+ background-color:#070;
+}
+
+/* スマホ用ナビゲーション*/
+.spnav{
+ display:none;
+}
+
+
+
+/* main メインコンテンツ
+======================================== */
+h2{
+ line-height:1.5;
+ color:#070;
+/*背景画像内側の右*/
+ padding-left:35px;
+ background:url(../img/head_icon.jpg) no-repeat;
+ margin-block-start: 0.83em;
+ margin-block-end: 0.83em;
+}
+
+main p{
+ line-height:1.5;
+ margin-block-start: 1em;
+ margin-block-end: 1em;
+}
+
+/*画像フロート*/
+main img{
+ float: right;
+/*マージン　上、右、下、左の時計回りに指定*/
+ margin:0 0 20px 20px;
+}
+
+
+h3{
+ clear:both;  /*h3を、回り込みさせない*/
+ background-color:#090;
+ color:#fff;
+ padding:5px;
+ margin-block-start: 1em;
+ margin-block-end: 1em;
+}
+
+
+th{
+ background-color:#dfd;
+}
+
+/*調理手順・用語説明*/
+ol,dl{
+ background:#dfd;
+ border:1px solid #070;
+ padding:20px;
+ margin-block-start: 1em;
+ margin-block-end: 1em;
+}
+
+/*条件は、上から下へ上書きされる為、変更箇所は再設定*/
+/*調理手順の左打側余白*/
+ol{
+ padding-left:40px;
+}
+
+
+
+/* footer フッター
+======================================== */
+footer{
+ border-top:1px solid #070;
+/* padding:30px 0;*/
+}
+
+footer p{
+ margin-block-start: 1em;
+ margin-block-end: 1em;
+}
+
+
+
+
+
+/*メディアクエリ　ブレイクポイント767px*/
+@media screen and (max-width:767px){
+
+/* PC用ナビゲーション */
+.pcnav{
+ display:none;
+}
+
+header{
+ padding:20px 0;
+ margin-bottom:20px;
+}
+
+h1{
+ font-size:20px;
+/* width:242px;*/
+/* width:11em;*/
+ width:275px;
+ padding-left:55px;
+/* margin:0 auto 10px;*/
+}
+
+header p{
+ font-size:16px;
+}
+
+/* スマホ用ナビゲーション */
+.spnav{
+ display:block;
+ text-align:center;
+}
+
+.spnav ul{
+ border-bottom: 1px solid #090;
+ margin-bottom:20px;
+}
+
+.spnav li{
+ line-height:34px;
+ font-size:14px;
+ border:1px solid #090;
+ border-bottom:none;
+}
+
+.spnav li a{
+/*ブロック幅を広げる（無いと文字だけ）*/
+ display:block;
+ background:#dfd;
+}
+
+main>p{
+ margin:0 auto;
+}
+
+main img{
+ float:none;
+}
+
+footer{
+ padding: 20px 0;
+}
+
+}

@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+/* CSS Reset Start
+/* reset ブロックレベル要素のみ
+/*ブラウザによって異なるデフォルトのCSSを打ち消してブラウザ間の表示を揃える
+======================================== */
+html,
+body,
+h1,
+p,
+ul,
+li
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN",  /*Mac*/
+ Meiryo,                /*Win*/
+ sans-serif;            /*その他ゴシック系*/
+ text-align:center;
+}
+
+/*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+/*Fluid*/
+ max-width:100%;        /*画像サイズを親ボックス内に合わせる*/
+ height:auto;
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+/*ユニバーサルセレクター（全称セレクター）*/
+*{
+ box-sizing:border-box;
+}
+
+
+
+/*--共通設定--*/
+/*****<< フッター >>*****/
+header,footer{
+ background:#fcc;
+}
+
+
+
+/*****<< コンテンツ幅設定 >>*****/
+/***<< header,nav,(main,sidebar),footer >>***/
+.container{
+ max-width:1000px;       /*PC幅1000前後が通常*/
+ margin:0 auto;         /*上下が0　左右がauto*/
+/* padding:0 10px;*/
+/* display:flex;*/
+/* justify-content:space-between;*/
+}
+
+
+
+/* header ヘッダー
+======================================== */
+header{
+ padding:30px 0;
+ margin-bottom:30px;
+}
+
+h1{
+ font-size:40px;
+ font-weight:lighter;
+ color:#900;
+ background:url(../img/logo.png) no-repeat;
+ line-height:50px;
+ width:495px;
+ padding-left:55px;
+ margin:0 auto 10px;
+}
+
+header p{
+ font-size:24px;
+}
+
+
+
+/* nav ナビゲーション
+======================================== */
+/*nav{*/
+.pcnav{
+/* margin-bottom:30px;*/
+ margin:0 auto 30px;
+}
+
+/*nav ul{*/
+.pcnav ul{
+ display:flex;
+/*コンテンツ幅。ボタン間に、余りを均等に配置*/
+ justify-content:space-between;
+}
+
+/*ナビゲーション　文字（文言）*/
+/*nav li{*/
+.pcnav li{
+ line-height:44px;
+ font-size:14px;
+/*コンテンツ幅に対して、ボタン数を考慮した、幅を指定*/
+ width:18%;
+}
+
+/*ナビゲーション　リンク*/
+/*nav li a{*/
+.pcnav li a{
+/*ブロック幅を広げる（無いと文字だけ）*/
+ display:block;
+ border:1px solid #777;
+}
+
+/*aの上　マウスを合わせたときの背景色を変更*/
+nav li a:hover{
+ color:#900;
+ background-color:#fcc;
+}
+
+/* スマホ用ナビゲーション*/
+.spnav{
+ display:none;
+}
+
+
+
+/* キーヴィジュアル */
+.keyVis{
+ margin-bottom:50px;
+}
+
+
+/* main メインコンテンツ
+======================================== */
+
+
+
+/* footer フッター
+======================================== */
+footer{
+ padding:30px 0;
+}
+
+
+
+
+
+/*メディアクエリ　ブレイクポイント767px*/
+@media screen and (max-width:767px){
+
+/* PC用ナビゲーション */
+.pcnav{
+ display:none;
+}
+
+header{
+ padding:20px 0;
+ margin-bottom:20px;
+}
+
+h1{
+ font-size:20px;
+/* width:242px;*/
+/* width:11em;*/
+ width:275px;
+ padding-left:55px;
+/* margin:0 auto 10px;*/
+}
+
+header p{
+ font-size:16px;
+}
+
+/* スマホ用ナビゲーション */
+.spnav{
+ display:block;
+}
+
+.spnav ul{
+ border-bottom: 1px solid #777;
+ margin-bottom:20px;
+}
+
+.spnav li{
+ line-height:34px;
+ font-size:14px;
+ border:1px solid #777;
+ border-bottom:none;
+}
+
+.spnav li a{
+/*ブロック幅を広げる（無いと文字だけ）*/
+  display:block;
+}
+
+.keyVis{
+ margin-bottom:20px;
+}
+
+footer{
+ padding: 20px 0;
+}
+
+}

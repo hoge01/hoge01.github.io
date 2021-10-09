@@ -1,0 +1,181 @@
+@charset "uft-8";
+ 
+/*----Reset----*/
+html,body,h1,h2,p,ul,li {
+margin: 0;
+padding: 0;
+line-height: 1;
+font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+list-style: none;
+}
+a {
+text-decoration: none;
+color: inherit;
+}
+img {
+border: none;
+vertical-align: bottom;
+/* Fluid image */
+max-width: 100%;
+height: auto;
+}
+/*----共通css----*/
+.container {
+max-width: 960px;
+margin: 0 auto;
+padding: 0 10px;
+display: flex;
+/*justify-content: space-between;*/
+}
+/*----header----*/
+header {
+color: #fff;
+background: #000;
+padding: 20px 0;
+/*padding: 11px 0 20px;*/
+}
+header > .container {
+justify-content: space-between;
+align-items: flex-end;
+}
+h1 {
+font-family: "Lacquer", sans-serif;
+font-size: 44px;
+margin-bottom: 5px;
+}
+ 
+/*SNSリンク*/
+aside>ul{
+/*display: flex;*/
+}
+aside li{
+display: inline;
+}
+aside img {
+width: 50px;
+height: auto;
+margin-left: 5px;
+}
+ 
+/*キービジュアル*/
+.keyVis {
+height: 200px;
+background: url(../img/header2.jpg) no-repeat center center/cover;
+/*background-size: cover;*/
+}
+ 
+/* ナビゲーションメニュー */
+.pcnav {
+background: #000;
+margin-bottom: 50px;
+}
+.pcnav li {
+width: 20%;
+line-height: 44px;
+font-size: 14px;
+text-align: center;
+color: #fff;
+}
+.pcnav a {
+display: block;
+border-right: solid 1px #fff;
+}
+.pcnav li:first-child a {
+border-left: 1px solid #fff;
+}
+.pcnav a:hover {
+background: #39d;
+}
+/*Sp nav*/
+.spnav {
+display: none;
+}
+ 
+/*2カラムレイアウト*/
+.wrap {
+justify-content: space-between;
+margin-bottom: 50px;
+}
+main {
+width: calc(100% * (600/960));
+}
+.sidebar {
+width: calc(100% * (300/960)); 
+}
+ 
+/*----メインコンテンツ----*/
+/*投稿日時*/
+time {
+background: #0097d8;
+color: #fff;
+font-weight: bold;
+padding: 20px;
+border-radius: 50%;
+float: right;
+}
+/* 見出し */
+article h2 {
+font-size: 28px;
+border-bottom: solid 1px #aaa;
+padding-bottom: 10px;
+margin-bottom: 10px;
+}
+/*記事段落*/
+article p {
+margin-bottom: 10px;
+line-height: 1.5;
+}
+/*Category*/
+.cat {
+font-size: 14px;
+}
+/*画像枠*/
+article img {
+border: 10px solid #0097d8;
+box-sizing: border-box;
+}
+ 
+/* ### サイドバー ### */
+/* 見出し*/
+.sidebar h2 {
+font-size: 28px;
+color: #0097d8;
+margin-bottom: 10px;
+}
+.sidebar ul {
+border-top: solid 1px #aaa;
+}
+.sidebar li {
+font-size: 14px;
+line-height: 44px;
+border-bottom: solid 1px #aaa;
+}
+.sidebar li a {
+display: block;
+background: url(../img/listmark.png)  no-repeat left center;
+padding-left: 20px;
+}
+.sidebar li a:hover {
+background-color: #b4f0ff; /*フルハンド*/
+}
+ 
+.sidebar section:first-child {
+margin-bottom: 50px;
+}
+ 
+/*フッター*/
+footer {
+color: #fff;
+background: #000;
+padding: 30px 0;
+}
+footer p {
+max-width: 960px;
+margin: 0 auto;
+padding: 0 10px;
+}
+footer p:first-child {
+margin-bottom: 5px;
+}

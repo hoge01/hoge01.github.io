@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+/*--CSS Reset Start--*/
+
+/*ヘッダーの上下にマージンがあるのをゼロにする*/
+html,
+body,
+h1,
+h2,
+p,
+ul,
+li{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN",  /*フォントMac:"Hiragino kaku Gothic ProN"*/
+　Meiryo,               /*フォントWin:Meiryo*/
+　sans-serif;           /*フォントその他ゴシック系:sans-serif*/
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+img{
+/*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+ border:none;           /*画像の境界線を非表示にする*/
+ vertical-align:bottom; /*初期設定・画像の下の空白を取る*/
+ max-width:100%;        /*画像サイズを親ボックス内に合わせる*/
+ height:auto;
+}
+
+/*--CSS Reset End--*/
+
+
+*{
+ box-sizing:border-box;
+}
+
+
+/*--共通設定--*/
+/*****<< フッター >>*****/
+header,nav,footer{
+ color:#fff;
+ background:#000;
+}
+
+
+
+/*****<< コンテンツ幅設定 >>*****/
+/***<< header,(keyVis),nav,(main,sidebar),footer >>***/
+.container{
+ width:960px;       /*PC幅1000前後が通常*/
+ margin:0 auto;     /*上下が0　左右がauto*/
+ display:flex;
+}
+
+header p{
+ display:block;
+}
+
+.keyVis>.container{
+ display:block;
+}
+
+.keyVis{
+ background:
+ url(../img/header2.jpg)
+ no-repeat
+ center/cover;
+}
+
+
+
+/*****<< ナビゲーション>>*****/
+nav{
+ margin-bottom:50px;
+}
+
+
+/*nav ul{*/
+/* display:flex;*/
+/*コンテンツ幅。ボタン間に、余りを均等に配置*/
+/* justify-content:space-between;*/
+/*}*/
+
+/*ナビゲーション　文字（文言）*/
+nav li{
+ line-height:44px;
+ font-size:14px;
+ text-align:center;
+/*コンテンツ幅に対して、ボタン数を考慮した、幅を指定*/
+ width:20%;
+}
+
+/*ナビゲーション　リンク*/
+nav li a{
+/*ブロック幅を広げる（無いと文字だけ）*/
+ display:block;
+ border-right:1px solid #fff;
+}
+
+nav li:first-child a{
+ border-left:1px solid #fff;
+}
+
+
+/*aの上　マウスを合わせたときの背景色を変更*/
+nav li a:hover{
+ background-color:#00f;
+}
+
+
+
+/***<< (main,sidebar) >>***/
+main{
+/* width:630px;*/
+ width:65.6%;
+}
+
+.sidebar{
+/* width:300px;*/
+ width:31.2%;
+}
+
+
+/*****<< メインコンテンツ >>*****/
+/*2カラムレイアウト*/
+.wrap{
+ justify-content:space-between;
+ margin-bottom:50px;
+}
+
+
+article{
+ margin-bottom:50px;
+}
+
+
+
+/*<< 2-2 カテゴリー >>*/
+/*CATEGORIES*/
+/*RECENT POSTS*/
+.sidebar h2{
+ font-size:28px;
+ color:#00f;
+ margin-bottom:10px;
+}
+
+/*カテゴリー　文字（文言）*/
+.sidebar li{
+ line-height:44px;
+ border-bottom:1px solid #aaa;
+}
+
+.sidebar li:first-child{
+ border-top:1px solid #aaa;
+}
+
+/*カテゴリー　リンク*/
+.sidebar li a{
+ display:block;
+ padding-left:20px;
+ background:
+ url(../img/listmark.png)
+ no-repeat
+ left center;
+}
+
+/*aの上　マウスを合わせたときの背景色を変更　文字*/
+.sidebar li a:hover{
+ color:#fff;
+ background-color:#000; /*背景画像が消えるのでショートハンドはダメ*/
+}
+

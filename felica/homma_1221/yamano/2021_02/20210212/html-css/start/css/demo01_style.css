@@ -1,0 +1,87 @@
+@charset "utf-8";
+ 
+body{
+background: #ccf;
+}
+ 
+/*コンテンツ幅*/
+div{
+width: 960px;
+margin: 0  auto;
+background: #fff;
+padding: 20px;
+}
+ 
+/*ヘッダー*/
+header{
+color: #fff;
+padding: 10px;
+background-image: url(../img/headerBg.jpg);
+background-repeat: no-repeat;
+height: 180px;
+}
+ 
+/*ナビゲーション*/
+nav ul{
+/*display:flex;*/
+list-style: none;
+padding-left: 0;
+}
+nav li{
+width:16.6%;
+text-align: center;
+}
+nav a{
+text-decoration: none;
+background: #ccf;
+display: block;
+padding: 15px 0;
+}
+nav a:hover{
+background: #00f;
+color: #fff;
+}
+ 
+/*見出し*/
+h2{
+background-color: #00f;
+color: #fff;
+padding: 5px;
+clear: both;
+}
+/*画像フロート*/
+main img{
+float: left;
+margin: 0 20px 20px 0;
+}
+ 
+/*制作手順*/
+ol{
+background-color: #ccf;
+color: #00f;
+border:1px solid #00f;
+padding: 20px  20px 20px 40px;
+}
+ 
+/*用語解説*/
+dl{
+background-color: #ccf;
+color: #00f;
+border:1px solid #00f;
+padding: 20px;
+}
+ 
+/*表組*/
+table{
+border-collapse: collapse;
+}
+th{
+background-color: #ccf;
+color: #00f;
+border: 1px solid #00f;
+padding: 5px;
+}
+td{
+border: 1px solid #00f;
+padding: 5px;
+}
