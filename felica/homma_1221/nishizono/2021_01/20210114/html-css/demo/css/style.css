@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*山野先生の授業でリセットを習ってから
+Reset
+html,body,h1,h2,p,ul,li {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo,
+        sans-serif;
+}
+*/
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    max-width:100%;
+    vertical-align: bottom;
+}
+/*共通CSS*/
+div {
+    width: 960px;
+    margin: 0 auto;
+
+}
+
+header,nav,footer {
+    background: #ccc;
+}
+
+/*header*/
+header {
+    padding: 30px 0 20px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/*NavigationΩ
+nav ul {
+    display: flex;
+}
+
+nav li {
+    width: 33.3%;
+    text-align: center;
+    line-height: 50px;
+}
+
+nav a {
+    display: block;
+    border-left: 1px solid #999;
+    background: #ddd;
+}
+
+nav a:hover {
+    background: #fff;
+}
+
+.current {
+    background: #fff;
+    border-left: none;
+}*/
+
+/*擬似クラス
+ul li:first-child  a{
+background:#fff;
+border-left: none;
+}*/
+
+/*メインコンテンツ*/
+body > div {
+    padding: 50px 0;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+body > div li {
+    margin-bottom: 10px;
+}
+
+/*footer*/
+footer {
+    padding: 30px 0;
+}
+
+
+
+/*これも山野先生の授業で習ってから
+.wrap {
+    display: block;
+}
+*/
+
+
+/*-----------------------
+	design.html
+-------------------------*/
+
+/*仮設置*/
+main {
+    width: 768px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 50px auto;
+}
+
+
+
+dl {
+    padding: 50px 0;
+}
+
+dt {
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #ddd;
+
+}
+
+/*-----------------------
+	ページャー
+-------------------------*/
+
+
+/* 今後flexに変更予定 */
+
+div ul li:first-child {
+
+    float: left;
+   
+}
+div ul li:last-child {
+
+    float: right;
+    
+}

@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+
+img{
+max-width:100%;
+vertical-align:bottom;
+}
+
+
+div{
+width:960px;
+margin:0 auto;
+/*background:#f00;*/
+}
+
+
+header,nav,footer{
+background:#ccc;
+}
+
+
+header{
+padding:30px;
+}
+
+
+
+
+
+main{
+width:768px;
+margin:0 auto;
+}
+
+
+header{
+background-color:#00f;
+color:#fff;
+padding:20px
+}
+
+
+h1{
+/*background-color:#999;*/
+/*color:#000;*/
+font-size:30px;
+/*padding:20px 0 20px o;*/
+}
+
+
+header p{
+/*background-color:#999;*/
+/*color:#000;*/
+/*border:1px solid #900;*/
+/*padding:10px 0 10px 0;*/
+}
+
+h2{
+margin:50 auto;
+}
+
+
+dl{
+padding:50px 0;
+}
+
+dt{
+margin:40px 0 20px;
+border-bottom:1px solid #ddd;
+}
+
+
+footer{
+background-color:#00f;
+color:#fff;
+padding:30px;
+}
+
+
+/*ナビゲーション*/
+ul{
+       list-style:none;  /*黒丸を非表示にする*/
+       padding-left:0;   /*初期値で40px入っているので消す*/ 
+/*色*/
+/*       background:#ccf;*/
+}
+
+/*ナビゲーション　リンク*/
+li a{
+text-decoration:none;  /*文字の下線を消す*/
+/*color:#000;    */
+color:inherit;    
+/*      background:#900;  文字だけ色*/
+}
+
+
+/*aの上　マウスを合わせたときの背景色を変更　文字を白*/
+li a:hover{
+/*            background:#f70;*/
+color:#00f;
+}
+
+
+div ul li:first-child{
+float:left;
+}
+
+
+div ul li:lastchild{
+float:right;
+}
+
+
+/*
+main p{
+text-align:center;
+}
+*/
