@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <title>パララックス効果</title>
+
+<!-- CSS・ファイル
+============================================= -->
+<link rel="stylesheet" href="css/reset00.css">
+<link rel="stylesheet" href="css/heroheader01.css">
+
+<style>
+/* CSS Reset
+############################################# */
+.parallax {
+ width:100%;
+ min-height:600px;
+ background-position:center top;
+ background-repeat:no-repeat;
+ background-attachment:fixed;
+ background-size:cover;	
+ text-align:center;
+ padding:60px;
+/* opacity:0.1;*/
+/* z-index:2;*/
+}
+
+.content {
+ max-width:100%;
+ min-height:500px;
+/* background-color:#fff;*/
+/* background:linear-gradient(rgba(0, 255, 255, 0.1), rgba(255, 255, 255, 0.1));*/
+/* background-color:rgba(0, 255, 255, 0.1);*/
+ text-align:center;
+ padding:60px;
+/* opacity:0.1;*/
+/* z-index:1;*/
+}
+
+.test{
+ max-width:50%;
+ min-height:500px;
+/* border:1px solid #aaa;*/
+ box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
+/* box-shadow: 10px 10px 10px 10px rgba(200,200,200,0.6) inset;*/
+ filter:drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
+ margin:0 10%;
+/* opacity:0.1;*/
+/* z-index:9;*/
+}
+/*
+.test1{
+ max-width:50%;
+ min-height:500px;
+ background-image:url(test/gas01.png);
+ background-repeat:no-repeat;
+ background-attachment:fixed;
+ background-size:contain;
+ padding:5px;
+ margin:0 auto;
+ background-color:rgba(0, 255, 255, 0.1);
+}
+*/
+.wrap{
+/* background-color:#aaa;*/
+/* opacity:0.1;*/
+/* z-index:0;*/
+}
+
+.parallax.bg-01{
+ background-image:url(original_img/stove-4994398_1920.jpg);
+ background-position:center bottom;
+ background-size:cover;
+}
+
+.parallax.bg-02{
+ background-image:url(original_img/gas-carrier-5085700_1920.jpg);
+}
+
+.parallax.bg-03{
+ background-image:url(original_img/gazoport-2639720_1920.jpg);
+}
+
+.parallax.bg-04{
+ background-image:url(original_img/pexels-pixabay-257700.jpg);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="wrap">
+
+<!--<div class="parallax bg-01">背面：パララックスエリア</div>-->
+<div class="parallax bg-01"></div>
+<!--<div class="content"><img src="test/gas01.png">前面：コンテンツエリア</div>-->
+<div class="content"><img class="test" src="test/gas01.png"></div>
+<!--<div class="content"><div class="test1"></div></div>-->
+<div class="parallax bg-02"></div>
+<div class="content"><img class="test" src="test/gas02.png"></div>
+<div class="parallax bg-03"></div>
+<div class="content"><img class="test" src="test/gas03.png"></div>
+<div class="parallax bg-04"></div>
+<div class="content"><img class="test" src="test/gas04.png"></div>
+
+</div>
+
+
+ 
+</body>
+
+</html>
