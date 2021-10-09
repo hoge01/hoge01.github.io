@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width initial-scale=1.0">
+<title>AOS plug-in</title>
+
+<style>
+/* CSS Reset
+############################################# */
+html
+,body
+,h1
+,h2
+,p
+,ul
+,li
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:
+  "Hiragino kaku Gothic ProN"  /*Mac*/
+  ,Meiryo                      /*Win*/
+  ,sans-serif;                 /*その他ゴシック系*/
+ /* text-align:center;*/     /*==今回・中央配置==*/
+}
+
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+ /*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+ max-width:100%;    /*親要素のwidth幅の100%の値*/
+ /*♦フルードイメージ（Fluid Image）-ウィンドウサイズ（または親要素の幅）に応じて、縦横比を保持したまま自動的に画像が拡大・縮小するようにする手法、最大幅は元画像の幅*/
+ height:auto;       /*横幅と同比率で高さも自動調整*/
+}
+
+ul
+/*,ol*/          /*※番号を使用する場合はolは記述しない*/
+{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+}
+
+
+
+.container{
+max-width:960px;
+height:auto;
+margin:0 auto;
+background-color:#aaa;
+}
+
+.test1{
+ width:500px;
+ height:200px;
+/* max-height:300px;*/
+/*height:auto;*/
+/*background:#00f;*/
+ background-color:#fff;
+ border:5px solid #000;
+ margin:0 auto 100px;
+}
+
+.test1 img{
+ width:250px;
+ float:right;
+/* float:left;*/
+}
+.test1 p{
+ width:250px;
+ text-align: center;
+ line-height:2.0;
+ padding:10px;
+/* clear:both;*/
+}
+
+.left{
+ margin-left:0;
+}
+
+.right{
+ margin-right:0;
+}
+
+div:first-child{
+margin-top:100vh;
+}
+</style>
+
+<!--CSS読み込み-->
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<div class="test1 left" data-aos="fade-up">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="fade-down">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="fade-right">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="fade-left">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="fade-up-right">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="fade-up-left">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="fade-down-right">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="fade-down-left">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="flip-left">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="flip-right">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="flip-up">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="flip-down">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="zoom-in">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="zoom-in-up">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="zoom-in-down">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="zoom-in-left">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="zoom-in-right">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="zoom-out">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="zoom-out-up">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="zoom-out-down">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="zoom-out-right">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="zoom-out-left">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="fade-up"
+      data-aos-duration="3000">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="500">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="300"
+      data-aos-offset="0">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="fade-up"
+      data-aos-anchor-placement="bottom-bottom">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="fade-up"
+      data-aos-anchor-placement="top-center">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 left" data-aos="fade-up"
+      data-aos-anchor-placement="center-center">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+<div class="test1 right" data-aos="fade-up"
+      data-aos-anchor-placement="bottom-center">
+ <img alt="画像1" src="img/kitchen_01.jpg" />
+ <p>水栓の水漏れ修理。<br>蛇口の取替。<br>シャワーホース交換。</p>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<!--js読み込み-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
+
+
+
+</body>
+</html>

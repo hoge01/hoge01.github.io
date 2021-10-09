@@ -1,0 +1,349 @@
+@charset "utf-8";
+
+/* Hero Header CSS
+############################################# */
+/* 共通設定
+############################################# */
+header
+,footer
+{
+/* color:#fff;*/
+/* background:#08f;*/
+}
+
+
+
+/* コンテンツ幅設定
+   header,nav,(main,sidebar),footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* レスポンシヴウェブデザイン（RWD）
+--------------------------------------------- */
+.container{
+/* width:960px;*/   /*PC幅1000前後が通常*/
+/* max-width:1300px;*/  /*♦最大幅を固定値:max-widthで設定*/
+/* padding:0 10px;*/    /*左右の余白調整*/
+/* margin:0 auto;*/     /*左右中央寄せ :上下 左右;*/
+}
+
+
+
+/* レイアウト設定
+############################################# */
+.container{
+ display:flex;
+ max-width:100%;
+}
+
+header{
+ width:15%;
+ z-index:1;
+}
+
+.heroheader{
+ display:flex;
+ flex-wrap:wrap;
+ width:85%;
+ z-index:0;
+}
+
+
+/* 上段（２）・下段（３）カラムレイアウト
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* 各BOXの高さ */
+.ph{
+ height:50vh;
+}
+
+/* 上段幅 */
+.topL
+,.topR
+{
+ width:calc(100% / 2);
+}
+
+/* 下段幅 */
+.btmL
+,.btmM
+,.btmR
+{
+ width:calc(100% / 3);
+}
+
+
+
+/* 個別設定
+############################################# */
+/* 0-2-1/4 <HEADER> ヘッダー
+============================================= */
+body{
+ border-top:2px solid #ccc;
+}
+
+header{
+ height:100vh;
+ width:15%;
+ color:#00f;
+ background:url(../original_img/j-lee-wt1G1_9aL68-unsplash.jpg) no-repeat center bottom/cover;
+/* background:url(../original_img/daniel-bernard-XU2WQJKtxw0-unsplash.jpg) no-repeat center bottom/cover;*/
+/* border-top:3px solid #bbb;*/
+/* border-left:2px solid #fff;*/
+/* border-right:5px solid #ccc;*/
+ border-right:5px solid rgba(100, 100, 100, 0.5);
+/* border-top-right-radius:5px;*/
+}
+
+h1 img{
+/* svg画像の場合、高さ、幅を指定 */
+/* width:180px;*/
+/* height:auto;*/
+/* position:absolute;
+ top:0;
+ left:0;
+ bottom:0;
+ right:0;
+ margin:auto;*/
+}
+
+h1{
+ border:4px solid rgba(0,0,255,0.5);
+ margin:10px;
+}
+
+h1 .logo{
+ height:auto;
+ background-color:rgba(255,255,255,1.0);
+}
+
+.logo1{
+ width:400px;
+/* height:110px;*/
+ height:200px;
+ position:fixed;
+ top:10px;
+ right:10px;
+ background:url(../test/logo00.png) no-repeat center center/contain;
+/* background:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9));*/
+ padding:2px;
+ z-index:2;
+}
+
+.gas{
+ width:auto;
+ height:100%;
+ background:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9));
+}
+
+.logo2{
+ width:100px;
+ height:50px;
+ position:fixed;
+ right:2%;
+ bottom:5vh;
+ background:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9));
+ padding:2px;
+ z-index:2;
+}
+
+
+
+/* :hover 疑似クラス (ホバー状態の <a> 要素を選択)
+カーソル（マウスポインタ―）で要素の上をホバー（通過）させたときにこの状態になる
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+header a:hover .logo{
+ background-color:rgba(0,0,255,0.5);
+ border:3px solid #fff;
+ transition:0.3s;
+}
+
+
+
+
+
+/* 0-2-2/4 <NAV> ナビゲーション
+============================================= */
+/* 0-2-2(1/2) <PCNAV> パソコン用
+_____________________________________________ */
+.pcnav{
+ position:fixed;
+/* top:50vh;*/
+ bottom:20vh;
+ width:calc(15% - 5px);
+ text-align:center;
+ z-index:2;
+}
+
+.pcnav li .caption2{
+ display: block;
+ line-height:50px;
+ font-size:15px;
+ font-weight:bold;
+ color:#fff;
+ background-color:rgba(0,0,255,0.5);
+ border-bottom:1px solid #fff;
+}
+
+.pcnav li:last-child .caption2{
+ border-bottom:none;
+}
+
+
+/* :hover 疑似クラス (ホバー状態の <a> 要素を選択)
+カーソル（マウスポインタ―）で要素の上をホバー（通過）させたときにこの状態になる
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.pcnav li .caption2:hover{
+ width:calc(290% + 10px);
+ font-size:30px;
+ color:#00f;
+ background-color:rgba(255,255,255,0.8);
+ padding-left:100%;
+ border:1px solid #00f;
+ border-radius:10px;
+/* border-left:200px solid rgba(0,0,0,0.1);*/
+/* transform:translate(200px, 0);*/
+/* transform:scale(1.5,1.5);*/
+ transition:1.0s;
+ opacity:1;
+}
+
+
+
+/* 0-2-3/4 <MAIN> メインコンテンツ
+============================================= */
+/* 0-2-3(0/5) SECTION 会社概要
+_____________________________________________ */
+.headerp
+,.company
+{
+ position:fixed;
+ top:0;
+ left:15%;
+ width:100%;
+ height:100vh;
+ color:#00f;
+ margin:0 auto;
+ padding:30px;
+ transition:0.3s;
+ opacity:0;      /* 非表示（ホバーで表示） */
+/* z-index:4;*/
+}
+
+.company h2{
+ color:#fff;
+ margin-bottom:20px;
+}
+
+.company dl{
+ display:flex;
+ flex-wrap:wrap;
+}
+
+.company dt{
+ width:20%;
+ background-color:#DADADA;
+ padding:20px;
+ border-top-left-radius:3px;
+ border-bottom-left-radius:3px;
+ margin:0 0 10px 0;
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+ text-align: center;
+}
+
+.company dd{
+ width:65%;
+ background-color:#F3F3F3;
+ padding:20px;
+ border-top-right-radius:3px;
+ border-bottom-right-radius:3px;
+ margin:0 0 10px 0;
+}
+
+
+/* :hover 疑似クラス (ホバー状態の <a> 要素を選択)
+カーソル（マウスポインタ―）で要素の上をホバー（通過）させたときにこの状態になる
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*header a:hover .company{*/
+.logo1:hover + .company{
+ background-color:rgba(0,0,0,0.5);
+ transition:1.0s;
+ opacity:1;      /* 非表示（ホバーで表示） */
+ z-index:1;
+}
+
+.logo2:hover + .company{
+ background-color:rgba(0,0,0,0.5);
+ transition:1.0s;
+ opacity:1;      /* 非表示（ホバーで表示） */
+ z-index:1;
+}
+
+
+
+/* 0-2-3(1/5) SECTION topL,R,btmL,M,R
+_____________________________________________ */
+/* 背景画像設定
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.topL{
+/* background:url(../img/tl02.jpg) no-repeat center bottom/cover;*/
+/* background:url(../img/P1030106.JPG) no-repeat center center/cover;*/
+ background:url(../test/1696407_m.jpg) no-repeat center center/cover;
+}
+
+.topR{
+ background:url(../img/tr01.jpg) no-repeat center bottom/cover;
+}
+
+.btmL{
+ background:url(../img/bl01.jpg) no-repeat center bottom/cover;
+}
+
+.btmM{
+ background:url(../img/bc01.jpg) no-repeat center bottom/cover;
+}
+
+.btmR{
+/* background:url(../img/br01.jpg) no-repeat center bottom/cover;*/
+ background:url(../parking/pexels-k-howard-2220292.jpg) no-repeat center bottom/cover;
+}
+
+
+.caption{
+ display:block;
+ height:50vh;
+ color:#fff;
+ background-color:rgba(0,0,0,0.3);
+/* box-sizing: border-box;*/
+/* padding-top:25vh;*/
+/* animation効果
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+ transition:0.3s;
+ opacity:0;      /* 非表示（ホバーで表示） */
+ z-index:1;
+}
+
+.caption h2{
+ padding-top:25vh;
+ padding-bottom:20px;
+ text-align:center;
+ font-size:40px;
+}
+
+.caption p{
+ line-height:1.4;
+ width:80%;
+ margin:0 auto;
+}
+
+
+/* :hover 疑似クラス (ホバー状態の <a> 要素を選択)
+カーソル（マウスポインタ―）で要素の上をホバー（通過）させたときにこの状態になる
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.caption:hover{
+/* font-size:20px;*/
+/* color:#000;*/
+ transition:1.0s;
+ opacity:1;      /* 非表示（ホバーで表示） */
+ z-index:1;
+}
