@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>習熟度確認試験４回目</title>
+
+<!--レスポンシヴウェブデザイン（RWD）
+♦ビューポート設定
+============================================= -->
+<meta name="viewport" content="width=device-width initial-scale=1">
+
+<!-- CSS・ファイル
+============================================= -->
+<link rel="stylesheet" href="css/reset00.css">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- jQury Plug-in (bxslider CDN)
+============================================= -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+<!-- jQury Plug-in (Lightbox CDN)
+============================================= -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+
+<!-- font-awesome
+============================================= -->
+<!--<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">-->
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!--===== ヘッダー =====-->
+<header>
+<h1>Lagoon<span>習熟度確認試験４回目</span></h1>
+
+<!--===== ナビゲーション =====-->
+<nav>
+ <ul>
+  <li><a href="#0">メニュー１</a></li>
+  <li><a href="#1">メニュー２</a></li>
+  <li><a href="#2">メニュー３</a></li>
+  <li><a href="#3">メニュー４</a></li>
+ </ul>
+</nav>
+
+</header>
+
+</div>
+
+<main>
+
+<div class="container">
+
+<div class="wrap">
+<h2>■スライダー</h2>
+</div>
+
+<ul class="bxslider">
+ <li><img src="img/bxs01.jpg" alt="img01"></li>
+ <li><img src="img/bxs02.jpg" alt="img02"></li>
+ <li><img src="img/bxs03.jpg" alt="img03"></li>
+ <li><img src="img/bxs04.jpg" alt="img04"></li>
+</ul>
+</div>
+
+
+
+<div class="wrap">
+
+<h2>■モーダルウィンドウ</h2>
+<!--<div id="glayLayer"></div>-->
+<!--<div id="imgLayer"></div>-->
+
+<ul class="box"><!-- data-lightbox="" data-title="" -->
+ <li><a href="img/lib01.jpg" class="modal" data-lightbox="img-set" data-title="海１"><img src="img/lib01.jpg" alt="海１"></a></li>
+ <li><a href="img/lib02.jpg" class="modal" data-lightbox="img-set" data-title="海２"><img src="img/lib02.jpg" alt="海２"></a></li>
+ <li><a href="img/lib03.jpg" class="modal" data-lightbox="img-set" data-title="海３"><img src="img/lib03.jpg" alt="海３"></a></li>
+ <li><a href="img/lib04.jpg" class="modal" data-lightbox="img-set" data-title="海４"><img src="img/lib04.jpg" alt="海４"></a></li>
+</ul>
+
+</div>
+
+
+
+
+<div class="wrap">
+<h2>■アコーディオンパネル</h2>
+<div class="content">
+ <dl>
+  <dt class="open">今日の日付</dt>
+  <dd id="now">ここにカテゴリAの内容が入る。</dd>
+  <dt>今日の運勢</dt>
+  <dd id="fortune" class="">ここにカテゴリBの内容が入。</dd>
+  <dt>現在の位置</dt>
+  <dd class="gmap">
+<!--   <iframe class='googleMap' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.9125189848814!2d139.7807558152587!3d35.67915598019475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018895b55190639%3A0x4d6eadf71eaae23e!2z44CSMTA0LTAwMzMg5p2x5Lqs6YO95Lit5aSu5Yy65paw5bed77yR5LiB55uu77yR4oiS77yR!5e0!3m2!1sja!2sjp!4v1615219048544!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy">-->
+<!--   </iframe>-->
+   <iframe class='googleMap' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.073350467078!2d139.71330631460643!3d35.72441453521114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6bea9e610d%3A0xb63d6b2f8118a847!2z44CSMTcxLTAwMjIg5p2x5Lqs6YO96LGK5bO25Yy65Y2X5rGg6KKL77yT5LiB55uu77yR77yY4oiS77yU77yQ!5e0!3m2!1sja!2sjp!4v1618395001450!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </dd>
+ </dl>
+</div>
+</div>
+
+
+</main>
+
+<div class="container">
+<p id="page-top">
+<i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+</p>
+</div>
+
+<!-- 0-2-4/4 <FOOTER> フッター
+============================================= -->
+<footer>
+<p class="container">
+<small>
+Copyrite &copy; 本間 利幸 All rights reserved.</small>
+</p>
+</footer>
+
+
+
+<!-- jquery (Google Hosted Libraries)リンク
+############################################# -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<!-- Initialize the slider -->
+<script>
+$(document).ready(function(){
+// $('.bxslider').bxSlider();
+ $('.bxslider').bxSlider({
+  auto:true
+ });
+});
+</script>
+
+
+<!-- jQury Plug-in (Lightbox CDN)
+============================================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
+
+<!-- jquery
+============================================= -->
+<script>
+
+$(function(){
+
+$('dd:not(:first)').hide();
+
+$('dt').on('click',function(){
+
+if ($(this).next().css('display') == 'none' ){
+    $('dd').slideUp(800);
+    $('dt').removeClass('open');
+    $(this).next().slideDown(800);
+    $(this).addClass('open');
+}
+
+});
+
+
+
+const today    = new Date();
+const year     = today.getFullYear();
+const month    = today.getMonth()+1;
+const date     = today.getDate();
+const day      = today.getDay();
+const week     = ['日','月','火','水','木','金','土'];
+const element1 = document.getElementById('now');
+//element1.textContent = '今日は、' +year+ '年'
+element1.textContent = '今日は、' +year+ '年' +month+ '月' +date+ '日' +week[day]+ '曜日です。';
+
+
+
+const luck     = ['大吉','中吉','小吉','吉','凶'];
+const rnd      = Math.floor(Math.random()*luck.length);
+const element2 = document.getElementById('fortune');
+element2.textContent = '今日の、あなたの運勢は < ' +luck[rnd]+ ' > です。';
+
+if (rnd === 0){
+element2.classList.add('good');
+} else {
+element2.classList.remove('good');
+}
+
+
+});
+
+</script>
+
+
+<!-- Font Awesome CDN embed code! 4.7.0
+############################################# -->
+<script src="https://use.fontawesome.com/d27bbf0fee.js"></script>
+
+
+
+<!-- jquery
+############################################# -->
+<script>
+$(function(){
+
+let topBtn = $('#page-top');
+
+//最初にボタンを見えなくする
+topBtn.hide();
+//スクロールが100に達したらボタンを表示
+$(window).scroll(function(){
+if($(this).scrollTop() > 100){
+topBtn.fadeIn();
+}else{
+topBtn.fadeOut();
+}
+});
+
+//スクロールしてトップ
+topBtn.on('click',function(){
+$('html,body').animate({scrollTop:0}
+                       ,500);
+});
+
+});
+</script>
+
+
+
+
+</body>
+
+
+</html>

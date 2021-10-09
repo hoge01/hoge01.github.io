@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <title>MixItUp</title>
+
+<!--レスポンシヴウェブデザイン（RWD）
+♦ビューポート設定
+============================================= -->
+<meta name="viewport" content="width=device-width initial-scale=1">
+
+<!-- CSS・ファイル
+============================================= -->
+<link rel="stylesheet" href="css/reset00.css">
+
+
+<style>
+.content{
+ max-width:660px;
+ margin:50px auto;
+ padding:2%;
+}
+
+.container{
+/* max-width:660px;*/
+}
+
+.controls
+,.container
+{
+ display:flex;
+ flex-wrap:wrap;
+ align-content:flex-start;
+}
+
+.controls>.filter{
+ margin:0 6px 10px;
+ padding:0 10px;
+ line-height:30px;
+ color:#666;
+ background-color:#fff;
+ border:1px solid #ccc;
+ border-radius:4px;
+ font-weight:bold;
+ text-align:center;
+ cursor:pointer;
+}
+
+.heading1{
+ margin-bottom:20px;
+}
+
+.mix{
+/* flex:1 0 100px;*/
+ width:100px;
+ height:125px;
+ margin:5px;
+ color:#fff;
+ background-color:#000;
+ font-size:30px;
+/* font-family:'Arial Black',;*/
+ text-align:center;
+ line-height:100px;
+}
+
+.red{
+ background-color:red;
+}
+
+.blue{
+ background-color:blue;
+}
+
+.gray{
+ background-color:gray;
+}
+
+.yellow{
+ background-color:yellow;
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+
+<div class="content">
+<h1 class="heading1">MixItUp</h1>
+
+<ul class="controls">
+ <li class="filter" data-filter="all">Show All</li>
+ <li class="filter" data-filter=".red">red</li>
+ <li class="filter" data-filter=".yellow">yellow</li>
+ <li class="filter" data-filter=".blue">blue</li>
+ <li class="filter" data-filter=".gray">gray</li>
+ <li class="filter" data-filter=".yellow, .blue">yellow &amp; blue</li>
+</ul>
+
+<ul class="container">
+ <li class="mix red"><img src="img/20210419_01.jpg" alt="画像">1</li>
+ <li class="mix yellow"><img src="img/20210419_04.jpg" alt="画像">2</li>
+ <li class="mix gray"><img src="img/20210419_02.jpg" alt="画像">3</li>
+ <li class="mix yellow"><img src="img/20210419_04.jpg" alt="画像">4</li>
+ <li class="mix blue"><img src="img/20210419_03.jpg" alt="画像">5</li>
+ <li class="mix red"><img src="img/20210419_01.jpg" alt="画像">6</li>
+ <li class="mix blue"><img src="img/20210419_03.jpg" alt="画像">7</li>
+ <li class="mix red"><img src="img/20210419_01.jpg" alt="画像">8</li>
+ <li class="mix gray"><img src="img/20210419_02.jpg" alt="画像">9</li>
+ <li class="mix blue"><img src="img/20210419_03.jpg" alt="画像">10</li>
+ <li class="mix yellow"><img src="img/20210419_04.jpg" alt="画像">11</li>
+ <li class="mix gray"><img src="img/20210419_02.jpg" alt="画像">12</li>
+ <li class="mix red"><img src="img/20210419_01.jpg" alt="画像">13</li>
+ <li class="mix blue"><img src="img/20210419_03.jpg" alt="画像">14</li>
+ <li class="mix red"><img src="img/20210419_01.jpg" alt="画像">15</li>
+ <li class="mix gray"><img src="img/20210419_02.jpg" alt="画像">16</li>
+ <li class="mix yellow"><img src="img/20210419_04.jpg" alt="画像">17</li>
+ <li class="mix blue"><img src="img/20210419_03.jpg" alt="画像">18</li>
+</ul>
+
+</div>
+
+
+
+<!-- jquery (Google Hosted Libraries)リンク
+============================================= -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<script src="js/mixitup.js"></script>
+
+
+
+<script>
+var containerE1 = document.querySelector('.container');
+var mixer = mixitup(containerE1);
+
+</script>
+
+
+
+</body>
+</html>

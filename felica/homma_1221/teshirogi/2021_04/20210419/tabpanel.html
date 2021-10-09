@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <title>タブパネル</title>
+
+<!--レスポンシヴウェブデザイン（RWD）
+♦ビューポート設定
+============================================= -->
+<meta name="viewport" content="width=device-width initial-scale=1">
+
+<!-- CSS・ファイル
+============================================= -->
+<link rel="stylesheet" href="css/reset00.css">
+
+<!-- googlefont Webからコピー
+============================================= -->
+<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+
+<style>
+body{
+ font-size:16px;
+/* font-family:'Noto Sans JP',;*/
+}
+
+.container{
+/* width:600px;*/
+ width:60%;
+ margin:50px auto;
+}
+
+ul{
+/* text-align:center;*/
+}
+
+.tab{
+ display:flex;
+ justify-content:space-between;
+}
+
+.tab li{
+ width:33%;
+ height:50px;
+}
+
+.tab a{
+ display:block;
+ background-color:#aaa;
+ border-radius:6px 6px 0 0;
+/* box-sizing:border-box;*/
+ color:#fff;
+ font-size:24px;
+ font-weight:700;
+ text-align:center;
+ line-height:50px;
+ cursor:pointer;
+}
+
+a.current{
+ color:#333;
+ background-color:#fff;
+ border:1px solid #000;
+ border-bottom:0;
+/* box-sizing:border-box;*/
+}
+
+.panel{
+ margin:0 auto;
+ border:1px solid #000;
+ border-top:0;
+}
+
+.panel li{
+ height:400px;
+ padding:20px;
+ color:#333;
+}
+
+li.panel01{
+ padding:10px;
+}
+
+.gmap{
+ width:100%;
+ height:100%;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<ul class="tab">
+ <li><a href="#tab01" class="current">タブ１</a></li>
+ <li><a href="#tab02">タブ２</a></li>
+ <li><a href="#tab03">タブ３</a></li>
+</ul>
+
+<ul class="panel">
+<!-- <li id="tab01">ここにtab01の内容が入る</li>-->
+ <li id="tab01" class="panel01">
+  <iframe class="gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d809.7704845457289!2d139.71554207831693!3d35.72420332284734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6bea38baf5%3A0xd4518337f74a83a7!2z44CSMTcxLTAwMjIg5p2x5Lqs6YO96LGK5bO25Yy65Y2X5rGg6KKL77yT5LiB55uu77yR77yY4oiS77yU77yQIOOCt-ODnuODk-ODqw!5e0!3m2!1sja!2sjp!4v1618817396053!5m2!1sja!2sjp" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+ </li>
+ <li id="tab02">ここにtab02の内容が入る</li>
+ <li id="tab03">ここにtab03の内容が入る</li>
+</ul>
+
+</div><!-- /.container -->
+
+
+
+<!-- jquery (Google Hosted Libraries)リンク
+============================================= -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(function(){
+
+  // 最初のパネルではなかったら閉じる
+  $('.panel>li:not(:first)').hide();
+  
+  // タブがクリックされたら
+  $('.tab a').on('click',function(){
+  
+    // 開いているパネルを閉じる
+    $('.panel>li').hide();
+    // クリックされたタブのhref属性に
+    // 紐づけされているパネルを見せる
+    $($(this).attr('href')).show();
+    
+    $('a').removeClass('current');
+    $(this).addClass('current');
+  
+  });
+
+});
+</script>
+
+
+</body>
+</html>
