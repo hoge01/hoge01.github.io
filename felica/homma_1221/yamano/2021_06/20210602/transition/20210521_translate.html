@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate演習</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset_00.css">
+
+
+
+<style>
+
+/* =========================
+演習１
+========================= */
+p{
+ line-height:50px;
+ width:50px;
+ color:#fff;
+ background-color:#00f;
+ text-align:center;
+ /* transition:transform 300ms linear 1000ms; */
+ transition:300ms;
+ margin:20px;
+}
+
+.right:hover{
+ transform:translateX(200px);
+ background:#f00;
+}
+
+.diagnal:hover{
+ transform:translate(100px,50px);
+}
+
+.down:hover{
+ transform: translateY(100px);
+}
+
+/* =========================
+演習２
+========================= */
+.exercise2 ul{
+ transform:translateX(-940px);
+ transition:300ms;
+ display:flex;
+ width:960px;
+ justify-content:space-between;
+ margin-left:20px;
+}
+
+.exercise2 li{
+ width:150px;
+ line-height:2.0;
+ text-align:center;
+ border:2px solid #0ff;
+}
+
+.exercise2 .btn{
+ width:20px;
+}
+
+.exercise2 ul:hover{
+ transform: translateX(0);
+}
+
+.exercise2 li:hover{
+ color:#fff;
+ background-color:#0ff;
+}
+
+/* =========================
+演習３
+========================= */
+.x{
+ /* font-size:10px; */
+ margin-left:100px;
+}
+
+.x:hover{
+ transform:scaleX(4);
+}
+
+.y:hover{
+ transform:scaleY(1.5);
+}
+
+.xy:hover{
+ transform:scale(1.5);
+}
+
+.rr:hover{
+ transform:rotate(360deg);
+ background-color:#f00;
+}
+
+.lr:hover{
+ transform:rotate(-360deg);
+ background-color:#f00;
+}
+
+/* =========================
+演習４
+========================= */
+.exercise4 ul{
+ transition:300ms;
+ display:flex;
+ width:900px;
+ justify-content:space-between;
+ margin-left:20px;
+ margin:30px;
+}
+
+.exercise4 li{
+ width:150px;
+ height:150px;
+ color:#fff;
+ line-height:150px;
+ font-weight:bold;
+ text-align:center;
+ text-shadow:1px 1px 1px #000;
+ /* background-color:#00f; */
+ border-radius:50%;
+}
+
+.exercise4 li:nth-child(1){
+ background-color:rgba(0,0,255,0.3);
+}
+.exercise4 li:nth-child(2){
+ background-color:rgba(255,0,255,0.3);
+}
+.exercise4 li:nth-child(3){
+ background-color:rgba(0,200,0,0.4);
+}
+.exercise4 li:nth-child(4){
+ background-color:rgba(0,200,255,0.4);
+}
+.exercise4 li:nth-child(5){
+ background-color:rgba(255,150,0,0.4);
+}
+
+.exercise4 li:hover{
+ color:#fff;
+ /* background-color:#0ff; */
+ transform:scale(1.2);
+}
+
+/* =========================
+演習５
+========================= */
+.exercise5 ul{
+ transition:300ms;
+ margin-left:20px;
+ margin:30px;
+}
+
+.exercise5 li{
+ width:400px;
+ height:300px;
+ color:#fff;
+ font-size:24px;
+ text-align:center;
+ background:url(img/fit1.jpg);
+ /* padding-top:250px; */
+}
+
+.exercise5 span{
+ display:block;
+ padding-top:50px;
+}
+
+.exercise5 a{
+ display:block;
+}
+
+.exercise5 .caption:hover{
+ transform:translateY(-50%)
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<!-- =========================
+演習１
+========================== -->
+<!-- 右移動 -->
+<p class="right">右</p>
+
+<!-- 斜め移動 -->
+<p class="diagnal">斜め</p>
+
+<!-- 下移動 -->
+<p class="down">下</p>
+
+<!-- =========================
+演習２
+========================== -->
+<nav class="exercise2">
+<ul>
+  <li><a href="#">HOME</a></li>
+  <li><a href="#">PROFILE</a></li>
+  <li><a href="#">WORKS</a></li>
+  <li><a href="#">ABOUT</a></li>
+  <li><a href="#">CONTACT</a></li>
+  <li class="btn"><a href="#"><i class="fas fa-ellipsis-v"></i></a></li>
+</ul>
+</nav>
+
+<!-- =========================
+演習３
+========================== -->
+<!-- Ｘ拡大 -->
+<p class="x">Ｘ拡大</p>
+
+<!-- Ｙ拡大 -->
+<p class="y">Ｙ拡大</p>
+
+<!-- ＸＹ拡大 -->
+<p class="xy">拡大</p>
+
+<!-- 右回転 -->
+<p class="rr">右回転</p>
+
+<!-- 左回転 -->
+<p class="lr">左回転</p>
+
+<!-- =========================
+演習４
+========================== -->
+<nav class="exercise4">
+<ul>
+  <li><a href="#">HOME </a></li>
+  <li><a href="#">PROFILE</a></li>
+  <li><a href="#">WORKS</a></li>
+  <li><a href="#">ABOUT</a></li>
+  <li><a href="#">CONTACT</a></li>
+</ul>
+</nav>
+
+<!-- =========================
+演習５
+========================== -->
+<nav class="exercise5">
+<ul>
+<li>
+<a href="#" class="caption">
+WEIGHT CONTROL
+<span>詳細を見る</span>
+</a>
+</li>
+</ul>
+</nav>
+
+</body>
+</html>
