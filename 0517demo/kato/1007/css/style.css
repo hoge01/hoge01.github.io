@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+:root{
+--top-color:#876633;
+--spring-color:#D05A6E;
+--summer-color:#2B5F75;
+--fall-color:#C1693C;
+--winter-color:#656765;
+}
+
+
+/* リセット部分 */
+html,body,h1,h2,p,ul,li{
+margin: 0;
+padding: 0;
+}
+ul{
+list-style: none;
+}
+a{
+text-decoration: none;
+}
+img{
+vertical-align: bottom;
+}
+
+/* 共通部分 */
+header{
+text-align: center;
+}
+h1{
+padding: 30px 0;
+}
+.g-nav{
+width: 100%;
+height: 50px;
+background-color: var(--top-color);
+}
+.g-nav>ul{
+display: flex;
+width: 960px;
+margin: 0 auto;
+}
+.g-nav li{
+width: 20%;
+}
+.g-nav a{
+display: block;
+line-height: 50px;
+color: #FFF;
+border-left: 1px solid #FFF;
+}
+.g-nav li:last-of-type>a{
+border-right: 1px solid #FFF;
+}
+.g-nav a:hover{
+background-color: darkslategray;
+}
+
+footer{
+width: 100%;
+height: 100px;
+background-color: var(--top-color);
+}
+footer>p{
+text-align: center;
+line-height: 100px;
+color: #FFF;
+}
+
+/* トップページ部分 */
+.main{
+width: 960px;
+margin: 50px auto 200px;
+text-align: center;
+}
+.main-visual{
+margin-bottom: 60px;
+}
+.main>h2{
+font-size: 28px;
+margin-bottom: 20px;
+}
+.main>p{
+width: 600px;
+margin: 0 auto;
+line-height: 2;
+}
+
+/* 季節ページ */
+.page{
+width: 960px;
+margin: 50px auto 200px;
+display: flex;
+justify-content: space-between;
+flex-direction: row-reverse;
+}
+.txt{
+width: 300px;
+}
+.txt>h2{
+text-align: center;
+font-size: 28px;
+margin-bottom: 40px;
+}
+.txt>p{
+line-height: 1.8;
+}
+.photo{
+width: 600px;
+background: url(../img/138_light01.jpg) center center/cover;
+}
+
+/* 春ページ */
+.spring .g-nav{
+background-color: var(--spring-color);
+}
+.spring>footer{
+background-color: var(--spring-color);
+}
+/* 夏ページ */
+.summer .g-nav{
+background-color: var(--summer-color);
+}
+.summer>footer{
+background-color: var(--summer-color);
+}
+/* 秋ページ */
+.fall .g-nav{
+background-color: var(--fall-color);
+}
+.fall>footer{
+background-color: var(--fall-color);
+}
+/* 冬ページ */
+.winter .g-nav{
+background-color: var(--winter-color);
+}
+.winter>footer{
+background-color: var(--winter-color);
+}
+/* カレント */
+.g-nav li.current>a{
+background-color: cadetblue;
+}

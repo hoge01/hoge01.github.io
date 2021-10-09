@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<style>
+</style>
+<link rel="stylesheet" href="./css/demo.css">
+<!-- <link rel="stylesheet" href="./css/style.css"> -->
+</head>
+
+<body>
+
+<header>
+<h1>ヘッダー：パララックス</h1>
+</header>
+
+<div class="content-box">
+    <div class="txt-box">
+        <h2>ヘッダー１</h2>
+        <p>テキスト１</p>
+    </div>
+    <div class="parallax" data-height="500">
+        <div class="background"></div>
+    </div>
+</div><!-- /.content-box -->
+
+<div class="content-box">
+    <div class="txt-box">
+        <h2>ヘッダー２</h2>
+        <p>テキスト２</p>
+    </div>
+    <div class="parallax" data-height="500">
+        <div class="background"></div>
+    </div>
+</div><!-- /.content-box -->
+
+<div class="parallax" data-height="140vh">
+    <div class="background bg">
+        <div class="txt-box2">
+            <h2>ヘッダー３</h2>
+            <p class="txt-box2-txt">テキスト３</p>
+            <!-- <p class="txt-box2-btn">BUtton</p> -->
+            <p class="button12">
+                <a href="#">Button</a>
+            </p>
+        </div>
+    </div>
+</div><!-- /.parallax -->
+
+
+<footer>フッター</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="js/parlx.js"></script>
+
+<script>
+$(function(){
+$('.parallax').Parlx({
+item:'.background',
+speed:0.3,
+// height:'400px',
+mobile:false
+});
+});
+</script>
+
+</body>
+</html>

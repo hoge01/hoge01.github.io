@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PARLX.JSの実装</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/demo.css">
+<!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+<header>
+<h1>Lorem ipsum dolor sit amet</h1>
+</header>
+
+<div class="content-box">
+<div class="txt-box">
+<h2>Lorem ipsum dolor sit amet.</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ipsa ipsam ea exercitationem reiciendis perferendis non eos distinctio molestiae fugiat nobis qui alias et. Adipisci obcaecati alias hic perferendis sed!</p>
+</div><!-- /.txt-box -->
+<div class="parallax" data-height="500">
+<div class="background"></div>
+</div>
+</div><!-- /.content-box -->
+
+<div class="content-box">
+<div class="txt-box">
+<h2>Lorem ipsum dolor sit amet.</h2>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, magni. Error voluptas dolores, impedit suscipit nulla alias, rem laborum debitis temporibus mollitia voluptatibus. Architecto ipsam quaerat fugit sunt repellat ratione.</p>
+</div><!-- /.txt-box -->
+<div class="parallax" data-height="500">
+<div class="background"></div>
+</div>
+</div><!-- /.content-box -->
+
+<div class="parallax" data-height="140vh">
+<div class="background bg">
+<div class="txt-box2">
+<h2>Lorem ipsum dolor sit amet.</h2>
+<p class="txt-box2-txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, labore. Cum in voluptatibus adipisci eos sapiente distinctio repellat. Reprehenderit, libero quaerat? Nulla molestiae expedita impedit, maiores nostrum rerum cumque necessitatibus.</p>
+<p class="button12">
+<a href="#">Button</a>
+</p>
+</div>
+</div>
+</div><!-- /.parallax -->
+<footer></footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/parlx.js"></script>
+<script>
+$(function(){
+$('.parallax').Parlx({
+item:'.background',
+speed: 0.5,
+mobile: false
+});
+});
+</script>
+</body>
+</html>

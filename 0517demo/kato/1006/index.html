@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+html,body,h1,ul,li{
+/* m0 p0 lh1 */
+ margin:0;
+ padding:0;
+ line-height:1;
+}
+
+h1{
+ line-height: 150px;
+ text-align: center;
+}
+
+.container{
+/* m0-a */
+ margin: 0 auto;
+/* maw960 */
+max-width: 960px;
+}
+
+.box{
+/* h800 */
+/* height: 800px; */
+line-height: 800px;
+color: #00f;
+font-size: 20rem;
+text-align: center;
+background-color: #aaa;
+margin: 5px;
+}
+
+nav{
+ position: sticky;
+ width: 100%;
+ top: 0;
+}
+
+ul{
+display: flex;
+height: 25px;
+}
+li{
+width: 25%;
+text-align: center;
+list-style-type: none;
+line-height: 25px;
+background-color: #0f0;
+}
+
+li a{
+ line-height: 25px;
+ text-decoration: none;
+}
+</style>
+
+</head>
+<body>
+
+<!-- .header>.header_inner>h1{Company}^^nav>ul>li*4>a{menu$} -->
+<div class="header">
+    <div class="herder_inner container">
+        <h1>Company</h1>
+    </div>
+</div>
+<nav>
+    <ul class="container">
+        <li><a href="#test1">menu1</a></li>
+        <li><a href="#test2">menu2</a></li>
+        <li><a href="#test3">menu3</a></li>
+        <li><a href="#test4">menu4</a></li>
+    </ul>
+</nav>
+
+<!-- .content>.box+.box+.box+.box -->
+<div class="content container">
+    <div class="box" id="test1">1</div>
+    <div class="box" id="test2">2</div>
+    <div class="box" id="test3">3</div>
+    <div class="box" id="test4">4</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$('li a').on('click',function(){
+
+// $('li a').css('color','red');
+// $(this).css('color','red');
+const href = $(this).attr('href');
+console.log(href);
+
+// const test = $('#test3').offset().top;
+const test = $(href).offset().top - 30;
+console.log(test);
+
+$('html,body').animate({scrollTop:test},800,'swing');
+
+return false;
+});
+</script>
+
+</body>
+</html>
