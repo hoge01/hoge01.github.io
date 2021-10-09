@@ -1,0 +1,13 @@
+#####wpcomment_nojpdeny#####
+SetEnvIf Request_URI ".*" WpCommentDeny
+#####end:wpcomment_nojpdeny#####
+AddType image/svg+xml .svg .svgz
+AddEncoding gzip .svgz
+
+RewriteEngine on
+RewriteRule ^ohsone/index.html$ http://www.ohsone.com/index.html [L,R=301]
+RewriteRule ^ohsone/ohsone_01.html$ http://www.ohsone.com/ohsone_01.html [L,R=301]
+RewriteRule ^ohsone/ohsone_02.html$ http://www.ohsone.com/ohsone_02.html [L,R=301]
+RewriteRule ^ohsone/ohsone_03.html$ http://www.ohsone.com/ohsone_03.html [L,R=301]
+RewriteRule ^ohsone/ohsone_04.html$ http://www.ohsone.com/ohsone_04.html [L,R=301]
+RewriteRule ^ohsone/ohsone_05.html$ http://www.ohsone.com/ohsone_05.html [L,R=301]

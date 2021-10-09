@@ -1,0 +1,397 @@
+@charset "UTF-8";
+
+/* #############################################
+ header_01.css
+############################################# */
+
+
+
+/* #############################################
+ 共通設定
+############################################# */
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ コンテンツ幅設定
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ---------------------------------------------
+ レスポンシヴウェブデザイン（RWD）
+--------------------------------------------- */
+
+
+
+/* #############################################
+ レイアウト設定
+############################################# */
+.contents{
+ display:flex;
+ flex-wrap:wrap;
+/* background-color:#07f;*/
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ コンテンツ幅設定
+ header,nav,(main,sidebar),footer
+ 上段（２）・下段（３）カラムレイアウト
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* 各BOXの高さ */
+.ph{
+ height:50vh;
+}
+
+/* 上段幅 */
+.topL
+,.topR
+{
+ width:calc(100% / 2);
+}
+
+/* 下段幅 */
+.btmL
+,.btmM
+,.btmR
+{
+ width:calc(100% / 3);
+}
+
+
+
+/* #############################################
+ 個別設定
+############################################# */
+/* =============================================
+ 0-2-1/4 <HEADER> ヘッダー
+============================================= */
+
+
+
+/* =============================================
+ 0-2-2/4 <NAV> ナビゲーション
+============================================= */
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-2(1/2) <PCNAV> パソコン用
++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-2(2/2) <SPNAV> スマホ用
++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+/* =============================================
+ 0-2-3/4 <MAIN> メインコンテンツ
+============================================= */
+.caption{
+ display:block;
+ height:50vh;
+ padding-top:20vh;
+/* overflow:hidden;*/
+/* word-wrap:break-word;*/
+/* overflow-wrap:break-word;*/
+ text-shadow:1px 1px 3px #00f;
+ background-color:rgba(0,0,0,0.6);
+ opacity:0;      /* 非表示（ホバーで表示） */
+ z-index:1;
+}
+
+.caption h2{
+/* font-size:18px;*/
+ text-align:center;
+ padding-bottom:15px;
+}
+
+h2.vw1{
+ font-size:2.4vw;
+}
+
+.caption p{
+ width:80%;
+ font-size:13px;
+ line-height:1.5;
+ margin:0 auto;
+}
+
+p.vw2{
+ font-size:1.1vw; 
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ :hover 疑似クラス
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.caption:hover{
+ transition:0.3s;/* animation効果 */
+ opacity:1;      /* 非表示（ホバーで表示） */
+ z-index:1;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-3(1/5) SECTION ＬＰガス部門
++++++++++++++++++++++++++++++++++++++++++++++ */
+.topL{
+ border-bottom:3px solid #aaa;
+ background:linear-gradient(to top
+/*,rgba(130,150,150,0.5) 0%*/
+,rgba(100,100,100,0.5) 0%
+/*,rgba(100,100,100,0.4) 100%)*/
+,rgba(0,0,0,0.4) 100%)
+,url(../img/tl01.jpg) no-repeat center center/cover;
+ opacity: 0;
+ animation: anime-ph 3s ease-in forwards 2s;
+}
+
+@keyframes anime-ph{
+ 0%{opacity: 0;}
+ 100%{opacity: 1;}
+}
+
+.topL .caption{
+ animation:anime-topL 5s linear infinite;
+ animation-duration:10s;
+/* transform:translatex(100%);*/
+}
+
+@keyframes anime-topL{
+ 0%{opacity:0;}
+ 10%{opacity:1;}
+ 20%{opacity:1;}
+ 30%{opacity:0;}
+/* 40%{opacity:0;}*/
+/* 50%{opacity:0;}*/
+/* 60%{opacity:0;}*/
+/* 70%{opacity:0;}*/
+/* 80%{opacity:0;}*/
+/* 90%{opacity:0;}*/
+/* 100%{opacity:0;}*/
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-3(2/5) SECTION 建設部門
++++++++++++++++++++++++++++++++++++++++++++++ */
+.topR{
+ border-left:3px solid #aaa;
+ border-bottom:3px solid #aaa;
+ background:linear-gradient(to top
+,rgba(100,100,100,0.5) 0%
+,rgba(0,0,0,0.4) 100%)
+,url(../img/tr01.jpg) no-repeat center bottom/cover;
+ opacity: 0;
+ animation: anime-ph 3s ease-in forwards 2s;
+}
+
+.topR .caption{
+ animation:anime-topR 5s linear infinite;
+ animation-duration:10s;
+/* transform:translatex(100%);*/
+}
+
+@keyframes anime-topR{
+/* 0%{opacity:0;}*/
+ 10%{opacity:0;}
+ 20%{opacity:1;}
+ 30%{opacity:1;}
+ 40%{opacity:0;}
+/* 50%{opacity:0;}*/
+/* 60%{opacity:0;}*/
+/* 70%{opacity:0;}*/
+/* 80%{opacity:0;}*/
+/* 90%{opacity:0;}*/
+/* 100%{opacity:0;}*/
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-3(3/5) SECTION 駐車場管理・仲介
++++++++++++++++++++++++++++++++++++++++++++++ */
+.btmL{
+ background:linear-gradient(to top
+,rgba(100,100,100,0.5) 0%
+,rgba(0,0,0,0.4) 100%)
+,url(../img/bl01.jpg) no-repeat center center/cover;
+ opacity: 0;
+ animation: anime-ph 3s ease-in forwards 2s;
+}
+
+.btmL .caption{
+ animation:anime-btmL 5s linear infinite;
+ animation-duration:10s;
+/* transform:translatex(100%);*/
+}
+
+@keyframes anime-btmL{
+/* 0%{opacity:0;}*/
+/* 10%{opacity:0;}*/
+ 20%{opacity:0;}
+ 30%{opacity:1;}
+ 40%{opacity:1;}
+ 50%{opacity:0;}
+/* 60%{opacity:0;}*/
+/* 70%{opacity:0;}*/
+/* 80%{opacity:0;}*/
+/* 90%{opacity:0;}*/
+/* 100%{opacity:0;}*/
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-3(5/5) SECTION 住まいの困りごと相談
++++++++++++++++++++++++++++++++++++++++++++++ */
+.btmM{
+ border-left:3px solid #aaa;
+ background:linear-gradient(to top
+,rgba(100,100,100,0.5) 0%
+,rgba(0,0,0,0.4) 100%)
+,url(../img/bc03.jpg) no-repeat center center/cover;
+ opacity: 0;
+ animation: anime-ph 3s ease-in forwards 2s;
+}
+
+.btmM .caption{
+ animation:anime-btmM 5s linear infinite;
+ animation-duration:10s;
+/* transform:translatex(100%);*/
+}
+
+@keyframes anime-btmM{
+/* 0%{opacity:0;}*/
+/* 10%{opacity:0;}*/
+/* 20%{opacity:0;}*/
+ 30%{opacity:0;}
+ 40%{opacity:1;}
+ 50%{opacity:1;}
+ 60%{opacity:0;}
+/* 70%{opacity:0;}*/
+/* 80%{opacity:0;}*/
+/* 90%{opacity:0;}*/
+/* 100%{opacity:0;}*/
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-3(4/5) SECTION リフォーム工事
++++++++++++++++++++++++++++++++++++++++++++++ */
+.btmR{
+ border-left:3px solid #aaa;
+ background:linear-gradient(to top
+,rgba(100,100,100,0.5) 0%
+,rgba(0,0,0,0.4) 100%)
+,url(../img/br01.jpg) no-repeat center center/cover;
+ opacity: 0;
+ animation: anime-ph 3s ease-in forwards 2s;
+}
+
+.btmR .caption{
+ animation:anime-btmR 5s linear infinite;
+ animation-duration:10s;
+/* transform:translatex(100%);*/
+}
+
+@keyframes anime-btmR{
+/* 0%{opacity:0;}*/
+/* 10%{opacity:0;}*/
+/* 20%{opacity:0;}*/
+/* 30%{opacity:0;}*/
+ 40%{opacity:0;}
+ 50%{opacity:1;}
+ 60%{opacity:1;}
+ 70%{opacity:0;}
+/* 80%{opacity:0;}*/
+/* 90%{opacity:0;}*/
+/* 100%{opacity:0;}*/
+}
+
+
+
+/* =============================================
+ 0-2-4/4 <FOOTER> フッター
+============================================= */
+
+
+
+/* #############################################
+ レスポンシヴウェブデザイン（RWD）
+############################################# */
+/* =============================================
+ ♦メディアクエリー設定（ブレイクポイント）
+============================================= */
+@media screen and (max-width:767px){
+/* #############################################
+ レイアウト設定
+############################################# */
+.contents
+{
+ display:block;
+ border:none;
+}
+
+.ph{
+ width:100%;
+ height:auto;
+ border:none;
+ border:5px solid #aaa;
+ border-top:none;
+}
+
+
+
+/* =============================================
+ 0-2-1/4 <HEADER> ヘッダー
+============================================= */
+
+
+
+/* =============================================
+ 0-2-2/4 <NAV> ナビゲーション
+============================================= */
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-2(1/2) <PCNAV> パソコン用
++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-2(2/2) <SPNAV> スマホ用
++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+/* =============================================
+ 0-2-3/4 <MAIN> メインコンテンツ
+============================================= */
+.caption{
+ padding-top:15vh;
+ opacity:1;
+}
+
+h2.vw1{
+ font-size:9vw;
+}
+
+p.vw2{
+ font-size:3vw;
+}
+
+
+/* =============================================
+ 0-2-4/4 <FOOTER> フッター
+============================================= */
+
+
+
+}
+
+
+
+@media screen and (max-width:499px){
+/* #############################################
+ レイアウト設定
+############################################# */
+p.vw2{
+ font-size:4.5vw;
+}
+
+}

@@ -1,0 +1,897 @@
+@charset "UTF-8";
+
+/* #############################################
+ parallax.css
+############################################# */
+html{
+ scroll-behavior:smooth;
+}
+
+
+
+/* #############################################
+ 共通設定
+############################################# */
+body{
+/* background-color:#aaa;*/
+}
+
+.contents{
+ display:block;
+}
+
+
+
+/* #############################################
+ 個別設定
+############################################# */
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-3(0/7) SECTION ナビゲーション
++++++++++++++++++++++++++++++++++++++++++++++ */
+.nav{
+ display:none;
+ position:fixed;
+ top:0;
+ bottom:0;
+ left:0;
+ height:100%;
+ list-style:none;
+/* margin-left:15vw;*/
+ margin-left:200px;
+ z-index:997;
+}
+
+@media (min-width:500px) and (min-height:375px) {
+.nav{
+ display:block;
+}
+}
+
+.nav:before{
+/* border-left:2px solid rgba(255, 255, 255, 0.3);*/
+ border-left:2px solid rgba(0, 0, 255, 0.3);
+ content:"";
+ position:absolute;
+ top:0;
+ bottom:0;
+ height:100%;
+ left:49px;
+}
+
+.dot-nav{
+ list-style:none;
+ position:relative;
+ padding-left:40px;
+ z-index:5;
+}
+
+.dot-nav a{
+ display:inline-block;
+ background:#aaf;
+ width:20px;
+ height:20px;
+ border-radius:100%;
+ vertical-align:middle;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ :hover 疑似クラス
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.dot-nav a:hover{
+/* -webkit-transition:all 0.15s ease-in-out;*/
+ transition:all 0.15s ease-in-out;
+ background-color:#e53333;
+/* -webkit-transform:scale(2);*/
+/* -ms-transform:scale(2);*/
+ transform:scale(2);
+}
+
+.dot-nav a.active{
+ background-color:#e53333;
+/* -webkit-transform:scale(2);*/
+/* -ms-transform:scale(2);*/
+ transform:scale(2);
+}
+
+.dot-nav li{
+ margin:25px 0;
+}
+
+.dot-nav li span{
+ position:fixed;
+ vertical-align:middle;
+ color:#fff;
+ background:#000;
+ font-size:14px;
+ padding:2px 7px;
+ margin-top:-4px;
+ margin-left:25px;
+ border-radius:4px;
+/* -webkit-transition: opacity 0.3s ease-in-out;*/
+ transition:opacity 0.3s ease-in-out;
+ opacity:0;
+}
+
+.dot-nav li span b{
+ display:block;
+ font-size:18px;
+ line-height:1;
+ margin-bottom:5px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ :hover 疑似クラス
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.dot-nav li a:hover + span{
+ opacity:1;
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-3(7/7) SECTION 共通
++++++++++++++++++++++++++++++++++++++++++++++ */
+.content-flex{
+ display:flex;
+ flex-wrap:wrap;
+}
+
+.content-flex .before-after{
+ width:48%;
+ padding:5vh 1vw;
+}
+
+
+.before-after{
+/* display:grid;*/
+/* background-color:rgba(180,180,255,0.7);*/
+ background-color:rgba(100,100,100,0.6);
+ padding:5vh 5vw;
+ border-radius:50px;
+ margin:0 auto 15vh;
+}
+
+/*
+.before{
+ grid-row:1;
+ grid-column:1;
+}
+
+.after{
+ grid-row:1;
+ grid-column:2;
+}
+*/
+
+.before
+,.after
+{
+/* max-width:25vw;*/
+ width:25vw;
+ height:auto;
+ background-color:rgba(255,255,255,1.0);
+ padding:2vh 1vw;
+/* border:5px solid #aaa;*/
+/* border:5px solid #00f;*/
+/* border-radius:10px;*/
+ margin:0 auto;
+}
+
+.after{
+ min-width:25vw;
+}
+
+/*.before img{*/
+.before .img{
+/* width:80%;*/
+/* height:auto;*/
+ height:40vh;
+/* border:10px inset #fff;*/
+ border:10px inset #07f;
+/* border-radius:10px;*/
+/* border:5px solid #f00;*/
+}
+
+.before .img01{
+ background:url(../img301/1p.png) no-repeat center center/cover;
+}
+
+.before .img02{
+ background:url(../img301/2p.png) no-repeat center center/cover;
+}
+
+.before .img03{
+ background:url(../img301/3p.png) no-repeat center center/cover;
+}
+
+.before .img04{
+ background:url(../img301/4p.png) no-repeat center center/cover;
+}
+
+.before .img05{
+ background:url(../img301/5p.png) no-repeat center center/cover;
+}
+
+.before .img06{
+ background:url(../img301/6p.png) no-repeat center center/cover;
+}
+
+.before .img07{
+ background:url(../img301/7p.png) no-repeat center center/cover;
+}
+
+.before .img08{
+ background:url(../img301/8p.png) no-repeat center center/cover;
+}
+
+.before .img09{
+ background:url(../img301/9p.png) no-repeat center center/cover;
+}
+
+.before .img10{
+ background:url(../img301/10p.png) no-repeat center center/cover;
+}
+
+.before .img11{
+ background:url(../img301/11p.png) no-repeat center center/cover;
+}
+
+.before .img12{
+ background:url(../img301/12p.png) no-repeat center center/cover;
+}
+
+.before .img13{
+ background:url(../img301/13p.png) no-repeat center center/cover;
+}
+
+.before .img14{
+ background:url(../img301/14p.png) no-repeat center center/cover;
+}
+
+.gmap{
+/* width:25vw;*/
+ height:0;
+ overflow:hidden;
+ padding-bottom:56.25%;
+ position:relative;
+ border:10px inset #07f;
+}
+
+.gmap iframe{
+ position:absolute;
+ left:0;
+ top:0;
+ height:100%;
+ width:100%;
+}
+
+.before-after h4{
+ color:#00f;
+ font-size:1.3vw;
+ text-shadow:1px 1px 1px #000;
+ padding:2vh 2vw;
+}
+
+.before-after p{
+ color:#fff;
+ font-size:1.0vw;
+/* font-weight:bold;*/
+ line-height:1.5;
+ text-shadow:1px 1px 2px #000;
+ padding:2vh 1vw;
+/* overflow:hidden;*/
+}
+
+.main{
+ position:relative;
+}
+
+.page-block{
+ padding:10vh 5vw;
+}
+
+.content{
+ width:100%;
+ min-height:100vh;
+ color:#00f;
+ background-color:rgba(255,255,255,0.7);
+/* background-color:rgba(244,244,244,0.7);*/
+ padding:3% 5%;
+ border-radius:50px;
+ margin:0 auto;
+}
+
+.main h2{
+ color:#00f;
+ font-family:'roboto', serif;
+ font-size:4.5vw;
+ line-height:1.125;
+ letter-spacing:-3px;
+ text-shadow:1px 1px 1px #000;
+ margin-bottom:10px;
+}
+
+.main h3{
+ color:#f00;
+ font-family:helvetica, sans-serif;
+ font-size:2.5vw;
+ font-weight:400;
+/* line-height:0.85;*/
+ line-height:1.5;
+ text-transform:uppercase;
+ text-shadow:1px 1px 1px #000;
+ padding-bottom:15px;
+ border-bottom:2px solid rgba(0, 0, 255, 0.9);
+ box-shadow: 0 1px 0 rgba(255,0,0,0.9);
+ margin-bottom:35px;
+}
+
+.main .tel{
+ width:50px;
+ height:50px;
+/* color:#000;*/
+ text-align:center;
+/* border:1px solid #00f;*/
+/* background-color:#fff;*/
+ float:left;
+}
+
+.main .tel i{
+ display:block;
+ line-height:50px;
+ font-size:35px;
+ color:#00f;
+ animation:anime-tel 5s linear infinite;
+ animation-duration:10s;
+ transform:scale(1.0) rotate(0deg);
+}
+
+.main .tel2{
+ font-size:2.5vw;
+ line-height:50px;
+ margin-bottom:20px;
+}
+
+.content .p{
+ padding:2vw;
+ margin-top:2vh;
+}
+
+.content .p p{
+ color:#000;
+ font-size:1.3vw;
+ font-weight:bold;
+ line-height:1.5;
+}
+
+.main .tel2 ul{
+ display:flex;
+}
+
+.main .tel2 ul li{
+/* display:block;*/
+ color:#00f;
+ font-size:1.0vw;
+ line-height:50px;
+ text-shadow:none;
+ padding-bottom:0;
+}
+
+/*
+.main p{
+ color:#000;
+ font-family:georgia, times, serif;
+ font-size:2vw;
+ font-weight:normal;
+ line-height:1.5;
+ text-shadow:1px 1px 1px #00f;
+}
+*/
+.main a{
+ font-size:1vw;
+ line-height:3vh;
+ text-shadow:1px 1px 1px #aaa;
+}
+
+.main p.content-a
+,.main li
+{
+ color:#000;
+ font-size:1.2vw;
+ line-height:1.5;
+ text-shadow:1px 1px 1px #330;
+ padding-left:3vw;
+ padding-bottom:1vh;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ :hover 疑似クラス
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.main li:hover{
+ color:#00f;
+}
+
+.main span.h1-span{
+ display:inline-block;
+ color:#f00;
+ font-size:2.5vw;
+ padding-top:5vh;
+}
+
+.main span.h2-span{
+ display:inline-block;
+ color:#fa0;
+ font-size:2vw;
+ padding-top:5vh;
+}
+
+.main span.red0{
+ display:inline-block;
+ color:#f00;
+ font-size:1.5vw;
+ padding:2vh 0;
+}
+
+.main .p-span{
+ padding-left:1vw;
+}
+
+.img01{
+ text-align:center;
+ width:100%;
+ height:auto;
+}
+
+.menu{
+ overflow:hidden;
+}
+
+.menu li{
+ padding:0;
+}
+
+.menu a{
+ display:block;
+ color:#00f;
+ font-family:georgia, times, serif;
+ font-size:2vw;
+ font-weight:bold;
+ line-height:1.5;
+ text-shadow:1px 1px 1px #000;
+ padding:2px;
+}
+
+.menu li:nth-child(1){
+ animation:anime-menua01 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(2){
+ animation:anime-menua02 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(3){
+ animation:anime-menua03 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(4){
+ animation:anime-menua04 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(5){
+ animation:anime-menua05 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(6){
+ animation:anime-menua06 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(7){
+ animation:anime-menua07 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(8){
+ animation:anime-menua08 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(9){
+ animation:anime-menua09 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(10){
+ animation:anime-menua10 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(11){
+ animation:anime-menua11 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(12){
+ animation:anime-menua12 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(13){
+ animation:anime-menua13 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(14){
+ animation:anime-menua14 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(15){
+ animation:anime-menua15 3s linear;
+/* animation-duration:5s;*/
+}
+
+.menu li:nth-child(16){
+ animation:anime-menua16 3s linear;
+/* animation-duration:5s;*/
+}
+
+@keyframes anime-menua01{
+ 0%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua02{
+ 0%{transform:translateX(100%);opacity:0;}
+ 5%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua03{
+  0%{transform:translateX(100%);opacity:0;}
+ 10%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua04{
+  0%{transform:translateX(100%);opacity:0;}
+ 15%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua05{
+  0%{transform:translateX(100%);opacity:0;}
+ 20%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua06{
+  0%{transform:translateX(100%);opacity:0;}
+ 25%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua07{
+  0%{transform:translateX(100%);opacity:0;}
+ 30%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua08{
+  0%{transform:translateX(100%);opacity:0;}
+ 35%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua09{
+  0%{transform:translateX(100%);opacity:0;}
+ 40%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua10{
+  0%{transform:translateX(100%);opacity:0;}
+ 45%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua11{
+  0%{transform:translateX(100%);opacity:0;}
+ 50%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua12{
+  0%{transform:translateX(100%);opacity:0;}
+ 55%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua13{
+  0%{transform:translateX(100%);opacity:0;}
+ 60%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua14{
+  0%{transform:translateX(100%);opacity:0;}
+ 65%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua15{
+  0%{transform:translateX(100%);opacity:0;}
+ 70%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+@keyframes anime-menua16{
+  0%{transform:translateX(100%);opacity:0;}
+ 75%{transform:translateX(100%);opacity:0;}
+ 100%{transform:translateX(0);opacity:1;}
+}
+
+.menu i{
+ color:#f90;
+ font-size:1.5vw;
+ margin-left:1vw;
+ margin-right:1vw;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ :hover 疑似クラス
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.menu a:hover{
+ color:#f00;
+ background:url(../img/arrow.jpg) no-repeat center left/5%;
+ padding-left:50px;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-3(7/7) SECTION 背景画像
++++++++++++++++++++++++++++++++++++++++++++++ */
+#one{
+ background:linear-gradient(to top, rgba(130,150,150, 0.5) 0%,rgba(100, 100, 100, 0.4) 100%), url(../img3/parallax03_01.jpg) no-repeat center center/cover fixed;
+/* background-image:url(../img3/parallax03_01.jpg);*/
+/* background-repeat:no-repeat;*/
+/* background-position:center top;*/
+/* background-size:cover;*/
+/* background-attachment:fixed;*/
+}
+
+#two{
+ background:linear-gradient(to top, rgba(130,150,150, 0.5) 0%,rgba(100, 100, 100, 0.4) 100%), url(../img3/parallax03_02.jpg) no-repeat center center/cover fixed;
+}
+
+#three{
+ background:linear-gradient(to top, rgba(130,150,150, 0.5) 0%,rgba(100, 100, 100, 0.4) 100%), url(../img3/parallax03_03.jpg) no-repeat center bottom/cover fixed;
+}
+
+#four{
+ background:linear-gradient(to top, rgba(130,150,150, 0.5) 0%,rgba(100, 100, 100, 0.4) 100%), url(../img2/parallax02_07.jpg) no-repeat center bottom/cover fixed;
+}
+
+
+
+/* #############################################
+ レスポンシヴウェブデザイン（RWD）
+############################################# */
+/* =============================================
+ ♦メディアクエリー設定（ブレイクポイント）
+============================================= */
+@media screen and (max-width:1100px){
+/* #############################################
+ レイアウト設定
+############################################# */
+.nav{
+ margin-left:19vw;
+}
+
+.main .tel2 span{
+ display:block;
+}
+
+.main h2{
+ font-size:5vw;
+}
+
+.content{
+ border-radius:25px;
+}
+
+}
+
+
+
+@media screen and (max-width:767px){
+/* #############################################
+ レイアウト設定
+############################################# */
+.content-flex{
+ display:block;
+}
+
+.content-flex .before-after{
+ width:100%;
+}
+
+.content-flex .before
+,.content-flex .after
+{
+ width:90%;
+/* height:100%;*/
+}
+
+.before .img{
+/* height:60px;*/
+}
+
+.before-after{
+/* display:block;*/
+/* width:100%;*/
+}
+
+.before
+,.after
+{
+ max-width:100vw;
+ height:auto;
+ padding:1vh 5vw;
+/* margin:2vh auto;*/
+}
+
+.before-after h4{
+ font-size:4.5vw;
+}
+
+.before-after p{
+ font-size:3.0vw;
+}
+
+.content .p p{
+ font-size:3vw;
+}
+
+.main .menu a{
+ font-size:4.0vw;
+}
+
+.main .menu i{
+/* font-size:3.5vw;*/
+ font-size:3.0vw;
+ margin-right:2vw;
+}
+
+.main .tel2{
+ font-size:5vw;
+}
+
+.main .tel2 ul li{
+ font-size:2.2vw;
+ line-height:1.8;
+}
+
+.nav{
+ margin-left:0;
+}
+
+.nav:before{
+ left:24px;
+}
+.dot-nav{
+ padding-left:15px;
+}
+
+.main h3{
+ font-size:3vw;
+}
+
+.page-block{
+/* padding:5vh 2vw 5vh 9vw;*/
+ padding:5vh 2vw;
+}
+
+.content{
+ border-radius:5px;
+}
+
+}
+
+
+
+@media screen and (max-width:499px){
+/* #############################################
+ レイアウト設定
+############################################# */
+.before-after h4{
+/* color:#fff;*/
+/* font-size:6.5vw;*/
+ font-size:5.0vw;
+/* text-shadow:1px 1px 3px #000;*/
+/* padding:2vh 2vw;*/
+}
+
+.before-after p{
+/* color:#fff;*/
+ font-size:4.5vw;
+/* font-weight:bold;*/
+/* line-height:1.5;*/
+/* text-shadow:1px 1px 2px #000;*/
+/* padding:2vh 1vw;*/
+}
+
+.content .p p{
+ font-size:4vw;
+}
+
+.main .menu a{
+ font-size:6.0vw;
+}
+
+.main .menu i{
+/* font-size:3.5vw;*/
+ font-size:5.0vw;
+ margin-right:2vw;
+}
+
+.main .tel2{
+ font-size:7vw;
+}
+
+.main .tel2 ul{
+ display:block;
+}
+
+.main .tel2 ul li{
+ font-size:4vw;
+ line-height:1.8;
+}
+
+.main h2{
+ font-size:8vw;
+}
+
+.main h3{
+ font-size:4vw;
+}
+
+.main p{
+ font-size:3.5vw;
+}
+
+.main a{
+ font-size:2.5vw;
+}
+
+/*.main p.content-a{*/
+.main ul.content-a{
+/* font-size:2.5vw;*/
+}
+
+.main span.h1-span{
+ font-size:6vw;
+}
+
+.main span.h2-span{
+ font-size:4vw;
+}
+
+.main span.red0{
+ font-size:3.0vw;
+}
+
+.page-block{
+ padding:5vh 1vw;
+}
+
+.content{
+ border-radius:5px;
+}
+
+}

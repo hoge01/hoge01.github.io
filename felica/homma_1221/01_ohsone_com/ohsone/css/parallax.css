@@ -1,0 +1,360 @@
+@charset "UTF-8";
+
+/* #############################################
+ parallax.css
+############################################# */
+
+
+
+/* #############################################
+ 共通設定
+############################################# */
+body{
+/* background-color:#aaa;*/
+}
+
+
+
+/* #############################################
+ 個別設定
+############################################# */
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-3(0/7) SECTION ナビゲーション
++++++++++++++++++++++++++++++++++++++++++++++ */
+.nav{
+ display:none;
+ position:fixed;
+ top:0;
+ bottom:0;
+ left:0;
+ height:100%;
+ list-style:none;
+ margin-left:15vw;
+ z-index:997;
+}
+
+@media (min-width:500px) and (min-height:375px) {
+.nav{
+ display:block;
+}
+}
+
+.nav:before{
+/* border-left:2px solid rgba(255, 255, 255, 0.3);*/
+ border-left:2px solid rgba(0, 0, 255, 0.3);
+ content:"";
+ position:absolute;
+ top:0;
+ bottom:0;
+ height:100%;
+ left:49px;
+}
+
+.dot-nav{
+ list-style:none;
+ position:relative;
+ padding-left:40px;
+ z-index:5;
+}
+
+.dot-nav a{
+ display:inline-block;
+ background:#aaf;
+ width:20px;
+ height:20px;
+ border-radius:100%;
+ vertical-align:middle;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ :hover 疑似クラス
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.dot-nav a:hover{
+ -webkit-transition:all 0.15s ease-in-out;
+ transition:all 0.15s ease-in-out;
+ background-color:#e53333;
+ -webkit-transform:scale(2);
+ -ms-transform:scale(2);
+ transform:scale(2);
+}
+
+.dot-nav a.active{
+ background-color:#e53333;
+ -webkit-transform:scale(2);
+ -ms-transform:scale(2);
+ transform:scale(2);
+}
+
+.dot-nav li{
+ margin:25px 0;
+}
+
+.dot-nav li span{
+ position:fixed;
+ vertical-align:middle;
+ color:#fff;
+ background:#000;
+ font-size:14px;
+ padding:2px 7px;
+ margin-top:-4px;
+ margin-left:25px;
+ border-radius:4px;
+ -webkit-transition: opacity 0.3s ease-in-out;
+ transition:opacity 0.3s ease-in-out;
+ opacity:0;
+}
+
+.dot-nav li span b{
+ display:block;
+ font-size:18px;
+ line-height:1;
+ margin-bottom:5px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ :hover 疑似クラス
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.dot-nav li a:hover + span{
+ opacity:1;
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-3(7/7) SECTION 共通
++++++++++++++++++++++++++++++++++++++++++++++ */
+.main{
+ position:relative;
+}
+
+.page-block{
+ padding:10vh 5vw;
+}
+
+.content{
+ width:100%;
+ min-height:100vh;
+ color:#00f;
+ background-color:rgba(255,255,255,0.5);
+ padding:3% 2%;
+ border-radius:50px;
+ margin:0 auto;
+}
+
+.main h2{
+ color:#00f;
+ font-family:'roboto', serif;
+ font-size:4.5vw;
+ line-height:1.125;
+ letter-spacing:-3px;
+ text-shadow:1px 1px 2px #a00;
+ margin-bottom:10px;
+}
+
+.main h3{
+ color:#f00;
+ font-family:helvetica, sans-serif;
+ font-size:2.5vw;
+ font-weight:400;
+ line-height:0.85;
+ text-transform:uppercase;
+ text-shadow:1px 1px 2px #000;
+ padding-bottom:15px;
+ border-bottom:2px solid rgba(0, 0, 255, 0.5);
+ box-shadow: 0 1px 0 rgba(255,0,0,0.5);
+ margin-bottom:35px;
+}
+
+.main p{
+ color:#00f;
+ font-family:georgia, times, serif;
+ font-size:2vw;
+ font-weight:normal;
+ line-height:1.5;
+ text-shadow:1px 1px 2px #a00;
+}
+
+.main a{
+ font-size:1vw;
+ line-height:2vh;
+ text-shadow:1px 1px 3px #a00;
+}
+
+/*.main p.content-a{*/
+.main li.content-a{
+ color:#00f;
+ font-size:1.2vw;
+ text-shadow:1px 1px 2px #000;
+/* padding-left:3vw;*/
+ padding-bottom:1vh;
+}
+
+.main span.h1-span{
+ display:inline-block;
+ color:#f00;
+ font-size:2.5vw;
+ padding-top:5vh;
+}
+
+.main span.h2-span{
+ display:inline-block;
+ color:#fa0;
+ font-size:2vw;
+ padding-top:5vh;
+}
+
+.main span.red0{
+ display:inline-block;
+ color:#f00;
+ font-size:1.5vw;
+ padding:2vh 0;
+}
+
+.img01{
+ text-align:center;
+ width:100%;
+ height:auto;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++
+ 0-2-3(7/7) SECTION 背景画像
++++++++++++++++++++++++++++++++++++++++++++++ */
+#one{
+/* background:url(../img/parallax01.jpg) no-repeat center bottom/cover fixed;*/
+ background-image:url(../img/parallax01.jpg);
+ background-repeat:no-repeat;
+ background-position:center bottom;
+ background-size:cover;
+ background-attachment:fixed;
+}
+
+#two{
+ background:url(../img/parallax02.jpg) no-repeat center bottom/cover fixed;
+}
+
+#three{
+ background:url(../img/parallax03.jpg) no-repeat center bottom/cover fixed;
+}
+
+#four{
+ background:url(../img/parallax04.jpg) no-repeat center bottom/cover fixed;
+}
+
+#five{
+ background:url(../img/parallax05.jpg) no-repeat center center/cover fixed;
+}
+
+#six{
+ background:url(../img/parallax06.jpg) no-repeat center center/cover fixed;
+}
+
+#seven{
+ background:url(../img/parallax14.jpg) no-repeat center center/cover fixed;
+}
+
+
+
+/* #############################################
+ レスポンシヴウェブデザイン（RWD）
+############################################# */
+/* =============================================
+ ♦メディアクエリー設定（ブレイクポイント）
+============================================= */
+@media screen and (max-width:1100px){
+/* #############################################
+ レイアウト設定
+############################################# */
+.nav{
+ margin-left:22vw;
+}
+
+.main h2{
+ font-size:5vw;
+}
+
+.content{
+ border-radius:25px;
+}
+
+}
+
+
+
+@media screen and (max-width:767px){
+/* #############################################
+ レイアウト設定
+############################################# */
+.nav{
+ margin-left:0;
+}
+
+.nav:before{
+ left:24px;
+}
+.dot-nav{
+ padding-left:15px;
+}
+
+.main h3{
+ font-size:3vw;
+}
+
+.page-block{
+ padding:5vh 2vw 5vh 9vw;
+}
+
+.content{
+ border-radius:5px;
+}
+
+}
+
+
+
+@media screen and (max-width:499px){
+/* #############################################
+ レイアウト設定
+############################################# */
+.main h2{
+ font-size:8vw;
+}
+
+.main h3{
+ font-size:4vw;
+}
+
+.main p{
+ font-size:3.5vw;
+}
+
+.main a{
+ font-size:2.5vw;
+}
+
+/*.main p.content-a{*/
+.main ul.content-a{
+/* font-size:2.5vw;*/
+}
+
+.main span.h1-span{
+ font-size:6vw;
+}
+
+.main span.h2-span{
+ font-size:4vw;
+}
+
+.main span.red0{
+ font-size:3.0vw;
+}
+
+.page-block{
+ padding:5vh 1vw;
+}
+
+.content{
+ border-radius:5px;
+}
+
+}
