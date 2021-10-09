@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <title>Document</title>
+
+<style>
+@charset "utf-8";
+
+/* CSS Reset
+各ブラウザ（IE、FireFox、Chrome、safariなど）は、要素毎にデフォルトでスタイルを独自にもっており、ブラウザによって表示が異なる場合がある。それらの誤差を極力なくすために使用するスタイルシートを一般的に「リセットCSS」と呼ぶ。（ブロックレベル要素のみ）
+※header/nav/main/aside/footer/divは記述しない場合もある
+############################################# */
+html
+,body
+,h1
+,p
+,ul
+,li
+,dl
+,dt
+,dd
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN"  /*Mac*/
+  ,Meiryo                /*Win*/
+  ,sans-serif;           /*その他ゴシック系*/
+}
+
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+/*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+}
+
+ul
+/*,ol*/          /*※番号を使用する場合はolは記述しない*/
+{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+ /*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+ max-width:100%;    /*親要素のwidth幅の100%の値*/
+ /*♦フルードイメージ（Fluid Image）-ウィンドウサイズ（または親要素の幅）に応じて、縦横比を保持したまま自動的に画像が拡大・縮小するようにする手法、最大幅は元画像の幅*/
+ height:auto;       /*横幅と同比率で高さも自動調整*/
+}
+ 
+.container{
+ max-width:960px;  /*♦最大幅を固定値:max-widthで設定*/
+ padding:0 10px;      /*左右の余白調整*/
+ margin:20px auto;     /*左右中央寄せ :上下 左右;*/
+}
+
+
+
+/* 表示１ */
+.container p{
+ display:block;
+ width:540px;
+ margin:0 auto;
+}
+
+.container ul{
+ width:540px;
+ display:flex;
+ margin:0 auto;
+}
+
+
+
+
+/* 表示２ */
+.content{
+ width:500px;
+ text-align:center;
+ margin:50px auto;
+}
+
+.content .open{
+ background-color:#000; 
+}
+
+.content dt{
+ line-height:1.5;
+ color:#fff;
+ background-color:#aaa;
+ padding:5px 0;
+ border-bottom:1px solid #fff;
+ cursor:pointer;
+}
+
+.content dd{
+/* height:160px;*/
+ line-height:1.5;
+ padding:20px 0;
+ border-top:0;
+ border:1px solid #aaa;
+}
+
+.content dd.good{
+ color:#f00;
+ font-weight:900;
+}
+
+.content dd.gmap{
+ height:400px;
+ padding:10px;
+}
+
+iframe.googleMap{
+ width:100%;
+/* width:500px;*/
+ height:100%;
+/* height:400px;*/
+ box-sizing:border-box;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<!-- 表示１ -->
+
+<div class="container">
+ <p><img src="img/sax01.jpg" alt="" id="mainImage"></p>
+ <ul>
+  <li><img src="img/sax01.jpg" alt=""></li>
+  <li><img src="img/sax02.jpg" alt=""
+           onmouseover="mainImage.src='img/sax02.jpg'"
+           onmouseout="mainImage.src='img/sax01.jpg'">
+  </li>
+  <li><img src="img/sax03.jpg" alt=""
+           onmouseover="mainImage.src='img/sax03.jpg'"
+           onmouseout="mainImage.src='img/sax01.jpg'">
+  </li>
+  <li><img src="img/sax04.jpg" alt=""
+           onmouseover="mainImage.src='img/sax04.jpg'"
+           onmouseout="mainImage.src='img/sax01.jpg'">
+  </li>
+  <li><img src="img/sax05.jpg" alt=""
+           onmouseover="mainImage.src='img/sax05.jpg'"
+           onmouseout="mainImage.src='img/sax01.jpg'">
+  </li>
+ </ul>
+</div>
+
+
+
+<!--　表示２　-->
+
+<div class="container">
+<div class="content">
+ <dl>
+  <dt class="open">今日の日付</dt>
+  <dd id="now">ここにカテゴリAの内容が入る。</dd>
+  <dt>今日の運勢</dt>
+  <dd id="fortune" class="">ここにカテゴリBの内容が入る。</dd>
+  <dt>現在の位置</dt>
+  <dd class="gmap">
+   <iframe class='googleMap' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.9125189848814!2d139.7807558152587!3d35.67915598019475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018895b55190639%3A0x4d6eadf71eaae23e!2z44CSMTA0LTAwMzMg5p2x5Lqs6YO95Lit5aSu5Yy65paw5bed77yR5LiB55uu77yR4oiS77yR!5e0!3m2!1sja!2sjp!4v1615219048544!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy">
+   </iframe>
+  </dd>
+ </dl>
+</div>
+</div>
+
+
+<!-- 表示３ -->
+
+
+
+
+
+
+
+<!-- jquery (Google Hosted Libraries)リンク
+============================================= -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<!-- jquery
+============================================= -->
+<script>
+
+$(function(){
+
+ $('dd:not(:first)').hide();
+
+ $('dt').on('click',function(){
+
+  if ($(this).next().css('display') == 'none' ){
+   $('dd').slideUp(800);
+   $('dt').removeClass('open');
+   $(this).next().slideDown(800);
+   $(this).addClass('open');
+  }
+
+ });
+
+
+
+const today    = new Date();
+const year     = today.getFullYear();
+const month    = today.getMonth()+1;
+const date     = today.getDate();
+const day      = today.getDay();
+const week     = ['日','月','火','水','木','金','土'];
+const element1 = document.getElementById('now');
+//element1.textContent = '今日は、' +year+ '年'
+element1.textContent = '今日は、' +year+ '年' +month+ '月' +date+ '日' +week[day]+ '曜日です。';
+
+
+
+const luck     = ['大吉','中吉','小吉','吉','凶'];
+const rnd      = Math.floor(Math.random()*luck.length);
+const element2 = document.getElementById('fortune');
+element2.textContent = '今日の、あなたの運勢は < ' +luck[rnd]+ ' > です。';
+
+if (rnd === 0){
+ element2.classList.add('good');
+} else {
+ element2.classList.remove('good');
+}
+
+
+});
+
+</script>
+
+
+
+</body>
+</html>

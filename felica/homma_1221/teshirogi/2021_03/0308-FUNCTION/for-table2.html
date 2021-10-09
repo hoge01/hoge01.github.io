@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>for文で作る　一覧表</title>
+
+<style>
+table{
+ margin:0;
+ padding:0;
+ line-height:1;
+}
+
+table{
+ border:1px solid #aaa;
+ border-collapse:collapse;
+}
+
+th,td{
+width:100px;
+padding:10px 0;
+border:1px solid #aaa;
+text-align:center;
+}
+
+th{
+ background:;
+}
+
+</style>
+
+
+
+</head>
+
+
+<body>
+
+<table>
+
+<script>
+document.write('<tr>');
+ document.write('<th>平成</th>');
+ document.write('<th>西暦</th>');
+document.write('</tr>');
+
+for (var i = 1; i <= 31; i++) {
+ document.write('<tr>');
+  document.write('<td>' +i+ '</td>');
+  document.write('<td>' +(i+1988)+ '</td>');
+ document.write('</tr>');
+}
+
+</script>
+
+
+</table>
+
+
+</body>
+
+
+</body>
+</html>

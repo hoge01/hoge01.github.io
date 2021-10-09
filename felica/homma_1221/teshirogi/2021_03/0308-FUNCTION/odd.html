@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>偶数・奇数を判別するプログラム</title>
+</head>
+
+<body>
+
+
+
+<h1>偶数・奇数を判別するプログラム</h1>
+
+<p>ボタンを押して数字を入力して下さい。</p>
+
+<button onclick="result()">判別</button>  <!-- 関数 onclick 設置 -->
+<!-- イベントハンドラー　ONハンドラー　マウスの動きを感知して -->
+
+<h2 id="ans">ここに結果を表示</h2>
+<!-- class名 : css , id名 : JavaScript で使用 -->
+
+<script>
+
+function result(){  // 関数 onclick スタート
+
+var num = prompt('1以上の半角数字を整数で入力してください。')
+num = parseInt(num);  // 文字列を数値（整数）に変換
+
+var element = document.getElementById('ans');
+
+if (isNaN(num) || (num <= 0)){
+//   console.log('判別できません');
+  element.textContent = '判別できません';
+} else if (num % 2 === 1) {
+//   console.log('奇数');
+  element.textContent = '入力された数字「' +num+ '」は、奇数です。';
+} else{
+//   console.log('偶数');
+  element.textContent = '入力された数字「' +num+ '」は、偶数です。';
+}
+
+}  // 関数 onclick エンド
+
+
+
+// var num = prompt('半角数字で入力してください');
+// 1.「小数点以下」は、整数化
+// num = parseInt(num);
+// 2.「0」は、判別しない
+// 3.「負の値」は、判別しない
+// 4.「全角」は、判別しない
+// ◎「1」以上の整数は、偶数、奇数を判別する
+
+
+
+</script>
+
+</body>
+
+</html>

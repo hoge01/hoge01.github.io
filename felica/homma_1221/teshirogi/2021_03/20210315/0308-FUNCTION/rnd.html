@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>乱数の表示</title>
+
+<style>
+</style>
+
+</head>
+
+<body>
+
+<script>
+for (let i=1; i<=6; i++) {
+//   let rnd = Math.random();  //乱数を表示
+//   let rnd = Math.random()+6;  //乱数を6個表示
+   let rnd = Math.floor(Math.random()*6)+1;  //整数化 ※Math.floor() 小数点以下を切り捨て
+  console.log(rnd);
+}
+</script>
+
+</body>
+
+</html>

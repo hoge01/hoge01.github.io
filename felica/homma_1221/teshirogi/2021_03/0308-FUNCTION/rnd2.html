@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>サイコロの目をランダムに表示</title>
+
+<style>
+</style>
+
+</head>
+
+<body>
+
+<h1>サイコロの目をランダムに表示</h1>
+<p>ボタンを押すとサイコロの目が変化します</p>
+<button onclick="result()">サイコロをふる</button>
+<h2 id="ans"><img src="img/1.png" alt=""></h2>
+
+<script>
+function result() {
+  let dice = 6;
+  let rnd = Math.floor(Math.random()*dice)+1;
+  let element = document.getElementById('ans');
+  element.innerHTML = '<img src="img/'+rnd+'.png" alt="">';
+}
+</script>
+
+</body>
+
+</html>

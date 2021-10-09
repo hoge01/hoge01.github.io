@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>入力された数字までの合計</title>
+</head>
+<body>
+
+<h1>入力された数字までの合計</h1>
+
+<p>ボタンを押して数字を入力して下さい。</p>
+
+<button onclick="result()">合計を求める</button>  <!-- 関数 onclick 設置 -->
+<!-- イベントハンドラー　ONハンドラー　マウスの動きを感知して -->
+
+<h2 id="ans">ここに結果を表示</h2>
+
+
+<script>
+
+// for(初期値,回数,増減値)
+// i = 0 (配列の値)
+// i = 1 (カウントに利用)
+// i = i + 1;
+// (元の値にを1を加算)
+// i++ (インクリメント)
+
+
+//var maxnum = prompt('1以上の半角数字を整数で入力してください。')
+//maxnum = parseInt(maxnum);  // 文字列を数値（整数）に変換
+
+//var total = 0;
+
+//for(var i = 1; i <= maxnum; i++){
+//  total = total + i;
+//  console.log(i + '回目の計算');
+//  console.log(total);
+//}
+//console.log('１から５までの合計は、「' +total+ '」です。');
+
+
+
+
+function result(){  // 関数 onclick スタート
+
+var maxnum = prompt('1以上の半角数字を整数で入力してください。')
+maxnum = parseInt(maxnum);  // 文字列を数値（整数）に変換
+var total = 0;
+
+var element = document.getElementById('ans');
+
+if (isNaN(maxnum) || (maxnum <= 0)){
+  element.textContent = '計算できません';
+} 
+else{
+  for(var i = 1; i <= maxnum; i++){
+    total += i;
+    console.log(i + '回目の計算');
+    console.log(total);
+  }
+element.textContent = '入力された数字、「' +maxnum+ '」までの合計は、「' +total+ '」です。';
+}
+
+}  // 関数 onclick エンド
+
+
+</script>
+
+
+    
+</body>
+</html>

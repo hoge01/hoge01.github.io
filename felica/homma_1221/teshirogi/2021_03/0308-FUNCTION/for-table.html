@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>for文で作る　九九　一覧表</title>
+
+<style>
+table{
+ border:1px solid #aaa;
+ border-collapse:collapse;
+}
+
+th,td{
+width:80px;
+padding:10px 0;
+border:1px solid #aaa;
+text-align:center;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<h1>九九　一覧表</h1>
+
+<table>  <!-- table start -->
+
+<script>
+var num = 20;
+
+document.write('<tr>');
+  document.write('<th>');
+    document.write('&nbsp');
+    for(var i = 1; i <= num; i++){
+      document.write('<th>');
+      document.write(i + 'x');
+      document.write('</th>');
+    }
+  document.write('</th>');
+document.write('</tr>');
+
+for(var j = 1; j <= num; j++){
+  document.write('<tr>');
+    document.write('<th>');
+    document.write(j + 'の段');
+    document.write('</th>');
+
+    for(var k = 1; k <= num; k++){
+      document.write('<td>');
+      document.write(j*k);
+      document.write('</td>');
+    }
+
+  document.write('</tr>');
+}
+
+</script>
+
+</table>  <!-- table end -->
+
+
+
+</body>
+</html>
