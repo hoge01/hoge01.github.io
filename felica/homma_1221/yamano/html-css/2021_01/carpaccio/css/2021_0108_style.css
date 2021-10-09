@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+
+/*コンテンツ幅*/
+div{
+/* PC幅1000前後が通常*/
+    width:960px;
+/*  上下が0　左右がauto  */
+    margin:0 auto;
+}
+
+
+    header{
+/*           background-color:#070;*/
+           color:#fff;
+           padding:10px;
+/*                   background-image:url(../img/herb.jpg);*/
+/*背景画像を繰り返す　取り消す　繰り返さない*/
+/*           background-repeat:no-repeat;*/
+           background:url(../img/herb.jpg) no-repeat;
+/*paddingの上下分 10+10=20 引く 200-20=180px*/
+           height:180px;
+/*           height:200px;*/
+/*文字を左寄りから右寄りへ*/
+           text-align:right;
+        
+          }
+
+
+/*20210108 add start*/
+/*ナビゲーション*/
+nav ul{
+       list-style:none;
+       padding:0;
+/*test*/
+       border-top:1px solid #090;
+}
+
+nav li{
+       text-align:center;
+       border-bottom:1px solid #090;
+}
+
+nav a{
+      text-decoration:none;
+      color:#070;
+      background:#dfd;
+      display:block;
+      padding:15px 0;
+}
+
+nav a:hover{
+            background:#070;
+            color:#fff;
+}
+
+
+/*20210108 add end*/
+
+
+    h2{
+       color:#070;
+/*       border-left:24px solid #070;*/
+/*       padding:5px;*/
+/*背景画像内側の右*/
+         padding-left:35px;
+/*       margin-right:50px;*/
+/*       margin-left:50px;*/
+/*       background-image:url(../img/head_icon.jpg);*/
+/*       background-repeat:no-repeat;*/
+       background:url(../img/head_icon.jpg) no-repeat;
+/*       background-position:left;*/
+      }
+    h3{
+       background-color:#090;
+       color:#fff;
+       padding:5px;
+      }
+    th{
+       background-color:#dfd;
+      }
+/*    ol{*/
+/*同条件は、カンマ区切りで*/
+/*調理手順・用語説明*/
+    ol,dl{
+/*       background-color:#dfd;*/
+/*ショートバンド*/
+       background:#dfd;
+       border:1px solid #070;
+       padding:20px;
+      }
+/*条件は、上から下へ上書きされる為、変更箇所は再設定*/
+/*調理手順の左打側余白*/
+    ol{
+       padding-left:40px;
+      }
+/*    dl{*/
+/*       background-color:#dfd;*/
+/*       border:1px solid #00f;*/
+/*       padding:20px;*/
+/*      }*/
+    footer{
+            border-top:1px solid #070;
+           }

@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+
+/*コンテンツ幅*/
+div{
+/* PC幅1000前後が通常*/
+    width:960px;
+/*  上下が0　左右がauto  */
+    margin:0 auto;
+}
+
+
+/*index.html <style>〇〇〇</style>*/
+
+    header{
+           background-color:#0000ff;
+           color:#ffffff;
+           padding:10px;
+           background-image:url(../img/headerBg.jpg);
+/*背景画像を繰り返す　取り消す　繰り返さない*/
+           background-repeat:no-repeat;
+/*paddingの上下分 10+10=20 引く 200-20=180px*/
+           height:180px;
+/*           height:200px;*/
+
+    }
+    h2{
+       background-color:#00f;
+       color:#fff;
+       padding:5px;
+    }
+    ol{
+       background-color:#ccf;
+       color:#00f;
+/*1px 画面ドット　外枠の太さ*/
+       border:1px solid #00f;
+/*padding olは、左端初期設定40px　上、右、下、左*/
+       padding:20px 20px 20px 40px;
+    }
+    dl{
+       background-color:#ccf;
+       color:#00f;
+       border:1px solid #00f;
+       padding:20px;
+      }
+    th{
+       background-color:#ccf;
+       color:#00f;
+      }

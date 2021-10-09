@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+
+/*コンテンツ幅*/
+div{
+/* PC幅1000前後が通常*/
+    width:960px;
+/*  上下が0　左右がauto  */
+    margin:0 auto;
+}
+
+
+    header{
+           background-color:#900;
+           color:#fff;
+           padding:10px;
+/*           text-align:center;*/
+/*           background-image:url(../img/headerBg.jpg);*/
+/*           background-repeat:no-repeat;*/
+           background:url(../img/headerBg.jpg) no-repeat;
+           height:130px;
+          }
+
+
+/*20210108 add start*/
+/*ナビゲーション*/
+nav ul{
+       list-style:none;
+/*一緒*/
+/*       padding-left:0;*/
+       padding:0;
+}
+
+nav li{
+       text-align:center;
+}
+
+nav a{
+      text-decoration:none;
+      background:#fca;
+      display: block;
+      padding:15px 0;
+      color:#900;
+}
+
+nav a:hover{
+            background:#900;
+            color:#fff;
+}
+/*20210108 add end*/
+
+
+
+    h2{
+       background-color:#fca;
+       color:#900;
+       padding:5px;
+      }
+    footer{
+           border-top:1px solid #900;
+          }

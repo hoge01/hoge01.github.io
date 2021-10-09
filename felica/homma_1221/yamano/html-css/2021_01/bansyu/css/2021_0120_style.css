@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+
+/*コンテンツ幅*/
+/*20210115 add*/
+/*<!--divにクラス属性をつけて、名前を付ける-->*/
+.container{
+/*div{*/
+/* PC幅1000前後が通常*/
+    width:960px;
+/*  上下が0　左右がauto  */
+    margin:0 auto;
+}
+
+
+    header{
+           background-color:#900;
+           color:#fff;
+           padding:10px;
+/*           text-align:center;*/
+/*           background-image:url(../img/headerBg.jpg);*/
+/*           background-repeat:no-repeat;*/
+           background:url(../img/headerBg.jpg) no-repeat;
+           height:130px;
+          }
+
+
+/*20210108 add start*/
+/*ナビゲーション*/
+nav ul{
+       list-style:none;
+/*一緒*/
+/*       padding-left:0;*/
+       padding:0;
+/*20210115 add*/
+ display:flex;
+}
+
+nav li{
+       text-align:center;
+/*20210115 add*/
+/*幅960pxに対して、ボタン５個なので、１個192px*/
+ width:192px;
+}
+
+nav a{
+      text-decoration:none;
+      background:#fca;
+      display: block;
+      padding:15px 0;
+      color:#900;
+}
+
+nav a:hover{
+            background:#900;
+            color:#fff;
+}
+/*20210108 add end*/
+
+
+
+    h2{
+       background-color:#fca;
+       color:#900;
+       padding:5px;
+/*20210113 add start*/
+       clear:both;
+/*20210113 add end*/
+      }
+
+/*20210113 add start*/
+/*画像フロート*/
+main img{
+         float:left;
+         margin:0 20px 20px 0;
+}
+/*20210113 add end*/
+
+    footer{
+           border-top:1px solid #900;
+          }

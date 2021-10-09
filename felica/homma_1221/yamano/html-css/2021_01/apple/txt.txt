@@ -1,0 +1,215 @@
+Fellica PM Site 1221
+Lesson Contents and Data Download
+
+
+
+◆使用テキスト
+りんごのサイト
+りんごの効能やレシピを紹介します。
+
+ホーム
+りんごとは
+効能
+レシピ集
+お問合せ
+
+りんごについて
+“りんご”といえばシャキッとした食感と甘酸っぱい風味が特徴ですよね。さま ざまな加工品に用いられ、私たちにとって馴染み深い果物ともいえるでしょう。
+しかし、小さい頃から当たり前のようにある果物なだけに、その知識はあまり知られていません。そこで･･･当サイトでは、りんごの知識（雑学）をメインにおおくりしていきます。
+
+紅将軍
+りんご（紅将軍）の画像
+サクッとした歯ごたえ、豊富な果汁と甘い香りでまろやかな味の津軽。甘味と酸味のバランスがとれた昂林。ツル割れが生じやすくなかなか市場に出回らないことから、一部では幻のリンゴとも言われている紅将軍。
+詳細を見る
+
+焼きりんご
+焼きりんごの画像
+“焼きりんご”はりんごを丸ごと食べられる、冬の定番スイーツです。 りんごの芯をくり抜いたら砂糖やバターを詰め込み、あとはじっくり焼き上げるだけ･･･と作り方も超簡単。
+詳細を見る
+
+りんご隊隊長
+りんご隊長のイラスト画像りんご隊長は、りんごについて知識をもち、新しいりんご料理につねにチャレンジしています。
+
+Copyright コピーライトマーク 2019 All rights reserved.
+
+
+
+◆html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Apple Site:リンゴのサイト</title>
+<meta name="description" content="リンゴのサイトでは、りんごの知識（雑学）をメインにお送りししていきます。紅将軍や焼きリンゴ、又リンゴ隊長（キャラクター）の紹介もあります。 ">
+<link href="css/style0.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+ 
+<!--Header-->
+<header>
+<!--タイトル-->
+<h1>りんごのサイト</h1>
+<!--キャッチコピー-->
+<p>りんごの効能やレシピを紹介します。</p>
+</header>
+ 
+<!--Navigation-->
+<nav>
+<ul>
+<li><a href="#">ホーム</a></li>
+<li><a href="#">りんごとは</a></li>
+<li><a href="#">効能</a></li>
+<li><a href="#">レシピ集</a></li>
+<li><a href="#">お問合せ</a></li>
+</ul>
+</nav>
+ 
+<!--main Contents-->
+<main>
+ 
+<h2>りんごについて</h2>
+<p>シャキッとした食感と甘酸っぱい風味が特徴ですよね。さま ざまな加工品に用いられ、私たちにとって馴染み深い果物ともいえるでしょう。<br>
+しかし、小さい頃から当たり前のようにある果物なだけに、その知識はあまり知られていません。そこで･･･当サイトでは、<a href="#"  class="about">りんごの知識（雑学）</a>をメインにおおくりしていきます。 </p>
+ 
+<h3>紅将軍</h3>
+<img src="img/apple1.png" alt="りんご（紅将軍）の画像" class="apple">
+<p>サクッとした歯ごたえ、豊富な果汁と甘い香りでまろやかな味の津軽。甘味と酸味のバランスがとれた昂林。ツル割れが生じやすくなかなか市場に出回らないことから、一部では幻のリンゴとも言われている紅将軍。</p>
+<p><a href="#" class="more">詳細を見る</a></p>
+ 
+<h3>焼きりんご</h3>
+<img src="img/apple2.png" alt="焼きりんごの画像" class="apple">
+<p>“焼きりんご”はりんごを丸ごと食べられる、冬の定番スイーツです。 りんごの芯をくり抜いたら砂糖やバターを詰め込み、あとはじっくり焼き上げるだけ･･･と作り方も超簡単。</p>
+<p><a href="#" class="more">詳細を見る</a></p>
+ 
+<h2>りんご隊隊長</h2>
+<img src="img/apple3.png" alt="りんご隊長のイラスト画像">
+<p>りんご隊長は、りんごについて知識をもち、新しいりんご料理につねにチャレンジしています。</p>
+ 
+</main>
+ 
+<!--Footer-->
+<footer>
+<p><small>Copyright &copy; 2019 All rights reserved.</small></p>
+</footer>
+ 
+</div>
+</body>
+</html>
+
+
+
+◆CSS
+@charset "utf-8";
+/*Reset*/
+html,body,h1,h2,h3,p,ul,li{
+margin: 0;
+padding: 0;
+line-height: 1.0;
+font-family: "Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+}
+ul{
+list-style: none;
+}
+a{
+text-decoration: none;
+color: inherit;
+}
+img{
+border: none;
+}
+/*リンゴ画像画像サイズ*/
+.apple{
+width:250px;
+height: auto;
+}
+/*全体ボックス*/
+.container{
+width:960px;
+margin:0 auto;
+}
+ 
+/*header*/
+header{
+height: 200px;
+background:url(../img/headerBg.jpg) no-repeat;
+color: #fff;
+margin-bottom: 20px;
+}
+h1{
+font-size: 50px;
+padding: 20px;
+}
+header p{
+font-size: 24px;
+font-weight: bold; 
+padding-left: 20px;
+}
+ 
+/*Navigation*/
+nav{
+margin-bottom: 20px;
+}
+nav ul{
+display: flex;
+}
+nav li{
+text-align: center;
+color: #f00;
+width:20%;
+}
+nav a{
+display: block;
+background:#fdd;
+padding:15px 0;
+}
+nav a:hover{
+background:#f00;
+color: #fff;
+}
+ 
+/*見出し*/
+h2{
+background:#f00;
+color: #fff;
+padding: 10px;
+margin-bottom: 10px;
+clear: both;
+}
+h3{
+ background:#fdd;
+ color:#f00;
+ padding: 5px;
+ margin-bottom: 10px;
+ clear: both;
+}
+/*リンゴについて*/
+.about{
+color:#00f;
+text-decoration: underline;
+}
+/*リンゴ画像*/
+.apple{
+float: left;
+margin: 0 20px 30px 0;
+}
+/*段落*/
+main p{
+line-height: 1.5;
+margin-bottom: 30px;
+}
+/*詳細を見る*/
+.more{
+background:#f00;
+color: #fff;
+padding: 5px 10px;
+}
+ 
+/*Footer*/
+footer{
+clear: both;
+text-align: center;
+padding:30px;
+background:#a00;
+color: #fff;
+}

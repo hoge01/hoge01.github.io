@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+/*ウインド背景色の設定*/
+    body{
+         background-color:#fea;
+        }
+
+
+/*20210109 add start*/
+/*ヘッダーの上下にマージンがあるのをゼロにする*/
+/*html,*/
+body{
+/*     margin:0;*/
+/*ウインド背景色の設定*/
+/*     background-color:#ccf;*/
+background-image:url(../img/asari_bg.jpg);
+}
+
+
+/*20210108 add start*/
+div{
+    width:960px;
+    margin:0 auto;
+/*20210109 add start*/
+/*黄色の枠*/
+/*    border:20px solid #fff;*/
+    background:#fea;
+    padding:30px;
+}
+/*20210108 add end*/
+
+
+/*ページタイトルの設定*/
+    header{
+/*          border:2px solid #f80;*/
+          background-color:#fff;
+          text-align:center;
+          padding-bottom:10px;
+          }
+    header img{
+/*              border:2px solid #f80;*/
+              }
+    header P{
+/*            background-color:#fff;*/
+              line-height:1;
+            }
+
+
+/*20210108 add start*/
+/*20210109 add start*/
+/*子孫セレクター*/
+nav ul{
+       list-style:none;
+       padding:0;
+       border:none;
+       border-bottom:1px solid #f80;
+}
+
+nav li{
+       text-align:center;
+       border-top:1px solid #f80;
+}
+
+nav a{
+      text-decoration:none;
+      background:#fff;
+      color:#f80;
+      display:block;
+      padding:15px 0;
+}
+
+nav a:hover{
+            background:#f80;
+            color:#fff;
+}
+
+
+/*20210108 add end*/
+
+
+/*見出し*/
+    h1,h2{
+          background-color:#f80;
+          color:#fff;
+         }
+    h1{
+/*       background-color:#f80;*/
+/*       color:#fff;*/
+       padding:30px;
+/*20210109 add start*/
+       margin:0px;
+       line-height:1;
+      }
+    h2{
+/*       background-color:#f80;*/
+/*       color:#fff;*/
+       padding:5px;
+      }
+
+/*材料表*/
+    table{
+          background-color:#fff;
+         }
+    th{
+       color:#900;
+       background-color:#fd7;
+      }
+
+/*メニュー・ポイント・作り方*/
+    ul,ol{
+/*  背景色*/
+          background-color:#fff;
+/*  ボックスの境界線*/
+          border:1px solid #f80;
+/*  borderの内側の余白*/
+/*          padding-top:20px;*/
+/*          padding-bottom:20px;*/
+          padding:20px 20px 20px 40px;
+         }
+
+/*メニュー*/
+    nav ul{
+/*           background-color:#fff;*/
+/*           border:1px solid #f80;*/
+/*           padding-top:20px;*/
+/*           padding-bottom:20px;*/
+          }
+
+/*ポイント*/
+    main ul{
+/*            background-color:#fff;*/
+/*            border:1px solid #f80;*/
+/*            padding-top:20px;*/
+/*            padding-bottom:20px;*/
+           }
+
+/*作り方*/
+    ol{
+/*       background-color:#fff;*/
+/*       border:1px solid #f80;*/
+/*       padding-top:20px;*/
+/*       padding-bottom:20px;*/
+      }
+
+/**/
+    footer{
+           border-top:1px solid #f80;
+          }
