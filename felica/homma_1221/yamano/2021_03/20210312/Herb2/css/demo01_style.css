@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/*--Reset--*/
+html,body,h1,h2,h3,p,ul,li{
+margin:0;
+padding:0;
+line-height: 1.0;
+font-family: "Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+text-align: center;
+}
+img{
+vertical-align: bottom;
+border: none;
+/*Fluid Image*/
+max-width: 100%;
+height: auto;
+}
+ul{
+list-style: none;
+}
+a{
+text-decoration: none;
+color: inherit;
+}
+/*共通CSS*/
+.wrap{
+display: flex;
+max-width:960px;
+margin:0 auto;
+}
+ 
+/*Header*/
+header{
+background:url(../img/logo.png) no-repeat center 40px, 
+url(../img/top-header.jpg) repeat-x /*center top*/;
+}
+header h1{
+/*box-sizing: border-box;*/
+height: 130px;   
+padding-top:170px;
+color:#fff;
+font-family: 'Berkshire Swash', cursive;
+font-size: 500%;
+text-shadow: 3px 3px 5px #000;
+}
+header p{
+font-size: 26px;
+font-weight: bold;
+color:#40680f;
+padding: 40px 0;
+}
+/*Navigatinon*/
+.pcnav{
+margin-bottom: 20px;
+}
+.pcnav li{
+width:20%;
+}
+.pcnav a{
+display: block;
+padding: 10px 0;
+color:#999;
+}
+.pcnav a:hover{
+color:#40680f;
+text-decoration: underline;
+}
+ 
+/*メインコンテンツ*/
+.container{
+padding:50px 0;
+background:#8fc320;
+}
+.container section{
+width:calc(100% / 3);
+}
+.container section a{
+display: block;
+padding:calc(100% * 20/320);
+color:#fff;
+transition: 0.3s;
+}
+.container section a:hover{
+background:#40680f;
+}
+.container section i{
+font-size:60px;
+color:#40680f;
+background:#fff;
+display: block;
+width:150px;
+line-height: 150px;
+border-radius: 50%;
+margin:0 auto 20px;
+}
+.container h2{
+font-size: 18px;
+text-shadow: 1px 1px 2px #050;
+margin-bottom: 20px;
+}
+.container section p{
+line-height: 1.5;
+text-align: left;
+}
+ 
+/*----footer----*/
+footer{
+color:#40680f;
+padding:30px 0;
+}

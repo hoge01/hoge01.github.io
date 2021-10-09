@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HamburgerMenu</title>
+
+<style>
+/* CSS Reset
+############################################# */
+html
+,body
+,h1
+,p
+,ul
+,li
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN"  /*Mac*/
+ ,Meiryo                /*Win*/
+ ,sans-serif;           /*その他ゴシック系*/
+}
+
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+                        /*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+body{
+ height:100vh;
+ background:url(img/hamburger.jpg) no-repeat center/cover;
+}
+
+.btn{
+ width:50px;
+ height:50px;
+/* border:1px solid #aaa;*/
+ border:1px solid #fff;
+ border-radius:5px;
+ position:absolute;
+ top:5px;
+ right:5px;
+ z-index:2;
+ color:#fff;
+ text-align:center;
+}
+
+.btn i{
+ display:block;
+ line-height:50px;
+ font-size:35px;
+}
+
+/* barアイコン表示 */
+.btn i:last-child{
+ display:none;
+}
+
+/* クリック時 */
+.open i:first-child{
+ display:none;
+}
+.open i:last-child{
+ display:block;
+}
+
+
+nav{
+ width:300px;
+ height:100%;
+ background-color:#000;
+ position:fixed;
+/* position:absolute;*/ /* 右にずらすと見えるのでダメ */
+/* right:0;*/
+ right:-300px;
+ top:0;
+}
+
+nav li:first-child{
+ margin-top: 57px;
+}
+
+nav ul li{
+ line-height:70px;
+ text-align:center;
+ font-size:20px;
+ font-weight:bold;
+}
+
+nav ul li a{
+ color:#fff;
+}
+
+
+
+</style>
+
+<!-- font-awesome
+============================================= -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+</head>
+<body>
+
+<!-- sp btn -->
+<div class="btn">
+<i class="fas fa-bars"></i>
+<i class="fas fa-times"></i>
+</div>
+
+<!-- spnav -->
+<nav>
+<ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">PROFILE</a></li>
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">ACCESS</a></li>
+    <li><a href="#">CONTACT</a></li>
+</ul>
+</nav>
+
+
+
+<!-- jquery (Google Hosted Libraries)リンク
+============================================= -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<!-- jquery
+============================================= -->
+<script>
+$(function(){
+
+$('.btn').on('click',function(){
+
+//$(this).toggleClass('open');
+
+var rigthVal = 0;
+
+if($(this).hasClass('open')){
+    rigthVal = -300;
+   console.log(rigthVal);        // 確認用
+   $(this).removeClass('open');  // classのopenを取る
+}
+else{
+   console.log(rigthVal);        // 確認用
+   $(this).addClass('open');     // classのopenを付ける
+}
+
+$('nav').stop().animate({
+right:rigthVal
+},200);
+
+
+});
+
+});
+</script>
+
+
+
+</body>
+</html>

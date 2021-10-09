@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+/* CSS Reset
+############################################# */
+html
+,body
+,h1
+,p
+,ul
+,li
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN"  /*Mac*/
+        ,Meiryo                /*Win*/
+        ,sans-serif;           /*その他ゴシック系*/
+}
+
+img{
+ border:none;          /*画像の境界線を非表示にする*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+
+*{           /*ユニバーサルセレクタ（全称セレクタ）*/
+ box-sizing:border-box; /*ボックスサイズの算出方法指定*/
+}
+
+
+
+/* 共通設定
+############################################# */
+
+/* コンテンツ幅設定
+header,nav,(main,sidebar),footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* レスポンシヴウェブデザイン（RWD）
+--------------------------------------------- */
+.container{
+ max-width:660px;  /*♦最大幅を固定値:max-widthで設定*/
+/* padding:0 10px;*/      /*左右の余白調整*/
+ margin:30px auto;     /*左右中央寄せ :上下 左右;*/
+}
+
+img{
+ max-width:100%;    /*親要素のwidth幅の100%の値*/
+ height:auto;       /*横幅と同比率で高さも自動調整*/
+}
+
+/* 2カラムレイアウト
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.container ul{
+ display:flex;
+ flex-wrap:wrap;
+ background-color:#109cae;
+ padding:10px;
+}
+
+h1{
+ font-size:20px;
+ width:11em;
+/* width:350px;*/
+ text-align:center;
+ color:#fff;
+ background-color:#109cae;
+ padding:5px 15px;
+ border-radius:5px;
+ margin-bottom:20px;
+}
+
+ul li{
+ width:140px;
+/* padding:10px;*/
+ margin:10px;
+}
+
+#glayLayer{
+ position:absolute;
+ left:0;
+ top:0;
+ height:100vh;
+ width:100%;
+ background-color:rgba(0,0,0,0.6);
+ cursor:pointer;
+ display:none;
+}
+
+#imgLayer{
+ position:absolute;
+ top:0;
+ right:0;
+ bottom:0;
+ left:0;
+ width:640px;
+ height:457px;
+ margin:auto;
+ background-color:#fff;
+ display:none;
+}
+
+.close{
+ position:absolute;
+ top:-10px;
+ right:-10px;
+ cursor:pointer;
+}

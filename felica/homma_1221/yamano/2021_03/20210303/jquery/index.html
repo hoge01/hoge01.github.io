@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>jQuery</title>
+</head>
+
+<body>
+
+<!--<header></header>-->
+<!--<footer></footer>-->
+
+<h1>JavaScript Practice</h1>
+<dl>
+<dt>今日の天気</dt>
+<dd class="weather">晴れ</dd>
+</dl>
+
+<button id="nice">いいね！</button>
+<button id="bat">わるいね！</button>
+
+<!-- jquery (Google Hosted Libraries)リンク -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- jquery -->
+<script>
+//$(document).ready(function(){
+$(function(){                /*省略可能なコードを削ったもの*/
+
+// $(".weather") .css("color","#ff7c89");
+//  セレクタ      メソッド
+
+//セレクタ・複数指定できる
+ $('h1').css('color','red');
+// $('h1,dt').css('color','red');
+
+//メソッドチェーン・メソッドを連続して指定、実行できる
+ $('.weather') .css('color','pink');
+// $('.weather') .css('color','pink').fadeOut('slow');
+
+//イベント
+//$('#nice').click(function(){
+// alert('いいね！');
+//});
+
+//on()メソッドを使用することで複数イベントをまとめて設定可能
+$('#nice').on('click touchstart',function(){
+// alert('いいね！');
+ $('body').css('background','red');
+});
+
+//$('#bat').click(function(){
+// alert('わるいね！');
+//});
+
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>color button</title>
+
+<style>
+button{
+color: #fff;
+border-radius: 5px;
+}
+#blue{
+background:blue;}
+#red{
+background:red;}
+#green{
+background: green;}
+#yellow{
+background:rgb(197, 197, 5);}
+</style>
+
+</head>
+<body>
+<h1>背景・カラー選択</h1>
+<button id="blue">青</button>
+<button id="red">赤</button>
+<button id="green">緑</button>
+<button id="yellow">黄</button>
+
+
+<!-- jquery (Google Hosted Libraries)リンク -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- jquery -->
+<script>
+$('#blue').on('click touchstart',function(){
+ $('body').css('background','blue');
+});
+
+$('#red').on('click touchstart',function(){
+ $('body').css('background','red');
+});
+
+$('#green').on('click touchstart',function(){
+ $('body').css('background','green');
+});
+
+$('#yellow').on('click touchstart',function(){
+ $('body').css('background','yellow');
+});
+
+</script>
+    
+</body>
+</html>

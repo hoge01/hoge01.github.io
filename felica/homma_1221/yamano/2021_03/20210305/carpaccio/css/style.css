@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+ul,li{
+ margin:0;
+}
+
+
+/*コンテンツ幅*/
+/*20210115 add*/
+/*<!--divにクラス属性をつけて、名前を付ける-->*/
+.container{
+/*div{*/
+/* PC幅1000前後が通常*/
+/*    width:960px;*/
+ max-width:960px;
+/*  上下が0　左右がauto  */
+ margin:0 auto;
+ padding:0 10px;
+}
+
+
+header{
+ color:#fff;
+ padding:10px;
+/*背景画像を繰り返す　取り消す　繰り返さない*/
+/*background-repeat:no-repeat;*/
+ background:url(../img/headerBg02.jpg) no-repeat left center/cover;
+/*paddingの上下分 10+10=20 引く 200-20=180px*/
+ height:180px;
+/*           height:200px;*/
+/*文字を左寄りから右寄りへ*/
+ text-align:right;
+}
+
+.btn{
+ display:none;
+}
+
+
+/*20210108 add start*/
+/*ナビゲーション*/
+nav ul{
+ list-style:none;
+ padding:0;
+/*test*/
+ border-top:1px solid #090;
+/*20210115 add*/
+ display:flex;
+}
+
+nav li{
+ text-align:center;
+ border-bottom:1px solid #090;
+/*20210115 add*/
+/*幅960pxに対して、ボタン５個なので、１個192px*/
+/* width:192px;*/
+/* width:20%;*/
+ width:calc(100%/5)
+}
+
+
+
+nav a{
+ text-decoration:none;
+ color:#070;
+ background:#dfd;
+ display:block;
+ padding:15px 0;
+}
+
+nav a:hover{
+ background:#070;
+ color:#fff;
+}
+
+
+/*20210108 add end*/
+
+
+h2{
+ color:#070;
+/*背景画像内側の右*/
+ padding-left:35px;
+ background:url(../img/head_icon.jpg) no-repeat;
+}
+
+/*20210113 add start*/
+/*画像フロート*/
+main img{
+ float: right;
+/*マージン　上、右、下、左の時計回りに指定*/
+ margin:0 0 20px 20px;
+}
+/*20210113 add end*/
+
+
+h3{
+ background-color:#090;
+ color:#fff;
+ padding:5px;
+/*20210113 add start*/
+/*h3を、回り込みさせない*/
+ clear:both;
+/*20210113 add end*/
+}
+
+
+th{
+ background-color:#dfd;
+}
+/*同条件は、カンマ区切りで*/
+/*調理手順・用語説明*/
+ol,dl{
+/*ショートバンド*/
+ background:#dfd;
+ border:1px solid #070;
+ padding:20px;
+}
+/*条件は、上から下へ上書きされる為、変更箇所は再設定*/
+/*調理手順の左打側余白*/
+ol{
+ padding-left:40px;
+}
+
+footer{
+ border-top:1px solid #070;
+}
+
+
+
+/*メディアクエリ　ブレイクポイント767px*/
+@media screen and (max-width:767px){
+html,body,
+h1,header p{
+ margin:0;
+}
+
+header{
+ height:120px;
+ text-shadow:1px 1px 1px #000;
+}
+
+h1{
+ font-size:30px;
+ padding:10px 10px 0 0;
+}
+
+header p{
+ font-size:14px;
+ padding:0 10px 0;
+}
+
+
+
+/* スマホ用ナビゲーション */
+nav{
+ display:none;
+ position:absolute;
+/* width:100%;*/
+ width:calc(100% - 20px);
+}
+
+nav ul{
+ display:block;
+/* width:100%;*/
+}
+
+nav li{
+/* display:block;*/
+ width:auto;
+}
+
+/*nav li a{*/
+nav a{
+/*ブロック幅を広げる（無いと文字だけ）*/
+/* display:block;*/
+ background-color:rgba(200,255,200,0.8);
+}
+
+
+.btn{
+ display:block;
+ text-align:center;
+ height:50px;
+/* グラデーション */
+ background-image:linear-gradient(to bottom,#fff,#afc);
+/* color:#090;*/
+/* font-size:35px;*/
+ text-shadow: 1px 1px 1px #fff,-1px -1px 1px #050;
+}
+
+.btn i{             /* Winの場合 */
+ display:block;     /* Winの場合 */
+ line-height:50px;  /* Winの場合 */
+ font-size:35px;
+ color:#090;
+}
+
+
+main img{
+ float:none;
+ border:none;
+ vertical-align:bottom;
+ max-width:100%;
+ height:auto;
+ display:block; /*画像はインライン要素なので、ブロックにする*/
+ margin:0 auto 10px; /*ブロックにしてから*/
+}
+
+}

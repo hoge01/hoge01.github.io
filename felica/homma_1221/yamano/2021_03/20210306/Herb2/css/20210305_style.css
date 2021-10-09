@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/*--CSS Reset Start--*/
+
+/*ヘッダーの上下にマージンがあるのをゼロにする*/
+html,body,h1,h2,p,ul,li{
+ margin:0;
+ padding:0;
+ line-height:1.0;
+/*フォントMac:"Hiragino kaku Gothic ProN"*/
+/*フォントWin:Meiryo*/
+/*フォントその他ゴシック系:sans-serif*/
+ font-family:"Hiragino kaku Gothic ProN",
+　Meiryo,
+　sans-serif;
+/* text-align:center;*/
+}
+
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+/*--CSS Reset End--*/
+
+
+
+/*****<< ヘッダー >>*****/
+header{
+}
+
+h1{
+ background:url(../img/top-header.jpg) repeat-x;
+ background:url(../img/logo.png) no-repeat top center/cover;
+ height:300px;
+/*<!--googlefont Webからコピー-->*/
+ font-family: 'Berkshire Swash', cursive;
+ text-align:center;
+ color:#fff;
+ font-size:500%;
+}

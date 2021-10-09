@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/*--Reset--*/
+html,body,h1,h2,h3,p,ul,li{
+margin:0;
+padding:0;
+line-height: 1.0;
+font-family: "Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+text-align: center;
+}
+img{
+vertical-align: bottom;
+border: none;
+/*Fluid Image*/
+max-width: 100%;
+height: auto;
+}
+ul{
+list-style: none;
+}
+a{
+text-decoration: none;
+color: inherit;
+}
+/*共通CSS*/
+.wrap{
+display: flex;
+max-width:960px;
+margin:0 auto;
+}
+ 
+/*Header*/
+header{
+background:url(../img/logo.png) no-repeat center 40px, url(../img/top-header.jpg) repeat-x center top;
+}
+header h1{
+height: 130px;                    
+padding-top:170px;
+color:#fff;
+font-family:'Berkshire Swash', cursive;
+font-size: 500%;
+text-shadow: 3px 3px 5px #000;
+}
+header p{
+font-size: 26px;
+font-weight: bold;
+color:#40680f;
+padding: 40px 0;
+}
+/*Navigation*/
+.pcnav{
+margin-bottom: 10px;
+}
+.pcnav li{
+width:20%;
+}
+.pcnav a{
+display: block;
+padding: 10px 0;
+color:#999;
+}
+.pcnav a:hover{
+color:#40680f;
+text-decoration: underline;
+}
+/*Sp Btn*/
+.btn,.spnav{
+display: none;
+}
+ 
+/*リンクコンテンツ*/
+.container{
+padding:50px 0;
+background:#8fc320;
+}
+.container section,.recapi section{
+width:calc(100% / 3);
+}
+.container section a{
+display: block;
+padding: calc(100% * (20/320));
+color:#fff;
+transition: 0.3s;
+}
+.container section a:hover{
+background:#40680f;
+}
+.container p{
+margin-bottom: 20px;
+}
+.container section i{
+font-size:60px;
+display: block;
+width:150px;
+height: 150px;
+line-height: 150px;
+border-radius: 50%;
+margin:0 auto 20px;
+color:#40680f;
+background:#fff;
+text-shadow: none;
+}
+.container h2{
+font-size: 18px;
+text-shadow: 2px 2px 2px #000;
+margin-bottom: 20px;
+}
+.container section p{
+line-height: 1.5;
+margin:0 auto;
+text-align: left;
+}
+/*共通見出しcss*/
+.recapi h2, .access h2{
+color:#aaa;
+margin-bottom: 50px;
+}
+ 
+/*レシピ紹介*/
+.recapi{
+padding:100px 0;
+}
+.recapi a{
+display: block;
+padding:calc(100% * (20/320));
+overflow: hidden;/*aのfloatの為*/
+transition: 0.3s;
+}
+.recapi a:hover{
+background:#cfa;
+}
+.recapi h3{
+color:#40680f;
+margin-bottom: 10px;
+}
+.recapi img{
+margin-bottom: 10px;
+}
+.recapi a p{
+font-size: 14px;
+}
+.recapi a p:first-of-type{
+line-height: 1.5;
+text-align: left;
+/*margin-bottom: 30px;*/
+/*詳細ボタン位置*/
+height: 9em;
+}
+.more{
+float: right;
+color:#fff;
+padding:5px 5px 5px 15px;
+background:#f00 url(../img/mark.png) no-repeat 5px center;
+}
+ 
+/*店舗紹介*/
+.access{
+margin-bottom: 50px;
+}
+.access iframe {
+height: 600px;
+width: 100%;
+ }
+ 
+/*----footer----*/
+footer{
+color:#40680f;
+padding:50px 0;
+}

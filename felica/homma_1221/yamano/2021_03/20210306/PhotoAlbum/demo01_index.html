@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Photo Album</title>
+<link href="css/demo01_style.css" rel="stylesheet">
+</head>
+ 
+<body>
+ 
+<div class="container">
+<h1>Photo Album</h1>
+ 
+<div class="wrap">
+<ul>
+<li><a href="img/flower.jpg" class="flower">花</a></li>
+<li><a href="img/sea.jpg" class="sea">海</a></li>
+<li><a href="img/jellyfish.jpg" class="jellyfish">くらげ</a></li>
+<li><a href="img/building.jpg" class="building">建物</a></li>
+</ul>
+<!--メイン画像-->
+<p class="mainImg"><img src="img/flower.jpg" alt="花"></p>
+</div>
+ 
+</div>
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function(){
+//花
+ $('.flower').on('click',function(){
+  $('.mainImg img').attr('src','img/flower.jpg')
+                                     .attr('alt','花');
+                    return false;
+ });
+//海
+ $('.sea').on('click',function(){
+  $('.mainImg img').attr('src','img/sea.jpg')
+                                      .attr('alt','海');
+                    return false;
+ });
+//クラゲ
+ $('.jellyfish').on('click',function(){
+  $('img').attr('src','img/jellyfish.jpg')
+                .attr('alt','クラゲ');
+     return false;
+ });
+//建物
+ $('.building').on('click',function(){
+  $('img').attr('src','img/building.jpg')
+                .attr('alt','建物');
+     return false;
+ });
+ 
+});
+</script>
+ 
+</body>
+</html>

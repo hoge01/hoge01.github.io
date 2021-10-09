@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>背景色変更</title>
+<style>
+/*ボタンのcss*/
+button{
+color: #fff;
+border-radius: 5px;
+}
+.blue{
+background:blue;}
+.red{
+background:red;}
+.green{
+background: green;}
+.yellow{
+background:rgb(197, 197, 5);}
+</style>
+</head>
+<body>
+ 
+<button class="blue">青</button>
+<button class="red">赤</button>
+<button class="green">緑</button>
+<button class="yellow">黄</button>
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function(){
+ 
+    $('.blue').on('click',function(){
+        $('body').css('background','#00f');
+    });
+    $('.red').on('click',function(){
+        $('body').css('background','#f00');
+    });
+    $('.green').on('click',function(){
+        $('body').css('background','#0f0');
+    });
+    $('.yellow').on('click',function(){
+        $('body').css('background','#ff0');
+    });
+ 
+});
+</script>    
+ 
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>アコーディオンパネル</title>
+
+
+<!-- CSS -->
+<style>
+
+/* CSS Reset
+############################################# */
+html
+,body
+,h1
+,h2
+,p
+,ul
+,li
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN"  /*Mac*/
+     ,Meiryo                /*Win*/
+     ,sans-serif;           /*その他ゴシック系*/
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+/* 共通設定
+############################################# */
+
+/* コンテンツ幅設定
+header,nav,(main,sidebar),footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.menu{
+ max-width:200px;   /*♦最大幅を固定値:max-widthで設定*/
+ padding:0;         /*左右の余白調整*/
+ margin:20px auto;  /*左右中央寄せ :上下 左右;*/
+ border-bottom:1px solid #aaa;
+}
+
+.menu h2{
+ color:#555;
+ padding:5px;
+ border:1px solid #aaa;
+ border-bottom: none;
+ cursor:pointer;
+}
+
+.menu h2:hover{
+ color:#fff;
+ background-color:#00f;
+}
+
+.menu a{
+ display:block;
+ color:#555;
+ padding:5px 5px 5px 20px;
+ border:1px solid #aaa;
+ border-bottom: none;
+}
+
+.menu a:hover{
+ color:#00f;
+ background:#ddf;
+}
+
+.menu .current{
+ color:#fff;
+ background:#00f;
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<div class="menu">
+<h2 class="current">Drink</h2>
+<ul>
+     <li><a href="#">コーヒー</a></li>
+     <li><a href="#">紅茶</a></li>
+     <li><a href="#">ミルクティー</a></li>
+</ul>
+<h2>Food</h2>
+<ul>
+     <li><a href="#">ハンバーガー</a></li>
+     <li><a href="#">サンドイッチ</a></li>
+     <li><a href="#">スパゲッティ</a></li>
+</ul>
+<h2>Desert</h2>
+<ul>
+     <li><a href="#">チョコレートケーキ</a></li>
+     <li><a href="#">チーズケーキ</a></li>
+     <li><a href="#">アイスクリーム</a></li>
+</ul>
+</div>
+
+
+  
+
+
+
+
+        <!-- jquery (Google Hosted Libraries)リンク
+############################################# -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<!-- jquery
+############################################# -->
+<script>
+
+$(function(){
+
+ $('ul:not(:first-of-type)').hide();
+
+ $('.menu h2').on('click',function(){
+
+     $('.current').removeClass('current');
+     $(this).addClass('current');
+//  return false;
+
+// ulを全部（開いている）閉じる
+  $('.menu ul').slideUp('fast');  //slideUp 消す
+// クリックした次の
+  $($(this).next()).slideDown('fast');  //slideDown 表示
+
+ });
+
+});
+
+</script>
+
+
+
+</body>
+
+</html>

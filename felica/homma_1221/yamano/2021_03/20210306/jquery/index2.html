@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery2</title>
+</head>
+<body>
+
+<!-- １．画像変更 -->
+<!--<button>画像変更</button>-->
+<button class="r2">リゾート２画像</button>
+<button class="r4">リゾート４画像</button>
+
+<p>
+<img src="img/resort2.png" alt="リゾート２">
+</p>
+
+
+<!-- ２．テキスト変更 -->
+<button class="texChng">テキスト変更</button>
+<p class="first">文字が変更される前だよ。</p>
+
+
+<!-- ３．ペースト -->
+<p class="second">ここにペーストされる。</p>
+
+
+<!-- ４． -->
+
+
+
+
+
+<!-- jquery (Google Hosted Libraries)リンク -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- jquery -->
+<script>
+
+$(function(){
+
+
+// ４．
+
+
+
+// ３．ペースト
+
+$('.texChng').on('click',function(){
+ $('.second').text($('.first').text());
+});
+
+
+
+// ２．テキスト変更
+
+$('.texChng').on('click',function(){
+ $('.first').text('文字が変更されちゃったー！');
+});
+
+
+    
+// １．画像変更
+
+//$('button').on('click',function(){
+$('.r2').on('click',function(){
+
+ $('img').attr('src','img/resort2.png')
+         .attr('alt','リゾート２');
+});
+
+$('.r4').on('click',function(){
+
+ $('img').attr('src','img/resort4.png')
+         .attr('alt','リゾート４');
+});
+
+
+
+});
+
+
+
+</script>
+
+</body>
+</html>

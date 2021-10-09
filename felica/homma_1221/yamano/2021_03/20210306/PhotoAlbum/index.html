@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Photo Album</title>
+
+<!-- CSS -->
+<style>
+
+/* CSS Reset
+############################################# */
+html
+,body
+,h1
+,p
+,ul
+,li
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN"  /*Mac*/
+ ,Meiryo                /*Win*/
+ ,sans-serif;           /*その他ゴシック系*/
+}
+
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+                        /*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+/* 共通設定
+############################################# */
+
+/* コンテンツ幅設定
+   header,nav,(main,sidebar),footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.container{
+ max-width:600px;  /*♦最大幅を固定値:max-widthで設定*/
+ padding:0;        /*左右の余白調整*/
+ margin:20px auto; /*左右中央寄せ :上下 左右;*/
+ background-color:#fac;
+}
+
+.wrap{
+ display:flex;
+ justify-content:space-between;
+ padding:30px;
+}
+
+h1{
+ color:#fff;
+ background-color:#f39;
+ padding:10px 0 10px 30px;
+}
+
+
+ul li{
+ width:110px;
+ line-height:30px;
+ text-align:center;
+ margin-bottom:10px;
+}
+
+ul li a{
+ display:block;
+ background-color:#fff;
+ color:#999;
+}
+
+ul li a:hover{
+ color:#fff;
+ background:#f39;
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<div class="container">
+<h1>Photo Album</h1>
+
+<div class="wrap">
+
+<!-- メニュー -->
+<ul>
+<li><a href="img/flower.jpg" class="flower">花</a></li>
+<li><a href="img/sea.jpg" class="sea">海</a></li>
+<li><a href="img/jellyfish.jpg" class="jellyfish">クラゲ</a></li>
+<li><a href="img/building.jpg" class="building">建物</a></li>
+</ul>
+
+<!-- メイン画像 -->
+<p class="mainImg"><img src="img/flower.jpg" alt="花"></p>
+
+</div><!-- /.wrap -->
+
+</div><!-- /.container -->
+
+
+
+
+<!-- jquery (Google Hosted Libraries)リンク
+############################################# -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<!-- jquery
+############################################# -->
+<script>
+
+$(function(){
+
+// 花
+$('.flower').on('click',function(){
+
+ $('.mainImg img').attr('src','img/flower.jpg')
+                 .attr('alt','花');
+    return false;
+});
+
+// 海
+$('.sea').on('click',function(){
+
+ $('.mainImg img').attr('src','img/sea.jpg')
+                 .attr('alt','海');
+    return false;
+});
+
+// クラゲ
+$('.jellyfish').on('click',function(){
+
+ $('.mainImg img').attr('src','img/jellyfish.jpg')
+                 .attr('alt','クラゲ');
+    return false;
+});
+
+// 建物
+$('.building').on('click',function(){
+
+ $('.mainImg img').attr('src','img/building.jpg')
+                 .attr('alt','建物');
+    return false;
+});
+
+});
+
+
+
+</script>
+
+
+</body>
+
+</html>
