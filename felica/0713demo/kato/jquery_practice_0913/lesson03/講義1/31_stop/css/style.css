@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+dl{
+  width:300px;
+}
+
+dt{
+  color:#FFF;
+  background-color:#777;
+  text-align:center;
+}
+
+dd{
+  margin:0;
+  background-color:#DDD;
+}

@@ -1,0 +1,286 @@
+@charset "utf-8";
+
+/* CSS Reset Start
+/* reset ブロックレベル要素のみ
+/*ブラウザによって異なるデフォルトのCSSを打ち消してブラウザ間の表示を揃える
+============================================= */
+html,
+body,
+h1,
+p,
+ul,
+li
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN",  /*Mac*/
+ Meiryo,                /*Win*/
+ sans-serif;            /*その他ゴシック系*/
+ text-align:center;
+}
+
+                        
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+                        /*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+/*レスポンシヴウェブデザイン（RWD）
+--------------------------------------------- */
+ max-width:100%;        /*親要素のwidth幅の100%の値*/
+                        /*♦フルードイメージ（Fluid Image）-ウィンドウサイズ（または親要素の幅）に応じて、縦横比を保持したまま自動的に画像が拡大・縮小するようにする手法、最大幅は元画像の幅*/
+ height:auto;           /*横幅と同比率で高さも自動調整*/
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+/*ユニバーサルセレクター（全称セレクター）*/
+*{
+ box-sizing:border-box;
+}
+
+
+
+/*--共通設定--*/
+/*****<< フッター >>*****/
+header,footer{
+ background:#fcc;
+}
+
+
+
+/*****<< コンテンツ幅設定 >>*****/
+/***<< header,nav,(main,sidebar),footer >>***/
+/*レスポンシヴウェブデザイン（RWD）
+--------------------------------------------- */
+.container{
+ max-width:1000px; /*PC幅1000前後が通常*/
+                   /*♦最大幅を固定値に-最大横幅をmax-widthで設定*/
+ margin:0 auto;    /*左右中央寄せ :上下 左右;*/
+}
+
+
+
+
+
+/* <HEADER> ヘッダー
+# 0<HTML> 2/2<BODY> 1/4<HEADER>
+============================================= */
+header{
+ padding:30px 0;
+ margin-bottom:30px;
+}
+
+h1{
+ color:#900;
+ font-size:40px;    /*文字の大きさ、40px*/
+ font-weight:lighter;/*親要素に指定された形式より*/
+                    /*bolderは太く、lighterは細く表示*/
+ background:url(../img/logo.png)
+ no-repeat;
+                    /*背景画像の位置調整 画像50x50px*/
+ line-height:50px;  /*行の高さ、50px*/
+ padding-left:55px; /*文字左側、領域内スペース 50+5px*/
+ width:495px;       /*11文字x40px=440+55px*/
+ margin:0 auto 10px;/*左右中央寄せ :上 左右 下;*/
+}
+
+header p{
+ font-size:24px;
+}
+
+
+
+
+
+/* <NAV> ナビゲーション
+# 0<HTML> 2/2<BODY> 2/4<NAV>
+============================================= */
+/* パソコン用
+# 0<HTML> 2/2<BODY> 2/4(1/2)<PCNAV>
+_____________________________________________ */
+.pcnav{
+ margin:0 auto 30px;
+}
+
+.pcnav ul{
+ display:flex;
+/*コンテンツ幅。ボタン間に、余りを均等に配置*/
+ justify-content:space-between;
+}
+
+/*ナビゲーション　文字（文言）*/
+.pcnav li{
+ line-height:44px;
+ font-size:14px;
+/*レスポンシヴウェブデザイン（RWD）
+--------------------------------------------- */
+ width:18%;                 /* %で指定 */
+                            /*♦横幅固定値に対して親ボックスに対する％で指定*/
+                            /*コンテンツ幅に対して、ボタン数を考慮した、幅を指定*/
+}
+
+/*ナビゲーション　リンク*/
+.pcnav li a{
+ display:block; /*ブロック幅を広げる（無いと文字だけ）*/
+ border:1px solid #777;
+}
+
+/*aの上　マウスを合わせたときの背景色を変更*/
+nav li a:hover{
+ color:#900;
+ background-color:#fcc;
+}
+
+
+/* スマホ用
+# 0<HTML> 2/2<BODY> 2/4(2/2)<SPNAV>
+_____________________________________________ */
+.spnav{
+ display:none;
+}
+
+
+
+/* <MAIN> メインコンテンツ
+# 0<HTML> 2/2<BODY> 3/4<MAIN>
+============================================= */
+.wrap{
+ text-align:left;
+ border:10px solid #fcc;
+ padding:0 20px;
+ margin-bottom:50px;
+}
+
+.wrap p{
+ text-align:left;
+}
+
+.wrap h2{
+ background:#DCE6EB;
+ box-shadow:3px 3px 5px #ddd;
+ font-size:18px;
+ padding:3px 5px;
+ /* color:rgb(181,198,209); */
+ color:#777;
+/* border-left:7px solid #aaa;*/
+ border:1px solid #aaa;
+ font-weight:bold;
+/* margin-top:20px;*/
+}
+
+.wrap h3{
+ text-align:left;
+/* font-size:40px;*/
+/* font-weight:lighter;*/
+ background:url(../text/kicon.jpg) no-repeat;
+ padding-left:40px;
+/* line-height:18px;*/
+ margin-top:70px
+}
+
+.graybg{
+ background:#DCE6EB;
+ padding:20px;
+ margin:20px 20px 50px;
+ color:red;
+ font-weight:bold;
+ font-size:16px;
+}
+
+.tbl{
+ border-collapse:collapse;
+ margin-left:20px;
+}
+.tbl,.tbl th,.tbl td{
+ border:1px solid #aaa;
+ padding:5px;
+}
+.tbl th{
+ background:#eee;
+}
+
+.red{
+ text-align:left;
+ color:red;
+ margin:10px 0;
+ font-size:16px;
+ font-weight:bold;
+}
+
+/* <FOOTER> フッター
+# 0<HTML> 2/2<BODY> 4/4<FOOTER>
+============================================= */
+footer{
+ padding:30px 0;
+}
+
+
+
+
+
+/* メディアクエリ　ブレイクポイント767px
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media screen and (max-width:767px){
+
+/* PC用ナビゲーション */
+.pcnav{
+ display:none;
+}
+
+header{
+ padding:20px 0;
+ margin-bottom:20px;
+}
+
+h1{
+ font-size:20px;
+/* width:242px;*/
+/* width:11em;*/
+ width:275px;
+ padding-left:55px;
+/* margin:0 auto 10px;*/
+}
+
+header p{
+ font-size:16px;
+}
+
+/* スマホ用ナビゲーション */
+.spnav{
+ display:block;
+}
+
+.spnav ul{
+ border-bottom: 1px solid #777;
+ margin-bottom:20px;
+}
+
+.spnav li{
+ line-height:34px;
+ font-size:14px;
+ border:1px solid #777;
+ border-bottom:none;
+}
+
+.spnav li a{
+/*ブロック幅を広げる（無いと文字だけ）*/
+  display:block;
+}
+
+.keyVis{
+ margin-bottom:20px;
+}
+
+footer{
+ padding: 20px 0;
+}
+
+}

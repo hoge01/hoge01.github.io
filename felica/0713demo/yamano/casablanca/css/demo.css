@@ -1,0 +1,271 @@
+@charset "utf-8";
+ 
+/*----reset----*/
+html,body,h1,h2,p,ul,li{
+margin: 0;
+padding: 0;
+line-height: 1.0;
+font-family:"Hiragino Kaku Gothic ProN",Meiryo, sans-serif;
+}
+ul{
+list-style: none;
+}
+a {
+text-decoration: none;
+color: inherit;
+}
+img {
+border: none;
+display: block;
+max-width: 100%;
+height: auto;
+}
+/*共通css*/
+.container {
+max-width: 960px;
+margin:0 auto;
+padding: 0 10px;
+display: flex;
+}
+ 
+/*Header*/
+header.container{
+padding: 10px;
+justify-content: space-between;
+align-items: center;
+}
+h1{
+background: url(../img/logo.png) no-repeat;
+height: 46px;
+/*text非表示*/
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+}
+ 
+/*Key visual*/
+.keyVis{
+padding: 120px 0;
+}
+.img1{
+background: url(../img/sofa.jpg) no-repeat center/cover;
+}
+.img2{
+background: url(../img/sofa2.jpg) no-repeat center/cover;
+}
+.img3{
+background: url(../img/sofa3.jpg) no-repeat center/cover;
+}
+.keyVis .container{
+display: block;
+font-size:44px;
+color: #fff;
+font-family: 'Italianno', cursive;
+text-shadow: 2px 2px 2px #900;
+}
+.keyVis span{
+display: block;
+font-size:100px;
+}
+ 
+/*----Navigation---- */
+.pcnav{
+background: url(../img/btn_bg.png) repeat-x left top;
+margin-bottom: 30px;
+}
+.pcnav li {
+width: 20%;
+line-height:44px;
+font-size: 14px;
+text-align: center;
+}
+.pcnav a {
+display: block;
+color: #fff;
+border-left: 1px solid #fff;
+}
+.pcnav li:last-child a{
+border-right: 1px solid #fff;
+}
+.pcnav a:hover {
+background: url(../img/btn_bg.png) repeat-x left bottom;
+}
+/* Sp用 */
+.btn, .spnav{
+display: none;
+}
+ 
+/*2カラムレイアウト*/
+.wrap{
+justify-content: space-between;
+margin-bottom:50px;
+}
+main{
+width:calc(100% * 630 / 960);
+}
+.sidebar {
+width:calc(100% * 300 / 960);
+}
+ 
+/*コンテンツ*/
+main h2 {
+font-size: 28px;
+color:#900;
+border-bottom: solid 1px #aaa;
+padding-bottom:5px;
+margin-bottom:10px;
+}
+main p {
+margin-bottom: 10px;
+line-height: 1.5;
+}
+main p:last-of-type{
+margin-bottom: 0;
+}
+/* main p:first-of-type{ */
+main span:first-of-type{
+display:block;
+margin-bottom: 10px;
+font-size: 20px;
+font-weight: bold;
+color: #d30;
+}
+main img{
+border:10px solid #bd0202;
+box-sizing: border-box;
+}
+ 
+/*----サイドバー----*/
+.sidebar img{
+margin-bottom: 50px;
+}
+.sidebar h2 {
+font-size: 28px;
+color:#900;
+margin-bottom:10px;
+}
+.sidebar li{
+line-height: 44px;
+border-bottom: solid 1px #aaa;
+}
+.sidebar li:first-child{
+border-top: solid 1px #aaa;
+}
+.sidebar li a {
+display: block;
+background: url(../img/listmark.png) no-repeat left center;
+padding-left: 20px;
+}
+.sidebar li a:hover {
+background-color:#fdc;
+}
+ 
+/*----Footer----*/
+footer {
+background:#d30;
+color:#fff;
+padding:30px 0;
+}
+ 
+@media screen and (max-width:767px){
+ 
+/*共通css*/
+.container {
+display:block;
+}
+ 
+/*Header*/
+h1{
+background-position: center;
+}
+header p{
+display: none;
+}
+ 
+/*Key visual*/
+.keyVis{
+padding: 30px 10px;
+text-align: center;
+margin-bottom: 20px;
+}
+ 
+/*----Navigation---- */
+.pcnav{
+display: none;
+}
+/* Hamberger Menu */
+.btn{
+display: block;
+width: 50px;
+height: 50px;
+color: #000;
+background: #fff;
+border:1px solid #000;
+border-radius: 5px;
+position: absolute;
+top:5px;
+right: 5px;
+text-align: center;
+}
+.btn i{
+font-size: 35px;
+line-height: 50px;
+display: block;
+}
+/* Sp nav */
+.spnav{
+/* display: block; */
+position: absolute;
+width: 100%;
+top: 57px;
+}
+.spnav li{
+line-height: 70px;
+text-align: center;
+font-size: 24px;
+border-top: 1px solid #fff;
+}
+.spnav a{
+display:block;
+color: #fff;
+background:rgba(200,50,0,0.8);
+}
+ 
+/*2カラム→1カラム*/
+.wrap{
+margin-bottom:0;
+}
+main,.sidebar{
+width: auto;
+margin-bottom: 20px;
+}
+ 
+/*h2見出し中央揃え*/
+h2{
+text-align: center;
+}
+main p,main h2 + p{
+font-size: 14px;
+}
+ 
+main img, .sidebar img{
+display: block;
+margin: 0 auto;
+}
+.sidebar ul{
+margin-bottom: 20px;
+}
+.sidebar li{
+border: solid 1px #aaa;
+border-radius: 5px;
+margin-bottom: 5px;
+}
+.sidebar li a{
+/*background-position:  20px center;*/
+padding-left: 40px;
+}
+ 
+/*Footer*/
+footer{
+text-align: center;
+}

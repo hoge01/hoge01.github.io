@@ -1,0 +1,178 @@
+@charset "utf-8";
+ 
+/*--Reset--*/
+html,body,h1,h2,h3,p,ul,li{
+margin:0;
+padding:0;
+line-height: 1.0;
+font-family: "游ゴシック",YuGothic,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+text-align: center;
+}
+img{
+border:none;
+/* Fluid image */
+max-width: 100%;
+height: auto;
+}
+a{
+text-decoration: none;
+color: inherit;
+}
+ul{
+list-style: none;
+}
+/*共通css*/
+header,.keyVis,footer{
+background:#fdd;
+}
+/*上下内側余白*/
+header,nav,footer{
+padding:30px 0;
+}
+ 
+/* Header */
+h1{
+font-size: 40px;
+font-weight:lighter;
+color: #900;
+background:url(../img/logo.svg) no-repeat left center;
+line-height: 50px;
+/*width:440px;*/
+width: 11em;
+margin:0 auto 10px;
+padding-left: 55px;
+}
+header p{
+font-size:24px;
+}
+ 
+/*Navigation & コンテナ*/
+.pcnav ul,.container{
+max-width:1000px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+}
+.pcnav li{
+border:1px solid #900;
+width:calc(100% * (180 / 1000));
+line-height: 44px;
+}
+.pcnav a{
+display: block;
+}
+.pcnav a:hover{
+color:#900;
+background:#fcc;
+}
+/* スマホメニュー */
+.spnav{
+display: none;
+}
+ 
+/* Key Visual & Main */
+.keyVis{
+padding: 50px 0;
+}
+main{
+padding: 50px 0 30px;
+}
+ 
+/* Main Content */
+h2,h3{
+color: #900;
+}
+.container section{
+width:30%;
+}
+h2,h3,main img,main p{
+margin-bottom: 20px;
+}
+main p{
+text-align: left;
+line-height: 1.5;
+}
+/* 詳細を見る */
+.more{
+padding: 5px;
+border: 1px solid #900;
+}
+.more:hover{
+color: #900;
+background: #fcc;
+}
+ 
+@media screen and (max-width:767px){
+ 
+/* Header */
+header{
+padding: 10px 0;
+/* margin-bottom: 0; */
+}
+h1{
+font-size: 22px;
+}
+header p{
+font-size:16px;
+}
+/* Sp menu用ボタン */
+.btn{
+display: block;
+background: linear-gradient(to bottom, #fff,#fcd);
+font-size: 35px;
+line-height: 50px;
+color: #f99;
+text-shadow: 1px 1px 1px #fff,-1px -1px 1px #c00;
+}
+ 
+/*Navigation*/
+.pcnav{
+display: none;
+}
+.spnav{
+/* display: block; */
+position: absolute;
+width: 100%;
+}
+.spnav ul{
+border-top: 1px solid #777;
+}
+.spnav li{
+line-height: 70px;
+font-size: 1.5em;
+color: #900;
+border-bottom: 1px solid #777;
+}
+.spnav a{
+display: block;
+background: rgba(255,230,230,0.9);
+}
+ 
+/* キービジュアル */
+.keyVis,main{
+padding: 20px 10px;
+}
+ 
+/*ブーケセレクション*/
+ 
+.container{
+display: block;
+}
+.container section{
+width:auto;
+}
+ 
+/* 詳細を見る */
+.more{
+display: block;
+font-size: 20px;
+text-align: center;
+margin-bottom: 20px;
+padding: 15px;
+color: #900;
+border-color: #900;
+border-radius: 5px;
+background: linear-gradient(#fff,#fdd);
+}
+ 
+}

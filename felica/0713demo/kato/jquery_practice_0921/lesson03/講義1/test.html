@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>jquery test</h1>
+<button class="bt">Click</button>
+<ul>
+    <li><a href="1.jpg">menu1</a></li>
+    <li><a href="2.jpg">menu2</a></li>
+    <li><a href="3.jpg">menu3</a></li>
+</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+// $(function(){
+// });
+
+// const bt=$('.bt');
+// const h1=$('h1');
+const a=$('li a');
+
+// bt.on('click',function(){
+a.on('click',function(){
+    // h1.html('test');
+    // const t=h1.html();
+    // console.log(t);
+$(this).html('test');
+const at=$(this).attr('href');
+console.log(at);
+    return false;
+});
+
+</script>
+
+</body>
+</html>

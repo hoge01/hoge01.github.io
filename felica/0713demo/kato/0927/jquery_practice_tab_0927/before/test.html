@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+div{
+ width:400px;
+ height:300px;
+ background-color:#ccc;
+ display:none;
+}
+
+.test{
+ background-color:#ff0;
+}
+</style>
+
+</head>
+<body>
+
+<a href="#0928" class="test">test</a>
+<div></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$(function(){
+// const a=$('a').html();
+// const a=$('a').attr('href');
+// const a=$('a').attr('class');
+// const a=$('a').attr('class','ikebukuro');
+const a=$('a');
+// console.log(a);
+a.on('click',function(){
+ const b=$(this).attr('class');
+ console.log(b);
+//  $('div').fadeIn();
+//  $('div').fadeToggle();
+ $('div').fadeToggle().attr('class',b);
+ return false;
+});
+
+});
+</script>
+
+</body>
+</html>

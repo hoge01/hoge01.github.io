@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+
+html,body,h1,h2,h3,ul,li,dl,dt,dd,p{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+
+body{
+    font-family: "Hiragino Kaku Gothic Pro",  Meiryo, sans-serif;
+    color: #444;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    /* vertical-align: bottom; * /
+    /* 画像の下部隙間を防ぐ2種類の方法 */
+}
+
+
+/* reset and initial */
+
+header{
+    background-color: #ddd;
+}
+
+.header_inner{
+    height: 80px;
+}
+
+.header_inner h1{
+    line-height: 80px;
+    font-size: 24px;
+    padding-left: 30px;
+}
+
+nav{
+    background-color: rgba(119, 119, 119);
+}
+
+nav ul{
+    display: flex ;
+}
+
+nav li{
+    width: 20%;
+    line-height: 50px;
+    text-align: center;
+}
+
+nav a{
+    display: block;
+    color: #eee;
+    letter-spacing: 0.1;
+    transition: .5s;
+}
+
+
+nav a:hover{
+    background-color: #ddd;
+    color: #444;
+}
+
+
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.main{
+    background-color: #ccc;
+    padding: 20px 10px 100px 10px;
+    box-sizing: border-box;
+
+}
+
+.main h2{
+    font-size: 20px;
+    color: #444;
+    text-align: center;
+    padding: 50px 0 20px;
+
+}
+
+.lbox{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.lbox li{
+    width: calc(100% / 4 - 15px);
+
+}
+
+.lbox .txt{
+    line-height: 1.5;
+    text-align: justify;
+    padding: 10px 12px;  
+}
+
+/* lightbox */
+.acordion{
+    margin-bottom: 60px;
+}
+
+.acordion dt{
+    font-size: 18px;
+    color: #444;
+    font-weight: bold;
+    padding: 8px 0 8px 10px;
+    border-left: 5px solid #666;
+    background-color: #bbb;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.acordion dd{
+    text-align: justify;
+    line-height: 1.5;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    
+}
+
+.acordion .current{
+    border-left: 5px solid #c00;
+}
+
+.acordion .map iframe{
+ width:100%;
+ height:30vh;
+}
+
+
+/* accordion */
+
+.photo_img{
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.photo_img .photo{
+    margin-bottom: 30px;
+}
+
+.photo_img ul{
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.photo_img li{
+    width:calc(100% / 3 - 15px);
+}
+
+/* atrribute */
+
+.tab_menu{
+    display: flex;
+}
+
+.tab_menu li{
+    width: 22%;
+}
+
+.tab_menu a{
+    display: block;
+    background-color: #aaa;
+    padding: 15px 0 15px 10px;
+    font-size: 25px;
+    font-weight: bold;
+    border-right: 1px dotted #eee;
+}
+
+.tab_menu .current_tab_memu{
+    color: #fff;
+    background-color: #666;
+}
+
+.tab .num{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px 0 15px 35px;;
+}
+
+.tab .txt{
+    line-height: 1.7;
+    padding: 0 30px 40px 30px;
+}
+
+.tab .current_tab{
+    color: #eee;
+    background-color: #666;
+}
+
+/* tab change */
+
+
+#toTop{
+    position: fixed;
+    right: 5%;
+    bottom: 50px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-color: #666;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+    color: #fff;
+    cursor:pointer;
+    /* display: none; */
+}
+
+
+/* toTop */
+
+
+footer{
+    background-color: #ddd;
+}
+
+.footer_inner{
+    height: 80px;
+}
+
+.footer_inner small{
+    line-height: 80px;
+    display: block;
+    text-align: center;
+}
+
