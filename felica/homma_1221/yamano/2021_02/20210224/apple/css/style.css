@@ -1,0 +1,342 @@
+@charset "utf-8";
+
+/*--CSS Reset Start--*/
+/*ヘッダーの上下にマージンがあるのをゼロにする*/
+html,body,h1,h2,h3,p,ul,li{
+ margin:0;
+ padding:0;
+ line-height:1.0;
+/*フォントMac:"Hiragino kaku Gothic ProN"*/
+/*フォントWin:Meiryo*/
+/*フォントその他ゴシック系:sans-serif*/
+ font-family:"Hiragino kaku Gothic ProN",Meiryo,sans-serif;
+/* text-align:center;*/
+}
+
+img{
+ border:none;
+}
+
+ul{
+ list-style:none;  /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;
+}
+
+
+/*リンゴの画像サイズ*/
+/*画像は縦横比は自動*/
+.apple{
+ width:250px;
+ height:auto;
+}
+/*--CSS Reset End--*/
+
+
+/* レスポンシヴウェブデザイン（RWD）
+--------------------------------------------- */
+.container{
+/* width:960px;*/   /*PC幅1000前後が通常*/
+ max-width:960px;   /*♦最大幅を固定値:max-widthで設定*/
+ padding:0 10px;    /*左右の余白調整*/
+ margin:0 auto;     /*左右中央寄せ :上下 左右;*/
+}
+
+/*.pcnav li{*/
+nav li{
+ width:calc(100% / 5);/* %で指定 */
+                    /*♦横幅固定値に対して親ボックスに対する％で指定*/
+                    /*コンテンツ幅に対し、(%/ボタン数)を考慮した、幅を指定*/
+}
+
+img{
+ max-width:100%;    /*親要素のwidth幅の100%の値*/
+                    /*♦フルードイメージ（Fluid Image）-ウィンドウサイズ（または親要素の幅）に応じて、縦横比を保持したまま自動的に画像が拡大・縮小するようにする手法、最大幅は元画像の幅*/
+ height:auto;       /*横幅と同比率で高さも自動調整*/
+}
+
+/* 2カラムレイアウト
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.appleMain{
+/* width:630px;*/
+/* width:65.6%;*/
+ width:calc(100% * 630/960);
+}
+
+.sidebar{
+/* width:300px;*/
+/* width:31.2%;*/
+ width:calc(100% * 300/960);
+}
+
+
+/*コンテンツ幅*/
+.container{
+/* PC幅1000前後が通常*/
+/*    width:960px;*/
+/*  上下が0　左右がauto  */
+    margin:0 auto;
+/*白色の枠*/
+/*    border:20px solid #fff;*/
+/*    background:#fff;*/
+/*    padding:20px;*/
+}
+
+
+/*ヘッダー*/
+header{
+ background-color:#900;
+ color:#fff;
+/* padding:20px;*/
+/* background-image:url(../img/headerBg.jpg);*/
+/*背景画像を繰り返す　取り消す　繰り返さない*/
+/* background-repeat:no-repeat;*/
+/*  height:200px;*/
+/* margin-bottom:20px;*/
+}
+
+header>.container{
+ height:200px;
+ background:url(../img/headerBg02.png)
+ no-repeat
+ right bottom;
+}
+
+h1{
+/* font-size:50px;*/
+ font-size:70px;
+/* font-family:'Italianno',cursive;*/  /*google font*/
+ font-family: 'Abril Fatface', cursive;
+/* padding:20px;*/
+ padding:20px 0;
+}
+
+header p{
+ font-size:24px;
+ font-weight:bold;
+/* padding-left:20px;*/
+}
+
+h2{
+ background:#900;
+ color:#fff;
+/* padding:20px 10px;*/
+ padding: 10px;
+ margin-bottom: 10px;
+ clear:both;
+}
+
+h3{
+ background:#fdd;
+ color:#f00;
+/* padding:10px;*/
+ /*h2を、回り込みさせない*/
+ padding: 5px;
+ margin-bottom: 10px;
+ clear:both;
+}
+
+
+/*画像フロート*/
+/*main img{*/
+.apple{
+ float:left;
+/*マージン　上、右、下、左の時計回りに指定*/
+ margin:0 20px 30px 0;
+ width:40%;
+ height:auto;
+}
+
+
+main{
+ display:flex;
+ justify-content:space-between;
+}
+
+.appleMain{
+/* width:630px;*/
+/* width:65.6%;*/
+}
+
+.sidebar{
+/* width:300px;*/
+/* width:31.2%;*/
+}
+
+.sidebar img{
+/* width:300px;*/
+/* height:auto;*/
+}
+
+
+
+/*ナビゲーション*/
+nav{
+ background:#fdd;
+ margin-bottom:20px;
+}
+nav ul{
+/* width:1000px;*/
+ margin:0 auto 30px;
+ display:flex;
+/*1000px 180x5=900px ボタン間に、余りを均等に配置*/
+ justify-content:space-between;
+/* background:#fdd;*/
+}
+
+/*ナビゲーション　文字（文言）*/
+nav li{
+ text-align:center;
+ color:#f00;
+/*幅960pxに対して、ボタン５個なので、１個192px*/
+/* width:192px;*/
+ width:20%;
+}
+
+/*ナビゲーション　リンク*/
+nav a{
+/*ブロックに色　幅を広げる（無いと文字だけ）*/
+ display:block;
+ padding:15px 0;
+}
+
+/*aの上　マウスを合わせたときの背景色を変更　文字を白*/
+nav a:hover{
+ background:#900;
+ color:#fff;
+}
+
+.btn{
+ display:none;
+}
+
+.about{
+ color:#00f;
+ text-decoration:underline;
+}
+
+main p{
+ line-height:1.5;
+ margin-bottom:30px; 
+}
+
+/*.more:hover{*/
+.more{
+ background:#f00;
+ color:#fff;
+ padding:5px 10px;
+}
+
+/*フッター*/
+footer{
+ background:#900;
+ color:#fff;
+ padding:20px 0;
+ text-align:center;
+}
+
+
+
+
+/* レスポンシヴウェブデザイン（RWD）
+   PC、タブレット、スマートフォンなど、あらゆるデバイスに最適化したWebサイトを、単一のHTMLで実現する制作手法。
+   スマートフォンやタブレットからのアクセス数が増加している今、レスポンシブWebデザインはモバイル対応に非常に有効と言える。
+--------------------------------------------- */
+/* ♦メディアクエリー設定（ブレイクポイント）
+============================================= */
+@media screen and (max-width:767px){
+.container{
+ display:block;
+/* padding:0;*/
+}
+
+.appleMain
+,.sidebar
+,nav li
+{
+ display:block;
+ width:auto;
+}
+
+header>.container{
+ height:130px;
+ background-size:auto 130px;/*幅:auto　高さ:130px*/
+}
+
+h1{
+ font-size:50px;
+ padding:20px 0;
+}
+
+nav>.container{
+ padding:0;
+}
+
+nav li a{
+ padding:0;
+ margin:0;
+ line-height:60px;
+ border-top:1px solid #900;
+}
+
+.btn{
+ display:block;
+ text-align:center;
+ height:50px;
+/* グラデーション */
+ background-image:linear-gradient(to bottom,#fff,#fcc);
+ color:#f00;
+ font-size:35px;
+ text-shadow: 1px 1px 1px #fff,-1px -1px 1px #900;
+}
+
+.btn i{             /* Winの場合 */
+ display:block;     /* Winの場合 */
+ line-height:50px;  /* Winの場合 */
+}
+
+
+
+h2{
+ background:#f00;
+ margin-bottom: 20px;
+}
+
+.more{
+ display:block;
+ clear:both;  
+ color:#f00;
+ background:#fdd;
+ padding:15px 0;
+ border:1px solid #f00;
+ text-align:center;
+}
+
+.sidebar img{
+ display:block;
+ margin:0 auto;
+}
+
+
+footer{
+ padding:10px 0;
+ text-align:left;
+}
+
+}
+
+
+
+
+@media screen and (max-width:500px){
+.apple{
+ float:none;
+ display:block;
+ width:400px;
+ margin:0 auto 10px;
+}
+
+}

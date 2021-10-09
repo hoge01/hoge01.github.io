@@ -1,0 +1,404 @@
+Fellica PM Site 1221
+Lesson Contents and Data Download
+
+html/css
+Illustrator
+Photoshop
+Responsive
+総合
+検索: 
+ 
+2021年1月
+日	月	火	水	木	金	土
+« 12月	 	 
+ 	1	2
+3	4	5	6	7	8	9
+10	11	12	13	14	15	16
+17	18	19	20	21	22	23
+24	25	26	27	28	29	30
+31	 
+カテゴリー
+html/css
+Illustrator
+Photoshop
+Responsive
+総合
+最近の投稿
+バナー制作演習（Herb Kitchen）
+Favicon & Touch icon
+コーディング演習（Flowershop）
+CSSリセット
+画像合成（Flower）
+コーディング演習（ペットショップ）
+画像編集・合成（Petshop）
+ヘッダー画像制作演習（Carpaccio）
+コーディング演習（KOMA-NATSU Web）
+CSSとは？
+コーディング演習（ボンゴレ）
+コーディング演習（タコのカルパッチョ）
+コーディング演習（晩秋）
+初めてのウェブサイト制作
+htmlとは？
+Adobe Brackets
+月別投稿記事
+2021年1月
+2020年12月
+リンク
+文法チェック
+HTML5 Outliner
+CSSチェック
+コードドリル
+CODEPREP
+Progate
+ペンツール練習サイト
+Adobe Pen Tool Game
+The Bézier Game
+15
+January
+html/css, Responsive
+コーディング演習（Flowershop）
+使用テキスト
+フラワーショップ：華屋
+あなたに世界中のお花をお届けします。
+
+ホーム
+華屋について
+店舗案内
+ギフト
+お問合せ
+
+Copyright コピーライトマーク フラワーショップ：華屋 All rights reserved.
+
+マークアップイメージ
+
+
+html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>フラワーショップ：華屋</title>
+<meta name="description" content="フラワーショップ：華屋はあなたに世界中のお花をお届けします。">
+<link href="css/style.css" rel="stylesheet">      
+</head>
+<body>
+
+<header>
+<h1>フラワーショップ：華屋</h1>
+<p>あなたに世界中のお花をお届けします。</p>
+</header>
+
+<nav>
+<ul>
+<li ><a href="#">ホーム</a></li>
+<li><a href="#">華屋について</a></li>
+<li><a href="#">店舗案内</a></li>
+<li><a href="#">ギフト</a></li>
+<li><a href="#">お問合せ</a></li>
+</ul>
+</nav>
+
+<!--キービジュアル-->
+<img src="img/flower.png" alt="花の一覧の画像">
+
+<footer>
+<p><small>Copyright &copy; フラワーショップ：華屋 All rights reserved.</small></p>
+</footer>
+
+</body>
+</html>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>フラワーショップ：華屋</title>
+<meta name="description" content="フラワーショップ：華屋はあなたに世界中のお花をお届けします。">
+<link href="css/style.css" rel="stylesheet">      
+</head>
+<body>
+ 
+<header>
+<h1>フラワーショップ：華屋</h1>
+<p>あなたに世界中のお花をお届けします。</p>
+</header>
+ 
+<nav>
+<ul>
+<li ><a href="#">ホーム</a></li>
+<li><a href="#">華屋について</a></li>
+<li><a href="#">店舗案内</a></li>
+<li><a href="#">ギフト</a></li>
+<li><a href="#">お問合せ</a></li>
+</ul>
+</nav>
+ 
+<!--キービジュアル-->
+<img src="img/flower.png" alt="花の一覧の画像">
+ 
+<footer>
+<p><small>Copyright &copy; フラワーショップ：華屋 All rights reserved.</small></p>
+</footer>
+ 
+</body>
+</html>
+cssリセット後
+
+
+指定校
+
+
+html
+@charset "utf-8";
+
+/*--Reset--*/
+html,body,h1,p,ul,li{
+margin:0;
+padding:0;
+line-height: 1.0;
+font-family: "Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+text-align:a center;
+}
+img{
+border:none;
+}
+a{
+text-decoration: none;
+color: inherit;
+}
+ul{
+list-style: none;a
+}
+/*共通css*/
+header,footer{
+background:#fdd;
+}
+
+/*header*/
+header{
+padding:30px 0;
+margin-bottom: 30px;
+}
+h1{
+font-size: 40px;
+font-weight:lighter;
+color: #900;
+background:url(../img/logo.png) no-repeat;
+line-height: 50px;
+width:440px;
+padding-left: 55px;
+margin:0 auto 10px;
+}
+header p{
+font-size:24px;
+}
+
+/*Navigation*/
+nav ul{
+width:1000px;
+margin:0 auto 30px;
+display: flex;
+justify-content: space-between;
+}
+nav li{
+border:1px solid #777;
+width:180px;
+}
+nav a{
+display: block;
+padding:15px 0;
+}
+nav a:hover{
+color:#900;
+background:#fcc;
+}
+/*キービジュアル*/
+.keyVis{
+margin-bottom: 50px;
+}
+
+/*--フッター--*/
+footer{
+padding:30px 0;
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+@charset "utf-8";
+ 
+/*--Reset--*/
+html,body,h1,p,ul,li{
+margin:0;
+padding:0;
+line-height: 1.0;
+font-family: "Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+text-align:a center;
+}
+img{
+border:none;
+}
+a{
+text-decoration: none;
+color: inherit;
+}
+ul{
+list-style: none;a
+}
+/*共通css*/
+header,footer{
+background:#fdd;
+}
+ 
+/*header*/
+header{
+padding:30px 0;
+margin-bottom: 30px;
+}
+h1{
+font-size: 40px;
+font-weight:lighter;
+color: #900;
+background:url(../img/logo.png) no-repeat;
+line-height: 50px;
+width:440px;
+padding-left: 55px;
+margin:0 auto 10px;
+}
+header p{
+font-size:24px;
+}
+ 
+/*Navigation*/
+nav ul{
+width:1000px;
+margin:0 auto 30px;
+display: flex;
+justify-content: space-between;
+}
+nav li{
+border:1px solid #777;
+width:180px;
+}
+nav a{
+display: block;
+padding:15px 0;
+}
+nav a:hover{
+color:#900;
+background:#fcc;
+}
+/*キービジュアル*/
+.keyVis{
+margin-bottom: 50px;
+}
+ 
+/*--フッター--*/
+footer{
+padding:30px 0;
+}
+CSSリセット  Favicon & Touch icon
+Copyright © FTA All rights reserved.
+
+RSS

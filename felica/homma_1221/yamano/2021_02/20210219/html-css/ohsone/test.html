@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" />
+
+<style>
+ html,body,h3{
+  padding:0;
+  margin:0;
+ }
+ img{
+ border:none;           /*画像の境界線を非表示にする*/
+                        /*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+ max-width:100%;    /*親要素のwidth幅の100%の値*/
+                    /*♦フルードイメージ（Fluid Image）-ウィンドウサイズ（または親要素の幅）に応じて、縦横比を保持したまま自動的に画像が拡大・縮小するようにする手法、最大幅は元画像の幅*/
+ height:auto;       /*横幅と同比率で高さも自動調整*/
+}
+body{
+max-width:1000px;
+background-color:#aaa;
+margin:30px auto;
+}
+
+ .slider-for{
+/* width:400px;*/
+ margin:0 auto;
+ }
+.autoplay
+,.slider
+,.slider-nav
+{
+margin:30px auto;
+/*max-width:1100px;*/
+max-width:600px;
+/*max-height:50px;*/
+/*border:1px solid #00f;*/
+}
+
+h3,div{
+/* border:1px solid #0ff;*/
+}
+
+img{
+ margin: 0 auto;
+ max-height:300px;
+}
+
+.slider-nav img{
+ max-height:50px;
+}
+
+/*.blue h3 {*/
+h3 {
+/*    background: #fff;*/
+    color: #3498db;
+    font-size: 36px;
+    line-height: 100px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+/*    width: 300px;*/
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+<div class="slider-for">
+ <div><h3><img alt="画像1" src="img/kitchen_01.jpg" /></h3></div>
+ <div><h3><img alt="画像2" src="img/kitchen_02.jpg" /></h3></div>
+ <div><h3><img alt="画像3" src="img/kitchen_03.jpg" /></h3></div>
+ <div><h3><img alt="画像4" src="img/kitchen_04.jpg" /></h3></div>
+ <div><h3><img alt="画像5" src="img/bathroom_01.jpg" /></h3></div>
+ <div><h3><img alt="画像6" src="img/bathroom_02.jpg" /></h3></div>
+ <div><h3><img alt="画像7" src="img/washroom_01.jpg" /></h3></div>
+ <div><h3><img alt="画像8" src="img/Toilet_01.jpg" /></h3></div>
+ <div><h3><img alt="画像9" src="img/Toilet_02.jpg" /></h3></div>
+</div>
+
+<!--<div class="slider autoplay">-->
+<div class="slider-nav">
+ <div><h3><img alt="画像1" src="img/kitchen_01.jpg" /></h3></div>
+ <div><h3><img alt="画像2" src="img/kitchen_02.jpg" /></h3></div>
+ <div><h3><img alt="画像3" src="img/kitchen_03.jpg" /></h3></div>
+ <div><h3><img alt="画像4" src="img/kitchen_04.jpg" /></h3></div>
+ <div><h3><img alt="画像5" src="img/bathroom_01.jpg" /></h3></div>
+ <div><h3><img alt="画像6" src="img/bathroom_02.jpg" /></h3></div>
+ <div><h3><img alt="画像7" src="img/washroom_01.jpg" /></h3></div>
+ <div><h3><img alt="画像8" src="img/Toilet_01.jpg" /></h3></div>
+ <div><h3><img alt="画像9" src="img/Toilet_02.jpg" /></h3></div>
+</div>
+
+<h2>Center Mode</h2>
+<div class="slider center">
+	<div>
+		<h3>1</h3>
+	</div>
+	<div>
+		<h3>2</h3>
+	</div>
+	<div>
+		<h3>3</h3>
+	</div>
+	<div>
+		<h3>4</h3>
+	</div>
+	<div>
+		<h3>5</h3>
+	</div>
+	<div>
+		<h3>6</h3>
+	</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+
+
+<script>
+$(function(){
+//$('.slick01').slick();
+$('.slider').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+ $('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+//  dots: true,
+//  adaptiveHeight: true,
+//  variableWidth: true,
+//  infinite: true,
+//  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true
+});
+
+});
+</script>
+
+</body>
+
+</html>

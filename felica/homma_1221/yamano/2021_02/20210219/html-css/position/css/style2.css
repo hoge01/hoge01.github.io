@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+.container2{
+ position:relative;
+ width:1000px;
+ height:800px;
+ margin:0 auto;
+}
+
+.container2 img{
+ position:absolute;
+}
+
+.yellow{
+ left:0;
+ top:50px;
+}
+
+.hybiscus{
+ left:0;
+ top:450px
+}
+
+.lily{
+ left:150px;
+ top:150px;
+}
+
+.hasu{
+ left:250px;
+ top:0;
+}
+
+.hasu2{
+ left:250px;
+ top:500px
+}
+
+.kobushi{
+ left:500px;
+ top:50px
+}
+
+.hydrangea{
+ left:500px;
+ top:450px
+}

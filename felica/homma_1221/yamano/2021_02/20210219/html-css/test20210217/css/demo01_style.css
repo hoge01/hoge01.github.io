@@ -1,0 +1,137 @@
+@charset "utf-8";
+/*----------Reset---------*/
+html,body,h1,h2,h3,p,ul,li,dl,dt,dd{
+margin: 0;
+padding: 0;
+line-height: 1.0;
+font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+list-style: none; 
+}
+a{
+text-decoration: none;
+}
+img {
+border: 0;
+vertical-align: bottom;
+}
+ 
+/*共通css*/
+.container{
+width:960px;
+margin:0 auto;
+}
+ 
+/*---------header---------*/
+header{
+background: #365699;
+color:#fff;
+padding:20px 0;
+}
+header h1{
+line-height: 50px;
+background:  url(../img/logo-1.png)no-repeat left center;
+padding-left:50px;
+}
+header p{
+font-weight:bold;
+padding-left:50px;/*marginでもok*/
+}
+ 
+/*---------ナビゲーション---------*/
+nav{
+background:url(../img/navBg.jpg) repeat-x;
+}
+nav ul{
+display: flex;
+}
+nav li{
+width:20%;
+text-align: center;
+line-height:44px;
+}
+nav li a{
+display: block;
+color: #365699;
+}
+nav li a:hover{
+background: url(../img/navBg.jpg) left bottom;
+}
+ 
+/*---------キービジュアル---------*/
+.keyVis{
+padding: 100px 0;
+background:url(../img/mall_bg.jpg) no-repeat center top;
+text-align: center;
+color:#fff;
+font-size:250%;
+line-height: 1.5;
+font-family: 'Righteous', cursive;
+margin-bottom: 30px;
+}
+ 
+/*2カラム*/
+.wrap{
+display: flex;
+justify-content: space-between;
+margin-bottom:20px;
+}
+main{
+width:630px;
+}
+.sidebar{
+width: 300px;
+}
+ 
+/*---------h2見出し---------*/
+h2{
+border-left: 20px solid #365699;
+padding-left: 5px;
+margin-bottom: 20px;
+}
+/*h3見出し共通*/
+h3{
+color:#fff;
+background: #365699;
+padding: 10px;
+margin-bottom: 10px;
+/*clear:both;*/
+}
+/*---------section---------*/
+.content>section{
+overflow: hidden;
+/*margin-bottom: 20px;*/
+}
+.content>section img{
+float: left;
+margin:0 10px 20px 0;
+}
+.content>section p:first-of-type{
+line-height: 1.5;
+margin-bottom: 10px;
+}
+/*詳細を見る*/
+.more a{
+background:url(../img/arrow.png) no-repeat left center;
+padding-left: 20px;
+color:#00f;
+}
+ 
+/*---------.sidebar---------*/
+.sidebar dt{
+color:#c00;
+font-weight:bold;
+margin-bottom:10px;
+}
+.sidebar dd{
+margin:0 0 30px 30px;
+line-height:1.5;
+}
+ 
+/*---------footer---------*/
+footer{
+color:#fff;
+padding: 30px 0;
+background: #365699;
+}

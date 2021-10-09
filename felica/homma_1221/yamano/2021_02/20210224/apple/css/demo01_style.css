@@ -1,0 +1,263 @@
+@charset "utf-8";
+ 
+/*Reset*/
+html,body,h1,h2,h3,p,ul,li {
+margin: 0;
+padding: 0;
+line-height: 1.0;
+font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ 
+ul {
+list-style: none;
+}
+ 
+a {
+text-decoration: none;
+color: inherit;
+}
+ 
+img {
+border: none;
+max-width: 100%;
+}
+ 
+/*リンゴ画像画像サイズ*/
+.apple {
+width: 40%;
+height: auto;
+}
+ 
+/*全体ボックス*/
+.container {
+max-width: 960px;
+margin: 0 auto;
+padding: 0 10px;
+}
+ 
+/*header*/
+header {
+background: #900;
+color: #fff;
+}
+header>.container {
+height: 200px;
+background: url(../img/headerBg02.png) no-repeat right bottom;
+}
+ 
+h1 {
+font-family: 'Fredoka One', cursive;
+font-size:70px;
+padding: 20px;
+}
+ 
+header p {
+font-size: 24px;
+font-weight: bold;
+padding-left: 20px;
+}
+ 
+/* sp btn */
+.btn {
+display: none;
+}
+ 
+/*Navigation*/
+nav {
+background: #fdd;
+margin-bottom: 20px;
+}
+ 
+nav ul {
+display: flex;
+}
+ 
+nav li {
+text-align: center;
+color: #f00;
+width: 20%;
+}
+ 
+nav a {
+display: block;
+padding: 15px 0;
+}
+ 
+nav a:hover {
+background: #f00;
+color: #fff;
+}
+ 
+/*2カラムレイアウト*/
+main {
+display: flex;
+justify-content: space-between;
+}
+ 
+.appleMain {
+width: 65.6%;
+/*630px*/
+}
+ 
+.sidebar {
+width: 31.2%;
+/*300px*/
+}
+ 
+.sidebar img {
+width: 300px;
+height: auto;
+}
+ 
+/*見出し*/
+h2 {
+background: #f00;
+color: #fff;
+padding: 10px;
+margin-bottom: 10px;
+clear: both;
+}
+ 
+h3 {
+background: #fdd;
+color: #f00;
+padding: 5px;
+margin-bottom: 10px;
+clear: both;
+}
+ 
+/*リンゴについて*/
+.about {
+color: #00f;
+text-decoration: underline;
+}
+ 
+/*リンゴ画像*/
+.apple {
+float: left;
+width: 40%;
+margin: 0 20px 30px 0;
+}
+ 
+/*段落*/
+main p {
+line-height: 1.5;
+margin-bottom: 30px;
+}
+ 
+/*詳細を見る*/
+.more {
+background: #f00;
+color: #fff;
+padding: 5px 10px;
+}
+ 
+/*Footer*/
+footer {
+clear: both;
+padding: 30px;
+background: #a00;
+color: #fff;
+}
+ 
+@media screen and (max-width:767px) {
+ 
+/* Header */
+header>.container {
+height: 130px;
+text-shadow: 1px 1px 1px #000;
+/* 背景画像サイズ調整 */
+background-size: auto 130px;
+}
+h1 {
+font-size: 45px;
+padding: 20px 0;
+}
+header p {
+font-size: 16px;
+padding: 0;
+}
+ 
+/* Sp btn */
+.btn {
+display: block;
+text-align: center;
+height: 50px;
+/* グラデーション */
+background-image: linear-gradient(to bottom, #fff, #fcc);
+margin-bottom: 10px;
+}
+.btn i {
+display: block;
+line-height: 50px;
+font-size: 35px;
+color: #f00;
+text-shadow: 1px 1px 1px #fff,-1px -1px 1px #900;
+}
+ 
+/* Navigation */
+nav {
+position: absolute;
+top:180px;
+width: 100%;
+/*display: none;*/
+}
+nav ul {
+display: block;
+}
+nav li {
+width: auto;
+font-size: 22px;
+line-height: 60px;
+text-shadow: 1px 1px 1px #fff,-1px -1px 1px #900;
+}
+nav a {
+padding: 0;
+background: rgba(255, 210, 210, 0.9);
+border-top: 1px solid #f00;
+}
+ 
+/* 2カラム→1カラム */
+main {
+display: block;
+}
+.appleMain,
+.sidebar {
+width: auto;
+}
+ 
+main p {
+margin-bottom: 20px;
+}
+ 
+/*詳細を見る*/
+.more {
+clear: both;
+display: block;
+text-align: center;
+padding: 15px 0;
+background: #fdd;
+border: 1px solid #f00;
+color: #f00;
+}
+ 
+.sidebar img {
+display: block;
+margin: 0 auto;
+}
+ 
+footer {
+padding: 10px 0;
+}
+ 
+}
+ 
+@media screen and (max-width:500px) {
+.apple {
+float: none;
+display: block;
+margin: 0 auto  10px;
+width: 400px;
+}
+ 
+}

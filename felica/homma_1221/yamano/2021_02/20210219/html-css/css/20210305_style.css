@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/*--CSS Reset Start--*/
+/*ヘッダーの上下にマージンがあるのをゼロにする*/
+html,body,h1,h2,p,ul,li{
+ margin:0;
+ padding:0;
+ line-height:1.0;
+/*フォントMac:"Hiragino kaku Gothic ProN"*/
+/*フォントWin:Meiryo*/
+/*フォントその他ゴシック系:sans-serif*/
+ font-family:"Hiragino kaku Gothic ProN",Meiryo,sans-serif;
+/* text-align:center;*/
+}
+
+img{
+ border:none;
+}
+
+ul{
+ list-style:none;  /*黒丸を非表示にする*/
+}
+
+/*a{*/
+/* text-decoration:none;  文字の下線を消す*/
+/* color:inherit;*/
+/*}*/
+
+/*共通CSS*/
+/*コンテンツ幅*/
+.container{
+ width:960px;
+ margin:0 auto;
+}
+
+header,nav,footer{
+ background:#ccc;
+}
+
+
+
+/*ヘッダー*/
+header{
+ padding:30px 0 20px;
+}
+
+h1{
+ font-size:30px;
+ margin-bottom:20px;
+}
+
+
+
+/*ナビゲーション*/
+nav ul{
+ margin:0 auto 50px;
+ display:flex;
+/*1000px 180x5=900px ボタン間に、余りを均等に配置*/
+ justify-content:space-between;
+ background:#ddd;
+}
+
+/*ナビゲーション　文字（文言）*/
+nav li{
+ text-align:center;
+ line-height:50px;
+/*幅960pxに対して、ボタン３個なので、１個px*/
+/* width:320px;*/
+ width:33.3%;
+/* border:1px solid #ccc;*/
+}
+
+/*ナビゲーション　リンク*/
+nav a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;
+/*ブロックに色　幅を広げる（無いと文字だけ）*/
+ display:block;
+ background:#ddd;
+ border-left:1px solid #ccc;
+}
+
+.current{
+ background:#fff;
+}
+/*aの上　マウスを合わせたときの背景色を変更　文字を白*/
+nav a:hover{
+ background:#fff;
+}
+
+
+
+
+
+main a:hover{
+ background:#fff;
+}
+
+
+
+/*メインコンテンツ*/
+main{
+ padding:50px 0;
+}
+
+h2{
+ margin-bottom:30px;
+}
+
+main li{
+ margin-bottom:20px;
+}
+
+
+/*フッター*/
+footer{
+ padding:30px 0;
+}

@@ -1,0 +1,215 @@
+@charset "utf-8";
+
+/*--CSS Reset Start--*/
+/*ヘッダーの上下にマージンがあるのをゼロにする*/
+html,body,h1,h2,h3,p,ul,li{
+ margin:0;
+ padding:0;
+ line-height:1.0;
+/*フォントMac:"Hiragino kaku Gothic ProN"*/
+/*フォントWin:Meiryo*/
+/*フォントその他ゴシック系:sans-serif*/
+ font-family:"Hiragino kaku Gothic ProN",Meiryo,sans-serif;
+/* text-align:center;*/
+}
+
+img{
+ border:none;
+}
+
+ul{
+ list-style:none;  /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;
+}
+
+
+/*バナー広告サイズ*/
+/*画像は縦横比は自動*/
+.banner{
+ width:300px;
+ height:auto;
+}
+/*--CSS Reset End--*/
+
+
+h2,h3,footer{
+background:#090;
+}
+
+
+
+/*コンテンツ幅*/
+.container{
+/* PC幅1000前後が通常*/
+    width:960px;
+/*  上下が0　左右がauto  */
+    margin:0 auto;
+/*白色の枠*/
+/*    border:20px solid #fff;*/
+/*    background:#fff;*/
+/*    padding:20px;*/
+}
+
+
+
+/*ヘッダー*/
+header{
+ color:#fff;
+ background-image:url(../img/herbs2.jpg);
+/*背景画像を繰り返す　取り消す　繰り返さない*/
+/* background-repeat:no-repeat;*/
+ height:200px;
+ margin-bottom:20px;
+}
+
+
+/*画像フロート*/
+/*main img{*/
+.herb{
+ float:left;
+/*マージン　上、右、下、左の時計回りに指定*/
+ margin:0 20px 50px 0;
+}
+
+
+h1{
+font-size:80px;
+/*width:600px;*/
+}
+
+header p{
+ font-size:24px;
+/* width:600px;*/
+/* clear:both;*/
+}
+
+
+h2{
+ padding:5px;
+ margin-bottom:20px;
+ color:#fff;
+ clear:both;
+}
+
+
+h3{
+ padding:5px;
+ margin-bottom:10px;
+ background:#fff;
+ border-left:15px solid #090;
+ clear:both;
+}
+
+
+.container{
+/*.wrap{*/
+ display:flex;
+ justify-content:space-between;
+}
+
+main{
+ width:630px;
+/* width:65.6%;*/
+}
+
+.sidebar{
+ width:300px;
+/* width:31.2%;*/
+}
+
+
+
+/*ナビゲーション*/
+nav ul{
+/* width:1000px;*/
+ margin:0 auto 30px;
+/*1000px 180x5=900px ボタン間に、余りを均等に配置*/
+/* display:flex;*/
+/* justify-content:space-between;*/
+ background:#050;
+}
+
+/*ナビゲーション　文字（文言）*/
+nav li{
+ text-align:center;
+ color:#fff;
+/*幅960pxに対して、ボタン５個なので、１個192px*/
+/* width:192px;*/
+ width:20%;
+ clear:both;
+}
+
+/*ナビゲーション　リンク*/
+nav a{
+/*ブロックに色　幅を広げる（無いと文字だけ）*/
+ display:block;
+ padding:15px 0;
+}
+
+/*aの上　マウスを合わせたときの背景色を変更　文字を白*/
+nav a:hover{
+ background:#f50;
+ color:#fff;
+}
+
+
+main p{
+ line-height:1.5;
+ margin-bottom:20px; 
+}
+
+
+/*.more:hover{*/
+.more{
+ background:#090;
+ color:#fff;
+ padding:5px 10px;
+}
+
+
+
+/*カテゴリー*/
+.sidebar ul{
+ margin-left:20px;
+}
+
+/*カテゴリー　文字（文言）*/
+.sidebar li{
+ height:50px;
+/* margin-left:20px;*/
+}
+
+/*カテゴリー　リンク*/
+.sidebar a{
+/*ブロックに色　幅を広げる（無いと文字だけ）*/
+ display:block;
+ padding:15px 0;
+}
+
+/*aの上　マウスを合わせたときの背景色を変更　文字を白*/
+.sidebar a:hover{
+ border:1px solid #090;
+ border-left:15px solid #090;
+/* background:#f50;*/
+/* color:#fff;*/
+}
+
+
+.sidebar img{
+ margin-top:20px;
+}
+
+
+
+/*フッター*/
+footer{
+ background:#090;
+ color:#fff;
+ padding:20px 0;
+ text-align:center;
+ margin-top:50px;
+}

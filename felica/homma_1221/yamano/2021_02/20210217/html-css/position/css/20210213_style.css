@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.container{
+ position:relative;
+ width:1000px;
+ height:800px;
+ margin:0 auto;
+}
+
+.container img{
+ position:absolute;
+}
+
+.container hasu{
+ left:0;
+ top:0;
+}
+
+.container kobushi{
+ left:0;
+ top:400px
+}
+
+.container lily{
+ left:200px;
+ top:200px;
+}
+
+.container hydrangea{
+ left:200px;
+ top:600px
+}
+
+.container yellow{
+ left:600px;
+ top:0px;
+}
+
+.container hybiscus{
+ left:600px;
+ top:600px
+}
+
+.container himawari{
+ left:800px;
+ top:200px;
+}
+
+
+
+.container2{
+ position:relative;
+ width:1000px;
+ height:800px;
+ margin:0 auto;
+}
+
+.container2 img{
+ position:absolute;
+}
+
+.container2 yellow{
+ left:0;
+ top:50px;
+}
+
+.container2 hybiscus{
+ left:0;
+ top:450px
+}
+
+.container2 lily{
+ left:150px;
+ top:150px;
+}
+
+.container2 hasu{
+ left:250px;
+ top:0;
+}
+
+.container2 hasu2{
+ left:250px;
+ top:500px
+}
+
+.container2 kobushi{
+ left:500px;
+ top:50px
+}
+
+.container2 hydrangea{
+ left:500px;
+ top:450px
+}

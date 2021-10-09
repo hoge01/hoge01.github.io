@@ -1,0 +1,325 @@
+@charset "utf-8";
+
+/*--CSS Reset Start--*/
+
+/*ヘッダーの上下にマージンがあるのをゼロにする*/
+html,
+body,
+h1,
+h2,
+p,
+ul,
+li{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN",  /*フォントMac:"Hiragino kaku Gothic ProN"*/
+　Meiryo,               /*フォントWin:Meiryo*/
+　sans-serif;           /*フォントその他ゴシック系:sans-serif*/
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+img{
+/*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示されます。*/
+ border:none;           /*画像の境界線を非表示にする*/
+ vertical-align:bottom; /*初期設定で画像の下の空白を取る*/
+ max-width:100%;        /*画像サイズを親ボックス内に合わせる*/
+ height:auto;
+}
+
+
+/*--CSS Reset End--*/
+/*
+*{
+ box-sizing:border-box;
+}
+*/
+
+/*--共通設定--*/
+
+/*****<< コンテンツ幅設定 >>*****/
+/***<< header,(keyVis),nav,(main,sidebar),footer >>***/
+.container{
+ width:960px;       /* PC幅1000前後が通常*/
+ margin:0 auto;     /*  上下が0　左右がauto  */
+ display:flex;
+/* justify-content: space-between;*/
+}
+
+.keyVis>.container{
+ display:block;
+}
+
+
+
+/***<< (main,sidebar) >>***/
+main{
+/* width:630px;*/
+ width:65.6%;
+}
+
+.sidebar{
+/* width:300px;*/
+ width:31.2%;
+}
+
+
+
+
+
+/*****<< ヘッダー >>*****/
+header{
+ padding:10px 0;
+ justify-content:space-between;
+ align-items:center;
+}
+
+h1{
+ background-image:url(../img/logo.png);
+ background-repeat:no-repeat;  /*背景画像を繰り返さない*/
+ height:46px;                  /*背景画像の高さを確保*/
+ text-indent:100%;             /*text非表示1 字下げ*/
+ white-space:nowrap;           /*text非表示2 改行をさせない*/
+ overflow:hidden;              /*text非表示3 はみ出た文字を隠す*/
+}
+
+
+
+.keyVis{
+/* background-image:url(../img/sofa.jpg);*/
+ background:
+ url(../img/sofa.jpg)
+ no-repeat
+ center/cover;                      /*中央　拡大縮小*/
+/* height:491px;*/
+ padding:120px 0;
+}
+
+.keyVis>.container{
+ display:block;                     /**/
+ font-size:44px;                    /*文字サイズ*/
+ color:#fff;                        /*文字色*/
+ font-family:'Italianno',cursive;   /*google font*/
+ text-shadow:2px 2px 2px #900;      /*文字に影 右:下:ぼかし:色*/
+}
+
+.keyVis span{
+ display:block;
+ font-size:100px;
+}
+
+/*****<< ナビゲーション>>*****/
+nav{
+ background:
+  url(../img/btn_bg.png)
+  repeat-x;
+ margin-bottom:30px;
+}
+
+
+/*nav ul{*/
+nav .container{
+/* display:flex;*/
+/*960px 192x5=960px ボタン間に、余りを均等に配置*/
+/* justify-content:space-between;*/
+}
+
+/*ナビゲーション　文字（文言）*/
+nav li{
+ line-height:44px;
+ font-size:14px;
+ text-align:center;
+/*幅960pxに対して、ボタン５個なので、１個192px*/
+/* width:192px;*/
+ width:20%;
+}
+
+/*ナビゲーション　リンク*/
+nav li a{
+/*ブロックに色　幅を広げる（無いと文字だけ）*/
+ display:block;
+ color:#fff;
+ border-left:1px solid #fff;
+}
+
+nav li:first-child a{
+ border-left:none;
+}
+
+
+/*aの上　マウスを合わせたときの背景色を変更*/
+nav li a:hover{
+ background:
+  url(../img/btn_bg.png)
+  repeat-x     /*背景画像サイズ151x88*で足りない横方向にrepeat-x*/
+  left bottom; /*背景画像の下側を表示*/
+}
+
+
+
+/* スマホ用ナビゲーション*/
+.spnav,
+.btn{
+ display:none;
+}
+
+
+
+/*****<< メインコンテンツ >>*****/
+/*2カラムレイアウト*/
+.wrap{
+/* display:flex;*/
+ justify-content:space-between;
+ margin-bottom:50px;
+}
+
+main h2{
+ font-size:28px;
+ color:#900;
+ border-bottom:1px solid #aaa;
+ padding-bottom:5px;    /*borderを付けたら必ずpadding-bottom*/
+ margin-bottom:10px;
+}
+
+main p{
+ margin-bottom:10px;
+ line-height:1.5;
+}
+
+main span{
+ display:block;          /*displaya改行させる*/
+ font-size:20px;
+ font-weight:bold;
+ color:#d30;
+ margin-bottom:10px;
+}
+
+main img{
+ border:10px solid #bd0202;
+/* margin:10px 0; */
+}
+
+
+
+
+
+/*<< 2-2 カテゴリー >>*/
+.sidebar img{
+ margin-bottom:50px;
+}
+
+.sidebar h2{
+ font-size:28px;
+ color:#d30;
+ margin-bottom:10px;
+}
+
+
+
+/*カテゴリー*/
+/*カテゴリー　文字（文言）*/
+.sidebar li{
+ line-height:44px;
+ border-bottom:1px solid #aaa;
+}
+
+.sidebar li:first-child{
+ border-top:1px solid #aaa;
+}
+
+
+/*カテゴリー　リンク*/
+.sidebar li a{
+/*ブロックに色　幅を広げる（無いと文字だけ）*/
+/* background-image:url(../img/listmark-1.png);
+ background-repeat:no-repeat;
+ background-position:left center;*/
+ display:block;
+ padding-left:20px;
+ background:
+ url(../img/listmark-1.png)
+ no-repeat
+ left center;
+}
+
+/*aの上　マウスを合わせたときの背景色を変更　文字*/
+.sidebar li a:hover{
+ background-color:#fdc; /*背景画像が消えるのでショートハンドはダメ*/
+/* background:#fdc;
+ background-image:url(../img/listmark-1.png);
+ background-repeat:no-repeat;
+ background-position:left center;*/
+}
+
+
+
+/*****<< フッター >>*****/
+footer{
+ color:#fff;
+ background:#d30;
+ padding:30px 0;
+/* margin-top:50px;*/
+/* text-align:center;    */
+}
+
+
+
+
+
+/*メディアクエリ　ブレイクポイント767px*/
+@media screen and (max-width:767px){
+.pcnav{
+ display:none;
+}
+
+.wrap{
+ display:block;
+}
+keyVis{
+ display:block;
+ width:100%;
+}
+main,.sidebar{
+ width:100%;
+}
+
+.spnav{
+ display:block;
+}
+
+.btn{
+ display:block;
+ width:50px;
+ height:50px;           /* Winの場合 */
+ /*line-height:50px;*/  /* macの場合 */
+ position:absolute;
+ top:5px;
+ right:5px;
+ border:1px solid #fff;
+ border-radius:5px;
+ color:#fff;
+ text-align:center;
+ font-size:35px;
+}
+
+.btn i{             /* Winの場合 */
+ display:block;     /* Winの場合 */
+ line-height:50px;  /* Winの場合 */
+}
+
+.spnav{
+ width:100%;
+ position:absolute;
+ top:55px;
+ right:5px;
+ background:rgba(0,0,255,0.5);
+}
+

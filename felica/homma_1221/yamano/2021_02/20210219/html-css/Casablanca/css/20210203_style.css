@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+/*--CSS Reset Start--*/
+
+/*ヘッダーの上下にマージンがあるのをゼロにする*/
+html,body,h1,h2,p,ul,li{
+ margin:0;
+ padding:0;
+ line-height:1.0;
+/*フォントMac:"Hiragino kaku Gothic ProN"*/
+/*フォントWin:Meiryo*/
+/*フォントその他ゴシック系:sans-serif*/
+ font-family:"Hiragino kaku Gothic ProN",
+　Meiryo,
+　sans-serif;
+}
+
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+/*--CSS Reset End--*/
+
+*{
+    box-sizing: border-box;
+}
+/*--共通設定--*/
+
+
+
+
+
+
+/*****<< コンテンツ幅設定 >>*****/
+/***<< header,nav,(main,sidebar),footer >>***/
+.container{
+/* PC幅1000前後が通常*/
+ width:960px;
+/*  上下が0　左右がauto  */
+ margin:0 auto;
+ display:flex;
+    justify-content: space-between;
+}
+
+.keyVis>.container{
+ display:block;
+}
+
+/***<< (main,sidebar) >>***/
+main{
+/* width:630px;*/
+ width:65.6%;
+}
+
+.sidebar{
+/* width:300px;*/
+ width:31.2%;
+}
+
+
+
+/*バナー広告サイズ*/
+/*画像は縦横比は自動*/
+.banner{
+/*親ボックスに対してなので、100%*/
+ width:100%;
+ height:auto;
+}
+
+
+
+/*****<< ヘッダー >>*****/
+h1{
+ background-image:url(../img/logo.png);
+/*背景画像を繰り返す　取り消す　繰り返さない*/
+ background-repeat:no-repeat;
+/* height:46px;*/
+ margin:10px 0;
+}
+
+
+header p{
+/* text-align:right;*/
+    width: 60%;
+}
+
+.keyVis{
+ background-image:url(../img/sofa.jpg);
+ background-repeat:no-repeat;
+ height:491px;
+ padding-top:120px;
+ padding-bottom:120px
+}
+
+
+
+/*****<< ナビゲーション>>*****/
+nav{
+ background:#db0202;
+ margin-bottom:30px;
+}
+
+
+/*nav ul{*/
+nav .container{
+/* display:flex;*/
+/*960px 192x5=960px ボタン間に、余りを均等に配置*/
+ justify-content:space-between;
+}
+
+/*ナビゲーション　文字（文言）*/
+nav li{
+ text-align:center;
+ color:#fff;
+/*幅960pxに対して、ボタン５個なので、１個192px*/
+/* width:192px;*/
+ line-height:44px;
+ width:20%;
+}
+
+/*ナビゲーション　リンク*/
+nav a{
+/*ブロックに色　幅を広げる（無いと文字だけ）*/
+ display:block;
+/* padding:15px 0;*/
+}
+
+/*aの上　マウスを合わせたときの背景色を変更　文字を白*/
+nav a:hover{
+ background:#f00;
+}
+
+
+
+/*****<< メインコンテンツ >>*****/
+main h2{
+ font-size:28px;
+ color:#bd0202;
+}
+
+
+
+
+
+/*<< 2-2 カテゴリー >>*/
+.sideber h2{
+ color:#d30;
+ font-size:50px;
+}
+
+/*カテゴリー*/
+.sidebar ul{
+margin-top:50px;
+}
+
+/*カテゴリー　文字（文言）*/
+.sidebar li{
+ height:44px;
+}
+
+/*カテゴリー　リンク*/
+.sidebar li a{
+/*ブロックに色　幅を広げる（無いと文字だけ）*/
+ display:block;
+ padding:15px 0px;
+/* padding:15px;*/
+ border:1px solid transparent;  /*白　透明色*/
+ border-right-width:15px;
+ border-left-width:15px;
+}
+
+/*aの上　マウスを合わせたときの背景色を変更　文字*/
+.sidebar li a:hover{
+ border-color:#fdc;
+/* border-right-color:#f00;*/
+
+
+
+/*****<< フッター >>*****/
+footer{
+ text-align:center;
+ padding:30px 0;
+ margin-top:50px;
+}

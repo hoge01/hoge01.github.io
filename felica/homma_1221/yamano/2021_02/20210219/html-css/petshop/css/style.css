@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+
+/*ヘッダーの上下にマージンがあるのをゼロにする*/
+html,body{
+ margin:0;
+/*ウインド背景色の設定*/
+ background:#ffc;
+ text-align:center;
+}
+
+
+/*20210210 add*/
+img{
+ border:none;
+ vertical-align: bottom;
+/*Fluid image*/
+/*width:100%;*/      /*画像サイズを親ボックス内に合わせる*/
+ max-width:100%;  /*（元画像サイズ以内）親ボックス内に合わせる。*/
+ height:auto;
+}
+
+
+/*コンテンツ幅*/
+/*20210115 add*/
+/*<!--divにクラス属性をつけて、名前を付ける-->*/
+.container{
+/*div{*/
+/* PC幅1000前後が通常*/
+/* width:960px;*/
+/*20210210 add*/
+ max-width:960px;
+/*  上下が0　左右がauto  */
+    margin:0 auto;
+/*白色の枠*/
+/*    border:20px solid #fff;*/
+/*    background:#fff;*/
+/*    padding:20px;*/
+}
+
+
+/*index.html <style>〇〇〇</style>*/
+
+header{
+/*background-color:#fec;*/
+/*color:#ffc;*/
+/*padding:20px;*/
+/*text-align:center;*/
+/*           background-image:url(../img/headerBg.jpg);*/
+/*背景画像を繰り返す　取り消す　繰り返さない*/
+/*           background-repeat:no-repeat;*/
+/*paddingの上下分 10+10=20 引く 200-20=180px*/
+/*           height:180px;*/
+/*           height:200px;*/
+    }
+
+h1{
+ background-color:#900;
+ color:#fff;
+ padding:20px 0;
+ margin:0;
+}
+
+header p{
+ background:#fec;
+ color:#900;
+ border:1px solid #900;
+ padding:10px 0;
+}
+
+/*main p{*/
+/*text-align:center;*/
+/*}*/
+
+
+/*ナビゲーション*/
+nav ul{
+ list-style:none;  /*黒丸を非表示にする*/
+ padding:0;   /*初期値で40px入っているので消す*/ 
+/*色*/
+/*       background:#ccf;*/
+/*20210115 add*/
+ display:flex;
+}
+
+/*ナビゲーション　文字（文言）*/
+nav li{
+/*       text-align:center;  文字をセンター*/
+/*色*/
+/*       background:#ccf;*/
+/*20210115 add*/
+/*幅960pxに対して、ボタン５個なので、１個192px*/
+/* width:192px;*/
+ width:20%;
+}
+
+/*ナビゲーション　リンク*/
+nav a{
+ text-decoration:none;  /*文字の下線を消す*/
+/*文字だけ色*/
+ background:#900;
+ color:#fff;
+/*ブロックに色　幅を広げる（無いと文字だけ）*/
+ display:block;
+ padding:15px 0;
+}
+
+/*aの上　マウスを合わせたときの背景色を変更　文字を白*/
+nav a:hover{
+ background:#f70;
+/* color:#fff;*/
+}
+
+
+/*フッター*/
+footer{
+ border-top:1px solid #900;
+}
+
+
+
+/*20210210 add*/
+/*メディアクエリ　ブレイクポイント767px*/
+@media screen and (max-width:767px){
+
+/*文字サイズを、iPhone5/SE 320px サイズに合わせて調整する*/
+/*ヘッダー*/
+h1{
+ font-size:28px;
+}
+
+header p{
+ font-size:13px;
+}
+
+
+/*ナビゲーション*/
+nav ul{
+ display:block;
+}
+
+nav li{
+ width:auto;  /*初期設定*/
+/* width:100%;*/  /*padding等を入れていると、伸びてしまうので注意*/
+}
+
+}
+
