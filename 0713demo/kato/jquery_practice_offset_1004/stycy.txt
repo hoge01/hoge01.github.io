@@ -1,4 +1,0 @@
-スティッキーに関するURL
-
-https://hsmt-web.com/blog/css-sticky/
-

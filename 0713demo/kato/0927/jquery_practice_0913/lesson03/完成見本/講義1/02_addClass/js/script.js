@@ -1,3 +1,0 @@
-$(function(){
-  $("p").addClass("textRed");
-});
