@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tab Panel</title>
+
+<style>
+/* CSS Reset
+############################################# */
+html
+,body
+,h1
+/*,p*/
+,ul
+,li
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN"  /*Mac*/
+ ,Meiryo                /*Win*/
+ ,sans-serif;           /*その他ゴシック系*/
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+
+.container{
+ max-width:800px;
+ margin:30px auto;
+}
+
+h1{
+ color:#00f;
+ margin-bottom:20px;
+}
+
+.tab{
+ display:flex;
+ border:1px solid #000;
+}
+
+.tab li{
+ width:calc(100% / 4);
+ line-height:40px;
+ text-align:center;
+/* border-right:1px solid #000;*/
+}
+
+.tab li:last-child{
+/* border:none;*/
+}
+
+.tab li a{
+ font-weight: bold;
+ display:block;
+ border:1px solid #aaa;
+}
+
+.tab a:hover{
+ background-color:#ddf;
+}
+
+.selected,a.selected:hover{
+ color:#fff;
+ background-color:#00f;
+}
+
+.panel{
+ background-color:#ddf;
+ border-left:1px solid #999;
+ border-right:1px solid #999;
+}
+
+.panel li{
+ line-height:1.5;
+ padding:20px;
+ border-bottom:1px solid #999;
+ height:7em;
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<div class="container">
+
+<h1>デザイン４原則</h1>
+
+<ul class="tab">
+<li><a href="#tab1" class="selected">コントラスト</a></li>
+<li><a href="#tab2">反復</a></li>
+<li><a href="#tab3">整列</a></li>
+<li><a href="#tab4">近接</a></li>
+</ul>
+
+<ul class="panel">
+
+<li id="tab1">
+異なる要素を配置するときは視覚的にもはっきりと異なるようにします。臆病になってはいけません。力強くはっきりと違うようにするのです。<br>
+コントラストは視覚的なおもしろさを作り出します。さらに情報の組み立てがはっきりするため情報の焦点を合わせやすくなります。
+</li>
+
+<li id="tab2">
+視覚的要素を反復することで、孤立している要素同士が一体化されます。また、視覚的なおもしろさに繋がります。<br>
+一貫性のある要素を少し際立たせることでグラフィックデザインとして成立するようになります。 ただし、あまりにも反復させすぎると強迫的なものになるので注意します。
+</li>
+
+<li id="tab3">
+ページ上のものはすべて意識して配置しなければいけません。すべての要素配置が視覚的につながりを持つように意識します。これによりページの一体化と組織化を狙います。空間的に離れていても揃えることができる要素を見つけましょう。<br>
+テキストを整列させるとき、中央揃えは無難ですが、退屈なデザインになりがちなので意図的に使用しない限り避けます。
+</li>
+
+<li id="tab4">
+関連する要素を近づけて視覚的ユニットを形成します。それだけで自動的に情報の組織構造ができあがります。<br>
+ページをぼーっと眺めてみて視線が止まった回数が5つ以上になるような場合は、近接化によるグループ化を狙います。
+</li>
+
+</ul>
+
+</div><!-- /.container -->
+
+
+
+
+
+<!-- jquery (Google Hosted Libraries)リンク
+============================================= -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<!-- jquery
+============================================= -->
+<script>
+$(function(){
+
+$('.panel li:not(#tab1)').hide();
+
+ $('.tab a').on('click',function(){
+
+  $('.tab a').removeClass('selected');
+  $(this).addClass('selected');
+
+//  $('.panel li').hide();   //hide    消す
+  $('.panel li').slideUp();  //slideUp 消す
+//  $($(this).attr('href')).show();     //show      表示
+  $($(this).attr('href')).slideDown();  //slideDown 表示
+  return false;
+
+
+ });
+
+});
+
+</script>
+
+
+
+</body>
+
+</html>
