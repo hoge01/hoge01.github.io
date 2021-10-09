@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/*--CSS Reset Start--*/
+html {
+  /* フォントサイズの計算に1rem=10pxを使いたいのでhtmlに62.5%を指定 */
+  font-size: 62.5%;
+}
+
+body {
+  /* どんなにブラウザ幅が狭くなっても最低1,000pxのコンテンツの幅を確保する */
+  min-width: 1000px;
+  font-family: '游明朝体', YuMincho, '游明朝 Medium', 'Yu Mincho Medium', '游明朝', 'Yu Mincho', serif;
+  line-height: 1.75;
+  color: #707070;
+}
+
+/* ボールド書体についてはEdgeに対応するため別途指定する */
+strong, b, mark, b, .typo-bold {
+  font-family: '游明朝体', YuMincho, '游明朝', 'Yu Mincho', '游明朝', 'Yu Mincho', serif;
+  font-weight: 700;
+}
+
+/* デフォルトのボールド指定を解除 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+img {
+  /* 指定しておかないと画像の下に微妙な隙間ができてしまうことがある */
+  vertical-align: bottom;
+  width:100%;
+}
+
+
+/* 共通インナー */
+/*.common-inner {*/
+page-header_inner,
+main-content_inner,
+page-footer_inner{
+ width: 960px;
+ margin: 0 auto;
+}
+
+/* 写真＋テキストのブロック */
+.photo-work {
+  display: flex;
+}
+
+.photo-work__image {
+  width: 480px;
+  margin-right: 20px;
+}
+
+.photo-work__text {
+  font-size: 1.6rem;
+}
+
+.article{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.article:nth-of-type(even){
+    flex-direction: row-reverse;
+}
+.article>img{
+    width: 50%;
+}
+.article>p{
+    width: 48%;
+}
+

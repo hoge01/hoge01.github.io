@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>サンプル：translate()事例</title>
+<link href="css/base.css" rel="stylesheet" media="all">
+
+<style>
+  .mvArea {
+    position: relative;
+  }
+  .logo {
+    /*mvエリア左上を起点に上下左右50%の位置に配置*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /*要素の1/2サイズ分だけ左上に移動（中心位置を中央に揃える）*/
+    transform: translate(-50%,-50%);
+  }
+</style>
+
+</head>
+<body>
+<h1>translate()実用事例</h1>
+
+<figure>
+<figcaption>●上下左右中央に配置</figcaption>
+
+<div class="mvArea">
+  <div class="logo">LOGO</div>
+</div>
+
+</figure>
+
+
+</body>
+</html>

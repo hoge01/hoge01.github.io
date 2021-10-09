@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>サンプル：scale()事例</title>
+<link href="css/base.css" rel="stylesheet" media="all">
+
+<style>
+  /*写真にカーソルを合わせると拡大*/
+  .gallery .ph:hover {
+    transform:scale(1.2);
+  }
+</style>
+
+</head>
+<body>
+<h1>scale()実用事例</h1>
+
+<figure>
+<figcaption>●:hoverで拡大する画像</figcaption>
+
+<ul class="gallery">
+  <li>
+    <div class="ph"><img src="img/img02.jpg" alt="写真：富田ファーム" width="480" height="320"></div>
+    <p class="cap">富田ファーム</p>
+  </li>
+  <li>
+    <div class="ph"><img src="img/img03.jpg" alt="写真：パッチワークの路" width="480" height="320"></div>
+    <p class="cap">パッチワークの路</p>
+  </li>
+  <li>
+    <div class="ph"><img src="img/img04.jpg" alt="写真：四季彩の丘" width="480" height="320"></div>
+    <p class="cap">四季彩の丘</p>
+  </li>
+</ul>
+
+</figure>
+
+
+</body>
+</html>

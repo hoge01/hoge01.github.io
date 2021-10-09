@@ -1,0 +1,83 @@
+/* テキストの装飾
+---------------------------*/
+
+/*text-shadow*/
+.ts01{}
+.ts02{}
+.ts03{}
+.ts04{}
+.ts05{}
+.ts06{}
+
+/*text-stroke*/
+.t-stroke01 {}
+.t-stroke02 {}
+
+/*background-clip: text*/
+.clip {}
+
+
+/* ボックスの装飾
+---------------------------*/
+/*border-radius*/
+.bdr01{}
+.bdr02{}
+.bdr03{}
+.bdr04{}
+
+.bdr .circle{}
+.bdr .ellipse{}
+
+.bdr05 {}
+.bdr06 {}
+
+
+/*box-shadow*/
+.bs01{}
+.bs02{}
+.bs03{}
+.bs04{}
+.bs05{}
+.bs06{}
+
+/*border-image*/
+.bdi {}
+
+
+/* 背景画像とグラデーション
+---------------------------*/
+/*background-size*/
+.bgsize02{}
+.bgsize03{}
+.bgsize04{}
+.bgsize05{}
+
+/*linear-gradient()*/
+.grad01{}
+.grad02{}
+.grad03{}
+
+/*radial-gradient()*/
+.grad04 {}
+.grad05 {}
+.grad06 {}
+
+/*repeating-linear-gradient()*/
+.grad07 {}
+
+/*repeating-radial-gradient()*/
+.grad08 {}
+
+
+/* フィルター効果
+---------------------------*/
+img.filter01 {}
+img.filter02 {}
+img.filter03 {}
+img.filter04 {}
+img.filter05 {}
+img.filter06 {}
+img.filter07 {}
+img.filter08 {}
+img.filter09 {}
+

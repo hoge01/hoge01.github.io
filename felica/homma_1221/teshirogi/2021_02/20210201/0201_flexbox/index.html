@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<!--他言語が指定場合の文字化け防止でtitleの前にmeta記述-->
+<title>Flexboxを使ったレイアウト</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!--CSS・ファイル-->
+<!--<link rel="stylesheet" href="css/style.css">-->
+
+<style>
+
+.box{
+ width:100%;
+ height:200px;
+ background: #fff;
+ border: 4px solid #000;
+ box-sizing: border-box;
+ font-size:100px;
+ font-family:'Arial Black',sans-serif;
+ text-align: center;
+ line-height: 182px;
+}
+
+.boxA{
+ background:#faeec7; 
+ border-color:#fccc30;
+}
+
+.boxB{
+ background:#defac7; 
+ border-color:#8ceb21;
+}
+
+.boxC{
+ background:#c7e7fa; 
+ border-color:#;
+}
+
+.boxD{
+ background:#fac7f6; 
+ border-color:#d330fc;
+}
+
+/*PC用CSSの記述*/
+@media screen and (min-width:768px) {
+ .wrapper{
+  display:flex;
+  max-width:960px;
+  margin:0 auto;
+ }
+}
+
+.boxB{
+ width:70%;
+}
+
+.boxC{
+ width:30%;
+}
+
+</style>
+
+
+</head>
+
+
+
+<body>
+ <div class="box boxA">A</div>
+ 
+ <div class="wrapper">
+  <div class="box boxB">B</div>
+  <div class="box boxC">C</div>
+ </div>
+
+ <div class="box boxD">D</div>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+/* Transform（変形）
+---------------------------*/
+
+/*translate()*/
+.trans01:hover{ transform: translate(30px,0);}
+.trans02:hover{ transform: translate(0,30px);}
+.trans03:hover{ transform: translate(30px,-30px);}
+
+/*scale()*/
+.scale01:hover{ transform: scale(0.8, 0.8);}
+.scale02:hover{ transform: scale(0.5, 1);}
+.scale03:hover{ transform: scale(1, 1.5);}
+
+/*rotate()*/
+.rotate01:hover{ transform: rotate(45deg);}
+.rotate02:hover{ transform: rotate(-15deg);}
+.rotate03:hover{ transform: rotateY(180deg);}
+
+/*skew()*/
+.skew01:hover{ transform: skew(30deg, 0);}
+.skew02:hover{ transform: skew(0, 30deg);}
+.skew03:hover{ transform: skew(30deg, 30deg);}
+
+
+/* Transform-Origin
+---------------------------*/
+.origin li{
+  width:30%;
+  cursor:pointer;
+}
+
+.origin li:hover{  
+  transform: scale(2, 1);
+  transform-origin:0 0; /*原点を左上に設定*/
+}
+
+/*transformにtransition効果を適用*/
+.sample > * {
+  transition: 0.5s;
+}
+
+/* Transition
+---------------------------*/
+/*フワッと色が変わるボタン1（同時）*/
+p.btn01 a{
+  background-color:#9c9;
+  color:#fff;
+  transition:1s;
+}
+
+p.btn01 a:hover{
+  background-color:#fc6;
+  color:#000;
+}
+
+/*フワッと色が変わるボタン2（背景色だけ）*/
+p.btn02 a{
+  background-color:#9c9;
+  color:#fff;
+  transition:background-color 1s;
+}
+
+p.btn02 a:hover{
+  background-color:#fc6;
+  color:#000;
+}
+
+/*フワッと色が変わるボタン3（時間差）*/
+p.btn03 a{
+  background-color:#9c9;
+  color:#fff;
+  transition:background-color 1s 0s, color 1s 1s;
+  /*
+  transition-property: background-color, color;
+  transition-duration: 1s, 1s;
+  transition-delay: 0s, 1s;
+  */
+}
+
+
+p.btn03 a:hover{
+  background-color:#fc6;
+  color:#000;
+}
+
+/*transition-timing-function*/
+
+.timing li{
+  position:relative;
+  left:0;
+}
+
+.timing:hover li{
+  left:500px;
+}
+
+.t01{ transition:left 2s ease;}
+.t02{ transition:left 2s linear;}
+.t03{ transition:left 2s ease-in;}
+.t04{ transition:left 2s ease-out;}
+.t05{ transition:left 2s ease-in-out;}
+
+/* Animation
+---------------------------*/
+@keyframes fadeIn {
+  0% { opacity: 0; },
+  100% { opacity: 1; }
+}
+.fadeIn01 { animation: fadeIn 1s;}
+.fadeIn02 { animation: fadeIn 1s infinite; } /*無限ループ*/
+.fadeIn03 { animation: fadeIn 1s infinite alternate; } /*無限ループ + 反転再生*/
+.fadeIn04 { animation: fadeIn 1s infinite alternate 3s; } /*無限ループ＋反転再生＋3秒後にスタート*/
+
+

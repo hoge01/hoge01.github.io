@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日付を取得</title>
+</head>
+<body>
+
+<!-- ここに表示 -->
+<h1 id="ans">ここに表示</h1>
+
+<script>
+
+var today  = new Date();
+//頭文字を大文字に！　キャメルケース（複数の単語をつなげて一単語として扱う記述法）
+var year   = today.getFullYear();
+// month = ['1','2'.........'12'] 配列変数 month[0]=1
+var month  = today.getMonth()+1;
+var date   = today.getDate();
+var hour   = today.getHours();
+var minute = today.getMinutes();
+var second = today.getSeconds();
+// week = ['日','月','火'...'土'] 配列変数 week[0]
+var day    = today.getDay();
+var week   = ['日','月','火','水','木','金','土'];
+
+var now    = year+ '年' +month+ '月' +date+ '日' +hour+ '時' +minute+ '分' +second+ '秒' +week[day] +'曜日';
+
+// ここに表示 セッティング
+var element = document.getElementById('ans');
+element.textContent = now;
+
+console.log(now);
+
+</script>
+</body>
+</html>

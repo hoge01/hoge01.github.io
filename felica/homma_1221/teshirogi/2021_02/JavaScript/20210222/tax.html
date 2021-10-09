@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消費税合算後の支払金額を求める</title>
+</head>
+<body>
+<script>
+var taxRate = 0.1;
+var total = 0;
+var price = prompt('単価を半角数字で入力してください');
+price = parseInt(price);
+/*
+var piece = prompt('購入個数を半角数字で入力してください');
+piece = parseInt(piece);
+*/
+
+// 単価 100円以上
+if (price < 100 || isNaN(price)) {
+ console.log('計算できません（単価 100円以上）');
+}
+else
+var piece = prompt('購入個数を半角数字で入力してください');
+piece = parseInt(piece);
+// 個数 1個以上
+if (piece < 1 || isNaN(piece)) {
+ console.log('計算できません（個数 1個以上）');
+}
+
+
+/*
+if(price < 100 || piece < 1 || isNaN(price) || isNaN(piece)){
+ console.log('計算できません');
+}
+*/
+
+else{
+total = price * piece * (1 + taxRate);
+total = Math.round(total); //total 四捨五入
+console.log(total);
+}
+
+</script>
+</body>
+</html>

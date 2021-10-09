@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if文を使った条件分岐</title>
+</head>
+<body>
+<script>
+// var num = 6;
+var num = prompt('半角数字で入力してください');
+// 1.「小数点以下」は、整数化
+num = parseInt(num);
+// 2.「0」は、判別しない
+// 3.「負の値」は、判別しない
+// 4.「全角」は、判別しない
+// ◎「1」以上の整数は、偶数、奇数を判別する
+if (num <= 0 || isNaN(num)) {
+ console.log('判別できません');
+}
+else
+if (num % 2 === 1) {
+ console.log('奇数');
+}
+else{
+ console.log('偶数');
+}
+</script>
+</body>
+</html>

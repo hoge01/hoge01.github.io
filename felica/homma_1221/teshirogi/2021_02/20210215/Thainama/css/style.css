@@ -1,0 +1,267 @@
+@charset "utf-8";
+
+/* CSS Reset Start
+/* reset ブロックレベル要素のみ
+/*ブラウザによって異なるデフォルトのCSSを打ち消してブラウザ間の表示を揃える
+======================================== */
+html,
+body,
+h1,
+p,
+ul,
+li
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN",  /*Mac*/
+ Meiryo,                /*Win*/
+ sans-serif;            /*その他ゴシック系*/
+ text-align:center;
+}
+
+/*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+/*Fluid*/
+ max-width:100%;        /*画像サイズを親ボックス内に合わせる*/
+ height:auto;
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+/*ユニバーサルセレクター（全称セレクター）*/
+*{
+ box-sizing:border-box;
+}
+
+
+
+/*--共通設定--*/
+/*****<< フッター >>*****/
+header,footer{
+/* background:#0f0;*/
+}
+
+
+
+/*****<< コンテンツ幅設定 >>*****/
+/***<< header,nav,(main,sidebar),footer >>***/
+.container{
+ max-width:960px;       /*PC幅1000前後が通常*/
+ margin:0 auto;         /*上下が0　左右がauto*/
+/* padding:0 10px;*/
+/* display:flex;*/
+/* justify-content:space-between;*/
+}
+
+
+
+/* header ヘッダー
+======================================== */
+header{
+/* padding:30px 0;*/
+/* margin-bottom:30px;*/
+}
+
+h1{
+ background:url(../img/logo.png) no-repeat;
+/* width:280px;*/
+ line-height:42px;
+ text-indent:100%;             /*text非表示1 字下げ*/
+ white-space:nowrap;           /*text非表示2 改行をさせない*/
+ overflow:hidden;              /*text非表示3 はみ出た文字を隠す*/
+}
+
+
+
+/*2カラムレイアウト*/
+.h1p{
+ width:60%;
+}
+
+.pcnav1,.pcnav2{
+ width:40%;
+ align-items:flex-end;
+}
+
+.header{
+ display:flex;
+ justify-content:space-between;
+/* margin-bottom:50px;*/
+}
+
+
+
+.pcnav2{
+ margin:0 auto 30px;
+}
+
+.pcnav1 ul,.pcnav2 ul{
+ display:flex;
+/*コンテンツ幅。ボタン間に、余りを均等に配置*/
+ justify-content:space-between;
+}
+
+/*ナビゲーション　文字（文言）*/
+.pcnav1 li,.pcnav2 li{
+/* line-height:44px;*/
+/* font-size:14px;*/
+/*コンテンツ幅に対して、ボタン数を考慮した、幅を指定*/
+/* width:5%;*/
+}
+
+/*ナビゲーション　リンク*/
+.pcnav1 li a,.pcnav2 li a{
+/*ブロック幅を広げる（無いと文字だけ）*/
+ display:block;
+/* border:1px solid #777;*/
+}
+
+/*aの上　マウスを合わせたときの背景色を変更*/
+.pcnav1 li a:hover{
+ color:#900;
+/* background-color:#fcc;*/
+}
+
+.pcnav2 li a:hover{
+ color:#900;
+/* background-color:#fcc;*/
+}
+
+
+/* スマホ用ナビゲーション*/
+.spnav1,.spnav2{
+ display:none;
+}
+
+
+
+
+/* nav ナビゲーション
+======================================== */
+
+
+
+
+
+/* キーヴィジュアル */
+.keyVis{
+ border-top:1px solid #f00;
+ margin-bottom:50px;
+}
+
+
+/* main メインコンテンツ
+======================================== */
+/*3カラムレイアウト*/
+.sub01,.sub02,.sub03{
+ width:30%;
+ padding:10px;
+ border:1px solid #000;
+}
+
+.sub00{
+ display:flex;
+ justify-content:space-between;
+ margin-bottom:50px;
+}
+
+.news{
+ text-align:left;
+}
+
+dt{
+ float: left;
+}
+
+dt::after{
+  content:"";
+}
+
+
+
+/* footer フッター
+======================================== */
+footer{
+ background:#0f0;
+ padding:30px 0;
+}
+
+.footer01,footer02{
+ width:40%;
+}
+
+.footer00{
+ display:flex;
+ justify-content:space-between;
+}
+
+
+
+
+/*メディアクエリ　ブレイクポイント767px*/
+@media screen and (max-width:767px){
+
+/* PC用ナビゲーション */
+.pcnav{
+ display:none;
+}
+
+header{
+ padding:20px 0;
+ margin-bottom:20px;
+}
+
+h1{
+ font-size:20px;
+/* width:242px;*/
+/* width:11em;*/
+ width:275px;
+ padding-left:55px;
+/* margin:0 auto 10px;*/
+}
+
+header p{
+ font-size:16px;
+}
+
+/* スマホ用ナビゲーション */
+.spnav{
+ display:block;
+}
+
+.spnav ul{
+ border-bottom: 1px solid #777;
+ margin-bottom:20px;
+}
+
+.spnav li{
+ line-height:34px;
+ font-size:14px;
+ border:1px solid #777;
+ border-bottom:none;
+}
+
+.spnav li a{
+/*ブロック幅を広げる（無いと文字だけ）*/
+  display:block;
+}
+
+.keyVis{
+ margin-bottom:20px;
+}
+
+footer{
+ padding: 20px 0;
+}
+
+}

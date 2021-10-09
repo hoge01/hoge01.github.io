@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>サンプル：CSS3プロパティ</title>
+<link href="css/base.css" rel="stylesheet" media="all">
+<link href="css/style.css" rel="stylesheet" media="all">
+</head>
+<body>
+<h1>CSS3 Properties</h1>
+
+<section  class="category">
+<h2>テキストの装飾</h2>
+
+<section>
+<h3>text-shadow</h3>
+<ul class="sample ts">
+<li class="ts01">Drop Shadow</li>
+<li class="ts02">Glow</li>
+<li class="ts03">Bevel</li>
+<li class="ts04">Emboss</li>
+<li class="ts05">Stroke</li>
+<li class="ts06">Neon</li>
+</ul>
+</section>
+
+<section>
+<h3>-webkit-text-stroke</h3>
+<table border="1" class="ie">
+<tr>
+<th>IE11</th><td>×</td>
+<th>他ブラウザ</th><td>要-webkit-</td>
+</tr>
+</table>
+<ul class="sample ts2">
+<li class="t-stroke01">OUTLINE</li>
+<li class="t-stroke02">OUTLINE+SHADOW</li>
+</ul>
+</section>
+
+<section>
+<h3>-webkit-backgtound-clip: text / -webkit-text-fill-color</h3>
+<table border="1" class="ie">
+<tr>
+<th>IE11</th><td>×</td>
+<th>他ブラウザ</th><td>要-webkit-</td>
+</tr>
+</table>
+<p class="clip">HELLO WORLD!</p>
+</section>
+
+</section>
+
+<section class="category">
+<h2>ボックスの装飾</h2>
+
+<section>
+<h3>border-radius（基本の角丸）</h3>
+<ul class="sample bdr">
+<li class="bdr01">値1つ</li>
+<li class="bdr02">値2つ</li>
+<li class="bdr03">値3つ</li>
+<li class="bdr04">値4つ</li>
+</ul>
+</section>
+
+<section>
+<h3>border-radius（正円・楕円）</h3>
+<ul class="sample bdr">
+<li class="circle">正円</li>
+<li class="ellipse">楕円</li>
+</ul>
+</section>
+
+<section>
+<h3>border-radius（楕円の円弧）</h3>
+<ul class="sample bdr">
+<li class="bdr05">膨らんだ長方形</li>
+<li class="bdr06">ゆがみ円</li>
+</ul>
+</section>
+
+
+<section>
+<h3>box-shadow</h3>
+<ul class="sample bs">
+<li class="bs01">Drop Shadow</li>
+<li class="bs02">Glow</li>
+<li class="bs03">Inset Drop Shadow</li>
+<li class="bs04">Inset Glow</li>
+<li class="bs05">Spread Shadow</li>
+<li class="bs06">Multi Shadow</li>
+</ul>
+</section>
+
+<section>
+<h3>border-images</h3>
+<div class="bdi">
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.  </p>
+</div>
+</section>
+</section>
+
+<section  class="category">
+<h2>背景画像とグラデーション</h2>
+
+<section>
+<h3>background-size</h3>
+<ul class="bgsize">
+<li class="bgsize01">auto</li>
+<li class="bgsize02">cover</li>
+<li class="bgsize03">contain</li>
+<li class="bgsize04">%</li>
+<li class="bgsize05">px</li>
+</ul>
+</section>
+
+<section>
+<h3>linear-gradient()</h3>
+<ul class="grad">
+<li class="grad01">2Colors（top → bottom）</li>
+<li class="grad02">3Colors（left → right）</li>
+<li class="grad03">3Colors（left top → right bottom）</li>
+</ul>
+</section>
+
+<section>
+<h3>radial-gradient()</h3>
+<ul class="grad">
+<li class="grad04">（circle）</li>
+<li class="grad05">（closest-side）</li>
+<li class="grad06">（at bottom）</li>
+</ul>
+</section>
+
+<section>
+<h3>repeating-linear-gradient()</h3>
+<ul class="grad">
+<li class="grad07">ストライプ</li>
+</ul>
+</section>
+
+<section>
+<h3>repeating-radial-gradient()</h3>
+<ul class="grad">
+<li class="grad08">放射状</li>
+</ul>
+</section>
+</section>
+
+<section  class="category">
+<h2>フィルター効果</h2>
+
+<section>
+<h3>filter</h3>
+<table border="1" class="ie">
+<tr>
+<th>IE11</th><td>×</td>
+</tr>
+</table>
+<ul class="filter">
+<li><img src="img/flower.jpg" alt="" class="filter01"><p>grayscale()</p></li>
+<li><img src="img/flower.jpg" alt="" class="filter02"><p>sepia()</p></li>
+<li><img src="img/flower.jpg" alt="" class="filter03"><p>contrast()</p></li>
+<li><img src="img/flower.jpg" alt="" class="filter04"><p>brightness()</p></li>
+<li><img src="img/flower.jpg" alt="" class="filter05"><p>saturate()</p></li>
+<li><img src="img/flower.jpg" alt="" class="filter06"><p>hue-rotate()</p></li>
+<li><img src="img/flower.jpg" alt="" class="filter07"><p>invert()</p></li>
+<li><img src="img/flower.jpg" alt="" class="filter08"><p>opacity()</p></li>
+<li><img src="img/flower.jpg" alt="" class="filter09"><p>blur()</p></li>
+</ul>
+</section>
+</section>
+
+
+</body>
+</html>

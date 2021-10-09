@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*{
+  margin:0;
+  padding:0;
+}
+ul {
+  list-style: none;
+}
+
+#wrap{
+  width:800px;
+  margin:30px auto;
+  background-color: beige;
+}
+
+#header{
+  background-color: lightpink;
+}
+
+#side{
+  background-color: skyblue;
+  width:200px;
+  float:left;
+}
+
+#main{
+  background-color: palegreen;
+  width:360px;
+  float:right;
+  display: block; /*for IE11*/
+}
+
+#navi{
+  background-color: plum;
+  width:200px;
+  float:right;
+}
+
+#contents{
+  background-color: orange;
+  border: 3px solid orange;
+  width:580px;
+  float:left;
+}
+
+#footer{
+  background-color: gold;
+  clear:both;
+}

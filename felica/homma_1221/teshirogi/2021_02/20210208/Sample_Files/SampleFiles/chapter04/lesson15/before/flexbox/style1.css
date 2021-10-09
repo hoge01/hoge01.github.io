@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*{
+  margin:0;
+  padding:0;
+}
+body {
+  margin: 20px;
+}
+section {
+  margin: 20px 0;
+}
+ul {
+  list-style: none;
+}
+.wrap {
+  margin: 50px;
+}
+.flex {
+  padding: 20px;
+  border: 1px solid #e7e7e7;
+  background: #ffffeb;
+}
+.flex li {
+  width: 100px;
+  padding: 15px;
+  border: 2px solid #666;
+  background: #80ceff;
+}
+
+/*flexboxレイアウトを適用*/
+.flex {
+
+}
+
+/*justify-content*/
+.no2 .flex {
+  justify-content: flex-start; /*初期値*/
+}
+
+/*aling-items*/
+.no3 .flex .fzL {
+  font-size: 3em;
+}
+.no3 .flex {
+  align-items: stretch; /*初期値*/
+}
+
+/*flex-wrap*/
+.no4 .flex {
+  flex-wrap: nowrap; /*初期値*/
+}
+
+/*align-content*/
+.no5 .flex {
+  flex-wrap: wrap;
+  align-content: stretch; /*初期値*/
+}
+
+/*flex-direction*/
+.no6 .flex {
+  flex-direction: row; /*初期値*/
+}
+

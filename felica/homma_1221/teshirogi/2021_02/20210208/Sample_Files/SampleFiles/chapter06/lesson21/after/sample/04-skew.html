@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>サンプル：skew()事例</title>
+<link href="css/base.css" rel="stylesheet" media="all">
+
+<style>
+  .wrap {
+    overflow: hidden; /*はみ出し領域を非表示*/
+    background: #fff;
+  }
+  .bg-skew {
+    margin-top: -5%;
+    padding: 8% 30px 4%;
+    background: #fff;
+    transform: skewY(5deg); /*要素を斜めに*/
+  }
+  .bg-skew p {
+    transform: skewY(-5deg); /*中身の歪みを打ち消し*/
+    text-align: justify;
+  }
+</style>
+
+</head>
+<body>
+<h1>skew()実用事例</h1>
+
+<figure>
+<figcaption>●斜め背景</figcaption>
+
+<div class="wrap">
+  <div class="ph"><img src="img/img05.jpg" alt="" width="1600" height="800"></div>
+  <div class="bg-skew">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</div>
+
+</figure>
+
+
+
+</body>
+</html>

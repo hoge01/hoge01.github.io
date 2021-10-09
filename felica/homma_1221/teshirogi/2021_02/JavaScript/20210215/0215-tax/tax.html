@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<h1>消費税計算</h1>
+<h2 id="ans">ここに結果を表示</h2>
+
+<script>
+// 初期値
+var price = 1000;
+var piece = 1;
+var taxRate = 0.1;
+var total = 0;
+
+// 処理（消費税計算）
+total = price * piece * (1 + taxRate);
+
+// 出力
+// DOMの操作で表示
+var element = document.getElementById('ans');
+var str = '単価「' +price+ '」円の商品を、「' +piece+ '」個購入した時の消費税合算後の支払金額は、「' +total+ '」円になります。'
+element.textContent = str;
+
+// コンソールに表示
+console.log(total);
+
+// ブラウザーに表示
+document.write(total);
+
+// 警告ウインドウに表示 
+alert(total);
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+/* Transform（変形）
+---------------------------*/
+
+/*translate()*/
+.trans01{ }
+.trans02{ }
+.trans03{ }
+
+/*scale()*/
+.scale01{ }
+.scale02{ }
+.scale03{ }
+
+/*rotate()*/
+.rotate01{ }
+.rotate02{ }
+.rotate03{ }
+
+/*skew()*/
+.skew01{ }
+.skew02{ }
+.skew03{ }
+
+
+/* Transform-Origin
+---------------------------*/
+.origin li{
+  width:30%;
+  cursor:pointer;
+}
+
+.origin li:hover{  
+  transform: scale(2, 1);
+}
+
+/*transformにtransition効果を適用*/
+.sample > * {
+  transition: 0.5s;
+}
+
+/* Transition
+---------------------------*/
+/*フワッと色が変わるボタン1（同時）*/
+p.btn01 a{
+  background-color:#9c9;
+  color:#fff;
+}
+
+p.btn01 a:hover{
+  background-color:#fc6;
+  color:#000;
+}
+
+/*フワッと色が変わるボタン2（背景色だけ）*/
+p.btn02 a{
+  background-color:#9c9;
+  color:#fff;
+}
+
+p.btn02 a:hover{
+  background-color:#fc6;
+  color:#000;
+}
+
+/*フワッと色が変わるボタン3（時間差）*/
+p.btn03 a{
+  background-color:#9c9;
+  color:#fff;
+}
+
+
+p.btn03 a:hover{
+  background-color:#fc6;
+  color:#000;
+}
+
+/*transition-timing-function*/
+
+.timing li{
+  position:relative;
+  left:0;
+}
+
+.timing:hover li{
+  left:500px;
+}
+
+.t01{ transition:left 2s ease;}
+.t02{ transition:left 2s linear;}
+.t03{ transition:left 2s ease-in;}
+.t04{ transition:left 2s ease-out;}
+.t05{ transition:left 2s ease-in-out;}
+
+/* Animation
+---------------------------*/
+@keyframes fadeIn {
+
+}
+.fadeIn01 { }
+.fadeIn02 { } /*無限ループ*/
+.fadeIn03 { } /*無限ループ + 反転再生*/
+.fadeIn04 { } /*無限ループ＋反転再生＋3秒後にスタート*/
+
+

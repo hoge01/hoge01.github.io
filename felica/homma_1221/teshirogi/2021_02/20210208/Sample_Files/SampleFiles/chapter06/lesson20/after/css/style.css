@@ -1,0 +1,148 @@
+/* テキストの装飾
+---------------------------*/
+
+/*text-shadow*/
+.ts01{text-shadow: 2px 2px 3px #999;}
+.ts02{color:#fff; text-shadow:0 0 5px #999;}
+.ts03{color:#ccc; text-shadow:-1px -1px 0 #fff, 1px 1px 0 #aaa;}
+.ts04{color:#ccc; text-shadow:-1px -1px 0 #aaa, 1px 1px 0 #fff;}
+.ts05{
+  color:#fff;
+  text-shadow:
+    1px 1px 0 #999, 
+    -1px 1px 0 #999, 
+    1px -1px 0 #999, 
+    -1px -1px 0 #999;
+}
+.ts06{
+  text-shadow:
+    0 0 5px #fff, 
+    0 0 13px #f03, 
+    0 0 13px #f03, 
+    0 0 13px #f03, 
+    0 0 13px #f03;
+}
+
+/*text-stroke*/
+.t-stroke01 {
+  -webkit-text-stroke: 1px #000;
+}
+.t-stroke02 {
+  -webkit-text-stroke: 1px #000;
+  text-shadow: 2px 2px 0 #000;
+}
+
+/*background-clip: text*/
+.clip {
+  background: url(../img/bg_flower.jpg) center center no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* ボックスの装飾
+---------------------------*/
+/*border-radius*/
+.bdr01{ border-radius:10px; }
+.bdr02{ border-radius:50px 0; }
+.bdr03{ border-radius:0 25px 50px; }
+.bdr04{ border-radius:0 10px 25px 50px; }
+
+.bdr .circle{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.bdr .ellipse{
+  width: 250px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+
+.bdr05 { border-radius: 50px / 30px;}
+.bdr06 { border-radius: 30% 60% 60% 50% / 80% 40% 70% 30%; }
+
+
+/*box-shadow*/
+.bs01{ box-shadow:2px 2px 5px rgba(0,0,0,0.5); }
+.bs02{ box-shadow:0 0 10px rgba(0,0,0,0.5); }
+.bs03{ box-shadow:2px 2px 5px rgba(0,0,0,0.5) inset; }
+.bs04{ box-shadow:0 0 15px rgba(18, 154, 238, 0.5) inset; }
+.bs05{ box-shadow:0 0 0 6px #9cc883; }
+.bs06{
+  box-shadow:
+    0 0 0 3px #ffffff inset,
+    0 0 0 3px #fffa9a,
+    0 0 0 6px #9cc883;
+}
+
+.bdi {
+  border: 24px solid #fbef82; /*フォールバック指定*/
+  border-image: url(../img/bdi.png) 24 round;
+}
+
+
+/* 背景画像とグラデーション
+---------------------------*/
+/*background-size*/
+.bgsize02{ background-size:cover; }
+.bgsize03{ background-size:contain; }
+.bgsize04{ background-size:100% 100%; }
+.bgsize05{ background-size:170px 100px; }
+
+/*linear-gradient()*/
+.grad01{
+  background:linear-gradient(to bottom,#f36,#fff);
+}
+.grad02{
+  background:linear-gradient(
+    to right,
+    #f36 0%,
+    #fff 50%,
+    #f63 100%);
+}
+.grad03{
+  background:linear-gradient(
+     to right bottom,
+    #f36 0%,
+    #fff 50%,
+    #f63 100%);
+}
+/*radial-gradient()*/
+.grad04 {
+  background:radial-gradient(circle ,#fff,#f36);
+}
+.grad05 {
+  background:radial-gradient(closest-side ,#fff,#f36);
+}
+.grad06 {
+  background: radial-gradient(at bottom, #fff, #f36);
+  /*background: radial-gradient(at left top, #fff, #f36);*/
+  /*background: radial-gradient(at -20% -20%, #fff, #f36);*/
+}
+
+/*repeating-linear-gradient()*/
+.grad07 {
+  background: 
+  repeating-linear-gradient(135deg, #fff, #fff 10px, #fef 10px, #fef 20px);
+}
+
+/*repeating-radial-gradient()*/
+.grad08 {
+  background: repeating-radial-gradient(circle farthest-side, #fff 25%, #faf 35%, #faf 35%, #fff 50%)
+}
+
+
+/* フィルター効果
+---------------------------*/
+img.filter01 { filter: grayscale(100%); }
+img.filter02 { filter: sepia(100%); }
+img.filter03 { filter: contrast(150%); }
+img.filter04 { filter: brightness(50%); }
+img.filter05 { filter: saturate(50%); }
+img.filter06 { filter: hue-rotate(45deg); }
+img.filter07 { filter: invert(100%); }
+img.filter08 { filter: opacity(50%); }
+img.filter09 { filter: blur(5px); }
+

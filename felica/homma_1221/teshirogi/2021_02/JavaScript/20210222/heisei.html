@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平成１～３１年までの西暦を求める</title>
+</head>
+<body>
+
+<h1 id="ans">ここに表示</h1>
+
+<script>
+
+var heisei = prompt('平成の数字を半角で入力してください');
+heisei = parseInt(heisei);
+var element = document.getElementById('ans');
+
+if (heisei < 0 || heisei > 31 || isNaN(heisei)) {
+  element.textContent = '範囲外です（平成は１～３１年です）';
+  console.log('範囲外です');
+}
+else{
+  var year = heisei + 1988;
+  var str = '平成「' +heisei+ '」年は、西暦「' +year+ '」年です';
+  element.textContent = str;
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>サンプル：rotate()事例</title>
+<link href="css/base.css" rel="stylesheet" media="all">
+
+<style>
+  /*右矢印*/
+  .ico-arw {
+    width: 30px;
+    height: 30px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg);
+  }
+  /*プラス*/
+  .ico-plus {
+    width: 45px;
+    height: 45px;
+  }
+  .ico-plus::before,
+  .ico-plus::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background:#000;
+  }
+  .ico-plus::after {
+    transform: rotate(90deg);
+  }
+  /*閉じる*/
+  .ico-close {
+    width: 45px;
+    height: 45px;
+  }
+  .ico-close::before,
+  .ico-close::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background:#000;
+  }
+  .ico-close::before {
+    transform: rotate(45deg);
+  }
+  .ico-close::after {
+    transform: rotate(-45deg);
+  }
+</style>
+
+</head>
+<body>
+<h1>rotate()実用事例</h1>
+
+<figure>
+<figcaption>●CSSでUIパーツ作成</figcaption>
+
+<ul class="ui-icons">
+  <li>
+    <div class="ico-arw"></div>
+    <p class="cap">矢印</p>
+  </li>
+  <li>
+    <div class="ico-plus"></div>
+    <p class="cap">プラス</p>
+  </li>
+  <li>
+    <div class="ico-close"></div>
+    <p class="cap">閉じる</p>
+  </li>
+</ul>
+
+</figure>
+
+</body>
+</html>
