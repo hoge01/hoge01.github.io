@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width initial-scale=1.0">
+ <title>hero</title>
+
+
+<style>
+/* CSS Reset
+############################################# */
+html
+,body
+,h1
+,p
+,ul
+,li
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:"Hiragino kaku Gothic ProN"  /*Mac*/
+  ,Meiryo                /*Win*/
+  ,sans-serif;           /*その他ゴシック系*/
+ text-align:center;
+}
+
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+ /*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+ max-width:100%;    /*親要素のwidth幅の100%の値*/
+ /*♦フルードイメージ（Fluid Image）-ウィンドウサイズ（または親要素の幅）に応じて、縦横比を保持したまま自動的に画像が拡大・縮小するようにする手法、最大幅は元画像の幅*/
+ height:auto;       /*横幅と同比率で高さも自動調整*/
+}
+
+ul{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+
+.container{
+/* max-width:1920px;*/
+}
+
+header{
+ height:calc(100vh - 50px);
+ background:url(img/hero01.jpg) no-repeat center top/cover;
+ font-family:'Tangerine',cursive;
+ text-shadow:2px 2px 2px #fff;
+ color:#00f;
+ font-size:300%;
+}
+
+h1{
+ padding-top:100px;
+ font-family:'Berkshire Swash',cursive; /*~指定~googlefont*/
+}
+
+p{
+ font-family:'Berkshire Swash',cursive; /*~指定~googlefont*/
+}
+
+/*.wrap{*/
+.pcnav ul{
+ display:flex;
+ max-width:750px;
+/* justify-content:space-between;*/
+ margin:0 auto;
+}
+
+.pcnav li{
+ width:calc(100% / 5);
+ line-height:50px;
+}
+
+.pcnav a{
+ display:block;
+}
+
+.spnav{
+ display:none;
+}
+
+/* Font-awesome
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.btn{
+ width:50px;
+ height:50px;
+ border:1px solid #fff;
+ border-radius:5px;
+ position:absolute;
+ top:5px;
+ right:5px;
+/* left:5px;*/
+ z-index:2;
+ color:#fff;
+ text-align:center;
+}
+
+/* Sp btn */
+.btn{
+ display:none;
+}
+
+.btn i{
+ display:block;
+ line-height:50px;
+ font-size:35px;
+}
+
+/* barアイコン表示 */
+.btn i:last-child{
+ /* display:none;*/
+}
+
+
+@media screen and (max-width:767px){
+/* レイアウト設定
+############################################# */
+.pcnav{
+ display:none;
+}
+
+.spnav
+,.btn
+{
+ display:block;
+}
+
+/* クリック時 */
+.close i:first-child{
+ display:none;
+}
+
+.close i:last-child{
+ display:block;
+}
+
+/*ナビゲーション*/
+.spnav ul{
+ display:block;
+ width:100%;
+ position:fixed;
+ top:57px;
+ left:0;
+/*  right:0;*/
+ margin-left:100%;
+/*  margin-right:100%;*/
+ transition:0.3s;
+}
+
+.slide ul{
+ margin-left:0;
+/* margin-right:0;*/
+}
+
+.spnav li{
+ width:auto;
+}
+
+.spnav a{
+ display:block;
+ color:#40680f;
+ font-size:30px;
+ /* font-weight:bold;*/
+ line-height:70px;
+ border-top:1px solid #aaa;
+ background:rgba(255,255,255,0.8);
+}
+
+
+}
+
+
+</style>
+
+<!-- googlefont Webからコピー
+============================================= -->
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+
+<!-- font-awesome
+============================================= -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+
+</head>
+<body>
+
+<!-- 0-2-1/4 <HEADER> ヘッダー
+============================================= -->
+<header>
+<div class="container" >
+<h1>Sky Revolution</h1>
+<p>You are the one that changes the sky</p>
+</div>
+</header>
+
+
+
+<!-- 0-2-2/4 <NAV> ナビゲーション
+============================================= -->
+<!-- 0-2-2(1/2) <PCNAV> パソコン用
+_____________________________________________ -->
+<nav class="pcnav">
+<!--<ul class="container">-->
+<ul>
+ <li><a href="#0">HOME</a></li>
+ <li><a href="#1">ABOUT</a></li>
+ <li><a href="#2">PROFILE</a></li>
+ <li><a href="#3">ACCESS</a></li>
+ <li><a href="#4">CONTACT</a></li>
+</ul>
+</nav><!-- /.pcnav -->
+
+
+<!-- 0-2-2(2/2) <SPNAV> スマホ用
+_____________________________________________ -->
+<!-- sp btn -->
+<div class="btn">
+ <i class="fas fa-bars"></i>
+</div>
+
+<nav class="spnav">
+ <ul>
+  <li><a href="#0">HOME</a></li>
+  <li><a href="#1">ABOUT</a></li>
+  <li><a href="#2">PROFILE</a></li>
+  <li><a href="#3">ACCESS</a></li>
+  <li><a href="#4">CONTACT</a></li>
+ </ul>
+</nav><!-- /.spnav -->
+
+
+
+ <!-- jquery (Google Hosted Libraries)リンク
+============================================= -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<!-- jquery
+============================================= -->
+<script>
+
+//$(function(){
+$('.btn').on('click',function(){
+ //$('.btn').on('touchstart',function(){
+ $(this).toggleClass('close');
+ $('.spnav').toggleClass('slide');
+
+});
+//});
+
+</script>
+
+
+ 
+</body>
+</html>

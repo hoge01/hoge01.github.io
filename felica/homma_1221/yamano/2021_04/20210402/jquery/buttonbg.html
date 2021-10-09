@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>color button</title>
+
+<style>
+button{
+color: #fff;
+border-radius: 5px;
+}
+#blue,.blue{
+background:blue;}
+#red,.red{
+background:red;}
+#green,.green{
+background:green;}
+#yellow,.yellow{
+background:rgb(197, 197, 5);}
+.White{
+background:#000;}
+</style>
+
+</head>
+<body>
+<h1>背景・カラー選択</h1>
+<button id="blue">青</button>
+<button id="red">赤</button>
+<button id="green">緑</button>
+<button id="yellow">黄</button>
+<br>
+<br>
+<button class="blue">blue</button>
+<button class="red">red</button>
+<button class="green">green</button>
+<button class="yellow">yellow</button>
+<br>
+<br>
+<button class="White">#FFF</button>
+
+
+
+<!-- jquery (Google Hosted Libraries)リンク -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<!-- jquery -->
+<script>
+$('#blue').on('click touchstart',function(){
+ $('body').css('background','blue');
+});
+
+$('#red').on('click touchstart',function(){
+ $('body').css('background','red');
+});
+
+$('#green').on('click touchstart',function(){
+ $('body').css('background','green');
+});
+
+$('#yellow').on('click touchstart',function(){
+ $('body').css('background','yellow');
+});
+
+
+
+<!-- jquery -->
+$('button').on('click',function(){
+//テキストから取得
+// $('body').css('background',$(this).text());
+ $('body').css('background',$(this).attr('class'));
+});
+
+
+
+//$('.blue').on('click touchstart',function(){
+// $('body').css('background',$('.blue').text());
+//});
+
+//$('.red').on('click touchstart',function(){
+// $('body').css('background',$('.red').text());
+//});
+
+//$('.green').on('click touchstart',function(){
+// $('body').css('background',$('.green').text());
+//});
+
+//$('.yellow').on('click touchstart',function(){
+// $('body').css('background',$('.yellow').text());
+//});
+
+//$('.White').on('click touchstart',function(){
+// $('body').css('background',$('.White').text());
+//});
+
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width initial-scale=1.0">
+ <title>hero2</title>
+
+<style>
+/* CSS Reset
+############################################# */
+html
+,body
+,h1
+,p
+/*,ul*/
+/*,li*/
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:
+  "Hiragino kaku Gothic ProN"  /*Mac*/
+  ,Meiryo                      /*Win*/
+  ,sans-serif;                 /*その他ゴシック系*/
+/* text-align:center;*/     /*==今回・中央配置==*/
+}
+
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+ /*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+ max-width:100%;    /*親要素のwidth幅の100%の値*/
+ /*♦フルードイメージ（Fluid Image）-ウィンドウサイズ（または親要素の幅）に応じて、縦横比を保持したまま自動的に画像が拡大・縮小するようにする手法、最大幅は元画像の幅*/
+ height:auto;       /*横幅と同比率で高さも自動調整*/
+}
+
+ul
+/*,ol*/          /*※番号を使用する場合はolは記述しない*/
+{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+}
+
+.container{
+/* max-width:1960px;*/
+/* height:100vh;*/
+ display:flex;
+ flex-wrap:wrap;
+}
+
+.ph{
+/* width:100%;*/
+ height:50vh;
+}
+
+.topL{
+ background:url(img/lefttop.jpg) no-repeat center bottom/cover;
+ width:calc(100% / 2);
+/* height:auto;*/
+}
+.topR{
+ background:url(img/righttop2.jpg) no-repeat center bottom/cover;
+ width:calc(100% / 2);
+/* height:auto;*/
+ }
+.btmL{
+ background:url(img/leftbottom.jpg) no-repeat center bottom/cover;
+ width:calc(100% / 3);
+/* height:auto;*/
+ }
+.btmM{
+ background:url(img/centerbottom.jpg) no-repeat center bottom/cover;
+ width:calc(100% / 3);
+/* height:auto;*/
+ }
+.btmR{
+ background:url(img/rightbottom.jpg) no-repeat center bottom/cover;
+ width:calc(100% / 3);
+/* height:auto;*/
+ }
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<section class="ph topL"></section>
+<section class="ph topR"></section>
+<section class="ph btmL"></section>
+<section class="ph btmM"></section>
+<section class="ph btmR"></section>
+
+</div>
+
+ 
+</body>
+
+
+</html>

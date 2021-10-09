@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--		<script type="text/javascript" src="../../../css_js/jquery-1.8.0.min.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			
+			$(function () {
+				$("input").select(function () {
+					$("p").append("select ");
+				});
+			});
+			
+		</script>
+	</head>
+
+	<body>
+		<input type="text" value="select me" />
+		<p></p>
+	</body>
+</html>

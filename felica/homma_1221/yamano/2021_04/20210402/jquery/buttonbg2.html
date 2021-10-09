@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>color button</title>
+
+<style>
+button{
+color: #fff;
+border-radius: 5px;
+}
+#blue,.blue{
+background:blue;}
+#red,.red{
+background:red;}
+#green,.green{
+background:green;}
+#yellow,.yellow{
+background:rgb(197, 197, 5);}
+.White{
+background:#000;}
+</style>
+
+</head>
+<body>
+<h1>背景・カラー選択</h1>
+<button id="blue">青</button>
+<button id="red">赤</button>
+<button id="green">緑</button>
+<button id="yellow">黄</button>
+<br>
+<br>
+<button class="blue">blue</button>
+<button class="red">red</button>
+<button class="green">green</button>
+<button class="yellow">yellow</button>
+<br>
+<br>
+<button class="White">#FFF</button>
+
+
+
+
+<!--<form method="get" action="select.html">-->
+<select name="example" required>
+<!--<option value=""selected="selected">選択してください</option>-->
+<option value="">選択してください</option>
+<option value="#FFFFFF">#FFFFFF</option>
+<option value="#FFCCFF">#FFCCFF</option>
+<option value="#FF99FF">#FF99FF</option>
+</select>
+<strong>必須</strong>
+
+<p><input type="submit" value="送信する" onclick="changePageBgColor();"></p>
+<p></p>
+<!--</form>-->
+
+
+<!--<form method="get">-->
+<!--  <label>色を選択-->
+    <input type="color" name="favorite_color" required onclick="changePageBgColor();">
+<!--  </label>-->
+<!--  <button class="texChng">送信</button>-->
+<!--  <button class="texChng">テキスト変更</button>-->
+<!--  <p class="first">文字が変更される前だよ。</p>-->
+<!--</form>-->
+<button class="texChng">テキスト変更</button>
+<p class="first">文字が変更される前だよ。</p>
+
+
+
+
+
+<!-- jquery (Google Hosted Libraries)リンク -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+
+<!-- jquery -->
+<script>
+//$('button').on('click',function(){
+// $('body').css('background','favorite_color');
+//});
+$(function(){
+$('.texChng').on('click',function(){
+ $('.first').text('文字が変更されちゃったー！');
+// $('.first').text('favorite_color');
+// $('.first').text(favorite_color);
+// $('body').css('background','favorite_color');
+});
+});
+</script>
+
+<script type="text/javascript">
+//$('.texChng').on('click',function(){
+ function changePageBgColor( newColor ) {
+ document.body.style.backgroundColor = newColor;
+}
+//});
+</script>
+
+<p>
+このページの背景色を……、<br>
+<input type="select" value="#FFFFFF" onclick="changePageBgColor('#FFFFFF');"><br>
+<input type="select" value="#FFCCFF" onclick="changePageBgColor('#FFCCFF');"><br>
+<input type="select" value="#FF99FF" onclick="changePageBgColor('#FF99FF');"><br>
+</p>
+
+
+
+
+<!-- jquery -->
+<script>
+$('#blue').on('click touchstart',function(){
+ $('body').css('background','blue');
+});
+
+$('#red').on('click touchstart',function(){
+ $('body').css('background','red');
+});
+
+$('#green').on('click touchstart',function(){
+ $('body').css('background','green');
+});
+
+$('#yellow').on('click touchstart',function(){
+ $('body').css('background','yellow');
+});
+
+
+
+<!-- jquery -->
+$('button').on('click',function(){
+ $('body').css('background',$(this).text());
+});
+
+
+
+//$('.blue').on('click touchstart',function(){
+// $('body').css('background',$('.blue').text());
+//});
+
+//$('.red').on('click touchstart',function(){
+// $('body').css('background',$('.red').text());
+//});
+
+//$('.green').on('click touchstart',function(){
+// $('body').css('background',$('.green').text());
+//});
+
+//$('.yellow').on('click touchstart',function(){
+// $('body').css('background',$('.yellow').text());
+//});
+
+//$('.White').on('click touchstart',function(){
+// $('body').css('background',$('.White').text());
+//});
+
+
+</script>
+    
+</body>
+</html>
