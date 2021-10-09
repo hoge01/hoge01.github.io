@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+
+/*ヘッダーの上下にマージンがあるのをゼロにする*/
+html,body{
+     margin:0;
+/*ウインド背景色の設定*/
+/*     background-color:#ccf;*/
+     background:#ccf;
+
+}
+
+
+/*コンテンツ幅*/
+div{
+/* PC幅1000前後が通常*/
+    width:960px;
+/*  上下が0　左右がauto  */
+    margin:0 auto;
+/*20210109 add start*/
+/*白色の枠*/
+/*    border:20px solid #fff;*/
+    background:#fff;
+    padding:20px;
+}

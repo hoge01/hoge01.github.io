@@ -1,0 +1,212 @@
+@charset "utf-8";
+ 
+/*----Reset----*/
+html,body,h1,h2,h3,p,ul,li{
+margin:0;
+padding:0;
+line-height:1.0;
+font-family:"Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul{
+list-style:none;
+}
+img{
+/*max-width:100%;
+height:auto;
+vertical-align:bottom;*/
+}
+a{
+text-decoration:none;	
+color:inherit;
+}
+/*初期画面の色*/
+body{
+background: #700;
+}
+/* 共通css */
+.container{
+max-width:	1020px;
+padding:0 10px;
+margin:0 auto;
+}
+ 
+/*----Header----*/
+ 
+.headerTop{
+background: #700;
+position: fixed;
+width: 100%;
+box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+ 
+header .container{
+display:flex;
+padding: 15px 10px;
+justify-content: space-between;
+align-items: center;
+}
+h1{
+font-size:40px;
+font-family: 'Great Vibes', cursive;
+}
+h1 span{
+color:#f73;
+font-weight: bold;
+text-shadow: 1px 1px 1px #900;
+}
+ 
+/*Navigation*/
+.pcnav ul{
+display:flex;
+}
+.pcnav li{
+font-size:14px;	
+margin-left:20px;
+font-weight: bold;
+}
+.current{
+color:#fc5;
+}
+.pcnav a{
+display: block;
+padding: 5px 0;
+transition: 200ms;
+}
+.pcnav a:hover{
+color:#fc0;
+}
+/* nav underline */
+.pcnav a::after{
+content: "";
+display: block;
+background: #fc0;
+height: 2px;
+margin-top:5px;
+transform: scaleX(0);
+transition: 200ms;
+}
+.pcnav a:hover::after{
+transform: scaleX(1);
+}
+ 
+/* Animation */
+header{
+height:100vh;
+background:url(../img/topbg3.jpg) no-repeat right center/cover;
+color:#fff;
+opacity: 0;
+animation: bg 2s ease-in forwards 1s;
+}
+@keyframes bg{
+0%{opacity: 0;}
+100%{opacity: 1;}
+}
+ 
+/* メインコピー */
+.copy{
+position: absolute;
+width: 100%;
+text-align: center;
+top: 30vh;
+text-shadow: 2px 2px 2px #000;
+color: #fff;
+opacity: 0;
+animation:copy 1s ease-in forwards;
+}
+@keyframes copy{
+0%{opacity: 0;}
+100%{opacity: 1;}
+}
+ 
+.copy h2{
+font-size:80px;	
+margin-bottom:40px;
+font-family: 'Great Vibes', cursive;
+letter-spacing: 5px;
+}
+.copy p{
+font-size:60px;	
+font-family: 'Great Vibes', cursive;
+}
+ 
+/* SNS icons */
+.sns{
+position: absolute;
+right:30px;
+bottom:15vh;
+}
+ 
+.sns i{
+display: block;
+font-size: 35px;
+color: #ccc;
+margin-bottom: 20px;
+transition: 250ms ease-out;
+}
+.sns i:hover{
+transform:rotate(360deg) scale(1.5);
+color:#fc0;
+}
+ 
+/* Startボタン*/
+.start{
+width:300px;
+height: 50px;
+position: absolute;
+margin: auto;
+right: 0;
+left: 0;
+bottom: 20vh;
+ 
+text-align: center;
+font-weight: bold;
+line-height: 50px;
+border-radius: 10px;
+font-size: 24px;
+color:#fff;
+background:#f50;
+border-radius: 10px;
+cursor: pointer;
+transition:200ms;
+}
+/*inset: auto 0 20vh 0;*/
+ 
+ 
+.start:hover{
+transform: scale(1.2);
+background: #900;
+}
+.start i{
+transition: 1000ms;
+}
+.start:hover i{
+transform: rotate(360deg);
+}
+ 
+/*矢印アニメーション*/
+.arrowBounce i{
+font-size: 50px;
+color:#fc0;
+display: block;
+width:50px;
+height: 50px;
+position: absolute;
+margin: auto;
+bottom:10vh;
+right:0;
+left: 0;
+animation:bounce 2s infinite;
+}
+ 
+/* 矢印の動き */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}

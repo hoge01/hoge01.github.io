@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<!-- 0 html 要素(Element) 文書の最上位(ルート)
+########################################-->
+<html lang="ja">
+
+
+
+<!-- 0-1 head 要素(Element) 文書の基本情報
+########################################-->
+<head>
+
+<meta charset="utf-8">
+<title>フラワーショップ：華屋</title>
+<meta name="description"
+ content="フラワーショップ：華屋は、あなたに世界中のお花をお届けします。">
+ 
+<!-- ビューポート設定 -->
+<meta name="viewport" content="width=device-width initial-scale=1">
+
+<!-- CSS・ファイル -->
+<link rel="stylesheet" href="css/style.css">
+<!--<link rel="stylesheet" href="css/demo01_style.css">-->
+
+<!-- googlefont Webからコピー -->
+
+
+<!-- font-awesome
+============================================= -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+</head>
+
+
+
+<!-- 0-2 body 要素(Element) コンテンツ
+########################################-->
+<body>
+
+
+
+<!-- 0-2-1 header ヘッダー
+======================================== -->
+<header>
+
+<div class="container">
+
+<div class="h1p">
+  <h1>フラワーショップ：華屋</h1>
+  <p>あなたに世界中のお花をお届けします。</p>
+</div><!-- /.h1p -->
+
+</div><!-- /.container -->
+
+</header>
+
+
+
+<!-- スマホボタン -->
+<div class="btn">
+<!--  <i class="fas fa-arrow-alt-circle-down"></i>-->
+  <i class="fas fa-leaf"></i>
+</div>
+
+
+
+<!-- 0-2-2 nav ナビゲーション
+======================================== -->
+<!-- パソコン用 -->
+<nav class="pcnav">
+  <ul class="container">
+    <li><a href="#0">ホーム</a></li>
+    <li><a href="#1">華屋について</a></li>
+    <li><a href="#2">店舗案内</a></li>
+    <li><a href="#3">ギフト</a></li>
+    <li><a href="#4">お問合せ</a></li>
+  </ul><!-- /.container -->
+</nav>
+
+<!-- スマホ用 -->
+<nav class="spnav">
+  <ul>
+    <li><a href="#0">ホーム</a></li>
+    <li><a href="#1">華屋について</a></li>
+    <li><a href="#2">店舗案内</a></li>
+    <li><a href="#3">ギフト</a></li>
+    <li><a href="#4">お問合せ</a></li>
+  </ul><!-- /.container -->
+</nav>
+
+
+
+<!--===== キーヴィジュアル =====-->
+<div class="container keyVis">
+<!--<p>-->
+<!--<a href="#">-->
+<img src="img/flower.jpg" alt="花の一覧の画像">
+<!--</a>-->
+<!--</p>-->
+</div><!-- /.keyVis -->
+
+
+
+<!-- 0-2-3 main メインコンテンツ
+======================================== -->
+<div class="container wrap">
+
+<!--<main>-->
+<!--</main>-->
+
+</div><!--./container-->
+
+
+
+<!-- 0-2-4 footer フッター
+======================================== -->
+<footer>
+
+<div class="container">
+
+<p>
+<small>
+Copyrite &copy; フラワーショップ：華屋 All rights reserved.
+</small>
+</p>
+
+</div><!-- /.container -->
+
+</footer>
+
+
+<!-- jquery (Google Hosted Libraries)リンク -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- jquery -->
+<script>
+$(function(){                /*省略可能なコードを削ったもの*/
+$('.btn').on('click',function(){
+//表示
+//$('.spnav').show();
+//非表示
+//$('.spnav').hide();
+//表示非表示　交互
+//$('.spnav').toggle();
+//にゅるにゅるダウン
+//$('.spnav').slideDown();
+//にゅるにゅるアップ
+//$('.spnav').slideUp();
+//にゅるにゅる表示非表示　交互
+$('.spnav').slideToggle();
+//$('.spnav').fadeToggle();
+});
+});
+</script>
+
+
+
+</body>
+
+</html>

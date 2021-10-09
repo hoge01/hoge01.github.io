@@ -1,0 +1,648 @@
+@charset "utf-8";
+ 
+/*----Reset----*/
+html,body,h1,h2,h3,p,ul,li{
+margin:0;
+padding:0;
+line-height:1.0;
+font-family:"Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul{
+list-style:none;	
+}
+img{
+max-width:100%;
+height:auto;
+vertical-align:bottom;
+}
+a{
+text-decoration:none;	
+color:inherit;
+/*display:block;*/
+}
+/*初期画面の色*/
+body{
+background: #700;
+}
+/* 共通css */
+.container{
+max-width:	1020px;
+padding:0 10px;
+margin:0 auto;
+}
+ 
+/*----Header----*/
+header{
+height:100vh;
+background:url(../img/topbg3.jpg) no-repeat right center/cover;
+background-attachment:fixed;
+color:#fff;
+/*overflow: hidden;*/
+animation: bg 3s ease-in;
+}
+@keyframes bg{
+0%{opacity: 0;}
+50%{opacity: 0;}
+100%{opacity: 1;}
+}
+ 
+.headerTop{
+background: #700;
+position: fixed;
+width: 100%;
+z-index:5;
+box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+ 
+header .container{
+display:flex;
+padding: 15px 10px;
+justify-content: space-between;
+align-items: center;
+/*position: relative;*/
+}
+h1{
+font-size:40px;
+font-family: 'Great Vibes', cursive;
+}
+h1 span{
+color:#f73;
+font-weight: bold;
+text-shadow: 1px 1px 1px #900;
+}
+ 
+/*Navigation*/
+.pcnav ul{
+display:flex;
+}
+.pcnav li{
+font-size:13px;	
+margin-left:20px;
+font-weight: bold;
+}
+.pcnav li:first-child{
+color:#fc5;
+}
+.pcnav a{
+display: block;
+padding: 5px 0;
+transition: 200ms;
+}
+.pcnav a:hover{
+color:#fc0;
+}
+/* sp nav */
+.spnav{
+display: none;
+}
+ 
+/* nav underline */
+.pcnav a::after{
+content: "";
+display: block;
+height: 2px;
+background: #fc0;
+margin-top:5px;
+transform: scaleX(0);
+transition: 200ms;
+}
+.pcnav a:hover::after{
+transform: scaleX(1);
+}
+ 
+/* メインコピー */
+.copy{
+position: absolute;
+width: 100%;
+top: 30vh;
+text-align: center;
+text-shadow: 2px 2px 2px #000;
+color: #fff;
+animation:copy 1s ease-in;
+}
+/* 表示アニメーション */
+@keyframes copy{
+0%{opacity: 0;}
+100%{opacity: 1;}
+}
+.copy h2{
+font-size:80px;	
+margin-bottom:40px;
+font-family: 'Great Vibes', cursive;
+letter-spacing: 5px;
+}
+.copy p{
+font-size:60px;	
+font-family: 'Great Vibes', cursive;
+}
+ 
+/* SNS icons */
+.sns{
+position: fixed;
+right:30px;
+bottom:15vh;
+}
+.sns i{
+display: block;
+font-size: 35px;
+color: #ccc;
+margin-bottom: 20px;
+transition: 250ms ease-out;
+}
+.sns i:hover{
+transform:rotate(360deg) scale(1.5);
+color:#fc0;
+}
+ 
+/* Start */
+.start{
+width:300px;
+height: 50px;
+text-align: center;
+font-weight: bold;
+line-height: 50px;
+border-radius: 10px;
+font-size: 24px;
+position: absolute;
+right: 0;
+left: 0;
+bottom: 20vh;
+margin: auto;
+color:#fff;
+background:#f50;
+border-radius: 10px;
+cursor: pointer;
+transition:0.2s;
+}
+.start:hover{
+background:#a30;
+}
+ 
+/*矢印アニメーション*/
+.arrowBounce i{
+display: block;
+width:50px;
+height: 50px;
+font-size: 50px;
+color:#fc0;
+position: absolute;
+bottom:10vh;
+right:0;
+left: 0;
+margin: auto;
+animation:bounce 2s infinite;
+}
+/* 矢印の動き */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+ 
+/*Topへ戻るボタン*/
+.top{
+width:60px;
+height:60px;
+line-height: 60px;
+text-align: center;
+font-weight: bold;
+color:#fff;
+font-size: 28px;
+border:3px solid #fff;
+border-radius: 10px;
+background:#46c3f4;
+box-shadow: 4px 4px 10px rgba(100,100,100,0.8);
+position: fixed;
+right:10px;
+bottom:10px;
+cursor: pointer;
+transition: 200ms;
+}
+.top:hover{
+background: #09d;
+}
+ 
+/* 見出し前icon */
+h2>i,.pamph i{
+color:	#46c3f4;
+margin-right:10px;
+}
+ 
+/*----SERVICE----*/
+.serviceBox{
+padding:100px 0;
+background: #fff;
+text-align:center;
+}
+.serviceBox h2{
+margin-bottom: 20px;
+}
+.serviceBox>.container>p{
+color:	#46c3f4;
+margin-bottom: 50px;
+}
+.serviceInner{
+display: flex;
+justify-content: space-betweenp
+}
+.service{
+width:calc(100% / 3);
+}
+.service a{
+display: block;
+}
+.service h3{
+margin-bottom:20px;	
+color:#555;
+}
+.service i{
+display: block;
+margin:0 auto 30px;
+width:200px;
+line-height:200px;
+border-radius: 50%;
+color:#46c3f4;
+background:#fff;
+font-size:40px;
+border:1px solid #46c3f4;
+transition: 200ms;
+}
+.service a:hover i{
+background:#46c3f4;
+color:#fff;
+transform: rotate(360deg) scale(1.2);
+}
+.service p{
+width:80%;
+margin:0 auto;
+line-height:1.4;
+text-align: left;
+/*color:#555;*/
+}
+ 
+/*----最新ツアー情報----*/
+.tour{
+text-align:center;	
+background:#def;
+padding:100px 0;
+}
+.tourInfo{
+margin-bottom: 50px;
+}
+.tour h2{
+margin-bottom:20px;	
+}
+.tour h2+p{
+color:	#46c3f4;
+margin-bottom: 50px;
+}
+ 
+/*----new----*/
+.newBox{
+display: flex;
+justify-content: space-between;
+}
+.new{
+width:23%;
+}
+.new a{
+display:block;
+padding-bottom:20px;
+background:#fff;
+transition: 200ms;
+}
+.new a:hover{
+background: #eff;
+box-shadow: 0 0 20px #07f;
+}
+.new a p:first-of-type{
+margin-bottom:20px;
+overflow: hidden;
+}
+.new a img{
+width:100%;
+height: 150px;
+object-fit: cover;
+object-position: center;
+opacity: 0.6;
+transition: 200ms;
+}
+.new a:hover img{
+opacity: 1;
+transform:scale(1.2);
+}
+.new h3{
+text-align:center;
+margin-bottom:20px;	
+font-size:14px;
+}
+.new a p:nth-of-type(2){
+line-height:1.4;
+text-align: left;
+font-size:14px;
+padding: 0 20px;
+height:9em;
+}
+.new p.syosai{
+width:80%;
+text-align:center;
+margin:0 auto;
+color:#fff;
+background:	#46c3f4;
+padding:5px;
+border-radius:5px;
+}
+ 
+/*資料請求l*/
+.pamph{
+padding:150px 0;
+color: #fff;
+background:url(../img/hotel.jpg) no-repeat center/cover;
+background-attachment: fixed;
+}
+.pamph p{
+text-align: center;
+font-size: 28px;
+width:10em;
+margin:0 auto;
+border:1px solid #fff;
+border-radius: 5px;
+}
+.pamph p a{
+display: block;
+color:#fff;
+padding:10px;
+transition: 0.2s;
+}
+.pamph p a:hover{
+background:#07a;
+}
+ 
+/*----sitemap----*/
+.sitemap{
+padding:100px 0;
+background: #fff;
+}
+.sitemap h2{
+margin-bottom:20px;	
+text-align:center;
+}
+.sitemap p{
+color:	#46c3f4;
+text-align:center;
+margin-bottom:50px;
+}
+.smapBox{
+display: flex;
+justify-content: space-around;
+}
+.smap{
+width:20%;
+font-size:14px;
+/*color:#555;*/
+}
+.smap h3,.smap ul li{
+margin-bottom:20px;	
+}
+.smap li a{
+padding: 5px;
+border: 1px solid transparent;
+border-radius: 5px;
+transition: 200ms;
+}
+.smap li a:hover{
+color:	#07f;
+border-color: #07f;
+}
+ 
+/*Footer*/
+footer{
+padding:40px 0;
+background:#def;
+/*color:#555;*/
+text-align:center;
+}
+ 
+/*Media Query*/
+@media screen and (max-width:1000px){
+ 
+/*最新ツアー情報4→2カラム*/
+.newBox{
+flex-wrap: wrap;
+}
+.new{
+width:48%;
+}
+.new a img{
+height: 200px;
+opacity: 1;
+}
+/* 3番目以降 */
+.newBox .new:nth-child(n+3){
+margin-top: 20px;
+}
+/* 詳細を見る位置調整 */
+.new a p:nth-of-type(2){
+height:5em;
+}
+ 
+}
+ 
+@media screen and (max-width:767px){
+ 
+/*----Header----*/
+header{
+height:80vh;
+}
+header .container{
+display:block;
+text-align: center;
+}
+ 
+.pcnav{
+display: none;
+}
+ 
+.copy{
+top:20vh;
+}
+.copy h2{
+font-size: 40px;
+}
+.copy p{
+font-size: 30px;
+}
+.start{
+bottom:40vh;
+}
+/*矢印アニメーション*/
+.arrowBounce i{
+bottom: 25vh;
+}
+.sns{
+bottom:20vh;
+}
+ 
+ 
+/* Sp menu */
+.spnav{
+display: block;
+position: fixed;
+width:100%;
+left: 0;
+top:70px;
+background:rgba(255,100,0,0.7);
+margin-left: 100%;
+transition: 300ms;
+}
+.spnav li{
+line-height: 70px;
+text-align: center;
+font-size: 22px;
+}
+.spnav a{
+display: block;
+color:#fff;
+font-weight: bold;
+border-bottom:1px solid #fff;
+}
+.slide{
+margin-left: 0;
+}
+ 
+/*スマホボタン*/
+.btn{
+z-index: 6;
+width:50px;
+height: 60px;
+/*
+border: 1px solid #fff;
+border-radius: 5px;
+*/
+position:fixed;
+top:3px;
+right: 3px;
+}
+.btn span,.btn span::before,.btn span::after{
+display: block;
+content:"";
+width:30px;
+height: 3px;
+background: #fff;
+transition:0.3s;
+}
+.btn span{
+position: absolute;
+top:0;
+right:0;
+bottom: 0;
+left: 0;
+margin: auto;
+}
+.btn span::before{
+margin-top:-15px;
+}
+.btn span::after{
+margin-top:27px;
+}
+/*クラス名closeがついた時のCSS*/
+.btn span.close{
+background:transparent;
+}
+.btn span.close::before{
+transform:rotate(225deg);
+margin-top:1px;
+}
+.btn span.close::after{
+transform:rotate(-225deg);
+margin-top:-3px;
+}
+ 
+/*SERVICE*/
+.serviceBox{
+padding:30px 0;
+}
+.serviceBox>.container>p{
+margin-bottom: 20px;
+}
+.serviceInner{
+display: block;
+}
+.service{
+width:auto;
+margin-bottom:30px;
+}
+ 
+.service i{
+width:150px;
+height: 150px;
+line-height:150px;
+}
+.service h3{
+margin-bottom: 10px;
+}
+.service p{
+max-width: 300px;
+margin: 0 auto;
+}
+ 
+/*最新ツアー情報*/
+.tour{
+padding:30px 0;
+}
+.tourInfo{
+margin-bottom:20px;
+}
+.newBox{
+display: block;
+}
+.new{
+width:100%;
+}
+.new a img{
+height: 400px;
+}
+.newBox .new:nth-child(n+2){
+margin-top: 20px;
+}
+.new a p:nth-of-type(2){
+height:auto; 
+margin-bottom:20px;
+}
+ 
+/* 資料請求 */
+.pamph{
+padding: 50px 0;
+}
+ 
+/*サイトマップ*/
+.sitemap{
+display: none;
+}
+footer{
+ 
+}
+ 
+@media screen and (max-width:400px){
+ 
+header h1{
+font-size:28px;
+}
+ 
+.new a img{
+height: 200px;
+}
+ 
+/* Start */
+.start{
+width:200px;
+}
+ 
+ 
+}

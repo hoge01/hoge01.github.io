@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+/* #############################################
+ style.css
+############################################# */
+/* CSS Reset
+############################################# */
+html
+,body
+,h1
+,h2
+,h3
+,p
+,ul
+,li
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:
+  "Hiragino kaku Gothic ProN"  /*Mac*/
+  ,Meiryo                      /*Win*/
+  ,sans-serif;                 /*その他ゴシック系*/
+/* text-align:center;*/     /*==今回・中央配置==*/
+}
+
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+ /*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+ max-width:100%;    /*親要素のwidth幅の100%の値*/
+ /*♦フルードイメージ（Fluid Image）-ウィンドウサイズ（または親要素の幅）に応じて、縦横比を保持したまま自動的に画像が拡大・縮小するようにする手法、最大幅は元画像の幅*/
+ height:auto;       /*横幅と同比率で高さも自動調整*/
+}
+
+ul
+/*,ol*/          /*※番号を使用する場合はolは記述しない*/
+{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+}
+
+.container{
+ max-width:calc(100% - 200px);
+/* max-width:1960px;*/
+/* height:100vh;*/
+ display:flex;
+ flex-wrap:wrap;
+}
+
+.ph{
+/* width:100%;*/
+ height:50vh;
+}
+
+.topL{
+ background:url(../img/lefttop.jpg) no-repeat center bottom/cover;
+ width:calc(100% / 2);
+/* height:auto;*/
+}
+.topR{
+ background:url(../img/righttop2.jpg) no-repeat center bottom/cover;
+ width:calc(100% / 2);
+/* height:auto;*/
+ }
+.btmL{
+ background:url(../img/leftbottom.jpg) no-repeat center bottom/cover;
+ width:calc(100% / 3);
+/* height:auto;*/
+ }
+.btmM{
+ background:url(../img/centerbottom.jpg) no-repeat center bottom/cover;
+ width:calc(100% / 3);
+/* height:auto;*/
+ }
+.btmR{
+ background:url(../img/rightbottom.jpg) no-repeat center bottom/cover;
+ width:calc(100% / 3);
+/* height:auto;*/
+ }
+ 
+header{
+ height:100vh;
+ width:200px;
+ background-color:#444;
+ position:relative;
+ float:left;
+}
+
+h1 img{
+/* svg画像の場合、高さ、幅を指定 */
+/* width:180px;*/
+/* height:auto;*/
+ position:absolute;
+ top:0;
+ left:0;
+ bottom:0;
+ right:0;
+ margin:auto;
+}
+
+.caption{
+ display:block;
+ height:25vh;
+ padding-top:25vh;
+ color:#fff;
+ background-color:rgba(0,0,0,0.3);
+ transition:0.3s;
+ opacity:0;
+/* margin-bottom:20px;*/
+}
+
+.caption h2{
+/* padding-top:25vh;*/
+ padding-bottom:20px;
+ text-align:center;
+}
+
+.caption p{
+ line-height:1.4;
+ width:80%;
+ margin:0 auto;
+}
+
+.caption:hover{
+ transition:0.3s;
+ opacity:1;
+}
+
+
+.section{
+ max-width:1020px;
+ text-align:center;
+ margin:100px auto;
+ padding:0 20px
+}
+
+.section h2{
+ font-size:50px;
+ line-height:70px;
+ letter-spacing:10px;
+ border:1px solid #aaa;
+ box-shadow:0 0 20px #444;
+/* padding:10px 0;*/
+/* margin-bottom:50px;*/
+}
+ 
+.section p{
+ font-size:22px;
+ line-height:2.0;
+ margin:50px auto;
+}
+
+.container2{
+ display:flex;
+/* margin-top:50px;*/
+}
+
+.container2 section{
+ width:calc(100% / 3);
+}
+
+.container2 section i
+,.section a
+{
+ display:block;
+}
+
+.container2 section i{
+ width:130px;       /*~指定~高さ*/
+/* height:130px;*/
+ line-height:130px;
+ border-radius:50%; /*~指定~円*/
+ color:#fff;
+ background-color:#444;
+ font-size:60px;
+/* margin:0 auto 30px;*/
+ margin:0 auto;
+ text-shadow:none;
+ transform:0.3s;
+}
+
+.container2 h3{
+ color:#f00;
+ font-size:30px;
+/* margin-bottom:30px;*/
+ margin:30px 0;
+}
+
+.container2 p{
+ color:#000;
+ line-height:1.5;
+}
+
+.container2 section a:hover i{
+ background-color:#e50;
+}
+
+footer p{
+ color:#fff;
+ text-align:center;
+ padding:50px 0;
+ background-color:#444;
+}
+
+
+
+/* #############################################
+ レスポンシヴウェブデザイン（RWD）
+############################################# */
+/* =============================================
+ ♦メディアクエリー設定（ブレイクポイント）
+============================================= */
+@media screen and (max-width:1000px){
+/* #############################################
+ レイアウト設定
+############################################# */
+.container{
+ max-width:1000px;
+}
+
+.ph{
+ height:calc((100vh - 100px) / 2);
+}
+
+header{
+ width:auto;
+ height:100px;
+ float:none;
+}
+
+h1 img{
+ width:80px;
+ height:auto;
+}
+
+.caption{
+ opacity:1;
+ background:none;
+ height:calc(30vh - 50px);
+ padding-top:20vh;
+}
+
+.caption h2
+,.caption p
+{
+ box-sizing:border-box;
+ background:rgba(0,0,0,0.4);
+}
+
+.caption h2{
+ font-size:150%;
+ width:80%;
+ padding:10px 0 5px;
+ margin:0 auto;
+}
+
+.caption p{
+ font-size:14px;
+ padding:5px 10px 10px;
+}
+
+
+
+}
+
+
+/* =============================================
+ ♦メディアクエリー設定（ブレイクポイント）
+============================================= */
+@media screen and (max-width:767px){
+/* #############################################
+ レイアウト設定
+############################################# */
+.container
+,.container2
+{
+ display:block;
+}
+
+.ph
+,.container2 section
+{
+ width:100%;
+}
+
+section p{
+ max-width:400px;
+ text-align:left;
+}
+
+footer p{
+ padding:20px 0;
+}
+
+
+}

@@ -1,0 +1,592 @@
+@charset "utf-8";
+
+/* CSS Reset
+   各ブラウザ（IE、FireFox、Chrome、safariなど）は、要素毎にデフォルトでスタイルを独自にもっており、ブラウザによって表示が異なる場合がある。それらの誤差を極力なくすために使用するスタイルシートを一般的に「リセットCSS」と呼ぶ。（ブロックレベル要素のみ）
+   ※header/nav/main/aside/footer/divは記述しない場合もある
+############################################# */
+html
+,body
+,h1
+,h2
+,h3
+,p
+,ul
+,li
+{
+ margin:0;
+ padding:0;
+ line-height:1.0;       /*行の高さ　単位を付けない*/
+ font-family:
+  "Hiragino kaku Gothic ProN"  /*Mac*/
+  ,Meiryo                      /*Win*/
+  ,sans-serif;                 /*その他ゴシック系*/
+ text-align:center;     /*==今回・中央配置==*/
+}
+                        
+img{
+ border:none;           /*画像の境界線を非表示にする*/
+                        /*画像にリンクを設定すると、一般的なブラウザでは自動的に境界線が表示される。*/
+ vertical-align:bottom; /*初期設定画像の下の空白を取る*/
+}
+
+ul
+/*,ol*/          /*※番号を使用する場合はolは記述しない*/
+{
+ list-style:none;       /*黒丸を非表示にする*/
+}
+
+a{
+ text-decoration:none;  /*文字の下線を消す*/
+}
+
+/*table{*/
+/* border-collapse:collapse;*//*隣接するセルの線を重ねて表示*/
+                        /*border-collapseプロパティは、隣接するセルのボーダーを重ねて表示するか（collapse）、間隔をあけて表示するか（separate）を指定*/
+/* border-spacing:0;*/ /*隣接するセルの線と線の間隔を指定*/
+                        /*border-spacingプロパティは、隣接するセルのボーダーとボーダーの間隔を指定する際に使用します。border-spacingプロパティは、border-collapseプロパティの値がseparateのときに有効。値を1つ指定した場合： [上下左右]の間隔が指定された値。値を2つ指定した場合： 記述した順に[左右][上下]の間隔が指定された値。*/
+/*}*/
+
+*{               /*ユニバーサルセレクタ（全称セレクタ）*/
+                        /*アスタリスク（ * ）を記述してすべての要素を対象にスタイルを適用するセレクタ*/
+/* box-sizing:border-box;*/ /*ボックスサイズの算出方法指定*/
+                        /*値にborder-boxを指定すると、widthとheightで指定する幅と高さがボーダーボックスに対して適用されます。 内容領域にパディングとボーダーを含んだ範囲に対して幅と高さが適用されるため、パディングとボーダーの分だけボックスサイズが小さくなります。*/
+                        /*content-box:パディングとボーダーを幅と高さに含めない（初期値）*/
+}
+
+
+
+/* 共通設定
+############################################# */
+/* カラー設定（指定校）
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+a{
+ color:inherit;         /*文字の色を親要素から取得*/
+}
+
+h1
+,h2
+,.container section a /*h2,p*/
+,.recipe .more
+{
+ color:#fff;
+}
+
+header p
+,.pcnav a:hover
+,.container section i
+,.recipe h3
+,footer
+{
+ color:#40680f;     /*~指定~文字色*/
+}
+
+.pcnav a
+{
+ color:#999;
+}
+
+.container{
+ background-color:#8fc320;/*~指定~背景色*/
+}
+
+.container section a:hover{
+ background-color:#40680f;/*~指定~背景色*/
+}
+
+.container section i
+,.recipe section
+{
+ background-color:#fff;
+}
+
+
+.recipe h2
+,.access h2
+{
+ color:#aaa;
+}
+
+.recipe a:hover{
+ background-color:#cfa;
+}
+
+.recipe .more{
+ background-color:#f00; /* 後で上書きされて効いてない */
+}
+
+
+
+/* コンテンツ幅設定
+   header,nav,(main,sidebar),footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* レスポンシヴウェブデザイン（RWD）
+--------------------------------------------- */
+/*.container{*/
+.wrap{
+/* width:960px;*/  /*PC幅1000前後が通常*/
+ max-width:960px;  /*♦最大幅を固定値:max-widthで設定*/
+/* padding:0 10px;*/   /*左右の余白調整*/
+ margin:0 auto;    /*左右中央寄せ :上下 左右;*/
+}
+
+img{
+ max-width:100%;    /*親要素のwidth幅の100%の値*/
+                    /*♦フルードイメージ（Fluid Image）-ウィンドウサイズ（または親要素の幅）に応じて、縦横比を保持したまま自動的に画像が拡大・縮小するようにする手法、最大幅は元画像の幅*/
+ height:auto;       /*横幅と同比率で高さも自動調整*/
+}
+
+
+/* カラムレイアウト
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.pcnav li{
+ width:calc(100% / 5);/* %で指定 */
+                    /*♦横幅固定値に対して親ボックスに対する％で指定*/
+                    /*コンテンツ幅に対し、(%/ボタン数)を考慮した、幅を指定*/
+}
+
+.container section
+,.recipe section
+{
+/* width:calc(100% / 3);*/
+ width:calc(100% * (320 / 960));
+}
+
+.container section a
+,.recipe a
+{
+ padding:calc(100% * (20 / 320));
+}
+
+
+
+/* レイアウト設定
+############################################# */
+/*.container*/
+.wrap
+{
+ display:flex;
+}
+
+.pcnav a            /*幅を広げる（無いと文字だけ）*/
+,.container section a
+,.container section i
+,.recipe a
+{
+ display:block;
+}
+
+
+
+/* 個別設定
+############################################# */
+/* 0-2-1/4 <HEADER> ヘッダー
+============================================= */
+header{
+ background:
+  url(../img/logo.png)
+  no-repeat
+  center 40px       /*~指定~余白*/
+ ,url(../img/top-header.jpg)
+  repeat-x
+  center top
+;
+}
+
+header h1{
+ height:130px;      /*~指定~高さ:300 - 余白:170*/
+ padding-top:170px; /*~指定~余白*/
+ font-family:'Berkshire Swash',cursive; /*~指定~googlefont*/
+ font-size:500%;    /*~指定~フォントサイズ*/
+ text-shadow: 3px 3px 5px #000;
+}
+
+header p{
+ font-size:26px;    /*~指定~フォントサイズ*/
+ font-weight: bold;
+ padding:40px 0;    /*~指定~余白*/
+}
+
+
+
+/* 0-2-2/4 <NAV> ナビゲーション
+============================================= */
+/* 0-2-2(1/2) <PCNAV> パソコン用
+_____________________________________________ */
+.pcnav{
+ margin-bottom:10px;/*~指定~余白*/
+}
+
+.pcnav a{
+ padding:10px 0;    /*~指定~余白*/
+}
+
+
+/* :hover 疑似クラス (ホバー状態の <a> 要素を選択)
+カーソル（マウスポインタ―）で要素の上をホバー（通過）させたときにこの状態になる
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.pcnav a:hover{
+ text-decoration:underline;/*~指定~アンダーライン*/
+}
+
+
+/* 0-2-2(2/2) <SPNAV> スマホ用
+_____________________________________________ */
+.spnav ul
+{
+ display:none;
+}
+
+
+/* Font-awesome
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.btn{
+ width:50px;
+ height:50px;
+ border:1px solid #fff;
+ border-radius:5px;
+ position:absolute;
+ top:5px;
+ right:5px;
+ z-index:2;
+ color:#fff;
+ text-align:center;
+}
+
+/* Sp btn */
+.btn{
+ display:none;
+}
+
+.btn i{
+ display:block;
+ line-height:50px;
+ font-size:35px;
+}
+
+/* barアイコン表示 */
+.btn i:last-child{
+/* display:none;*/
+}
+
+/* TOPへ戻るボタン */
+.top{
+ width:50px;
+ height:45px;
+ padding-top:5px;
+ font-weight:bold;
+ color:#40680f;
+ border:1px solid #40680f;
+ border-radius:5px;
+ position:fixed;
+ bottom:5px;
+ right:5px;
+ z-index:9999;
+ background-color:#fff;
+ cursor:pointer;
+/* text-align:center;*/
+}
+
+.top i{
+ display:block;
+}
+
+
+
+/* 0-2-0 <DIV> キーヴィジュアル
+============================================= */
+
+
+
+/* 0-2-3/4 <MAIN> メインコンテンツ
+============================================= */
+.container{
+ padding:50px 0;    /*~指定~余白*/
+}
+
+
+
+/* 0-2-3(1/3) SECTION オリジナルレシピ
+   0-2-3(2/3) SECTION イタリア料理とは？
+   0-2-3(3/3) SECTION お問合せ
+_____________________________________________ */
+.container section a{
+ transition:0.3s;
+}
+
+.container section i{
+ width:150px;       /*~指定~高さ*/
+ height:150px;
+ line-height:150px;
+ border-radius:50%; /*~指定~円*/
+ font-size:60px;
+ margin:0 auto 20px;
+ text-shadow:none;
+}
+
+.container h2{
+ font-size:18px;
+ text-shadow:2px 2px 2px #000;
+ margin-bottom:20px;
+}
+
+.container section p{
+ line-height: 1.5;
+ text-align: left;
+ margin:0 auto;
+}
+
+
+
+/* 0-2-3(3/3)+(1/2) SECTION レシピ紹介
+_____________________________________________ */
+.recipe{
+ margin:100px auto;
+}
+
+.recipe h2{
+ margin-bottom:50px;/*~指定~余白*/
+}
+
+.recipe section{
+/* padding:20px;*/      /*~指定~余白*/
+}
+
+.recipe a{
+ overflow:hidden;
+ transition:0.3s;
+}
+
+.recipe h3
+,.recipe img
+{
+ margin-bottom:10px;
+}
+
+.recipe p{
+ font-size:14px;
+}
+
+.recipe a p:first-of-type{
+ line-height:1.5;
+ text-align:left;
+/* margin-bottom:30px;*/
+/* 詳細ボタン位置 */
+ height:9em;
+}
+
+.recipe .more{
+ float:right;
+ background:url(../img/mark.png)
+ no-repeat
+ 5px center
+/* center left 5px*/
+ #f00
+ ;
+ padding:5px 5px 5px 15px;
+}
+
+
+
+/* 0-2-3(3/3)+(2/2) SECTION 店舗紹介
+_____________________________________________ */
+.access
+,.access h2
+{
+ margin-bottom:50px;
+}
+
+.access iframe{
+/* width:100%;*/
+/* height:600px;*/
+}
+
+.map{
+ position:relative;
+ padding-bottom:40%; /*padding上下%の基準は横幅*/
+ height:0;
+ overflow:hidden;
+}
+
+.map iframe{
+ position:absolute;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ border:0;
+}
+
+
+
+/* 0-2-4/4 <FOOTER> フッター
+============================================= */
+footer{
+ padding:50px 0;
+}
+
+
+
+
+
+/* レスポンシヴウェブデザイン（RWD）
+   PC、タブレット、スマートフォンなど、あらゆるデバイスに最適化したWebサイトを、単一のHTMLで実現する制作手法。
+   スマートフォンやタブレットからのアクセス数が増加している今、レスポンシブWebデザインはモバイル対応に非常に有効と言える。
+--------------------------------------------- */
+/* ♦メディアクエリー設定（ブレイクポイント）
+============================================= */
+@media screen and (max-width:767px){
+/* レイアウト設定
+############################################# */
+.wrap{
+ display:block;
+}
+
+/* カラムレイアウト
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.wrap{
+ max-width:400px;
+}
+
+.spnav li
+,.container section
+,.recipe section
+{
+ width:100%;
+/* width:auto;*/
+ height:auto;
+}
+
+.container section a
+,.recipe a
+{
+/* padding:100%;*/
+}
+
+.recipe img{
+
+}
+
+
+
+/* font-sizeは、iPhone5/SE 320x568基準 */
+/* 個別設定
+############################################# */
+/* 0-2-1/4 <HEADER> ヘッダー
+============================================= */
+header{
+/* background:*/
+/*  url(../img/logo.png)*/
+/*  no-repeat*/
+/*  center 10px/80px auto*/       /*~指定~余白*/
+/* ,url(../img/top-header.jpg)*/
+/*  repeat-x*/
+/*  center top/auto 120px*/
+/* ;*/
+ background-position:
+ center 10px
+,center top;
+ background-size:  /*幅　高さ*/
+ 80px auto
+, auto 120px;
+}
+
+header h1{
+ height:70px;
+ padding-top:50px;
+ font-size:300%;
+}
+
+header p{
+ font-size:12px;    /*~指定~フォントサイズ*/
+ font-weight:bold;
+ padding:10px 0;    /*~指定~余白*/
+}
+
+
+
+/* 0-2-0 <DIV> キーヴィジュアル
+============================================= */
+
+
+
+/* 0-2-2/4 <NAV> ナビゲーション
+============================================= */
+/* 0-2-2(1/2) <PCNAV> パソコン用
+_____________________________________________ */
+.pcnav
+{
+ display:none;
+}
+
+
+/* 0-2-2(2/2) <SPNAV> スマホ用
+_____________________________________________ */
+/* Sp btn */
+/* barアイコン表示 */
+.btn{
+ display:block;
+ overflow:hidden;  /*アイコン２つ目を非表示*/
+}
+
+/* クリック時 */
+.close i:first-child{
+ display:none;
+}
+
+.close i:last-child{
+ display:block;
+}
+
+/*ナビゲーション*/
+.spnav ul{
+ display:block;
+ width:100%;
+ position:fixed;
+ top:57px;
+ left:0;
+ margin-left:100%;
+ transition:0.3s;
+}
+
+.slide ul{
+ margin-left:0;
+}
+
+.spnav li{
+ width:auto;
+}
+
+.spnav a{
+ display:block;
+ color:#40680f;
+ font-size:30px;
+/* font-weight:bold;*/
+ line-height:70px;
+ border-top:1px solid #aaa;
+ background:rgba(255,255,255,0.8);
+}
+
+
+
+/* 0-2-3/4 <MAIN> メインコンテンツ
+============================================= */
+
+/* 0-2-3(1/2) SECTION オリジナルレシピ
+_____________________________________________ */
+.access{
+ margin-bottom:20px;
+}
+
+.map{
+ padding-bottom:60%; /*padding上下%の基準は横幅*/
+}
+
+
+
+/* 0-2-4/4 <FOOTER> フッター
+============================================= */
+
+
+
+}

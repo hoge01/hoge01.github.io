@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+
+/*コンテンツ幅*/
+/*<!--divにクラス属性をつけて、名前を付ける-->*/
+.container{
+/*div{*/
+/* PC幅1000前後が通常*/
+ max-width:960px;
+/*  上下が0　左右がauto  */
+ margin:0 auto;
+}
+
+.javap{
+ display:inline;
+ font-size:12px;
+ padding-right:5px;
+}
+
+.javabtn{
+ margin:10px;
+}
+
+.textBtn{
+ margin:0;
+ padding:5px;
+}
+
+
+
+header{
+background-color:#900;
+ color:#fff;
+ padding:10px;
+ background:url(../img/headerBg.jpg) no-repeat right top/cover;
+ height:130px;
+}
+
+
+/*ナビゲーション*/
+nav ul{
+ list-style:none;
+/*一緒*/
+ padding:0;
+ margin:0;
+/*20210115 add*/
+ display:flex;
+}
+
+nav li{
+ text-align:center;
+/*幅960pxに対して、ボタン５個なので、１個192px*/
+/* width:192px;*/
+/* width:20%;*/
+ width:calc(100%/5)
+}
+
+nav a{
+ text-decoration:none;
+ background:#fca;
+ display: block;
+ padding:15px 0;
+ color:#900;
+}
+
+nav a:hover{
+ background:#900;
+ color:#fff;
+}
+
+
+
+h2{
+ background-color:#fca;
+ color:#900;
+ padding:5px;
+ clear:both;
+}
+
+/*画像フロート*/
+main img{
+ float:left;
+ margin:0 20px 20px 0;
+}
+
+footer{
+ border-top:1px solid #900;
+}
+
+
+
+/*メディアクエリ　ブレイクポイント767px*/
+@media screen and (max-width:767px){
+
+/* PC用ナビゲーション */
+/*.pcnav{*/
+/* display:none;*/
+/*}*/
+
+/* スマホ用ナビゲーション */
+html,body{
+ margin:0;
+}
+
+
+header{
+ height:100px;
+}
+
+h1,header p{
+ margin:0;
+}
+
+h1{
+/* font-size:20px;*/
+/* width:242px;*/
+/* width:11em;*/
+/* width:275px;*/
+/* padding-left:55px;*/
+/* margin:0 auto 10px;*/
+}
+
+header p{
+/* font-size:16px;*/
+}
+
+
+
+/* Sp btn*/
+.btn{
+ width:50px;
+ height:50px;
+ border:1px solid #fff;
+ position:absolute;
+ top:5px;
+ right:5px;
+}
+
+
+
+nav{
+ position:absolute;
+ top:57px;
+ width:100%;
+ display:none; /*スマホ用ナビゲーション非表示・javで表示*/
+}
+
+nav ul{
+ display:block;
+/* border-bottom: 1px solid #777;*/
+/* margin-bottom:20px;*/
+}
+
+nav li{
+/* line-height:34px;*/
+ font-size:24px;
+ width:auto;
+/* border:1px solid #777;*/
+/* border-bottom:none;*/
+}
+
+nav li a{
+/*ブロック幅を広げる（無いと文字だけ）*/
+ display:block;
+ background:rgba(255,200,160,0.8)
+}
+
+main img{
+ float:none;
+ border:none;
+ vertical-align:bottom;
+ max-width:100%;
+ height:auto;
+ display:block;
+ margin:0 auto 10px;
+}
+
+main p{
+/* display:block;*/
+/* width:auto;*/
+/* margin:0 auto;*/
+/* text-align:center;*/
+}
+
+footer{
+ padding: 20px 0;
+}
+
+}
