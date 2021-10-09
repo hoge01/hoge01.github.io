@@ -1,0 +1,89 @@
+@charset "utf-8";
+ 
+/*背景色*/
+body{
+background: url(../img/asari_bg.jpg);
+}
+ 
+/*コンテンツ幅、中央揃え*/
+div{
+width: 960px;
+margin: 0 auto;
+background: #fea;
+padding: 30px;
+}
+ 
+/*ヘッダー*/
+header{
+text-align: center;
+background: #fff;
+padding-bottom: 20px;
+}
+h1{
+background:#f80;
+color: #fff;
+padding:30px 0;
+}
+ 
+/*Navigation*/
+nav ul{
+padding: 0;
+list-style: none;
+border: none;
+}
+nav li{
+text-align: center;
+font-size: 22px;
+}
+nav a{
+text-decoration: none;
+display: block;
+background:#fff;
+color: #f80;
+padding: 15px 0;
+}
+nav a:hover{
+background:#f80;
+color: #fff;
+}
+ 
+/*見出し*/
+h2{
+background:#f80 url(../img/ring.png) no-repeat left center;
+color: #fff;
+padding: 5px 0 5px 35px;
+}
+ 
+/*表組み*/
+table{
+border-collapse: collapse;
+background:#fff;
+}
+th{
+color:#900;
+background:#fd7;
+}
+th,td{
+border: 1px solid #f80;
+padding: 5px;
+}
+ 
+/*nav・ポイント・作り方*/
+ul,ol{
+background:#fff;
+border:1px solid #f80;
+padding:20px 20px 20px 40px;
+}
+ 
+/* トップへ戻る */
+main a{
+text-decoration:none;
+color:#f00;
+background:url(../img/top.png) no-repeat;
+padding: 2px 0 2px 25px;
+}
+ 
+/*フッター*/    
+footer{
+border-top: 1px solid #f80;
+}

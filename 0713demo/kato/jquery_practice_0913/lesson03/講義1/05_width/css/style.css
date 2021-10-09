@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+body{
+  text-align:center;
+}
+
+div{
+  color:red;
+  width:200px;
+  padding:10px;
+  margin:0 auto;
+  border:2px solid #FF0000;
+}

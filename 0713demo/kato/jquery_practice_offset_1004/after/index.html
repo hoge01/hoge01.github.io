@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery and JavaScipt</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="header_inner container">
+            <h1>jQuery JavaScipt</h1>
+        </div>    
+    </header>
+    <nav>
+        <ul class="container">
+            <li><a href="#light">menu1</a></li>
+            <li><a href="#acord">menu2</a></li>
+            <li><a href="#attr">menu3</a></li>
+            <li><a href="#tab">menu4</a></li>
+            <li><a href="">menu5</a></li>
+        </ul>
+    </nav>
+
+    <div class="main container">
+        
+        <ul class="slider">
+            <li><img src="img/main01.jpg" alt="main01 image"></li>
+            <li><img src="img/main02.jpg" alt="main02 image"></li>
+            <li><img src="img/main03.jpg" alt="main03 image"></li>
+        </ul>
+        <h2 id="light">jQuery LightBox</h2>
+        <ul class="lbox">
+            <li>
+                <a href="img/sample01.jpg" data-lightbox="box"><img src="img/sample01.jpg" alt="sample01"></a>
+                <p class="txt">
+                    Lorem ipsum dolor amet consectetur adipisicing. Distinctio et commodi
+                    illum voluptas quidem facilis doloremque hic amet adipisci
+                </p>
+            </li>
+            <li>
+                <a href="img/sample02.jpg" data-lightbox="box"><img src="img/sample02.jpg" alt="sample02"></a>
+                <p class="txt">
+                    Lorem ipsum dolor amet consectetur adipisicing. Distinctio et commodi
+                    illum voluptas quidem facilis doloremque hic amet adipisci
+                </p>
+            </li>
+            <li>
+                <a href="img/sample03.jpg" data-lightbox="box"><img src="img/sample03.jpg" alt="sample03"></a>
+                
+                <p class="txt">
+                    Lorem ipsum dolor amet consectetur adipisicing. Distinctio et commodi
+                    illum voluptas quidem facilis doloremque hic amet adipisci
+                </p>
+            </li>
+            <li>
+                <a href="img/sample04.jpg" data-lightbox="box"><img src="img/sample04.jpg" alt="sample04"></a>
+                <p class="txt">
+                    Lorem ipsum dolor amet consectetur adipisicing. Distinctio et commodi
+                    illum voluptas quidem facilis doloremque hic amet adipisci
+                </p>
+            </li>
+        </ul>
+        <h2 id="acord">jQuery acordion</h2>
+
+        <dl class="acordion">
+            <dt>acordion1</dt>
+            <dd>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur esse quas necessitatibus 
+                fugit recusandae ea veritatis beatae impedit? Libero vitae dolorum cupiditate numquam repellat 
+                quae magnam commodi incidunt fugit! Assumenda.
+                <p id="today"></p>
+            </dd>
+            <dt>acordion2</dt>
+            <dd>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur esse quas necessitatibus 
+                fugit recusandae ea veritatis beatae impedit? Libero vitae dolorum cupiditate numquam repellat 
+                quae magnam commodi incidunt fugit! Assumenda.
+                <p id="fortune"></p>
+            </dd>
+            <dt>acordion3</dt>
+            <dd>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3238.9697293832155!2d139.7110071152601!3d35.726962980183714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5rGg6KKLIOOCt-ODnuODk-ODqw!5e0!3m2!1sja!2sjp!4v1633178398120!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </dd>
+        </dl>
+
+
+        <h2 id="attr">jQuery this attr</h2>
+        
+        <div class="photo_img">
+            <p class="photo"><img src="img/img1.jpg"></p>
+            <ul>
+                <li><a href="img/img1.jpg"><img src="img/img1.jpg"></a></li>
+                <li><a href="img/img2.jpg"><img src="img/img2.jpg"></a></li>
+                <li><a href="img/img3.jpg"><img src="img/img3.jpg"></a></li>
+                
+            </ul>
+        </div>
+
+        <h2 id="tab">jQuery Tab</h2>
+        <ul class="tab_menu">
+            <li><a href="#tab1" class="current_tab_memu">01</a></li>
+            <li><a href="#tab2">02</a></li>
+            <li><a href="#tab3">03</a></li>
+            <li><a href="#tab4">04</a></li>
+        </ul>
+        <div class="tab">
+            <div id="tab1" class="current_tab">
+                <h3 class="num">01</h3>
+                <p class="txt">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore mollitia similique in ab porro
+                    molestiae eos quidem deserunt maxime dignissimos? Ullam ex, dolores placeat consequatur reiciendis 
+                    corporis enim inventore possimus.
+                </p>
+            </div>
+            <div id="tab2">
+                <h3 class="num">02</h3>
+                <p class="txt">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore mollitia similique in ab porro 
+                    molestiae eos quidem deserunt maxime dignissimos? Ullam ex, dolores placeat consequatur reiciendis 
+                    corporis enim inventore possimus.
+                </p>
+
+            </div>
+            <div id="tab3">
+                <h3 class="num">03</h3>
+                <p class="txt">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore mollitia similique in ab porro 
+                    molestiae eos quidem deserunt maxime dignissimos? Ullam ex, dolores placeat consequatur reiciendis 
+                    corporis enim inventore possimus.
+                </p>
+            </div>
+            <div id="tab4">
+                <h3 class="num">04</h3>
+                <p class="txt">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore mollitia similique in ab porro 
+                    molestiae eos quidem deserunt maxime dignissimos? Ullam ex, dolores placeat consequatur reiciendis 
+                    corporis enim inventore possimus.
+                </p>
+            </div>
+         </div>
+
+        <p><a href="#" id="toTop">TOP</a></p>
+    </div>
+
+    <footer>
+        <p class="footer_inner">   
+            <small>自分の名前</small>
+        </p>
+    </footer>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/lightbox.min.js"></script>
+
+<script>
+    $(function(){
+        $('.slider').bxSlider({
+            auto:true,
+            mode:'fade',
+            speed:2000,
+        });
+
+        lightbox.option({
+        'fadeDuration': 400, 
+        'wrapAround': true
+      });
+
+    });
+</script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

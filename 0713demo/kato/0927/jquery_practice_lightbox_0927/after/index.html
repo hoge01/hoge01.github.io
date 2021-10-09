@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery LightBox</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+</head>
+<body>
+    <header>
+        <div class="header_inner container">
+            <h1>jQuery Comapny</h1>
+        </div>    
+    </header>
+    <nav>
+        <ul class="container">
+            <li><a href="">menu1</a></li>
+            <li><a href="">menu2</a></li>
+            <li><a href="">menu3</a></li>
+            <li><a href="">menu4</a></li>
+            <li><a href="">menu5</a></li>
+        </ul>
+    </nav>
+
+    <div class="main container">
+        
+        <ul class="slider">
+            <li><img src="img/main01.jpg" alt="main01 image"></li>
+        </ul>
+        <h2>jQuery LightBox</h2>
+        <ul class="lbox">
+            <li><a href="img/sample01.jpg" data-lightbox="sample" data-title="sample01"><img src="img/sample01.jpg" data-alt="sample01"></a></li>
+            <li><a href="img/sample02.jpg" data-lightbox="sample" data-title="sample02"><img src="img/sample02.jpg" data-alt="sample02"></a></li>
+            <li><a href="img/sample03.jpg" data-lightbox="sample" data-title="sample03"><img src="img/sample03.jpg" data-alt="sample03"></a></li>
+        </ul>
+
+
+        <p><a href="#" id="toTop">TOP</a></p>
+    </div>
+    
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script>
+    $(function(){
+        lightbox.option({
+        'fadeDuration': 200,
+        'wrapAround': true
+        })
+    });
+</script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

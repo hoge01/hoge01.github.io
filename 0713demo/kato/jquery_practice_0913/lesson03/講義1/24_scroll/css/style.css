@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+p{
+  position:fixed;
+  top:0;
+  right:0;
+}
+
+div{
+  width:300px;
+}

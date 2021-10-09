@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+body{
+	text-align:center;
+}
+
+div{
+	position:absolute;
+	left:0;
+	width:20px;
+	height:20px;
+	background-color:#666666;
+}
+
+button{
+	margin-top:100px;
+}
