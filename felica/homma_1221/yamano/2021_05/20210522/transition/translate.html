@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Translate演習</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="css/reset_00.css">
+
+<style>
+
+body{
+/* background-color:#eee;*/
+}
+
+header
+,footer
+{
+ text-align:center;
+ background-color:#eee;
+ padding:30px 0;
+}
+
+h1{
+ font-size:30px;
+/* font-family: 'Merienda', cursive;*/
+ margin-bottom:20px;
+}
+
+main{
+ max-width:960px;
+/* background-color:#eef;*/
+ margin:0 auto;
+}
+
+section{
+ background-color:#eee;
+ padding:10px 0;
+ border-radius:10px;
+ margin:20px 0;
+}
+
+section h2{
+ padding:0 10px 10px;
+}
+
+section>p{
+ padding-left:10px;
+}
+
+/* =========================
+演習１ exercise1
+========================= */
+.ex1
+,.ex3
+,.ex5
+{
+ display:flex;
+ justify-content:space-between;
+ width:960px;
+ padding:0 150px;
+}
+
+.ex1 p
+,.ex3 p
+,.ex5 p
+{
+ line-height:50px;
+ width:50px;
+ color:#fff;
+ background-color:#00f;
+ text-align:center;
+ /* transition:transform 300ms linear 1000ms; */
+ transition:500ms;
+ margin:20px;
+/* margin-left:0;*/
+}
+
+.right:hover{
+ transform:translateX(200px);
+ background:#f00;
+}
+
+.diagnal:hover{
+ transform:translate(100px,50px);
+}
+
+.down:hover{
+ transform: translateY(100px);
+}
+
+/* =========================
+演習２ exercise2
+========================= */
+.ex2 nav{
+ overflow:hidden;
+ padding:20px 0;
+}
+
+.ex2 ul{
+ display:flex;
+ justify-content:space-between;
+ width:960px;
+ transform:translateX(-940px);
+ transition:500ms;
+}
+
+.ex2 li{
+ width:150px;
+ color:#aaa;
+ font-weight:bold;
+ line-height:40px;
+ text-align:center;
+ border:3px solid #0ff;
+ border-radius:5px;
+}
+
+.ex2 .btn{
+ color:#0ff;
+ width:20px;
+}
+
+.ex2 ul:hover{
+ transform: translateX(0);
+}
+
+.ex2 li:hover{
+ color:#fff;
+ background-color:#0ff;
+}
+
+/* =========================
+演習３ exercise3
+========================= */
+.ex3 .x{
+ /* font-size:10px; */
+/* margin-left:100px;*/
+}
+
+.ex3 .x:hover{
+ transform:scaleX(4);
+}
+
+.ex3 .y:hover{
+ transform:scaleY(1.5);
+}
+
+.ex3 .xy:hover{
+ transform:scale(1.5);
+}
+
+/* =========================
+演習４ exercise4
+========================= */
+.ex4 ul{
+ display:flex;
+ width:900px;
+ justify-content:space-between;
+ padding:30px;
+ margin-left:20px;
+/* margin:30px;*/
+}
+
+.ex4 li{
+ width:150px;
+ height:150px;
+ color:#fff;
+ line-height:150px;
+ font-weight:bold;
+ text-align:center;
+ text-shadow:1px 1px 1px #000;
+ /* background-color:#00f; */
+ border-radius:50%;
+ transition:300ms;
+}
+
+.ex4 li:nth-child(1){
+ background-color:rgba(0,0,255,0.3);
+}
+.ex4 li:nth-child(2){
+ background-color:rgba(255,0,255,0.3);
+}
+.ex4 li:nth-child(3){
+ background-color:rgba(0,200,0,0.4);
+}
+.ex4 li:nth-child(4){
+ background-color:rgba(0,200,255,0.4);
+}
+.ex4 li:nth-child(5){
+ background-color:rgba(255,150,0,0.4);
+}
+
+.ex4 li:hover{
+ color:#fff;
+ /* background-color:#0ff; */
+ transform:scale(1.2);
+}
+
+/* =========================
+演習５ exercise5
+========================= */
+.ex5 .rr:hover{
+ transform:rotate(360deg);
+ background-color:#f00;
+}
+
+.ex5 .lr:hover{
+ transform:rotate(-360deg);
+ background-color:#f00;
+}
+
+/* =========================
+演習６ exercise6
+========================= */
+
+/* =========================
+演習７ exercise7
+========================= */
+.ex7 nav{
+  /* margin:0 auto; */
+  /* text-align:center; */
+ padding:20px;
+}
+
+.ex7 li{
+ width:400px;
+ height:300px;
+ background:url(img/fit1.jpg) no-repeat;
+/* margin-bottom:250px; */
+/* transition:300ms;*/
+ overflow:hidden;
+ margin:0 auto; 
+}
+
+.ex7 .caption{
+ display:block;
+ width:400px;
+ height:300px;
+ color:#fff;
+ font-size:24px;
+ text-align:center;
+ transform: translateY(250px);
+ transition:300ms;
+}
+
+.ex7 .caption:hover{
+ transform:translateY(0);
+ color:#fc0;
+ background-color: rgba(0,0,0,0.4);
+ padding-top:35%;
+}
+
+.ex7 span{
+ display:block;
+ width:40%;
+ color:#fff;
+ line-height:1.5;
+ font-weight:bold;
+ background-color:#f00;
+ padding:0 5px;
+ margin:0 auto;
+ margin-top:50px;
+}
+
+.ex7 span:hover{
+ color:#f00;
+ background-color:#fc0;
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<!-- 0-2-1/4 <HEADER> ヘッダー
+============================================= -->
+<header>
+<div class="container" >
+  <h1>制作課題サイト&#12304;transition/transform (css3)&#12305;</h1>
+  <p>transition:アニメーション宣言 / transform:移動</p>
+</div>
+</header>
+
+
+
+<main>
+
+<!-- =========================
+演習１ exercise1
+========================== -->
+<section>
+<h2>演習１</h2>
+<p>各ボタンクリックで下記のように0.5秒で移動する</p>
+<div class="ex1">
+
+<!-- 右移動 -->
+<p class="right">右</p>
+
+<!-- 斜め移動 -->
+<p class="diagnal">斜め</p>
+
+<!-- 下移動 -->
+<p class="down">下</p>
+
+</div>
+</section>
+
+<!-- =========================
+演習２ exercise2
+========================== -->
+<section class="ex2">
+<h2>演習２</h2>
+<p>ボタンクリックで下記のようにスライド</p>
+
+<nav>
+<ul>
+  <li><a href="#">HOME</a></li>
+  <li><a href="#">PROFILE</a></li>
+  <li><a href="#">WORKS</a></li>
+  <li><a href="#">ABOUT</a></li>
+  <li><a href="#">CONTACT</a></li>
+  <li class="btn"><a href="#"><i class="fas fa-ellipsis-v"></i></a></li>
+</ul>
+</nav>
+
+</section>
+
+<!-- =========================
+演習３ exercise3
+========================== -->
+<section>
+<h2>演習３</h2>
+<p>各ボタンクリックで下記のように0.5秒で拡大する</p>
+<div class="ex3">
+
+<!-- Ｘ拡大 -->
+<p class="x">Ｘ拡大</p>
+
+<!-- Ｙ拡大 -->
+<p class="y">Ｙ拡大</p>
+
+<!-- ＸＹ拡大 -->
+<p class="xy">拡大</p>
+
+</div>
+</section>
+
+<!-- =========================
+演習４ exercise4
+========================== -->
+<section class="ex4">
+<h2>演習４</h2>
+<p>ホバーアニメーション（0.3s）</p>
+
+<nav>
+<ul>
+  <li><a href="#">HOME </a></li>
+  <li><a href="#">PROFILE</a></li>
+  <li><a href="#">WORKS</a></li>
+  <li><a href="#">ABOUT</a></li>
+  <li><a href="#">CONTACT</a></li>
+</ul>
+</nav>
+
+</section>
+
+<!-- =========================
+演習５ exercise5
+========================== -->
+<section>
+<h2>演習５</h2>
+<p>ホバーアニメーション（0.3s）</p>
+<div class="ex5">
+
+<!-- 右回転 -->
+<p class="rr">右回転</p>
+
+<!-- 左回転 -->
+<p class="lr">左回転</p>
+
+</div>
+</section>
+
+<!-- =========================
+演習６ exercise6
+========================== -->
+<section class="ex6">
+<h2>演習６</h2>
+<p>ハンバーガーメニュー</p>
+
+</section>
+
+<!-- =========================
+演習７ exercise7
+========================== -->
+<section class="ex7">
+<h2>演習７</h2>
+<p>ホバーアニメーション（0.3s）</p>
+
+<nav>
+<ul>
+<li>
+<a href="#" class="caption">
+WEIGHT CONTROL
+<span>詳細を見る</span>
+</a>
+</li>
+</ul>
+</nav>
+
+</section>
+
+</main>
+
+<!-- 0-2-4/4 <FOOTER> フッター
+============================================= -->
+<footer>
+<p class="container">
+ <small>Copyright &copy; WEBサイト制作課題サイト</small>
+</p>
+</footer>
+
+</body>
+</html>
