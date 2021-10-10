@@ -1,0 +1,65 @@
+/* 0-2-0 <DIV> キーヴィジュアル
+============================================= */
+.keyVis{
+/*width:100%;*/
+height:720px;
+}
+
+.img1{
+/* height:500px;*/
+background:
+url(../img/front-page/keyvis_01.jpg)
+no-repeat
+center/cover;
+}
+
+.img2{
+background:
+url(../img/front-page/keyvis_02.jpg)
+no-repeat
+center/cover;
+}
+
+.img3{
+background:
+url(../img/front-page/keyvis_03.jpg)
+no-repeat
+center/cover;
+}
+
+.bx-wrapper {
+border: 0;
+}
+
+/*Slider */
+.bx-wrapper {
+ border: 0;
+ margin-bottom: 0;
+ /* height: 1150px;*/
+ max-height: 1000px;
+}
+
+@media screen and (max-width:767px) {
+ .bx-wrapper {
+  height: 750px;
+ }
+}
+
+/*仮でarrowミュート*/
+.bx-wrapper .bx-prev, .bx-wrapper .bx-next {
+ background: none;
+}
+
+
+
+/* swiper */
+.swiper-container{
+ max-width:1000px;
+ height:250px;
+ margin-bottom:60px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets{
+ bottom:0;
+/* margin-top:50px;*/
+}
