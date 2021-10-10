@@ -1,0 +1,50 @@
+https://liveweave.com/
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML, CSS and JavaScript demo</title>
+</head>
+<body>
+<!-- Start your code here -->
+
+<p class="lw">Hello Weaver!</p>
+
+<!-- End your code here -->
+</body>
+
+
+
+.lw {
+   font-size: 60px;
+transition: 2s;
+  opacity: 0.2;
+  position: relative;
+}
+.lw::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10;
+  background: #f00;
+  z-index: -1;
+  transition: 1s;
+  
+}
+
+.lw:hover{
+  opacity: 1;
+  color: #f00;
+}
+
+.lw:hover::before{
+  
+width: 100%;
+}
