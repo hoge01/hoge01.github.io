@@ -1,0 +1,127 @@
+.content-box
+{
+ max-width:1440px;  /*♦最大幅を固定値:max-widthで設定*/
+ padding:0 10px;      /*左右の余白調整*/
+ margin:20px auto;     /*左右中央寄せ :上下 左右;*/
+}
+
+
+
+/*-----------------
+product
+------------------*/
+.left_01{
+ max-width:1100px;
+ padding:1px 0;
+ background:#0f3f73;
+}
+
+.box-inner_01{
+ max-width:820px;
+ margin:130px auto;
+/* background:pink;*/
+}
+
+h2.ttl_01{
+ margin:0 auto;
+ text-align:left;
+ line-height:1.4;
+ letter-spacing:10px;
+ font-size:50px;
+ font-weight:bold;
+ color:#fff;
+ padding:10px 0;
+}
+
+.product p{
+ max-width:400px;
+ color:#fff;
+ text-align:left;
+}
+
+.logo_01{
+ max-width:100px;
+}
+
+.product_box{
+ display:flex;
+ justify-content:flex-start;
+ max-width:820px;
+/* margin:-600px 0 0 50%;*/
+ margin:-400px 0 0 50%;
+ flex-wrap:wrap;
+ z-index:-200;
+/* background:red;*/
+}
+
+.product-item a{
+ display:block;
+ width:300px;
+ margin:20px 10px 0px;
+ height:250px;
+ background-color:#000;
+}
+
+.product-item a:hover{
+ opacity:0.5;
+}
+
+.item01 a{
+ background:#000 url("../img/front-page/product_img_01.jpg")no-repeat center center / cover;
+}
+
+.item02 a{
+ background:#000 url("../img/front-page/product_img_02.jpg")no-repeat center center / cover;
+}
+
+.item03 a{
+ background:#000 url("../img/front-page/product_img_03.jpg")no-repeat center center / cover;
+}
+
+.item04 a {
+/* background:#000 url("../img/front-page/product_img_04.jpg")no-repeat center center / cover;*/
+}
+
+.product-item p{
+ padding:61% 6% 6%;
+ right:0;
+ bottom:0;
+ text-align:right;
+}
+
+
+
+
+
+@media screen and (max-width:1280px){
+
+.product_box {
+    display: block;
+    margin: -160px auto 0;
+}
+.box-inner_01 {
+    max-width: 820px;
+    margin: 0px auto 100px;
+    /* background: pink; */
+    padding: 7%;
+}
+	.left_01 {
+		max-width:100%;
+	}
+
+
+}
+
+
+
+
+
+@media screen and (max-width:480px){
+h2.ttl_01 {
+ margin: 0 auto;
+ text-align: left;
+ line-height: 1.4;
+ letter-spacing: 2px;
+}
+
+}

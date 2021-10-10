@@ -1,0 +1,153 @@
+/* おまけ
+############################################# */
+html{
+ scroll-behavior:smooth;
+}
+
+a:hover{
+ color:#c1c1c1;
+}
+
+main{
+ padding:2%;
+}
+
+
+/* 共通設定
+############################################# */
+section{
+ max-width:1440px;
+ margin:0 auto;
+}
+
+.container{
+ max-width:1200px;
+ padding:0 10px;
+ margin:0 auto;
+}
+
+.content-box{
+ padding:60px 0;
+}
+
+.content-box-01{
+ padding:100px 0 50px;
+}
+
+.box{
+ display:flex;
+ justify-content:space-between;
+ margin-bottom:60px;
+ flex-wrap:wrap;
+}
+
+.box.flex-start{
+ justify-content:flex-start;
+}
+
+.box.flex-end{
+ flex-direction:row-reverse;
+ justify-content:flex-end;
+}
+
+.left
+,.right
+{
+ width:calc(100%/2);
+}
+
+
+
+/* page-header 共通
+############################################# */
+/*
+.page-header {
+ background: #f9f9f9;
+ padding: 0;
+ margin: 0 auto;
+ border: none;
+ position: relative;
+ overflow: hidden;
+}
+.page-header_inner {
+ width: 1200px;
+ margin: 0 auto;
+ padding: 200px 0 100px 0;
+ position: relative;
+ z-index: 1;
+}
+
+.h1_en {
+ color: #2b2322;
+ font-size: 80px;
+ letter-spacing: 5px;
+ line-height: 1.1;
+ font-weight: bold;
+ text-transform: uppercase;
+}
+.h1ttl{
+ display: block;
+ padding: 0 0 0 12px;
+ margin: 0;
+ border: none;
+ color: #2b2322;
+ font-weight: bold;
+ font-size: 15px;
+ letter-spacing: 3px;
+}
+.h1ttl_02 {
+ font-weight:300;
+}
+*/
+
+
+
+@media screen and (max-width:1024px){
+ .box {
+  padding:1%;
+ }
+ .content-box-01 {
+  padding: 60px 0 50px;
+ }
+ .content-box {
+  padding: 0 ;
+ }
+}
+
+@media screen and (min-width:769px){
+ .pc768 {
+  display: none;
+ }
+}
+@media screen and (max-width:768px){
+ .sp768 {
+  display: none;
+ }
+
+}
+@media screen and (min-width:768px){
+ .pc {
+  display: none;
+ }
+
+
+}
+@media screen and (max-width:767px){
+ .sp {
+  display: none;
+ }
+
+ .box.flex-start {
+  display: block;
+ }
+ .left, .right {
+  width: 100%;
+ }
+
+}
+
+
+
+
+
+
