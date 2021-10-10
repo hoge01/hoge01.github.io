@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>無題ドキュメント</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="nav">
+  <ul>
+ <li><a href="#news">NEWS</a></li>
+    <li><a href="#vision">VISION</a></li>
+    <li><a href="#company">COMPANY</a></li>
+    <li><a href="#product">PRODUCT</a></li>
+    <li><a href="#recruit">RECRUIT</a></li>
+    <li><a href="#pillows">PILLOW MUSEUM</a></li>
+    <li><a href="#contact" target="_blank" >CONTACT</a></li>
+    <li><a href="#online-shop"><i class="fas fa-shopping-cart"></i>ONLINE SHOP</a></li>
+  </ul>
+</div>
+<!--	<a class="menu" href="#"><span></span><span></span><span></span></a>-->
+<button class="menu"><span></span><span></span><span></span></button>
+<header>
+  <h1>タイトル</h1>
+</header>
+<div id="all">
+<article>
+  <section id="news">
+    <h2>NEWS</h2>
+  
+	  <p>1111111111</p>
+	 <p>1111111111</p>
+	   <p>1111111111</p>
+	   <p>1111111111</p>
+	   <p>1111111111</p>
+	
+	</section>
+  <section id="vision">
+    <h2>VISION</h2>
+    
+	  <p>1111111111</p>
+	 <p>1111111111</p>
+	   <p>1111111111</p>
+	   <p>1111111111</p>
+	   <p>1111111111</p></section>
+  <section id="company">
+    <h2>PRODUCT</h2>
+   
+	  <p>1111111111</p>
+	 <p>1111111111</p>
+	   <p>1111111111</p>
+	   <p>1111111111</p>
+	   <p>1111111111</p></section>
+  <section id="product">
+    <h2>RECRUIT</h2>
+    <br>
+   
+	  <p>1111111111</p>
+	 <p>1111111111</p>
+	   <p>1111111111</p>
+	   <p>1111111111</p>
+	   <p>1111111111</p></section>
+ <section id="pillows">
+    <h2>PILLOW MUSEUM</h2>
+    <br>
+   
+	  <p>1111111111</p>
+	 <p>1111111111</p>
+	   <p>1111111111</p>
+	   <p>1111111111</p>
+	   <p>1111111111</p></section>
+	</article>
+  <p class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></p>
+
+
+</div>
+	
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+     $('.menu').on('click', function() {
+         $(this).toggleClass('active');
+         $("#nav").toggleClass('active');
+      })
+    });
+
+$(function() {
+  var pagetop = $('.pagetop');
+  $(window).scroll(function () {
+  if ($(this).scrollTop() > 80) {
+    pagetop.fadeIn();
+  } else {
+    pagetop.fadeOut();
+  }
+  });
+  pagetop.click(function () {
+    $('body, html').animate({ scrollTop: 0 }, 600);
+    return false;
+  });
+});
+
+$(function(){
+   $('a[href^="#"]').click(function() {
+      var speed = 600;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+	
+	$('#nav a').on('click', function() {
+  $('#nav').toggleClass('active');
+  $(".menu").toggleClass('active');
+});
+});
+</script>
+</body>
+</html>
