@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+.test2 span{
+ color: #f00;
+ font-weight: bold;
+}
+
+.test{
+ background-color: #f00;
+ line-height: 100px;
+ color: #fff;
+ font-size: 50px;
+ text-align: center;
+ display: none;
+}
+</style>
+</head>
+
+<body>
+
+<button class="btn">CLICK</button>
+<p class="test">test</p>
+<p class="test2">
+    <span class="h"></span>時
+    <span class="m"></span>分
+    <span class="s"></span>秒
+</p>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+function test(){
+
+// $('.test').on('click',function(){
+
+// $(this).fadeOut();
+// $('.test').fadeOut();
+$('.test').fadeIn();
+
+// });
+
+}
+
+// test();
+
+// setTimeout(test(),3000); では、即時発動するのでだめ。test() は、 test で記述。
+// setTimeout(test,3000);
+
+// $('.btn').on('click',function(){
+    // setTimeout(test,2000);
+// })
+
+setTimeout(test,10000);
+
+
+// const now = new Date();
+// const second = now.getSeconds();
+// console.log(second);
+// $('.test2').text(second);
+
+function timer(){
+
+const now = new Date();
+const hour = now.getHours();
+const minute = now.getMinutes();
+const second = now.getSeconds();
+// console.log(second);
+// $('.test2').text(second);
+$('.test2 .h').text(hour);
+$('.test2 .m').text(minute);
+$('.test2 .s').text(second);
+
+}
+
+setInterval(timer,1000);
+
+</script>
+
+</body>
+</html>
