@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+
+html,
+body,
+h1 {
+  padding: 0;
+  margin: 0;
+}
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85vh;
+//   background-color: #f5eddf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  display: flex;
+  overflow: hidden;
+  font-family: "Merriweather", serif;
+  font-size: 90px;
+  color: #afa849;
+  /* border: 1px solid #333; */
+}
+h1 > span {
+  display: block;
+  z-index: 9999;
+  transform: translateY(105%);
+  animation: txt-anime 9s ease forwards infinite;
+}
+@keyframes txt-anime {
+  0% {
+    transform: translateY(105%);
+    opacity: 0;
+  }
+  // 45% {
+    // opacity: 0.9;
+  // }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  51%  {
+    opacity: 0;
+    font-size: 65px;
+  }
+  52%  {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105%);
+    opacity: 0;
+  }
+}
+
+h1 > span {
+  @for $i from 1 to 18 {
+    &:nth-of-type(#{$i + 1}) {
+      $delay: $i * 0.2 + 0.5 + s;
+      //  transition-delay: $delay;
+      animation-delay: $delay;
+    }
+  }
+}

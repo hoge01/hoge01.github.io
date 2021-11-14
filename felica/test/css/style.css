@@ -1,0 +1,389 @@
+@charset "utf-8";
+
+body{
+  background-color: #f5eddf;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#toTop{
+  position: fixed;
+  right: 5%;
+  bottom: 50px;
+  width: 60px;
+  height: 60px;
+  display: block;
+  /* background-color: #666; */
+  background-color: #afa849;
+  text-align: center;
+  line-height: 60px;
+  font-size: 14px;
+  color: #fff;
+  display: none;
+}
+
+/* スライダー（bxSlider） */
+
+.bx-wrapper{
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+/*
+.bx-pager
+,.bx-controls-direction
+  {
+  display: none;
+}
+*/
+
+.slider .img{
+  height: 85vh;
+}
+.slider .img1{
+  background: url(../img/performance-g34a05bac0_1920.jpg) no-repeat center/cover;
+}
+.slider .img2{
+  background: url(../img/gerold-hinzen-AhRygnKYHv8-unsplash.jpg) no-repeat center/cover;
+}
+.slider .img3{
+  background: url(../img/jens-thekkeveettil-dBWvUqBoOU8-unsplash.jpg) no-repeat bottom center/cover;
+}
+.img4{
+  background: url(../img/lucas-alexander-gOqpO2uU0RE-unsplash.jpg) no-repeat bottom center/cover;
+}
+.img5{
+  background: url(../img/theo-eilertsen-photography-04aMmb0Ijw0-unsplash.jpg) no-repeat bottom center/cover;
+}
+.img6{
+  background: url(../img/alberto-bigoni-4-DeS5a-hAM-unsplash.jpg) no-repeat center/cover;
+}
+.img7{
+  background: url(../img/dolo-iglesias-FjElUqGfbAw-unsplash.jpg) no-repeat bottom center/cover;
+}
+.img8{
+  background: url(../img/engin-akyurt-1E-PFrorFUA-unsplash.jpg) no-repeat center/cover;
+}
+.img9{
+  background: url(../img/jazz-ga7bd42d09_1920.jpg) no-repeat bottom center/cover;
+}
+.img10{
+  background: url(../img/jorge-zapata-ajLlK5qL6Ic-unsplash.jpg) no-repeat bottom 10% center/cover;
+}
+
+.header_inner h1{
+  line-height: 100px;
+  font-size: 50px;
+  text-shadow: 1px 1px 1px #333, -1px -1px 2px #ccc;
+}
+
+/* ナビゲーション */
+nav{
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #afa849;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+  
+nav ul{
+  display: flex ;
+}
+  
+nav li{
+  width: calc(100% / 5);
+  line-height: 50px;
+  text-align: center;
+}
+  
+nav a{
+  display: block;
+  font-size: 20px;
+  /* color: #eee; */
+  color: #f5eddf;
+  letter-spacing: 0.1;
+  transition: 0.5s;
+}
+
+nav a:hover{
+  background-color: #ddd;
+  color: #444;
+}
+
+main{
+  background-color: #ddd;
+}
+section{
+  /* border: 5px solid #0f0; */
+}
+section h2{
+  text-align: center;
+  color: #f5eddf;
+  font-size: 24px;
+  background-color: #afa849;
+  padding: 10px;
+}
+
+/* 共通 */
+.portfolio
+,.clientwork
+,.test
+{
+    margin-bottom: 100px;
+}
+
+.portfolio h2
+,.clientwork h2
+,.test h2
+{
+}
+
+.portfolio_inner
+,.pdf_inner
+,.clientwork_inner
+,.test_inner
+{
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+}
+
+.txt{
+  padding: 10px;
+}
+
+/* ポートフォリオ */
+.pf_li{
+  width: calc(100% / 3);
+  padding: 10px;
+}
+
+.pf_li .image{
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  /* object-fit: contain; */
+  object-position:top center;
+}
+
+.wordpress .image{
+  object-position: center;
+}
+
+.pdf{
+  position: relative;
+}
+
+.pf_li .pdf_inner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.pdf0{
+  width: calc(100% / 2);
+  height: calc(100% / 2);
+}
+.pdf0{
+  display: block;
+}
+a.pdf0{
+  display: block;
+  line-height: 200%;
+  text-align: center;
+  color: #444;
+  background-color: rgba(221, 221, 221, 0.5);
+  font-size: 50px;
+  font-weight: bold;
+  /* opacity: 1; */
+}
+.pdf0 a{
+  display: block;
+  /* width: auto; */
+  height: 100%;
+  line-height: 200%;
+  text-align: center;
+  opacity: 0;
+}
+
+.pdf0 a:hover{
+  color: #444;
+  background-color: rgba(221, 221, 221, 0.5);
+  font-size: 50px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+
+/* ＷＥＢサイト制作 */
+.cw_li{
+  width: calc(100% / 2);
+  padding: 10px;
+}
+
+.cw_li .image{
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position:top center;
+}
+.version1 .image{
+  object-position: top left;
+}
+
+.cw_li a{
+  display: block;
+}
+
+
+/* 習熟度確認試験 */
+.t_li{
+  width: calc(100% / 4);
+  padding: 10px;
+}
+
+.t_li .image{
+  aspect-ratio: 16 / 12;
+  object-fit: cover;
+  object-position:top center;
+}
+
+.t05 .image{
+  object-position: top left;
+}
+
+.t_li a{
+  display: block;
+}
+
+
+
+
+/* test01 */
+  
+    .main {
+      /* background-color: #ccc; */
+      /* background-color: #ddd; */
+      /* padding: 20px 10px 100px 10px; */
+      /* box-sizing: border-box; */
+    }
+  
+    .main h2 {
+      /* font-size: 20px; */
+      /* color: #444; */
+      /* text-align: center; */
+      /* padding: 50px 0 20px; */
+    }
+
+    /* atrribute */
+    .tab_menu {
+      display: flex;
+    }
+  
+    .tab_menu li {
+      /* width: 22%; */
+      width: calc(100% / 4);
+    }
+  
+    .tab_menu a {
+      display: block;
+      background-color: #aaa;
+      padding: 15px 0 15px 10px;
+      font-size: 25px;
+      font-weight: bold;
+      border-right: 1px dotted #eee;
+    }
+  
+    .tab_menu .current_tab_memu {
+      color: #fff;
+      background-color: #666;
+    }
+  
+    .tab .num {
+      font-size: 40px;
+      font-weight: bold;
+      padding: 30px 0 15px 35px;
+      ;
+    }
+  
+    .tab .txt {
+      line-height: 1.7;
+      padding: 0 30px 40px 30px;
+    }
+  
+    .tab .current_tab {
+      color: #eee;
+      background-color: #666;
+    }
+  
+    /* accordion */
+    .acordion {
+      /* padding-bottom: 0.1px; */
+      margin-bottom: 60px;
+      /* background-color: #fff; */
+    }
+  
+    .acordion dt {
+      font-size: 18px;
+      color: #444;
+      font-weight: bold;
+      padding: 8px 0 8px 10px;
+      border-left: 5px solid #666;
+      /* border-right: 5px solid #666; */
+      /* background-color: #aaa; */
+      background-color: #ccc;
+      /* background-color: #fff; */
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+  
+    .acordion dd {
+      text-align: justify;
+      line-height: 1.5;
+      padding: 0 10px;
+      margin-bottom: 30px;
+      color: #0f0;
+      /* background-color: #aaa; */
+    }
+  
+    .acordion .current {
+      border-left: 5px solid #c00;
+      /* border-right: 5px solid #c00; */
+      color: #fff;
+      background-color: #666;
+    }
+  
+    /* .acordion dd:nth-of-type(3) iframe { */
+      /* width: 100%; */
+      /* height: 25vh; */
+    /* } */
+    #tab1{
+      /* background-color: #ff0; */
+      padding-bottom: 0.1px;
+    }
+    .acordion{
+      margin-bottom: 0;
+    }
+    .acordion dt{
+      /* margin-bottom: 0; */
+    }
+    .acordion dd{
+      margin: 0 5px 30px;
+      /* margin-bottom: 0; */
+      /* margin: 0; */
+    }
+
+footer{
+  background-color: #afa849;
+  margin-top: 50px;
+}
+footer p{
+  line-height: 50px;
+  color: #eee;
+  text-align: center;
+}
