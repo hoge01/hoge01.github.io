@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MixItUpとFancyboxを使ったギャラリー</title>
+    <!-- <link rel="stylesheet" href="css/jquery.fancybox.css"> -->
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ms.css">
+</head>
+<body>
+
+<div class="btn-wraaper">
+<button type="button" class="all" data-filter=".all">ALL</button>
+<button type="button" class="html5" data-filter=".html5">HTML5</button>
+<button type="button" class="css3" data-filter=".css3">CSS3</button>
+<button type="button" class="js" data-filter=".js">JavaScript</button>
+<button type="button" class="wp" data-filter=".wp">WordPress</button>
+<button type="button" class="ps" data-filter=".ps">Photoshop</button>
+</div><!-- /.btn-wraaper -->
+
+
+<div class="gallery">
+<div class="mix all html5 css3 js">
+    <span class="line cat1">HTML5</span>
+    <span class="line line2 cat2">CSS3</span>
+    <span class="line line3 cat3">JS</span>
+    <!-- <a href="javascript:;" data-fancybox data-type="iframe" data-src="./site-01/"> -->
+    <!-- <a href="javascript:;" data-fancybox data-type="iframe" data-src="./site-01/" data-caption="ポートフォリオ"> -->
+    <a href="javascript:;" data-fancybox="html5 css3 js" data-type="iframe" data-src="./site-01/" data-caption="ポートフォリオ【HTML5/CSS3/JS】">
+    <img src="https://placehold.jp/3d4070/ffffff/800x600.jpg" alt="">
+    </a>
+</div><!-- /.mix -->
+<div class="mix all html5 css3 wp">
+    <span class="line cat1">HTML5</span>
+    <span class="line line2 cat2">CSS3</span>
+    <span class="line line3 cat4">WP</span>
+    <!-- <a href="javascript:;" data-fancybox data-type="iframe" data-src="./site-01/"> -->
+    <!-- <a href="javascript:;" data-fancybox="html5 css3 wp" data-type="iframe" data-src="./site-01/" data-caption="ポートフォリオ【HTML5/CSS3/WP】"> -->
+    <a href="javascript:;" data-fancybox="html5 css3 wp" data-type="iframe" data-src="./pdf/5月Web科担当表.pdf">
+    <img src="https://placehold.jp/3d4070/ffffff/800x600.jpg" alt="">
+    </a>
+</div><!-- /.mix -->
+<div class="mix all html5 css3 ps">
+    <span class="line cat1">HTML5</span>
+    <span class="line line2 cat2">CSS3</span>
+    <span class="line line3 cat5">PS</span>
+    <!-- <a href="javascript:;" data-fancybox data-type="iframe" data-src="./site-01/"> -->
+    <a href="javascript:;" data-fancybox="html5 css3 ps" data-type="iframe" data-src="./site-01/" data-caption="ポートフォリオ【HTML5/CSS3/PS】">
+    <img src="https://placehold.jp/3d4070/ffffff/800x600.jpg" alt="">
+    </a>
+</div><!-- /.mix -->
+<div class="mix all html5 js wp">
+    <span class="line cat1">HTML5</span>
+    <span class="line line2 cat3">JS</span>
+    <span class="line line3 cat4">WP</span>
+    <!-- <a href="javascript:;" data-fancybox data-type="iframe" data-src="./site-01/"> -->
+    <a href="javascript:;" data-fancybox="html5 js wp" data-type="iframe" data-src="./site-01/" data-caption="ポートフォリオ【HTML5/JS/WP】">
+    <img src="https://placehold.jp/3d4070/ffffff/800x600.jpg" alt="">
+    </a>
+</div><!-- /.mix -->
+<div class="mix all html5 js ps">
+    <span class="line cat1">HTML5</span>
+    <span class="line line2 cat3">JS</span>
+    <span class="line line3 cat5">PS</span>
+    <!-- <a href="javascript:;" data-fancybox data-type="iframe" data-src="./site-01/"> -->
+    <a href="javascript:;" data-fancybox="html5 js ps" data-type="iframe" data-src="./site-01/" data-caption="ポートフォリオ【HTML5/JS/PS】">
+    <img src="https://placehold.jp/3d4070/ffffff/800x600.jpg" alt="">
+    </a>
+</div><!-- /.mix -->
+<div class="mix all html5 wp ps">
+    <span class="line cat1">HTML5</span>
+    <span class="line line2 cat4">WP</span>
+    <span class="line line3 cat5">PS</span>
+    <!-- <a href="javascript:;" data-fancybox data-type="iframe" data-src="./site-01/"> -->
+    <a href="javascript:;" data-fancybox="html5 wp ps" data-type="iframe" data-src="./site-01/" data-caption="ポートフォリオ【HTML5/WP/PS】">
+    <img src="https://placehold.jp/3d4070/ffffff/800x600.jpg" alt="">
+    </a>
+</div><!-- /.mix -->
+<div class="mix all js wp ps">
+    <span class="line cat3">JS</span>
+    <span class="line line2 cat4">WP</span>
+    <span class="line line3 cat5">PS</span>
+    <!-- <a href="javascript:;" data-fancybox data-type="iframe" data-src="./site-01/"> -->
+    <a href="javascript:;" data-fancybox="js wp ps" data-type="iframe" data-src="./site-01/" data-caption="ポートフォリオ【JS/WP/PS】">
+    <img src="https://placehold.jp/3d4070/ffffff/800x600.jpg" alt="">
+    </a>
+</div><!-- /.mix -->
+<div class="mix all css3 js wp">
+    <span class="line cat2">CSS3</span>
+    <span class="line line2 cat3">JS</span>
+    <span class="line line3 cat4">WP</span>
+    <!-- <a href="javascript:;" data-fancybox data-type="iframe" data-src="./site-01/"> -->
+    <a href="javascript:;" data-fancybox="css3 js wp" data-type="iframe" data-src="./site-01/" data-caption="ポートフォリオ【CSS3/JS/WP】">
+    <img src="https://placehold.jp/3d4070/ffffff/800x600.jpg" alt="">
+    </a>
+</div><!-- /.mix -->
+<div class="mix all css3 js ps">
+    <span class="line cat2">CSS3</span>
+    <span class="line line2 cat3">JS</span>
+    <span class="line line3 cat5">PS</span>
+    <!-- <a href="javascript:;" data-fancybox data-type="iframe" data-src="./site-01/"> -->
+    <a href="javascript:;" data-fancybox="css3 js ps" data-type="iframe" data-src="./site-01/" data-caption="ポートフォリオ【CSS3/JS/PS】">
+    <img src="https://placehold.jp/3d4070/ffffff/800x600.jpg" alt="">
+    </a>
+</div><!-- /.mix -->
+<div class="mix all css3 js wp">
+    <span class="line cat2">CSS3</span>
+    <span class="line line2 cat3">JS</span>
+    <span class="line line3 cat4">WP</span>
+    <!-- <a href="javascript:;" data-fancybox data-type="iframe" data-src="./site-01/"> -->
+    <a href="javascript:;" data-fancybox="html5 js wp" data-type="iframe" data-src="./site-01/" data-caption="ポートフォリオ【CSS3/JS/WP】">
+    <img src="https://placehold.jp/3d4070/ffffff/800x600.jpg" alt="">
+    </a>
+</div><!-- /.mix -->
+</div><!-- /.gallery -->
+
+
+<div class="cursor"></div>
+<div class="follower"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- <script src="js/mixitup.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+
+<!-- <script src="js/jquery.fancybox.js"></script> -->
+<!-- <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<script src="./js/TweenMax.min.js"></script>
+<script src="./js/MouseStalker.js"></script>
+
+<script>
+$(function(){
+ var mixer = mixitup('.gallery');
+});
+</script>
+
+</body>
+</html>

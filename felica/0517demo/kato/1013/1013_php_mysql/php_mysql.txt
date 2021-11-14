@@ -1,0 +1,54 @@
+<?php
+
+ $dsn = 'mysql:dbname=データベース名;host=localhost;charset=utf8';
+ $user = 'ユーザー名';
+ $password = 'パスワード';
+
+ try{
+  $pdo = new PDO($dsn, $user, $password); 
+   echo '接続に成功しました。<br>';
+
+}catch (PDOException $e){
+   echo('Error:'.$e->getMessage());
+   die('データベースの接続に失敗しました。');
+ }
+ $pdo = null;
+ ?>
+
+ ----- データベース接続の基本形 ---------
+
+
+$st = $pdo->prepare("INSERT INTO テーブル名 VALUES(?, ?, ?)");
+    //  「?」はフィールドに挿入するデータで、データは後ほど設定するため、『仮のデータ』（プレースホルダといい）になる
+$st->execute(array('データ1', 'データ2', 'データ3'));
+    //  executeメソッドでSQL文を発行します。MySQLに挿入するデータは配列形式で格納
+
+$stは、任意の変数名
+
+今回は、テーブルの項目として、name varchar(30),tel varchar(30),address varchar(50)で設定しました。
+
+ ----- テーブルにデータを挿入する基本形 ---------
+
+
+
+ $result = $pdo->prepare('SELECT * FROM テーブル名');
+ $result->execute();
+
+ $resultは、任意の変数名
+
+  ----- テーブルからデータを抽出する基本形 ---------
+
+
+ foreach ($result as $row) {
+  echo $row['フィールド名'] .'<br>';
+   echo $row['フィールド名'].'<br>';
+   echo $row['フィールド名'].'<br>';
+}
+
+$resultは、任意の変数名
+フィールド名は、テーブルの項目名
+
+  ----- 抽出したデータを表示する基本形 ---------
+
+
+  上記の基本設定を基に、データのデータベースへの挿入・抽出・ブラウザへの出力を実装して行きます

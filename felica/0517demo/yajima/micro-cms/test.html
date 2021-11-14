@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>micro-CMSを使ってみる</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--
+<h1 id="title"></h1>
+<div id="content"></div>
+-->
+
+<!--
+<script>
+fetch("https://xfreestudy.microcms.io/api/v1/news/b5-ak8tod", {
+headers: {
+    "X-MICROCMS-API-KEY": "d67509f3163d4aaa8a02b511aa774f1459eb"
+}
+})
+.then(res => res.json())
+.then(json => {
+    document.getElementById("title").innerHTML = json.title;
+    document.getElementById("content").innerHTML = json.content;
+})
+</script>
+-->
+
+<h1>お知らせ</h1>
+<img src="https://images.microcms-assets.io/assets/82b58aecf35445bd87007ee3f9ffb076/7c7ef4d66093423595a78c0ef7f48838/46_ice01.jpg" alt="画像">
+<div id="content-wrapper">
+<!--
+  <div class="content-box">
+    <h2>記事タイトル</h2>
+    <div class="txt">
+      <p>記事</p>
+    </div>
+    <p>公開日時</p>
+  </div>
+-->
+</div>
+
+<script>
+fetch("https://xfreestudy.microcms.io/api/v1/test", {
+headers: {
+"X-MICROCMS-API-KEY": "d67509f3163d4aaa8a02b511aa774f1459eb"
+}
+})
+.then(function(res) {
+  return res.json();
+})
+
+.then(function(json) {
+let fragment = document.createDocumentFragment();
+for (let i = 0; i < json.contents.length; i++) {
+
+// titleの取得
+let title = document.createElement('h2');
+title.textContent = json.contents[i].title;
+ 
+// contentの取得
+// let content = document.createElement('p');
+let content = document.createElement('div');
+content.className = 'txt';
+content.innerHTML = json.contents[i].content;
+
+// テスト
+let visual = document.createElement('div');
+visual.className = 'test';
+visual.innerHTML = json.contents[i].content;
+// visual.innerHTML = json.contents[i].visual;
+
+//dateの取得
+let date = document.createElement('p');
+date.className = 'time';
+date.innerHTML = json.contents[i].content;
+let postDate = new Date(json.contents[i].publishedAt);
+let postY=postDate.getFullYear();
+let postM=postDate.getMonth()+1;
+let postD=postDate.getDate();
+date.innerHTML = postY+'年'+postM+'月'+postD+'日';
+
+let item = document.createElement('div');
+item.className = 'content-box';
+
+item.appendChild(title);
+item.appendChild(content);
+item.appendChild(visual);
+item.appendChild(date);
+fragment.appendChild(item);
+}
+
+document.getElementById('content-wrapper').appendChild(fragment);
+})
+</script>
+
+</body>
+</html>

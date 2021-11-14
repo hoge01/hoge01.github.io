@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* マウスストーカー */
+body{
+    cursor: none;
+   }
+
+   .cursor{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    z-index: 1001;
+    pointer-events: none;
+   }
+   .cursor.is-active{
+    display: none;
+    }
+   .follower{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: chartreuse;
+    position: absolute;
+    z-index: 1000;
+    pointer-events: none;
+    transition: 0.1s;
+   }
+   .follower.is-active{
+    transform: scale(2.2);
+    background-color: #ca153a;
+    }

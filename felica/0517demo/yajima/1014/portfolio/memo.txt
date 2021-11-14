@@ -1,0 +1,20 @@
+ギャラリー部分の作成
+使用するプラグイン
+
+・mix it up（）
+https://www.kunkalabs.com/mixitup/
+
+・fancybox（モーダルウィンドウ）v4
+http://fancybox.net/
+https://fancyapps.com/docs/ui/fancybox/
+https://fancyapps.com/fancybox/3/
+https://web.archive.org/web/20210304013040/https://github.com/fancyapps/fancyBox
+
+・参考サイト
+https://chiyo-katsumasa.com/video/
+
+・カテゴリー
+1.カテゴリー１
+2.カテゴリー２
+3.カテゴリー３
+4.カテゴリー４

@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+
+html,
+body,
+h1 {
+  padding: 0;
+  margin: 0;
+}
+.box {
+  width: 100%;
+  height: 100vh;
+  background-color: #f5eddf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  display: flex;
+  overflow: hidden;
+  font-family: "Merriweather", serif;
+  font-size: 90px;
+  color: #afa849;
+  /* border: 1px solid #333; */
+}
+h1 > span {
+  display: block;
+  transform: translateY(105%);
+  animation: txt-anime 5s ease forwards infinite;
+}
+@keyframes txt-anime {
+  0% {
+    transform: translateY(105%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(105%)
+  }
+}
+// h1>span:nth-of-type(2){
+//  animation-delay: 0.7s;
+// }
+// h1>span:nth-of-type(3){
+//  animation-delay: 0.9s;
+// }
+// h1>span:nth-of-type(4){
+//  animation-delay: 1.1s;
+// }
+// h1>span:nth-of-type(5){
+//  animation-delay: 1.3s;
+// }
+// h1>span:nth-of-type(6){
+//  animation-delay: 1.5s;
+// }
+// h1>span:nth-of-type(8){
+//  animation-delay: 1.7s;
+// }
+// h1>span:nth-of-type(9){
+//  animation-delay: 1.9s;
+// }
+
+h1 > span {
+  @for $i from 1 to 9 {
+    &:nth-of-type(#{$i + 1}) {
+      $delay: $i * 0.1 + 0.5 + s;
+      //  transition-delay: $delay;
+      animation-delay: $delay;
+    }
+  }
+}
+
+.pen1{
+  width: 50vw;
+  height: auto;
+  margin: 0 auto;
+}
+// for文を使ってみる
+// @for $i from 1 to 8{
+//  $width:percentage(1 / $i);
+//  .col#{$i}{
+//  width: $width;
+//  }
+// }
+// .wrapper{
+//  display: flex;
+// }
+// [class^="col"]{
+//  height: 400px;
+//  background-color:cadetblue ;
+// }

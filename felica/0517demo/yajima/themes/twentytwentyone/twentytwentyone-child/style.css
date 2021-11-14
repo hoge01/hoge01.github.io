@@ -1,0 +1,14 @@
+/*
+Theme Name:   twentytwentyone Child
+Template:     twentytwentyone
+Description:  twentytwentyone の子テーマ
+Author:       testuser
+*/
+
+h1{
+ color: #f00;
+}
+
+p{
+ color: #00f;
+}
